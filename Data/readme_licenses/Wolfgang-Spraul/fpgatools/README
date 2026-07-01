@@ -1,0 +1,107 @@
+Introduction
+ fpgatools converts the configuration of an FPGA between
+ JSON and bitstream representation.
+
+ The only supported chip at this time is the xc6slx9, a 45nm-generation
+ FPGA with 5720 6-input LUTs, block ram and multiply-accumulate
+ resources.
+
+ Also not included are place and route tools or other higher-level
+ logic optimization, synthesis, Verilog, HLS, etc.
+ Future work on integrating with graywolf or yosys might be an option.
+ If you have ideas in that direction, please email the author at
+ wspraul@q-ag.de
+
+ *) educational resource
+ *) have fun and experiment with every feature of the chip
+ *) command-line tools, text-based file formats
+ *) supported platform: Linux
+ *) free software, released into the public domain (see
+    UNLICENSE for details)
+
+FAQ
+ todo
+
+Libraries
+
+- libfpga-control    programmatic access to libfpga-model
+- libfpga-model      in-memory representation of the FPGA
+- libfpga-floorplan  reads and writes .fp floorplan files
+- libfpga-bit        reads and writes .bit bitstream files
+
+Design Utilities
+
+- hello_world        outputs an AND gate floorplan to stdout
+- blinking_led       outputs blinking led design to stdout
+- fpinfo             outputs information about tiles, devices, ports,
+                     connections and switches in a floorplan
+- fp2bit             converts .fp floorplan into .bit bitstream
+- bit2fp             converts .bit bitstream into .fp floorplan
+- draw_svg_tiles     draws a simple .svg showing tile types
+
+fpgatools Development Utilities
+
+- autotest           test suite
+- sort_seq           sorts line-based text file by sequence numbers in strings
+- merge_seq          merges a pre-sorted text file into wire sequences
+- pair2net           reads the first two words per line and builds nets
+- hstrrep            high-speed hashed array based search and replace util
+
+Profiling
+
+~# time ./hello_world
+~# perf record ./hello_world
+~# perf annotate
+~# perf report
+
+TODO (as of 2015-03)
+
+short-term (3 months):
+* support block memory
+  -> write block_mem autotest
+* support macc
+* support pll_adv
+* support dcm
+* support ilogic2/ologic2
+
+mid-term (12 months):
+* example: counter (including clock, jtag)
+* more cases in logic block configuration
+* autotest: fix bugs in lut_encoding, logic_cfg, routing_sw, io_sw tests
+* autotest: protect stderr of diff executable in autotest log
+* several places might benefit from a bison parser:
+  - switchbox description into bit parser/generator (bit_frames.c)
+  - inter-tile wire connections (model_conns.c)
+  - configure devices and route wires
+
+cleanup (whenever convenient):
+* use tile flags instead of tile names
+* model connections and switches together rather than separately
+* describe more wire names/meanings with integers instead of strings
+* move all part-specific static data into xc_info()
+
+long-term (>12 months):
+* auto-crc calculation in .bit file
+* MCB switches and connections
+* maybe fp2bit should natively write ieee1532 and separate tools convert
+  from ieee1532 to .bit and other formats
+* design fpga core that uses high-speed icap/reconfig to process data
+* example: j1 soc
+* support chips other than xc6slx9, maybe xc7a35 or xc7a100
+
+ChangeLog
+
+2012-12-20
+* Second design verified: blinking_led is a clocked design where the clock
+  increments a counter and the highest bit of the counter drives a LED.
+
+2012-09-24
+* First design verified: hello_world is an unclocked AND gate design
+  which was verified in a xc6slx9.
+
+2012-08-20
+* Beginning of full fidelity circle with model, floorplan, conversion
+  between floorplan and binary configuration formats.
+
+2012-06-03
+* Project started.

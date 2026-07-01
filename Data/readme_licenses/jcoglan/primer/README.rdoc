@@ -1,0 +1,252 @@
+= Primer
+
+This is an experiment to bring automatic cache expiry and regeneration to Rails.
+At Songkick[http://www.songkick.com], we have a ton of code that deals with
+caches and denormalization and messages and offline processing and it's hard to
+maintain. I want to get rid of it. All of it.
+
+
+== What?
+
+Inspired by LunaScript[http://asana.com/luna] and Fun[http://marcuswest.in/read/fun-intro/],
+I figured Ruby could figure out which values a computation uses, and use that to
+expire caches for you without having to write any expiry code. This turns out to
+be possible, at least for typical ActiveRecord usage, and Primer includes an
+engine for that.
+
+Primer currently lets you do the following:
+
+* Mark up ERB templates with cache keys on Rails and Sinatra
+* Monitor what attributes a cache value depends on
+* Automatically expire a cache when its dependencies change
+* Declare how caches should be recalculated for eager cache population
+* Update pages in real time when their data is updated
+
+It does all this without you having to write a single cache sweeper. You just
+declare how to render your site, Primer does the rest.
+
+
+== Enough waffle, show me the code!
+
+The following is the minimal, 'hello world' use case. Get your ActiveRecord
+model, put a mixn in it:
+
+  class BlogPost < ActiveRecord::Base
+    include Primer::Watcher
+  end
+
+Set up a cache for your app (you need Redis[http://code.google.com/p/redis/]):
+
+  Primer.cache = Primer::Cache::Redis.new(:host => "10.0.1.1", :port => 6380)
+
+Throw a helper in your views:
+
+  # Rails
+  module ApplicationHelper
+    include Primer::Helpers::ERB
+  end
+  
+  # Sinatra
+  helpers { include Primer::Helpers::ERB }
+
+Wrap cache blocks around your markup for expensive bits:
+
+  # views/posts/show.html.erb
+  
+  <% primer "/posts/#{@post.id}/title" do %>
+    <%= @post.title.upcase %>
+  <% end %>
+
+The output of the block gets cached to Redis using the given key. Once the
+output is cached, the block will not be called again. The cache is invalidated
+when (and only when) the title of <tt>@post</tt> changes; Primer figures this
+out and you don't need to write any cache sweeping code.
+
+Finally you need to run the cache agent, unless you want to run the cache
+monitoring work in a background process (see below):
+
+  Primer::Worker::ChangesAgent.run!
+  
+  # If you're using ActiveRecord
+  Primer::Worker::ActiveRecordAgent.run!
+
+
+=== Declaring cache generators
+
+You may have noticed that Primer forces the use of path-style keys for your
+cache. Instead of wrapping code you want to memoize in a block, you can declare
+how to calculate it elsewhere and use a router to map cache keys to calculations.
+For example we could rewrite our post title example like this:
+
+  # views/posts/show.html.erb
+  # note '=' sign here, not used with block form
+  
+  <%= primer "/posts/#{@post.id}/title" %>
+
+Then you can declare how to calculate this in a router attached to your cache
+object:
+
+  Primer.cache.routes do
+    get "/posts/:id/title" do
+      post = BlogPost.find(params[:id])
+      post.title.upcase
+    end
+  end
+
+The advantage of this is that the cache now has a way to generate cache values
+outside of your rendering stack, meaning that instead of just invalidating the
+cache it can actually calculate the new value so the cache is always ready for
+incoming requests.
+
+It also means you can generate cache content offline; running the following will
+generate the cache of the first post's title:
+
+  Primer.cache.compute("/posts/1/title")
+
+
+=== Lazy loading
+
+A common problem when caching view fragments is not knowing whether you need to
+load database objects in the controller. If the parts of the view that use that
+object are already cached, there's no point loading the object since it won't be
+needed to render the page.
+
+Rails has some lazy-loading capability built in, for example if you have a model
+that says <tt>BlogPost.has_many :comments</tt>, a call to <tt>blog_post.comments</tt>
+won't actually load the comments until you call <tt>each</tt> on that collection
+to read the data. Primer introduces the same idea for all database calls.
+
+If you <tt>include Primer::Lazyness</tt> in a model, then <tt>Model.find(id)</tt>
+will not call the database. It just returns an object with the ID you asked for,
+and won't actually load the model from the database until you try to access
+other properties that we cannot infer from the <tt>find()</tt> call.
+
+For example, this makes it easy to load a model in the controller and use its ID
+to key cache fragments, safe in the knowledge that no unnecessary database calls
+will be made.
+
+  BlogPost < ActiveRecord::Base
+    include Primer::Lazyness
+  end
+  
+  # Does not call the database
+  post = BlogPost.find(1)
+  
+  # Does not call the database unless the title is not cached
+  primer "/posts/#{post.id}/title" do
+    post.title
+  end
+
+Primer also lazy-loads on other properties, for example if I call
+<tt>BlogPost.find_by_title("Hello World")</tt> then Primer will create an object
+whose <tt>title</tt> is <tt>"Hello World"</tt> without calling the database, but
+then if I ask for the object's <tt>id</tt> or other properties the real model is
+loaded.
+
+
+=== Throttling
+
+Let's say you have a cache value that depends on many little bits of model data,
+a common situation in web front-ends. For example:
+
+  Primer.cache.routes do
+    get "/posts/:id/summary" do
+      post = BlogPost.find(params[:id])
+      <<-HTML
+        <div class="post-summary">
+          <h2>#{ post.title }</h2>
+          <ul class="post-meta">
+            <li>Posted #{ post.strftime('%A %e %B %Y') } by #{ post.author.name }</li>
+            <li>Tagged with #{ post.tags.map { |t| link_to(t.name, t) }.join(', ') }</li>
+          </ul>
+        </div>
+      HTML
+    end
+  end
+
+We've got a few domain objects in use here: the post itself, its author, the
+tags attached to the post. We'd want this value regenerating whenever any of
+this data changes, but what if many values that affect this template change at
+around the same time? We might not want to regenerate it for every single change,
+we just want to make sure it looks okay after all the changes have been applied.
+Primer lets you throttle cache regeneration, for example this makes sure each
+key is never regenerated twice within a 5-second interval:
+
+  Primer.cache.throttle = 5
+
+When a value affecting a key changes, Primer will wait 5 seconds before
+regenerating it, allowing other data changes to accrue before we update the
+cache.
+
+
+=== Background workers
+
+You'll probably want to move a lot of the work Primer does out of your front-end
+process. Primer includes an AMQP message bus to support this, and setting it up
+is easy - put this somewhere in your app's setup:
+
+  Primer.bus = Primer::Bus::AMQP.new(:queue => 'my_app_events')
+
+To make a background worker, you just need a file like this:
+
+  # worker.rb
+  
+  # load your models, config, Primer routes etc
+  require 'path/to/app/environment'
+  
+  Primer.worker!
+
+Running <tt>ruby worker.rb</tt> will start a process in the shell that listens
+for change notifications and updates the cache for you. You can start as many of
+these as you like to spread the load out.
+
+
+=== Real-time page updates
+
+If you want to be properly web-scale, you'll need to be updating your pages in
+real time as your data changes. Primer lets you update any fragment generated by
+a block-less <tt>primer</tt> call in your view automatically.
+
+All you need to do is place some middleware in your Rack config:
+
+  # config.ru
+  
+  require 'path/to/sinatra/app'
+  
+  use Primer::RealTime
+  run Sinatra::Application
+
+Add the client-side script to your templates (this must be in the <tt>HEAD</tt>):
+
+  <script type="text/javascript" src="/primer.js"></script>
+
+Then configure it wherever your data model gets used to tell it you want to use
+real-time updates and where the messaging server is. You should also set a
+password - this will stop third parties being able to publish to the message bus
+and inject arbitrary HTML into your pages.
+
+  Primer.real_time = true
+  Primer::RealTime.bayeux_server = 'http://localhost:9292'
+  Primer::RealTime.password = 'super_secret_password'
+
+
+== Examples
+
+See <tt>example/README.rdoc</tt>, a little Sinatra blog with a Redis cache,
+offline cache workers and real-time page updates.
+
+
+== Anything else?
+
+I've tested it on Ruby 1.8.7 and 1.9.2 with Rails 3 and Sinatra 1.1. I've
+briefly tried using it in Rails 2.2 and it looked okay-ish.
+
+I'm NOT using this in production, and neither should you. Ideas and feedback
+welcome, pull requests considered, bug reports likely to gather dust.
+
+
+== License
+
+Copyright (c) 2010-2011 Songkick.com, James Coglan. Named by the inimitable
+grillpanda[http://github.com/grillpanda]. Released under the MIT license.
+

@@ -1,0 +1,355 @@
+# -*- mode: org; mode: org-make-toc -*-
+* org-reverse-datetree
+:PROPERTIES:
+:TOC:      :include descendants :depth 2
+:END:
+[[https://melpa.org/#/org-reverse-datetree][https://melpa.org/packages/org-reverse-datetree-badge.svg]]
+[[https://stable.melpa.org/#/org-reverse-datetree][https://stable.melpa.org/packages/org-reverse-datetree-badge.svg]]
+[[https://github.com/akirak/org-reverse-datetree/workflows/CI/badge.svg][https://github.com/akirak/org-reverse-datetree/workflows/CI/badge.svg]]
+
+This package provides functions for creating reverse
+date trees, which are similar to date trees as supported by built-in
+functions of Org mode (e.g. =org-capture=) but in a
+reversed order. Since newer contents come first in reverse date trees,
+they are more useful in situations where you want to find latest
+activities on a particular subject using a search tool like
+[[https://github.com/alphapapa/helm-org-rifle][helm-org-rifle]].
+
+[[file:screenshots/org-reverse-datetree-1.png]]
+
+:CONTENTS:
+- [[#features][Features]]
+- [[#installation][Installation]]
+- [[#usage][Usage]]
+  - [[#configuring-date-formats][Configuring date formats]]
+  - [[#defining-a-capture-template][Defining a capture template]]
+  - [[#jumping-to-a-particular-date][Jumping to a particular date]]
+  - [[#calendar-integration][Calendar integration]]
+  - [[#retrieving-the-current-date-in-the-date-tree][Retrieving the current date in the date tree]]
+  - [[#defining-a-refile-function][Defining a refile function]]
+  - [[#archiving][Archiving]]
+  - [[#defining-an-agenda-command][Defining an agenda command]]
+  - [[#cleaning-up-empty-dates][Cleaning up empty dates]]
+  - [[#defining-a-custom-org-ql-predicate][Defining a custom org-ql predicate]]
+- [[#configuration-examples][Configuration examples]]
+- [[#changelog][Changelog]]
+- [[#license][License]]
+:END:
+** Features
+- Reverse date trees, where latest contents are shown first.
+- You can customize the format of the date tree.
+- Week trees are also supported. You can even create date trees with four levels (year-month-week-date) or any number of levels.
+- Configurations of date trees are stored in file headers, so each file is ensured to have a single date tree with a consistent structure.
+- Configuration is done interactively on first creation.
+** Installation
+You can install this package from MELPA.
+** Usage
+The following functions retrieve a configuration from the file header:
+
+- Use =org-reverse-datetree-goto-date-in-file= to jump to a date in the date tree. If this function is called non-interactively and the time argument is nil, it jumps to the current date. This can be used for =org-capture=.
+- =org-reverse-datetree-goto-read-date-in-file= is similar as above, but it always prompts for a date even if the function is called non-interactively.
+- =org-reverse-datetree-refile-to-file= is a function that refiles the current entry into a date tree. This can be used to build a custom command for refiling an entry to a particular file.
+*** Configuring date formats
+The format configuration is stored in the file header of each Org file, as shown in the following example:
+
+#+begin_src org
+  ,#+REVERSE_DATETREE_DATE_FORMAT: %Y-%m-%d %A
+  ,#+REVERSE_DATETREE_WEEK_FORMAT: %Y W%W
+  ,#+REVERSE_DATETREE_YEAR_FORMAT: %Y
+  ,#+REVERSE_DATETREE_USE_WEEK_TREE: t
+#+end_src
+
+These attributes are added by functions in this package on initial creation of the date tree, so you usually don't have to manually edit them.
+
+You can customize the default format by setting
+=org-reverse-datetree-{year,month,week,date}-format=.
+Note that the formats should be basically numeric and zero-prefixed, since
+date-tree headings are ordered lexicographically by their texts.
+You should avoid a month format starting with a string like "Feb" or "February". If you want to contain one, you should append it to a zero-prefixed numeric month.
+
+Another way to configure the structure is to set =org-reverse-datetree-level-formats= variable as a file-local variable. Through the variable, you can define a structure with any number of levels.
+For example, the following configuration enables date trees consisting of four levels (year-month-week-date) in all files (thanks [[https://github.com/samspo][@samspo]] for [[https://github.com/akirak/org-reverse-datetree/issues/4][reporting]]):
+
+#+begin_src emacs-lisp
+  (setq-default org-reverse-datetree-level-formats
+                '("%Y"                    ; year
+                  (lambda (time) (format-time-string "%Y-%m %B" (org-reverse-datetree-monday time))) ; month
+                  "%Y W%W"                ; week
+                  "%Y-%m-%d %A"           ; date
+                  ))
+#+end_src
+**** Non-reverse date tree
+Even though this package is named =org-reverse-datetree=, it is now possible to create a non-reverse date tree, i.e. a normal ascending date tree.
+
+To enable the feature, set =org-reverse-datetree-non-reverse= variable to non-nil. It is a file-local variable. The default continues to be a reverse date tree.
+*** Defining a capture template
+You can define an =org-capture= template which inserts an entry into a date tree with [[https://github.com/akirak/org-starter][org-starter]] package as follows:
+
+#+begin_src emacs-lisp
+(org-starter-def-capture "p"
+  "Commonplace book plain entry"
+  entry
+  (file+function "cpb.org" org-reverse-datetree-goto-date-in-file)
+  "* %?"
+  :clock-in t :clock-resume t :empty-lines 1)
+#+end_src
+
+Or with [[https://github.com/progfolio/doct][doct]]:
+
+#+begin_src emacs-lisp
+  (setq org-capture-templates
+        (doct '(("Commonplace book" :keys "c"
+                 :file "~/org/cpb.org"
+                 :function org-reverse-datetree-goto-date-in-file
+                 :template ("* %?")))))
+#+end_src
+**** :olp option
+Warning: This is an experimental feature, so advanced features such as refiling, archiving, and cleaning up (which are described later) are not supported for it.
+
+If you want a date tree under an outline path (like =file+olp+datetree= target in =org-capture=), call the function with =:olp= option:
+
+#+begin_src emacs-lisp
+  (org-reverse-datetree-goto-date-in-file nil :olp '("Group" "Subgroup 1"))
+#+end_src
+
+which you could use in a capture template like this:
+
+#+begin_src emacs-lisp
+  (setq org-capture-templates
+        '(("c" "Commonplace book" entry
+           (file+function "cpb.org"
+                          (lambda ()
+                            (org-reverse-datetree-goto-date-in-file
+                             nil :olp '("Group" "Subgroup 1"))))
+           "* %?"
+           :clock-in t :clock-resume t)))
+#+end_src
+
+When a new olp is created, it is ordered alphabetically (or lexicographically).
+
+*** Jumping to a particular date
+Use =org-reverse-datetree-goto-date-in-file= command to jump to a particular date in the date tree of the current file.
+*** Calendar integration
+If you run =org-reverse-datetree-calendar= from an Org file, =calendar= is shown with dates in the date tree highlighted.
+
+[[file:screenshots/calendar.png]]
+
+If you run =org-reverse-datetree-display-entry= in the calendar, a corresponding date entry in the date tree will be displayed in a window. If the date doesn't exist in the date tree, a new entry will be created.
+
+To navigate between highlighted dates in the calendar, use =org-reverse-datetree-calendar-next= and =org-reverse-datetree-calendar-previous=.
+
+The following is an example configuration for =calendar-mode-map=:
+
+#+begin_src emacs-lisp
+  (define-key calendar-mode-map "]" #'org-reverse-datetree-calendar-next)
+  (define-key calendar-mode-map "[" #'org-reverse-datetree-calendar-previous)
+  (define-key calendar-mode-map (kbd "RET") #'org-reverse-datetree-display-entry)
+#+end_src
+
+If you want to remove the highlights, run =org-reverse-datetree-unlink-calendar= command.
+*** Retrieving the current date in the date tree
+With =org-reverse-datetree-guess-date= function, you can retrieve the date of the entry at point where a date tree is effective.
+Note that this function may not work in certain situations, so it should be considered experimental.
+*** Defining a refile function
+With =org-reverse-datetree-refile-to-file=, you can define a function which can be used to refile entries to the date tree in a particular file:
+
+#+begin_src emacs-lisp
+  (defun akirak/org-refile-to-cpb (arg)
+    (interactive "P")
+    (org-reverse-datetree-refile-to-file "~/org/cpb.org" arg))
+#+end_src
+
+The date is determined according to =org-reverse-datetree-entry-time= custom variable.
+If a =C-u= prefix argument is given, the user is asked to pick a date manually.
+
+The second argument can be an Emacs time.
+The following example refiles the current entry to today:
+
+#+begin_src emacs-lisp
+  (defun akirak/org-refile-to-cpb-today (arg)
+    (interactive "P")
+    (org-reverse-datetree-refile-to-file "~/org/cpb.org" (current-time)))
+#+end_src
+
+The second argument can also take the same format as =org-reverse-datetree-entry-time=.
+The following function refile the current entry according to =CREATED_AT= property or the earliest clock:
+
+#+begin_src emacs-lisp
+  (defun akirak/org-refile-to-cpb-2 (arg)
+    (interactive "P")
+    (org-reverse-datetree-refile-to-file "~/org/cpb.org"
+                                         '((property "CREATED_AT")
+                                           (clock earliest))))
+#+end_src
+
+You can use this function both in =org-mode= (either on a single entry or on multiple entries under selection) and in =org-agenda-mode= (either on a single entry or on bulk entries). It retrieves a date for each entry if it operates on multiple entries.
+
+[[https://github.com/akirak/org-starter][org-starter]] package integrates with this function well.
+For example, you can define the following function:
+
+#+begin_src emacs-lisp
+  (defun akirak/org-refile-to-cpb (&optional arg)
+    (interactive "P")
+    (org-reverse-datetree-refile-to-file (org-starter-locate-file "cpb.org" nil t)
+                                         arg))
+#+end_src
+
+A recommended way to invoke this command is to add an entry to =org-starter-extra-refile-map= in org-starter package:
+
+#+begin_src emacs-lisp
+  (add-to-list 'org-starter-extra-refile-map
+               '("p" akirak/org-refile-to-cpb "cpb"))
+#+end_src
+
+Then you can run =org-starter-refile-by-key= and press ~p~ key to refile the selected entries to =cpb.org=.
+
+The following snippet is a naive implementation of a function which migrates entries in a date-tree file (the current buffer) to another date-tree file (=dest-file= argument):
+
+#+begin_src emacs-lisp
+  (defun org-reverse-datetree-migrate-to-file (dest-file)
+    (let ((depth (length (org-reverse-datetree--get-level-formats)))
+          ;; Prevent from showing the contexts for better performance
+          (org-reverse-datetree-show-context-detail nil))
+      (save-restriction
+        (widen)
+        (while (re-search-forward (rx-to-string `(and bol
+                                                      ,(make-string depth ?\*)
+                                                      space))
+                                  nil t)
+          (let ((date (thread-last (seq-drop (parse-time-string
+                                              (org-get-heading t t t t))
+                                             3)
+                        (append '(0 0 0))
+                        (encode-time))))
+            (if date
+                (progn
+                  (outline-next-heading)
+                  (while (= (1+ depth) (org-outline-level))
+                    (org-reverse-datetree-refile-to-file dest-file date)))
+              (user-error "Date is unavailable")))))))
+#+end_src
+*** Archiving
+:PROPERTIES:
+:CREATED_TIME: [2020-03-25 Wed 19:04]
+:END:
+You can archive a tree to a reverse datetree using =org-reverse-datetree-archive-subtree= command.
+It also works on multiple trees in an active region.
+
+The default destination can be customized by either setting
+=org-reverse-datetree-archive-file= custom variable or
+=REVERSE_DATETREE_ARCHIVE_FILE= property. The value should be a file path. The
+property can be set in an entry property (inherited) or in the file header.
+If none of the them are set, the function interactively prompts for a file name.
+
+From inside =org-agenda=, you can use =org-reverse-datetree-agenda-archive=.
+It doesn't work on bulk entries for now.
+*** Defining an agenda command
+With [[https://github.com/alphapapa/org-ql][org-ql]] package, you can define a function for browsing entries in a reverse date tree:
+
+#+begin_src emacs-lisp
+  (org-ql-search "~/org/cpb.org"
+    (level 4)
+    :sort priority)
+#+end_src
+
+You can also define a custom org-agenda command:
+
+#+begin_src emacs-lisp
+  (setq org-agenda-custom-commands
+        '(("c" "Browse entries in cpb.org"
+           org-ql-block '(level 4)
+           ((org-super-agenda-groups
+             '((:todo "DONE")
+               (:todo t)))
+            (org-agenda-files '("~/org/cpb.org"))))))
+#+end_src
+
+=org-super-agenda-groups= is an option for [[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] for grouping the contents. If you don't activate =org-super-agenda-mode=, that option is simply ignoerd.
+*** Cleaning up empty dates
+You can use =org-reverse-datetree-cleanup-empty-dates= command to clean up date entries that contains no children.
+*** Defining a custom org-ql predicate
+=org-reverse-datetree-date-child-p= function returns non-nil if and only if the heading is a direct child of a date heading in the date tree.
+You can use this function to define an [[https://github.com/alphapapa/org-ql][org-ql]] predicate that matches direct children of date trees:
+
+#+begin_src emacs-lisp
+  (org-ql-defpred datetree ()
+    "Return non-nil if the entry is a direct child of a date entry."
+    :body
+    (org-reverse-datetree-date-child-p))
+#+end_src
+
+The following code displays entries in the date tree using =org-ql-search=:
+
+#+begin_src emacs-lisp
+  (org-ql-search (current-buffer)
+    '(datetree))
+#+end_src
+** Configuration examples
+- [[https://out-of-cheese-error.netlify.com/spacemacs-config#org7963676][An Annotated Spacemacs - For an org-mode workflow ·]]: Using the package in some of his =org-capture= templates for clippling URLs, notes, and tasks.
+** Changelog
+:PROPERTIES:
+:TOC:      :depth 0
+:END:
+*** 0.4.4 (2025-05-13)
+- Add ~org-reverse-datetree-archive-file~ custom variable (requested by [[https://github.com/hanschen][Hans Chen]], see [[https://github.com/akirak/org-reverse-datetree/issues/74][#74]]).
+*** 0.4.3 (2025-04-01)
+- Parse datetree settings from the entire buffer (requested by Brad Stewart, a.k.a. ~@bradmont~)
+- Stop using ~if-let~ and ~when-let~ which are to be deprecated on Emacs 31.
+*** 0.4.2.2 (2024-06-19)
+- Fix a bug with parsing the clocked time of the entry.
+*** 0.4.2.1 (2024-05-30)
+- Fix usage of ~message~. Thank you [[https://github.com/leotaku][Leo Gaskin]] (@leotaku). ([[https://github.com/akirak/org-reverse-datetree/pull/60][#60]])
+- Require Emacs 29.1.
+*** 0.4.2 (2022-12-03)
+- Allow overriding org-read-date-prefer-future for the package. (See =org-reverse-datetree-prefer-future= custom variable)
+- If =org-use-effective-time= is non-nil, consider =org-extend-today-until= for determining the target date
+- Bugfix: Don't depend on org-time-stamp-formats to support Org 9.6
+- Bugfix: Don't throw an error when run in a file without a datetree
+- Bugfix: Restore the archive time
+- Bugfix: Skip the property drawer when inserting a new header
+- Require Emacs 28.1 and Org 9.5 as minimum dependencies
+*** 0.4.1 (2022-09-30)
+- Add =org-reverse-datetree-calendar-next= and =org-reverse-datetree-calendar-previous= commands.
+- Fix the face of calendar highlights to support light background.
+- Fix quotes in =cl-case= patterns.
+*** 0.4 (2022-08-31)
+- Add =org-reverse-datetree-date-child-p= function.
+- Add =org-reverse-datetree-default-entry-time= function.
+- =org-reverse-datetree-refile-to-file= function has been changed to return the time, unless a region is active in the =org-mode= buffer or bulk mode is active in =org-agenda-mode=.
+*** 0.3.14 (2022-08-13)
+- Add calendar integration.
+- Add =org-reverse-datetree-dates= function.
+*** 0.3.13 (2022-07-31)
+- Optimize the header reading by narrowing.
+- Add =org-reverse-datetree-num-levels= function.
+*** 0.3.12 (2022-07-02)
+- Add =org-reverse-datetree-guess-date= function.
+*** 0.3.11.1 (2022-05-22)
+- Add =org-reverse-datetree-map-entries= function.
+*** 0.3.10 (2022-03-11)
+- Add =match= entry type to =org-reverse-datetree-entry-time= custom variable.
+*** 0.3.9.1 (2022-03-09)
+- Hotfix for a bug introduced in 0.3.9 (reported by Tianshu Wang ([[https://github.com/tshu-w][@tshu-w]]) at [[https://github.com/akirak/org-reverse-datetree/issues/32][#32]])
+*** 0.3.9 (2022-03-04)
+- Add =org-reverse-datetree-entry-time= to allow customizing how to determine the date.
+- Make =org-reverse-datetree-refile-to-file= take =t= or patterns as the time argument.
+*** 0.3.8 (2022-02-22)
+- Add =org-reverse-datetree-show-context-detail= to allow customization of the behavior.
+*** 0.3.7 (2022-02-14)
+- Add =:olp= argument to functions. (Based on a feedback from [[https://github.com/krvpal][@krvpal]] at [[https://github.com/akirak/org-reverse-datetree/issues/23][#23]].)
+*** 0.3.6 (2022-01-18)
+- Add =org-reverse-datetree-show-context= option.
+*** 0.3.5 (2020-11-28)
+- Fix bugs with =org-reverse-datetree-cleanup-empty-dates=.
+- Switch to [[https://github.com/akirak/elinter/][elinter]] for CI.
+*** 0.3.4 (2020-09-23)
+Add a function for archiving from org-agenda, =org-reverse-datetree-agenda-archive=.
+*** 0.3.3 (2020-03-25)
+Add an initial support for archiving.
+*** 0.3.2 (2020-03-21)
+Add support for a non-reverse date tree.
+*** 0.3.1 (2020-02-24)
+- Fix a bunch of issues with =org-reverse-datetree-cleanup-empty-dates=. Explicitly documented the function in README.
+- Switch to GitHub Actions on running CI.
+** License
+GPL v3

@@ -1,0 +1,56 @@
+  +---------------------------------------------------------------------+
+  |             ____  __          __       ___________ ______           |
+  |            / __ \/ /_  __  __/ /____  / ____/ ___// ____/           |
+  |           / /_/ / __ \/ / / / // __ \/ /    \__ \/ /_               |
+  |          / ____/ / / / /_/ / // /_/ / /___ ___/ / __/               |
+  |         /_/   /_/ /_/\__, /_/ \____/\____//____/_/                  |
+  |                      /____/                                         |
+  |                                                                     |
+  |                 http://compbio.mit.edu/PhyloCSF                     | 
+  +---------------------------------------------------------------------+
+
+SOURCE DISTRIBUTION
+
+Please see our web site for more information about PhyloCSF and how to use it.
+PhyloCSF is written in OCaml. This source distribution is divided into a
+library, CamlPaml, containing generic infrastructure for phylogenetic rate
+models, and a program implementing the PhyloCSF-specific models and driver
+program. With additional development, the CamlPaml library will eventually be
+released as a separate entity, but for now it is just part of this
+distribution.
+
+Here are the steps to build the source:
+
+[1] Install the OCaml package manager OPAM
+
+http://opam.ocamlpro.com/doc/Quick_Install.html
+
+This will install a minimal OCaml toolchain (if not already present on your
+system) and the OPAM package manager. Once it's installed, initialize your
+shell environment by running: eval $(opam config env)
+
+[2] Install dependencies using OPAM
+
+opam install batteries ocaml+twt gsl
+
+The gsl package may require you to separately install the GNU Scientific
+Library (GSL) from: http://www.gnu.org/software/gsl/
+On Debian/Ubuntu systems GSL is available in the 'libgsl0-dev' package, and on
+Mac OS X, 'gsl' is available in both Homebrew and MacPorts.
+
+[3] Compile PhyloCSF
+
+Now just run 'make' in this directory. This will build and install the
+CamlPaml library, then compile the PhyloCSF executable and copy it to
+this directory. You can then use the ./PhyloCSF dispatch script like the
+examples found on our website, e.g.
+
+./PhyloCSF 12flies PhyloCSF_Examples/tal-AA.fa
+
+PhyloCSF should be usable in this way by anyone on the machine/cluster with rx
+permissions; they don't have to set up OPAM or anything else. PhyloCSF can
+be started from any working directory.
+
+If you want to 'install' PhyloCSF somewhere, you must transplant PhyloCSF,
+PhyloCSF.ARCH (where e.g. ARCH=Linux.x86_64), and the PhyloCSF_Parameters
+directory to the desired location.

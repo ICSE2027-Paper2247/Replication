@@ -1,0 +1,192 @@
+== dyn-edn
+
+image:https://img.shields.io/clojars/v/com.walmartlabs/dyn-edn.svg[Clojars Project, link="https://clojars.org/com.walmartlabs/dyn-edn"]
+
+Often, especially in production, you don't know all of the configuration until
+your application is actually started. For example, in a cloud provider,
+important IP addresses and port numbers are often assigned dynamically.
+This information is provided to the processes via environment variables.
+
+This approach has been codified as part of the link:https://12factor.net/config[12-Factor App] manifesto.
+
+However, in most Clojure projects, configuration is done primarily in terms of
+link:https://github.com/edn-format/edn[EDN format] configuration files.
+
+This library provides a number of reader macros that allow an EDN configuration file
+to reference data provided in environment variables, JVM system properties, or elsewhere.
+
+link:http://walmartlabs.github.io/apidocs/dyn-edn/[API Documentation]
+
+===  Overview
+
+`dyn-edn` introduces a little bit of indirection into the otherwise fixed content
+of an EDN file, in the form of reader macros.
+
+The dynamic bits are __properties__:
+
+  * Shell environment variables
+
+  * JVM System properties
+
+  * Explicitly provided properties
+
+The following reader macros are available:
+
+`#dyn/prop`::
+    Accesses dynamic properties. The value is either a key, or a vector of a key
+    and a default value.
+
+`#dyn/join`::
+    Joins a number of values together to form a single string; this is used when
+    building a single string from a mix of properties and static text.
+
+`#dyn/long`::
+    Converts a string to a long value.  Typically used with `#dyn/prop`.
+
+`#dyn/boolean`::
+    Converts a string to a boolean value.  Typically used with `#dyn/prop`.
+
+`#dyn/keyword`::
+    Converts a string to a keyword value. Typically used with `#dyn/prop`.
+
+Here's an example showing all the variants:
+
+[source,clojure]
+----
+{:connection-pool
+  {:user-name #dyn/prop [DB_USER "accountsuser"]
+   :user-pw #dyn/prop DB_PW
+   :url  #dyn/join ["jdbc:postgresql://"
+                       #dyn/prop [DB_HOST "localhost"]
+                       ":"
+                       #dyn/prop [DB_PORT "5432"]
+                       "/accounts"]}
+ :web-server
+  {:port #dyn/long #dyn/prop "WEB_PORT"}}
+----
+
+In this example, the `DB_USER`, `DB_PW`, `DB_HOST`, and `DB_PORT`, and `WEB_PORT` environment variables
+all play a role.
+`DB_USER` and `DB_PORT` are optional, since default values have been provided.
+
+Let's assume that the `DB_HOST` environment variable is `db.example.org`,
+`DB_PW` is `change-me`, and `WEB_PORT` was `8192`,
+and the other referenced environment variables are unset.
+
+After parsing and reader macro expansion, the resulting data will be:
+
+[source,clojure]
+----
+{:connection-pool
+  {:user-name "accountsuser"
+   :user-pw   "change-me"
+   :url        "jdbc:postgresql://db.example.org:5432/accounts"}
+ :web-server
+  {:port 8192}}
+----
+
+Notice that combining `#dyn/long` and `#dyn/prop` has ensured that the web server port number is present
+as a number, not as a string.
+
+=== Property Lookup
+
+The `#dyn/prop` macro's value is either single key, or a vector of a key and a default value.
+The key may be a symbol, keyword, or string.
+
+An exception is thrown if the property is not found and there is no default.
+
+For environment variables or JVM system properties, the dynamic value that replaces
+the macro will always be a string.
+For explicit properties, the dynamic value is typically a string, but can be any Clojure data: string, number, keyword, even
+a map or vector.
+
+Underneath the covers, the key is used for a simple lookup in a map.
+The map is a merge of all environment variables, all JVM system properties, and any application-provided
+properties.
+
+As a convenience, each environment variable is added to the map _twice_: one using a string key, and once
+with the string key converted to a symbol.
+
+JVM system properties are added using string keys and string values.
+
+Application properties are added exactly as provided; typically this means keyword keys and any kind of data values.
+
+=== Usage
+
+The `env-readers` function returns a map of readers; it may optionally be passed additional
+properties beyond those obtained from docker secrets, environment variables and JVM system properties.
+
+[source,clojure]
+----
+(require '[clojure.edn :as edn]
+         '[clojure.java.io :as io]
+         '[com.walmartlabs.dyn-edn :refer [env-readers]])
+
+(->> "config.edn"
+     io/resource
+     slurp
+     (edn/read-string {:readers (env-readers)}))
+----
+
+=== Usage with Docker secrets
+
+In a docker swarm secrets can be passed to a container when the container is added as a service to the swarm. In the default case,
+these secrets are mounted from tmpfs at /run/secrets although this location can be specified when the service is
+created.
+
+e.g.
+
+[source,sh]
+----
+$ printf <secret> | docker secret create my_secret -
+
+$ docker service create --replicas 1 --name <servicename> \
+    --secret src=my-secret,target="/mysecrets/mysecret" \
+    --publish published=8081,target=8081 <image:tag>
+----
+
+The above will create a secret called `my-secret` and make it available as a file at `/mysecrets/mysecret`.
+
+The following can be used to recover the secret within the Docker container:
+
+[source,clojure]
+----
+(require '[clojure.edn :as edn]
+         '[clojure.java.io :as io]
+         '[com.walmartlabs.dyn-edn :refer [env-readers]])
+
+(->> "config.edn"
+     io/resource
+     slurp
+     (edn/read-string
+       {:readers (env-readers
+                   {:docker-secrets-dir "/mysecrets"})}))
+----
+
+If `:docker-secrets-dir` is not available as a property, it's assumed that all secrets have been mounted at
+`/run/secrets` (which is Docker's default location).
+
+NOTE: In order for secrets to be available under this library, it is assumed that all secrets are mounted in the same directory.
+
+Using the example above
+
+[source,sh]
+----
+$ printf 5432 | docker secret create DB_PORT -
+
+$ docker service create --replicas 1 --name <servicename> \
+    --secret DB_PORT \
+    --publish published=8081,target=8081 <image:tag>
+----
+
+and if DB_PORT is **not** in the Environment of the container, the outcome will be the same. The value of the parameter
+will be read from the file at `/run/secrets/DB_PORT` and made available.
+
+NOTE: the value of an env variable with a particular name will overwrite a secret with
+that name i.e. an environment variable has precedence.
+
+=== License
+
+Copyright (c) [2018]-present, Wal-Mart Store, Inc.
+
+Distributed under the Apache Software License 2.0.

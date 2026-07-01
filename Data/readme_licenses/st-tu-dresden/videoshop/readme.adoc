@@ -1,0 +1,113 @@
+= VideoShop - A Salespoint example project
+:experimental:
+
+image:https://github.com/st-tu-dresden/videoshop/workflows/Build%20Maven%20artifacts/badge.svg["Build Status", link="https://github.com/st-tu-dresden/videoshop/actions"]
+
+Purpose of this sample project is to make students familiar with basic technologies they're going to use during the Software Engineering Lab at Technical University of Dresden.
+
+## Quickstart
+
+NOTE: The Quickstart requires Java 21 and a recent Git (2.46 or newer preferred) to be available on your machine. If you miss any of those go through the steps described in <<prerequisites>>.
+Also, note that you have to run `mvnw.cmd` instead of `./mvnw` if you run Windows by accident.
+
+[source, shell]
+----
+$ git clone https://github.com/st-tu-dresden/videoshop
+$ cd videoshop
+$ ./mvnw clean package
+$ ./mvnw spring-boot:run
+----
+
+After that point your browser to `http://localhost:8080`.
+
+Note that the standard admin user is named `boss` and has the password `123`.
+
+## Prerequisites
+
+### Java 21
+
+https://adoptium.net/temurin/releases/?version=21[Download] the binaries, install. Make sure the console shows something like this:
+
+[source, bash]
+----
+$ java -version
+openjdk version "21.0.4" 2024-07-16 LTS
+OpenJDK Runtime Environment Temurin-21.0.4+7 (build 21.0.4+7-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.4+7 (build 21.0.4+7-LTS, mixed mode)
+----
+
+Make sure that the wrapped Maven picks up the same JDK version and that the following command shows similar output:
+
+[source, bash]
+----
+$ ./mvnw --version
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /.m2/wrapper/dists/apache-maven-3.9.9/3477a4f1
+Java version: 21.0.4, vendor: Eclipse Adoptium, runtime: /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "14.7", arch: "aarch64", family: "mac"
+----
+
+### Git
+
+https://git-scm.com/download[Download] the binaries, run the installer. Verify the command line shows something like this after install:
+
+[source, bash]
+----
+$ git --version
+git version 2.46.1
+----
+
+## IDE Setup
+
+### Eclipse
+
+Grab the latest https://spring.io/tools[Spring Tool Suite] (plain Eclipse should work as well), run installer or unzip and run it.
+
+Select menu:File[Import], select menu:Maven[Existing Maven Projects], select the folder you checked the project out into and hit btn:[Finish]. This will import the project into your workspace.
+
+In the Console view you might wanna click the btn:[Open Console] button and select Maven Console to see that Maven is downloading dependencies, sources and Javadocs.
+
+### IntelliJ
+
+Grab the latest https://www.jetbrains.com/idea/download/[IntelliJ IDEA IDE] (both Community Edition and Ultimate Edition will work), install it according to the instructions on their website and run it.
+
+From the Welcome Screen, select btn:[Open]. Otherwise, if you've already opened another project, you'll need to select menu:File[Open…].
+Now, navigate to the folder you checked the project out into (it should contain `pom.xml`), select it and hit btn:[Open].
+When asked whether to trust and open the Maven project, proceed with btn:[Trust Project].
+
+Now you have to wait a bit while IntelliJ and Maven work on importing the project, which includes downloading all required dependencies from the internet.
+All IDE activities are displayed in the status bar.
+
+## Technology stack
+
+This sample application is build on top of the following technologies:
+
+### Spring Boot
+
+Rapid application development framework based on Spring (see below).
+
+- https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle[Reference documentation]
+- https://spring.io/guides[Getting started guides]
+- https://projects.spring.io/spring-boot[Project home]
+
+### Spring 5
+
+The de-facto standard Java application framework.
+
+- https://spring.io/guides[Getting started guides]
+- https://projects.spring.io/spring-framework[Project home]
+
+### Spring Data JPA
+
+Spring module to easily build data access layers using JPA 2.1 (Java Persistence API).
+
+- https://spring.io/guides?filter=jpa[Getting started guides]
+- https://projects.spring.io/spring-data-jpa[Project home]
+
+### Thymeleaf
+
+Library to build HTML web views using natural templating.
+
+- https://spring.io/guides/gs/serving-web-content[Getting started guide]
+- https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html[Tutorial]

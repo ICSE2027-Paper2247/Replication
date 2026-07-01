@@ -1,0 +1,96 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://i.imgur.com/hzVv8Cx.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://i.imgur.com/d9ldRKK.png">
+  <img alt="Discord TicTacToe logo" src="https://i.imgur.com/d9ldRKK.png">
+</picture>
+
+<div align="center">
+  <p>
+    <strong>
+      An innovative Bot for playing Tic Tac Toe on Discord!
+      <br />
+      Created with <a href="https://github.com/discordjs/discord.js">discord.js</a>.
+    </strong>
+  </p>
+
+  <p>
+    <a href="https://github.com/utarwyn/discord-tictactoe/releases/latest"><img src="https://img.shields.io/github/v/release/utarwyn/discord-tictactoe" alt="GitHub release"></a>
+    <a href="https://npmjs.com/package/discord-tictactoe"><img src="https://img.shields.io/npm/dt/discord-tictactoe?color=eb2f06&logo=npm" alt="npm Downloads"></a>
+    <a href="https://hub.docker.com/r/utarwyn/discord-tictactoe"><img src="https://img.shields.io/badge/docker-available-blue?logo=docker&color=0db7ed" alt="Available on DockerHub"></a>
+    <a href="https://sonarcloud.io/dashboard?id=utarwyn_discord-tictactoe"><img src="https://sonarcloud.io/api/project_badges/measure?project=utarwyn_discord-tictactoe&metric=alert_status" alt="Quality Gate Status"></a>
+  </p>
+  
+  <img src="https://i.imgur.com/QB7z1j4.gif" alt="demo" />
+</div>
+
+## About
+
+"Discord TicTacToe" is a **self-hosted NodeJS bot** which allows you to play the popular TicTacToe game on Discord.
+Invite your friends or play against our robot, a fearsome opponent. Use `/tictactoe` command to challenge someone else
+and use buttons to play, so simple! Works **out-of-the-box**, no configuration needed.
+
+If you have a problem when using the bot, or you want to propose a new feature, feel free to open an issue.
+
+Have fun! 🥳
+
+## Requirements
+
+Before installing the bot, you need to create your own [Discord Application][6].
+Then, you can install the bot via Docker or npm (check below!). If you are not a programmer, I recommend you to opt for Docker because its the easiest solution.
+
+> [!IMPORTANT]
+> Make sure your Discord bot has these permissions in all channels where games can be played:
+> "Read message history", "Send messages", "View channel", "Application commands" or "Add reactions" depending on what you plan to use.
+
+## Installation
+
+The module is suitable for discord.js **v14** and requires an active **LTS version** of Node.
+
+> [!WARNING]
+> **Module v3 is unsupported** as it uses the outdated discord.js v13. Please upgrade to v4 (`discord-tictactoe@^4`) which uses discord.js v14. v3 will no longer receive updates or support.
+
+The bot works **out-of-the-box**. But if you want to configure it, check [config.example.json][7] file in the config folder.
+
+## Running via Docker
+
+1. Make sure to have Docker installed.
+2. Start Docker container based on one of our [DockerHub images][1] using an API token:\
+   `docker run -e TOKEN=YOUR_TOKEN utarwyn/discord-tictactoe@4`
+3. You can pass options directly with `-e OPTION_NAME=option_value` or use the option `-v $(pwd)/config/config.json:/app/config/config.json` to load an entire config file.
+
+## Running via Node.js
+
+1. Check with `node -v` that you are running appropriate Node.js version.
+2. Install the project from [npm][2]:\
+   `npm install discord-tictactoe` or `yarn add discord-tictactoe`
+3. Import module into your script:
+   ```javascript
+   const TicTacToe = require('discord-tictactoe');
+   ```
+4. Check usage examples in this [wiki page][10].
+
+## Setup slash command ✨
+
+Slash command are enabled by default **starting from v3**!\
+Just mention the bot with `tttdeploy` somewhere in your server to install it (admin only).
+
+🚀 Want more info? Check [this detailed guide][8].
+
+## License
+
+"Discord TicTacToe" is open-sourced software licensed under the [Apache-2.0 license][3].
+
+---
+
+> GitHub [@utarwyn][4] &nbsp;&middot;&nbsp; Twitter [@Utarwyn][5]
+
+[1]: https://hub.docker.com/r/utarwyn/discord-tictactoe
+[2]: https://www.npmjs.com/package/discord-tictactoe
+[3]: https://github.com/utarwyn/discord-tictactoe/blob/next/LICENSE
+[4]: https://github.com/utarwyn
+[5]: https://twitter.com/Utarwyn
+[6]: https://discordapp.com/developers/applications
+[7]: https://github.com/utarwyn/discord-tictactoe/blob/next/config/config.example.json
+[8]: https://github.com/utarwyn/discord-tictactoe/wiki/Using-slash-command-in-V3-and-V4
+[9]: https://github.com/utarwyn/discord-tictactoe/wiki/Using-slash-command-in-V2
+[10]: https://github.com/utarwyn/discord-tictactoe/wiki/Usage-examples-with-Node.js

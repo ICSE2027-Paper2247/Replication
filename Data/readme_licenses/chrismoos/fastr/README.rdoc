@@ -1,0 +1,366 @@
+= fastr
+
+Micro web framework for Ruby. Should be used with an EventMachine rack server.
+
+== Guide
+
+The guide is a work in progress, check it out here: http://chrismoos.com/fastr
+
+You can help with the guide by forking this repository: http://github.com/chrismoos/fastr_doc
+
+== API Documentation
+
+You can see the latest API documentation here: http://rdoc.info/projects/chrismoos/fastr
+
+== Getting Started
+
+  $ sudo gem install fastr
+  $ fastr init helloworld
+  $ cd helloworld
+  $ thin -p 5000 start
+
+== Directory Structure
+
+The directory structure is similar to rails:
+
+* app/(config/controller/views/models)
+* public
+* lib
+* test
+
+== Routes
+
+The routes are configured in app/config/routes.rb
+
+  router.draw do |route|
+  	route.for '/:controller/:action'
+  	# route.for '/home/:action', :action => '[A-Za-z]+'
+  	# route.for '/test', :to => 'home#index'
+  	# route.for '/users/:id', :to => 'users#create', :methods => [:post]
+  end
+  
+By default a route will match against all HTTP methods (GET, POST, etc,.).
+  
+== Settings
+
+Various settings can be configured in app/config/settings.rb
+
+  config.log_level = Logger::DEBUG
+  config.cache_templates = true
+  config.plugins << MyPluginModule
+  
+== Controller
+  
+  class HomeController < Fastr::Controller
+    def index
+      render(:text, "Hello, world!")
+    end
+  end
+  
+= Request/Response Information
+
+== Headers
+
+You can set response headers by accessing the attribute headers:
+
+  self.headers['My-Header'] = 'value'
+  
+== Cookies
+
+You can read cookies by accessing the attribute cookies:
+
+  puts self.cookies['MY_SESS_COOKIE']
+  
+Set cookie:
+
+  set_cookie("sess", myuniquekey, {:expires => Time.now + 3600})
+
+== Return a view in a controller
+
+The return for a controller is just a rack response, i.e [200, {"Content-Type" => "text/plain"}, "Hello, World!"]
+
+You can also use the following render methods:
+
+  render(:text, "My text")
+
+Fastr currently has support for HAML and eRuby templates. Any instance variables in your controller are available in the template. The correct template engine will be chosen based on the file extension. By default no template engines will be loaded, you need to explicitly require the engine(s) you will be using in your init.rb file (below the require 'fastr' line):
+
+  require 'fastr'
+  require 'fastr/template/erubis'
+  require 'fastr/template/haml'
+
+Some rendering examples:
+
+  render(:template, "users/index.haml") # this path is relative to your app/views/ folder
+  render(:template, "users/index.html.erb") # this path is relative to your app/views/ folder
+
+You can also specify a hash of data that will be available in the @vars instance variable from your template:
+
+  render(:template, "users/index.html.erb", {:vars => {:greeting => "Aloha!"}})
+
+This is particularly useful when you render a partial:
+
+  render(:partial, "users/_greeting.html.erb", {:vars => {:message => "Welcome!"}})
+
+It's also possible to specify a response code and headers:
+
+  render(:template, "users/index.html.erb", {:vars => {:greeting => "Aloha!"}, :response_code => 200, :headers => "Content-Type" => "text/html"})
+
+JSON:
+
+  render(:json, {:status => "ok", :message => "done"})
+
+== Async Responses
+
+You should never block EventMachine. If you're doing any kind of I/O in your controller action you need to render your response asynchronously:
+
+  class DemoController < Fastr::Controller
+    def fast_index
+      EM.add_timer(1) do
+        async_resp { render(:text, "fast_index\n") }
+      end
+      render_async
+    end
+  
+    def slow_index
+      sleep(1)
+      render(:text, "slow_index\n")
+    end
+  end
+
+Here's the difference:
+
+  $ ab -n 10 -c 10 "http://127.0.0.1:4444/demo/fast_index"
+  Concurrency Level:      10
+  Time taken for tests:   1.010 seconds
+  Requests per second:    9.90 [#/sec] (mean)
+
+  $ ab -n 10 -c 10 "http://127.0.0.1:4444/demo/slow_index"
+  Concurrency Level:      10
+  Time taken for tests:   10.011 seconds
+  Requests per second:    1.00 [#/sec] (mean)
+
+If all your actions in a controller are async you can use an after_filter to make things cleaner:
+
+  class DemoController < Fastr::Controller
+    after_filter :render_async
+  
+    def index
+      EM.add_timer(1) do
+        async_resp { render(:text, "fast_index\n") }
+      end
+    end
+  end
+
+== Deferred Responses
+
+fastr also lets you return a deferred response. This is useful if you want to chunk the response back to the client, or have a long running operation that you want to perform without blocking EventMachine.
+
+The following is an example of a deferred response. It executes a sleep which normally would block EventMachine, but by using response.task, we tell EventMachine to run this code in its internal thread pool and when finished the callback is executed.
+
+The following is an example of a controller action.
+
+  def long_running_task
+    defer_response(200, {"Content-Type" => "text/plain"}) do |response|
+      puts "in our deferred response...now we can do cool stuff!"
+      response.send_data("hey\n")
+      
+      long_task = proc {
+        log.debug "Sleeping for 5 seconds...but this won't block other requests"
+        sleep(5)
+        log.debug "Finished sleeping, returning response to client."
+        return "finished"
+      }
+      
+      callback = proc { |result|
+        log.debug "Callback result: #{result}"
+        response.send_data("#{result}\n")
+        response.succeed
+      }
+      
+      # This is used to get a callback when the request's connection is closed
+      response.closed do
+        puts "Connection closed."
+      end
+      
+      response.task(long_task, callback)
+    end
+  end
+  
+== AsyncRecord (experimental database support)
+
+One of the greatest things about running on an event-based server is that you can get accelerated performance in database access. 
+
+Usually there is a lot of time spent blocking for a database query to return. In Fastr, using AsyncRecord, your queries don't block the request. You will receive a callback once the query has completed. This has major performance implications. 
+
+NOTE: Even though your connections are non-blocking to the database server, the database server is still blocking when accessing IO (disk/memory). 
+
+To use AsyncRecord, do the following:
+
+Setup your init.rb file:
+  
+  require 'async_record'
+  conn = AsyncRecord::Connection::MySQL.new(:host => "127.0.0.1", :port => 3306, :user => "root", :database => "database")
+  conn.connect
+  AsyncRecord::Base.set_connection(conn)
+  
+Define a model (app/models/user.rb):
+
+  class User < AsyncRecord::Base
+    set_table_name "users"
+  end
+
+=== Controller  
+  
+In your controller, try the following (remember to put the following in a deferred response):
+  
+=== Get all the rows in the table:
+
+  User.all(:limit => 256) do |users|
+    users.each do |user|
+      response.send_data("#{user.username}\n")
+    end
+    response.succeed
+  end
+  
+=== Find a row by ID
+
+  User.find(1) do |user|
+    if user.nil?
+      response.send_data("User not found")
+    else
+      response.send_data("User: #{user.username}\n")
+    end
+    response.succeed
+  end
+  
+=== Get the count of rows in the table
+
+  User.count do |count|
+    response.send_data("Count: #{count}")
+    response.succeed
+  end
+  
+=== Run a custom query
+
+  User.query("select username from users") do |results|
+    response.send_data("Results: #{results.inspect}")
+    response.succeed
+  end
+  
+WARNING: AsyncRecord is under heavy development, but its pretty cool :).
+  
+== Plugins
+
+=== Available plugins
+
+* fastr-compress --
+  compresses output with gzip or deflate
+  http://github.com/chrismoos/fastr-compress
+
+=== Loading manually
+
+To explicitly load a plugin that doesn't exist in your custom/plugins directory, you can do the following in your *settings.rb* file:
+
+  config.plugins << MyPluginModule
+
+=== Loading from custom directory
+
+Fastr searches the custom/plugins directory in your application's root directory for loading plugins.
+
+Example structure:
+
+* custom/plugins/my_test/plugin.rb
+* custom/plugins/my_test/lib/*.rb
+
+When a plugin is found, the plugin.rb file is loaded. It should contain a module that matches the name of your plugin, ending with the word plugin.
+
+Example:
+
+Directory: my_test
+
+Module name: MyTestPlugin
+
+Here is an example plugin and what is currently supported:
+
+  module MyTestPlugin
+    def self.after_boot(app)
+      puts "booted: #{app}"
+    end
+
+    def self.before_dispatch(app, env)
+      env
+    end
+
+    def self.after_dispatch(app, env, response)
+      response
+    end
+  end
+  
+== Filters
+
+You can add before and after filters to your controller. The filters are executed before an action is called, and after.
+
+=== Before Filters
+
+  before_filter :my_before_filter_noop, :my_before_filter_halt
+  
+  def my_before_filter_noop
+    filter_continue # use this if you want the filter chain to continue
+  end
+  
+  def my_before_filter_halt
+    [200, {}, ["STOP HERE AND RETURN"]] # Return a rack response if you want the chain to halt
+  end
+  
+=== After Filters
+
+  after_filter :my_after_filter
+  
+  def my_after_filter(response)
+    # here you can modify the response
+    # response is just a rack response, i.e [200, {}, "Hello, Filter!"]
+    # This filter adds a custom header
+    code, headers, body = *response
+    headers['My-Custom-Header'] = 'vall'
+    
+    [code, headers, body]
+  end
+
+== Static Files
+
+Anything stored in the public folder in your project's root directory will be served as a static file. This directory is checked before the routes. The mime type is set based on the file's extension.
+
+== Change Log
+
+0.3
+
+* Added kqueue/epoll.
+* Fixed dependencies.
+* Added loading of model and lib directories.
+* Added settings file.
+* Added controller params.
+* Added ability to disable template caching.
+* Added closed callback for deferred responses.
+* Added static file serving.
+* Added JSON rendering.
+* Added response headers and cookie handling.
+* Added plugins.
+
+== Current Status
+
+Right now just the base is done. The controller supports a very basic render method.
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Chris Moos. See LICENSE for details.

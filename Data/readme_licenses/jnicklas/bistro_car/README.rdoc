@@ -1,0 +1,88 @@
+= BistroCar
+
+* http://github.com/jnicklas/bistro_car
+
+== Description:
+
+BistroCar serves up {CoffeeScript}[http://jashkenas.github.com/coffee-script/]
+from within your Rails application.
+
+== Install:
+
+You'll need to install {node.js}[http://nodejs.org/#download] and
+{CoffeeScript}[http://jashkenas.github.com/coffee-script/#installation].
+
+Add it as a gem dependency to you Rails application:
+
+    config.gem "bistro_car"
+
+== Usage:
+
+Add your CoffeeScript files to <tt>app/scripts</tt>. Then in your layout or wherever else suits you, add:
+
+    <%= coffee_script_bundle %>
+
+This will insert automatically link to your JavaScriptified CoffeeScript files. You might find it useful, for debugging purposes, to render your CoffeeScript inline, instead of linking to external scripts, you can do that with:
+
+    <%= coffee_script_bundle :mode => :inline %>
+
+You can set this for the entire application:
+
+    BistroCar.mode = :inline
+
+== Secondary bundles:
+
+You're encouraged to create only a single bundle, but sometimes you might find it useful/necessary to create multiple bundles for different parts of your application. In that case you can create a directory structure like this:
+
+    + app
+      + scripts
+        + admin
+          - admin.coffee
+          - other_admin.coffee
+        - application.coffee
+
+Now you can require both bundles like this:
+
+    <%= coffee_script_bundle :admin %>
+
+== Minification:
+
+You can make BistroCar minify your JavaScript bundles using JSMin by setting:
+
+    BistroCar.minify = true
+
+This is done automatically for the production environment.
+
+== Inline CoffeeScript
+
+You can also render CoffeeScript inline from within your erb templates like this:
+
+    <% coffee_script do %>
+      x: x => x * 2
+      y: y => y + 2
+    <% end %>
+
+== License:
+
+(The MIT License)
+
+Copyright (c) 2010 Jonas Nicklas
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -1,0 +1,132 @@
+"Sandie":http://github.com/premasagar/sandie is a simple method for creating a new JavaScript _context_ in the browser, e.g. for loading external scripts into a page without affecting the global scope of the document. This is useful when there is a need to avoid collisions between otherwise conflicting scripts and to keep the global namespace clean - e.g. when including third-party JavaScript widgets in a web page (see the "Sqwidget project":http://github.com/premasagar/sqwidget).
+
+Scripts are sandboxed by loading them inside the window of a temporary iframe, and then returned to a callback function, so that they can be used elsewhere on the main document.
+
+* by "Premasagar Rose":http://github.com/premasagar
+** "premasagar.com":http://premasagar.com / "dharmafly.com":http://dharmafly.com
+* "MIT license":http://opensource.org/licenses/mit-license.php
+
+
+h1. Usage
+
+See initial demo at "dharmafly.com/sandie/demo/":http://dharmafly.com/sandie/demo/
+
+
+h2. Avoid var collisions between competing scripts
+
+bc. var foo = 'bar';
+sandie(
+    'script.js',            // this example script contains "var foo = 'blah';"
+    function(exports){      // a callback function, containing vars added by the script
+        alert(foo);         // 'bar' (from global scope in the main document)
+        alert(exports.foo); // 'blah' (from the sandboxed script)
+    }
+);
+
+
+h2. Load multiple scripts
+
+bc. sandie(
+    ['script1.js', 'script2.js'], // multiple script src's
+    function(exports){            // 'exports' is an object, with properties 'foo1' & 'foo2' from the scripts
+        alert(exports.foo1 + exports.foo2);
+    }
+);
+
+
+h2. Load objects and pass functions into the sandbox
+
+bc. sandie(
+    [{foo1:bar}, function(){this.foo2 = 'blah';}, 'foo3.js'],   // objects, functions and external scripts
+    function(exports){                 // 'exports' is a key-value object of 'foo1', 'foo2' & 'foo3'
+        alert(exports.foo1 + exports.foo2 + exports.foo3);
+    }
+);
+
+In this example, an object is merged into the global scope of the sandbox (i.e. the iframe @window@), a function is executed in the scope of the sandbox, and then an external script is loaded.
+
+This is useful, for example, when certain variables and functions are required to be in place before loading an external script.
+
+
+h2. Eval code in the sandbox
+
+Pass a string of code, contained within a @<script></script>@ wrapper:
+
+bc. sandie('<script>var evilThing = "foo";</script>', callback);
+
+Scripts to be eval'ed can also be passed along with the other types of scripts (external scripts, objects and functions), but (for the moment, at least), the eval'ed script should come first:
+
+bc. sandie(['<script>var evilThing = "foo";</script>', {foo:'bar'}, 'example.js'], callback);
+
+This can be utilised, for example, to prevent a malicious script from accessing global properties, by masking the @window@ property:
+
+bc. sandie(['<script>var window = {};</script>', 'evil.js'], callback);
+
+Or by masking more fine-grained properties:
+
+bc. sandie(['<script>window.parent = null;</script>', 'evil.js'], callback);
+
+See the note on "Security", below.
+
+
+h2. Optional third argument: @persist@
+
+By default, the sandbox will clean up after itself once all the scripts have loaded. To keep keep the sandbox open, so that further scripts can be loaded or further manipulations can be made, simply pass boolean @true@ as the third argument.
+
+The callback function can now be used to manipulate the sandbox further, e.g. via the @load()@ method, which takes the same arguments as the initial constructor:
+
+bc. sandie(
+    'example.js',
+    function(){
+        this.load('example2.js', function(vars){
+            doSomething(vars);
+        });
+    },
+    true
+);
+
+
+h2. Document additional methods
+
+For the moment, check out the source code of @sandie.js@ to see what's available.
+
+
+h2. Example uses
+
+* Allowing widgets to load different versions of the same plugin or JavaScript library
+* Allowing widgets to load different scripts that use the same names for global variables
+* (In fact, these are exactly the use cases of "Sqwidget":http://github.com/premasagar/sqwidget, which Sandie was created for)
+
+
+h2. Security
+
+The initial use case for Sandie was to contain potentially messy, but otherwise trusted, third-party scripts. However, it is also possible to contain malicious scripts. E.g. you can prevent a malicious script from accessing global properties, by masking the local @window@ variable:
+
+bc. sandie(['<script>var window = {};</script>', 'evil.js'], callback);
+
+In this example, the malicious script will be unable to access the global parent window or the local document. (Disclaimer: this has not yet been rigorously tested; please do share any research you perform in this area).
+
+Some third-party might legitimately want to access the containing window. Such scripts will break when the sandbox is locked down in this way.
+
+A more sophisticated API for bulletproofing a secure sandbox will be added to Sandie in future. (Your patches and pull requests are very welcome).
+
+
+h2. Project status
+
+The script is under active development, with extended functionality on its way. It is confirmed working in all browsers tested:
+
+* Chrome 5 on Ubuntu & Windows Vista
+* Chrome 6 on Ubuntu
+* Firefox 3.6.4
+* Firefox 2.0.0 on Windows XP
+* IE8 on Windows Vista
+* IE7 on Windows XP
+* IE6 on Windows XP
+* Safari 4.0.5 on Windows Vista
+* Safari 3.2.2 on Windows XP
+* Opera 10.10 on Ubuntu
+* Opera 10.60a on Ubuntu
+* Opera 10.10 on Windows Vista
+* Mobile: Safari on iPhone 3G v3.1.3
+* Mobile: Android 1.6 with browser v4
+* Mobile: Opera Mini on iPhone

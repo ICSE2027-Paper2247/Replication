@@ -1,0 +1,32 @@
+* Overview
+My code for the Deep Learning class exercises. There should be nothing
+proprietary in here. For the earlier exercises, I tried to create
+parallel implementations in Octave and NumPy. Later on, class-supplied
+helper code necessitated the use of Matlab (for now).
+
+* Materials
+- [[http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=DeepLearning][OpenClassroom Regression Tutorial]]
+- [[http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial][UFLDF Tutorial Wiki]]
+
+* Note
+
+- The L-BFGS Matlab code is licensed by Stanford under a Creative Commons,
+  Attribute, Non-Commercial license. Please read the
+  [[http://ufldl.stanford.edu/wiki/index.php/Exercise:Sparse_Autoencoder#Sparse_autoencoder_implementation][details on the UFLDL wiki]].
+- The MNIST digit data comes from [[http://yann.lecun.com/exdb/mnist/]].
+* Questions
+** UFLDL
+"Since J(W,b) is a non-convex function, gradient descent is
+susceptible to local optima; however, in practice gradient descent
+usually works fairly well." - [[http://ufldl.stanford.edu/wiki/index.php/Backpropagation_Algorithm][UFLDL/Backpropagation]]
+
+Why? Is it *almost* convex? Are the local optima all of a similar
+quality? Are any of the variations (squared error / squared error +
+weight decay / squared error + weight decay + sparsity constraints)
+convex?
+* Tasks
+** Python
+*** TODO Get [[file:ufldf/stackedae_exercise/stackedae_exercise.py][stackedae_exercise.py]] to work.
+*** TODO Implement [[file:ufldf/linear_decoder_exercise][linear_decoder_exercise]].
+*** TODO Implement [[file:ufldf/cnn_exercise][cnn_exercise]].
+

@@ -1,0 +1,135 @@
+Backbone Factory
+================
+
+Introduction
+------------
+
+Backbone Factory is a small javascript library for creating [Backbone.js](http://documentcloud.github.com/backbone/) objects for testing your code. It has no external dependency. 
+
+The API is heavily inspired by the awesome [Factory Girl](https://github.com/thoughtbot/factory_girl). 
+
+
+Installation
+------------
+
+To use it, just [download](https://github.com/SupportBee/Backbone-Factory/raw/master/public/javascripts/backbone-factory.js) the file and include it in your testing setup.  
+Usage
+-----
+
+Lets say you have two Backbone models, Post and User
+
+```javascript
+var User = Backbone.Model.extend({
+
+  name: null,
+  email: null
+
+});
+
+var Post = Backbone.Model.extend({
+
+  defaults: {
+    title: 'Default Title'
+  }
+
+});
+```
+
+### Defining Factories
+
+To define factories for them
+
+```javascript
+var postFactory = BackboneFactory.define('post', Post);
+var userFactory = BackboneFactory.define('user', User);
+```
+
+### Using Factories
+
+To use these factories, 
+
+```javscript
+this.postObject = BackboneFactory.create('post');
+this.userObject = BackboneFactory.create('user');
+```
+
+This will create objects using the [defaults](http://documentcloud.github.com/backbone/#Model-defaults) you have in your class definitions.
+
+
+### Defining Sequences 
+
+```javascript
+var emailSequence = BackboneFactory.define_sequence('email', function(n){
+        return "person"+n+"@example.com"; 
+      });
+```
+
+### Using Sequences
+
+```javascript
+var email = BackboneFactory.next('email') // person1@example.com
+```
+
+### Defining Factories with defaults
+
+```javascript
+var userFactory = BackboneFactory.define('user', User, function(){
+                                   return {
+                                     name : 'Backbone User',
+                                     email: BackboneFactory.next('person_email')
+                                      };
+                                    }
+                                   );
+```
+
+### Overriding defaults when creating objects
+
+```javascript
+var userWithEmail = BackboneFactory.create('user', function(){
+                                             return {
+                                                email: 'overriden@example.com'
+                                              };
+                            });
+ ```
+
+Contributing
+------------
+
+1. Open a ticket on GitHub, maybe someone else has the problem too
+2. Make a fork of my GitHub repository
+3. Make a spec driven change to the code base (we use [jasmine](http://pivotal.github.com/jasmine/))
+5. Make sure it works and all specs pass
+6. Update the README if needed to reflect your change / addition
+7. With all specs passing push your changes back to your fork
+8. Send me a pull request
+
+
+License
+-------
+
+(The MIT License)
+
+Copyright (c) 2009, 2010, 2011
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+

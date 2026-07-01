@@ -1,0 +1,191 @@
+GRONG (Gross and ROugh Nameserver written in Go) is a DNS (Domain Name
+System) authoritative name server. It is intended as a research
+project and is not probably suitable for use on the wild Internet.
+
+MAY NOT BE SUITABLE ON A PRODUCTION SITE. YOU HAVE BEEN WARNED!!!
+
+Disclaimer: I've never been to this city
+<http://en.wikipedia.org/wiki/Grong>
+
+GRONG can only be used as an authoritative name server (like, for
+instance, nsd), not as a recursive one.
+
+GRONG provides a general DNS engine, the front-end, which receives
+packets, parses them and sends a proper response, and several possible
+back-ends (named "responders") which generates a response, given the
+query. Some are provided with GRONG and you are welcome to write
+others.
+
+The official source is <http://github.com/bortzmeyer/grong>
+
+Usage
+*****
+
+./grong [-address="[ADDRESS]:PORT"] [-debug=N] [-nodaemon] [-domain="DOMAIN NAME"]
+
+Run with -help to see the defaults (and the other, less common, options)
+
+The -address option takes either a port (in the syntax ":NNN"), in
+that case GRONG listens on all IP addresses, or one address (in the
+syntax "x.y.z.T:NNN" for IPv4 and "[xxxx:yyyy::zzzz]:NNN" for
+IPv6). There is currently no way to listen on some (but not all) of the IP
+addresses.
+
+The -domain option takes a domain name, which will be the name of the
+zone for which the name server will be authoritative for. Not all
+responders use it.
+
+The back-end is choosen at compile-time only (I have no idea about the
+support for dynamic linking in Go)
+
+Among the provided responders:
+* rude-responder: responds REFUSED to every query
+* reflector-responder: responds with the IP address of the client (for TXT 
+  requests, in text form, for A or AAAA requests, as binary). -domain indicates 
+  the zone name it uses (e.g. whoami.example.net)
+* as112: an AS 112 name server (see <http://www.as112.net/>)
+
+For the person who compiles
+**************************
+
+You need a working Go <http://golang.org> environment. Today, only the
+gc compiler is supported.
+
+To choose a responder (here, foobar-responder):
+
+make clean
+ln -sf foobar-responder.go responder.go
+make
+mv ./server /where/you/want/grong-foobar
+
+
+For the person who writes a responder
+************************************
+
+The interface of the responder is:
+
+It must be in package "responder" and imports package "types". Read
+"types.go" first, it contains useful constants (named from the RFC
+1035).
+
+The front-end checks that the request is a query and, if so, calls the
+responder. The prototype is:
+
+func Respond(query types.DNSquery, config map[string]interface{}) types.DNSresponse 
+
+To see what is available for you in the query, see the description of
+type DNSquery. Important: the query name (Qname) is always in
+lowercase, to ease comparisons.
+
+In the DNSresponse, RRs (Resource Records) have to be in the wire
+format (the front-end does not know the format of the RR, to keep it
+generic). For instance, data in TXT RR has to be {length,
+value}. There are some utilities functions in types to help you to do
+so.
+
+The map named "config" above gives you access to global variables. You
+can never be sure what variables are defined so it is careful to test
+their existence before using them. Typical variables (read the source
+code of server.go to find others) are:
+* debug: an integer for the debug level (0 = no debug, 1 = a bit of
+  debug, etc). Always set.
+* servername: if set, a string identifying this specific name server
+  (for instance "cdg1.a.ns.example.net").
+* zonename: if set, the name of the zone currently served (for instance 
+  "myself.example.net")
+
+Since the map stores various types (the "interface{}", which means the
+empty interface, something which is fulfilled by every possible
+object), you often have to convert data with the reflect package. For
+instance, to get the integer value of debug:
+debug, exists := myconfig["debug"]
+if exists {
+	debugi := reflect.NewValue(debug).(*reflect.IntValue).Get()
+}
+
+The responder must also provide a function:
+
+func Init(firstoption int) 
+
+which will be called at server startup and which can be used to
+process additional command-line flags (see as112.go for a good
+example) or any other stuff.
+
+Implementation notes
+********************
+
+One goroutine is run for every DNS request. Makes the code much
+simpler and easier to read but may explain the fact that performance
+are behind BIND.
+
+TODO
+****
+
+Finish the AS112 responder (SOA and NS records)
+
+The ability to listen to more than one address (but not all). Can I
+give several -address option to the flag module? If so, it probably
+just means firing several udpListeners and several tcpListeners. Since
+it interacts with the IPv4/IPv6 listening abilities, we may have to
+wait for the solution of
+<http://code.google.com/p/go/issues/detail?id=679>.
+
+Debugging of Go runtime performance issues, hit it harder with
+queryperf!
+
+Test with gccgo
+
+Implements version.server (and version.bind and hostname.bind ?)
+
+See if we can replace a good part of package "types" by standard
+package net/ <http://golang.org/src/pkg/net/dnsmsg.go> It does not
+seem easy, the dns* files do not export anything outside of package
+net, they are meant for internal use only.
+
+Daemonizing seems very difficult with Go
+<http://groups.google.com/group/golang-nuts/browse_thread/thread/2b29d93b90501a4b/95242bfb7ae0549e>
+In the mean time, nohup + & + disown seems the only solution. Provide
+an example at least for Debian, using start-stop-daemon?
+
+A name server with data, for instance able to serve a zone with a
+simple setup, one SOA, a few NS, and one A record for www.$ORIGIN. The
+list of zones (all with identical data) and the IP address of the Web
+server being taken from a file or on the command-line.
+
+Configuration file. What is idiomatic in Go? .INI ?
+<https://github.com/cthom06/go-rproxy> uses JSON.
+
+Continue hardening against rogue packets. See the example
+test-scapy.py in the distribution.
+
+Michael Hoisie had a very good suggestion to turn GRONG into a
+package. He plans:
+1) all the source files should have a common package, like "grong".
+there shouldn't be a main package
+2) there could be a Responder interface, that looks like:
+type Responder interface {
+    Respond(query.DNSquery) DNSresponse
+}
+And all the various responders would implement this.
+3) The Makefile would have a format like (except modified for Grong):
+http://github.com/hoisie/web.go/blob/master/Makefile
+4) Instead of main() method, there would be a method like Run( resp
+Responder ) that takes a responder and starts the server
+
+Rewrite a good part of Grong to use Go DNS? https://github.com/miekg/godns
+
+DNSSEC (no, I'm joking)
+
+
+Author
+******
+
+Stéphane Bortzmeyer <stephane+grong@bortzmeyer.org>
+
+
+License
+*******
+
+This is free software. Free as in free speech, not as in free beer.
+
+See the actual license in LICENSE

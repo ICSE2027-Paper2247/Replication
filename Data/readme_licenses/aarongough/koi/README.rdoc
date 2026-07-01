@@ -1,0 +1,99 @@
+= Koi
+
+Koi is a small programming language that is designed to be easy to use, easy to understand and easy to implement. 
+
+Koi is an imperative, dynamic, weakly-typed language with first-class functions. Koi's syntax and features were influenced by JavaScript, Lua and Ruby. Koi makes a point of working very hard to be unambiguous in it's syntax so that it is easy to write parsers for.
+
+Koi's main goal is to be a useful language that teaches the basics of language implementation. The project was started because I wanted to learn more about how languages work 'under the hood' and Koi is my way of sharing what I've learnt with as many people as possible.
+
+=== Example
+
+This is an old-school 'Blast Off!' program written in Koi:
+
+  countdown = function( count )
+    print( to_string( count ))
+    print( ", " )
+    if( count == 0 )
+      return()
+    end
+    count = count - 1
+    call( countdown, count )
+  end
+  
+  call( countdown, 10 )
+  
+  print( "Blast Off!" )
+  
+  #=> 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, Blast Off!
+
+=== Installation
+
+For ease of use the default installation of Koi is packaged as a RubyGem. Providing you already have Ruby and RubyGems installing Koi is as easy as entering the following command in a terminal:
+
+  gem install koi-lang
+  
+Mac OS X and most Unix/Linux distributions come with an installation of Ruby and RubyGems. If you do not have Ruby and RubyGems installed please check the {Ruby website for instructions}[http://www.ruby-lang.org/en/downloads/].
+
+=== Usage
+
+After Koi is installed you can run a program by typing the following on the command line:
+
+  koi /path/to/program
+
+== Koi Fundamentals
+
+=== Data types
+
+Koi features a full set of basic and compound data types including:
+
+* Nil
+* Boolean
+* Integer
+* Float
+* String
+* Hash
+* Function
+
+=== Flow control
+
+Koi currently only implements a minimal set of flow control operators:
+
+  if( expression )
+    do_work
+  end
+  
+  unless( expression )
+    do_other_work
+  end
+  
+=== Built-in functions
+
+[print( string )]                     Writes a string to STDOUT.
+[gets()]                              Fetches a newline delimited string from STDIN.
+[call( identifier [, parameter])]     Calls the function that is stored in 'identifier'.
+[tailcall( identifier [, parameter])] Performs a 'tailcall' to the function stored in 'identifier'. This type of call is used when recursing heavily to improve performance and to facilitate the use of functions as iterators. {More information on tailcalls.}[http://en.wikipedia.org/wiki/Tail_call]
+[return([ value ])]                   Return a value from a function.
+[to_string( value )]                  Converts the given value to a representative string.
+[type_of( value )]                    Returns a string representing the type of the value given, eg: "integer".
+
+=== Reserved words
+
+if, unless, function, end, call, tailcall, print, gets, return, to_string, type_of, nil, true, false
+
+=== Components
+
+The default installation of Koi consists of the following discrete components:
+
+* The reference parser: {koi-reference-parser}[http://github.com/aarongough/koi-reference-parser]
+* The reference compiler: {koi-reference-compiler}[http://github.com/aarongough/koi-reference-compiler]
+* The standard Virtual Machine: {koi-vm-ruby}[http://github.com/aarongough/koi-vm-ruby]
+
+Each of these components are completely stand-alone and are specifically designed to be as simple as possible. I strongly encourage pulling them apart to see how they tick, and changing them if you see fit! Just make sure to contribute any improvements back to the main repository!
+
+==== Hope you enjoy Koi!
+
+=== Author & Credits
+
+Author:: {Aaron Gough}[mailto:aaron@aarongough.com]
+
+Copyright (c) 2010 {Aaron Gough}[http://thingsaaronmade.com/] ({thingsaaronmade.com}[http://thingsaaronmade.com/]), released under the MIT license

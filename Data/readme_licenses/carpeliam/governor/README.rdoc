@@ -1,0 +1,130 @@
+= Governor http://img.shields.io/badge/maintainer-needed-orange.png
+
+*Governor is archived* due to the fact that it's locked to Rails v3.0, and
+as such can't patch any security holes or support modern applications.
+
+*Governor* (named after Rod Blagojevich) is the pluggable blogging platform
+for Rails, built for people who want to build their blog into their website,
+not build their website into their blog.
+
+== Dependencies
+
+* Rails 3.0 (<b>Rails 3.1+ not supported</b>)
+* ActiveRecord
+
+Various plugins[https://github.com/carpeliam/governor/wiki/Plugins] have their
+own dependencies. By 1.0, I'd like to make it possible to use Governor with
+other ORMs, but I'm not sure when that'll be.
+
+== Setting Up
+
+First, add Governor to your Gemfile.
+
+    gem 'governor'
+
+and run <code>bundle install</code>. Now you're ready to add a model:
+
+    rails generate governor:create_articles [CLASS_NAME]
+
+<code>CLASS_NAME</code> by default is Article, but feel free to specify
+something else, like Post, Blog, whatever. This will add a model, migration,
+and route to your app.
+
+If you already have a model and you want to add Governor, you just need to
+include <code>Governor::Article</code> in your model. You'll also need to add
+a route as follows (assuming your model is called <code>Article</code>):
+
+    governate :articles
+
+== Usage
+
+Now that you have an article model and a set of routes, you're ready to plug
+it into your app. I'd recommend running `rake routes` to see what routes have
+been added, as they depend on the model name you chose.
+
+You can add a Governor Management bar to your app by calling
+<code>governor_header</code> in your view:
+
+    <% if user_logged_in_or_whatever? # whatever logic you want to use %>
+      <%= governor_header %>
+    <% end %>
+
+Plugins can hook into this header to add their own management tool links.
+
+Next, go ahead and add some
+plugins[https://github.com/carpeliam/governor/wiki/Plugins]!
+
+== Authentication/Authorization
+
+Governor checks to see if any of the popular authentication schemes are in
+place, and should work with Devise, Authlogic, and Clearance. If you're using
+something else, It's fairly easy to plug in to Governor. Running the following
+generator will add an initializer to your app:
+
+    rails generate governor:configure
+
+Here's a snippet from the generated initializer:
+
+    # How to reference the author of an article
+    Governor.author = Proc.new do
+      if defined?(Devise)
+        send("current_#{Devise.default_scope}")
+      elsif respond_to?(:current_user)
+        current_user
+      else
+        raise "Please define Governor.author. Run `rails generator governor:configure` to install an initializer."
+      end
+    end
+
+Replace the block with your own code. This will allow you to define
+app-specific definitions for the author of an article; authorization rules for
+editing/deleting articles; and what the application should do if someone
+breaks those rules.
+
+== Customization
+
+If you'd like to customize the views, you can run the rails generator:
+
+    rails generate governor:views
+
+== Roadmap
+
+Less of a roadmap as a politician's promise of what will exist in future
+versions of Governor:
+
+* A better-documented {plugin
+  API}[https://github.com/carpeliam/governor/wiki/Guide-to-Creating-a-Plugin].
+* More plugins[https://github.com/carpeliam/governor/wiki/Plugins].
+  * Asset Management (uploading photos etc)
+  * Web-based admin interface
+  * slugs, or <code>/yyyy/mm/dd/slug</code>-styled URLs
+* Plugin integration testing to make sure 1 plugin doesn't break others
+* More consistent i18n support
+* The ability for a plugin to modify the rendering of an existing element on
+  the page.
+* A chicken in every pot and a car in every garage.
+
+Until v1.0 (or at least until things start to stabilize), I won't promise
+anything regarding backwards compatibility. Please let me know if something
+you were relying on breaks, and I'll do my best to steer you in the right
+direction or repair functionality.
+
+== Contributing to Governor
+
+Governor is just getting off the ground now, so while there's a lot to
+implement, the infrastructure might be too shaky to support multiple
+developers. Still, if you're interested in improving this, let's talk.
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Liam Morley. See LICENSE.txt for
+further details.
+

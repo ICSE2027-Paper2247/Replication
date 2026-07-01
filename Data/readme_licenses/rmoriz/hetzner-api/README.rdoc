@@ -1,0 +1,134 @@
+==== Status 2014/07: looking for sponsoring/new maintainers.
+
+= hetzner-api
+
+A HTTParty[http://httparty.rubyforge.org/] based wrapper for Hetzner.de's server management API.
+
+see http://wiki.hetzner.de/index.php/Robot_Webservice/en for details.
+
+{<img src="https://badge.fury.io/rb/hetzner-api.png" alt="Gem Version" />}[http://badge.fury.io/rb/hetzner-api]
+
+== Installation
+
+<b>gem install hetzner-api</b>
+
+(you may want to use sudo for that.)
+
+== Example
+
+<b>See spec/hetzner_api_spec.rb[link:spec/hetzner_api_spec.rb] for nice examples!</b>
+
+<tt>h = Hetzner::API.new "username", "password"</tt>
+
+<tt>h.reset? "111.111.111.111"</tt>
+
+<tt>h.enable_rescue! "111.111.111.111", "linux", "64"</tt>
+
+<tt>h.reset! "111.111.111.111", :sw</tt>
+
+<tt>h.wol! "111.111.111.222"</tt>
+
+<tt>h.rdns! "111.111.111.222", "web100.falkenstein.de.example.com"</tt>
+
+== Continuous Integration
+
+{Build Status on Travis-CI}[link:http://travis-ci.org/rmoriz/hetzner-api]:
+
+{<img src="https://secure.travis-ci.org/rmoriz/hetzner-api.png?branch=master" alt="Build Status" />}[http://travis-ci.org/rmoriz/hetzner-api]
+
+== Coverage
+
+  Reset
+    query
+      should list available reset options for all servers
+      should list available reset options for a specific IP
+      should fail when IP is unknown
+      should fail when IP has no reset option
+    execution
+      should reset the specific IP
+      should fail for the specific IP if input is invalid
+      should fail for the specific IP if a manual reset is active
+      should fail for the specific IP if reset is unavailable
+      should fail for the specific IP if IP is unknown
+
+  Boot
+    query boot configuration
+      should display the boot configuration
+    the rescue system
+      should be able to activate
+      should be able to deactivate
+
+  Rdns
+    should query the current rdns status
+    should be able to set a new ptr
+    should be able to remove a new ptr
+
+  VNC
+    should be able to query vnc boot status
+    should be able to set vnc boot status
+    should be able to disable vnc boot status
+
+  WOL
+    should be able to query WOL status
+    should be able to send a WOL notification
+
+  IP
+    information
+      should be able to display all IP addresses of the customer account
+      should be able to display a IP address of the customer account
+      should be able to display all IP addresses for a given server IP address
+    manage traffic warnings
+      should be able to activate and set traffic warning limits on a specific IP address
+      should be able to deactivate traffic warnings for a specific IP address
+
+  Subnet
+    information
+      should be able to display all IP subnets of the customer account
+      should be able to display a IP subnet of the customer account
+      should be able to display all IP addresses for a given server IP address
+    manage traffic warnings
+      should be able to activate and set traffic warning limits on a specific IP address
+      should be able to deactivate traffic warnings for a specific IP address
+
+  Server
+    should be able to set a server_name
+    information
+      should be able to display all servers of the customer account
+      should be able to display a specific server by its IP address
+
+  Plesk
+    should be able to query plesk boot option status
+    should be able to activate plesk boot option
+    should be able to disable plesk boot option
+
+  Failover
+    should be able to query the status of all failover IPs
+    should be able to query the status of a single failover IP
+    should be able to set the status of a single failover IP
+
+  Traffic
+    should display the traffic for a specific ip address and a subnet
+    should display the traffic for serveral IP addresse and no subnet
+    should display the traffic for subnets and no ip address
+
+
+== Readme (rdoc)
+
+<b>http://rdoc.info/github/rmoriz/hetzner-api</b>
+
+
+== WARNING!
+
+This is not an official Hetzner AG project.
+
+The gem and the author are not related to Hetzner AG!
+
+<b>Use at your very own risk! Satisfaction NOT guaranteed!</b>
+
+== Copyright
+
+Copyright (c) 2012 Roland Moriz. See LICENSE for details.
+
+{Ruby on Rails Freelancer}[https://roland.io/]
+
+{Ruby on Rails Entwicklung}[https://moriz.de/] -> Moriz GmbH

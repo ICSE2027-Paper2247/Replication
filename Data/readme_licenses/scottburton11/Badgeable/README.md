@@ -1,0 +1,96 @@
+About Badgeable
+===============
+Badgeable is an elegant DSL for awarding badges
+
+Overview
+--------
+Badgeable provides an elegant DSL for describing and awarding badges
+to your Ruby objects.
+
+Usage
+-----
+Describe the badges you want to award using the badge block. The only 
+configuration directive required for each badge is the name of the badge
+and the name constant of the awarding class:
+
+    class Person
+      include Mongoid::Document
+      include Badgeable::Subject
+      embeds_many :nachos
+    end
+
+    badge "Nacho Nacho Man" do
+      thing Nacho
+      count 40
+      subject :person
+      conditions do |nacho|
+        nacho.spicy?
+      end
+    end
+
+would award the "Nacho Nacho Man" badge to each Person who eats 40 
+nachos, and the last one was spicy.
+
+    class Person
+      include Mongoid::Document
+      include Badgeable::Subject
+      references_many :meals
+    end
+
+    badge "Fancy Pants" do
+      thing Meal
+      subject :person
+      count
+        Meal.where(:price_cents.gte => 10000).count >= 12
+      end
+      conditions do |meal|
+        meal.restaurant.city != meal.eater.city
+      end
+    end
+  
+would award the "Fancy Pants" badge to the diner who has eaten 12 
+expensive meals where the awarding meal was out of town.
+
+You can also award arbitrary badges using your own business logic by 
+calling #award_badge(badge_name) on any Badgeable instance.
+
+Setup
+-----
+Badge recipient classes should include Badgeable::Subject.
+Extending an awarding class with Badgeable::Award will allow you
+to define badge blocks in the awarding class definition. You may
+also eval a separate file of badge definitions in the context of
+Badgeable::Award.
+
+When used with Rails, Badgeable will look for badging definitions
+in Rails.root/lib/badges.rb; `rails g badgeable:definitions` to
+get started.
+
+Supported ORMs
+--------------
+* Mongoid
+* ActiveRecord - [badgeable_active_record](https://github.com/scottburton11/badgeable_active_record)
+
+License
+-------
+Copyright (c) 2010-2012 Scott Burton
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

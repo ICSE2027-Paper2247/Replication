@@ -1,0 +1,67 @@
+# Ergonaut One
+
+![Ergonaut One Header Image](img/header.jpg)
+*Ergonaut One in Modern Case*
+
+Ergonaut One is an open-source ergonomic wireless split mechanical keyboard designed by Ergonaut Keyboards.
+
+Inspiration for the keyboard was taken from these projects:
+
+* [Corne](https://github.com/foostan/crkbd) by [foostan](https://github.com/foostan)
+* [Dao](https://github.com/yumagulovrn/dao-choc-ble) by [yumagulovrn](https://github.com/yumagulovrn)
+
+## Idea
+
+We wanted to create a pretty affordable, nice looking, and, most importantly, very DIY-friendly ergonomic wireless split keyboard with Gateron Low Profile switches.
+
+## Photos
+
+Gallery can be found on [imgur](https://imgur.com/a/sOBBtmQ).
+
+## Features
+
+* Low-profile, which will reduce strain on your beautiful hands;
+* Split. You can put the keyboard where it'll be comfortable exactly for you;
+* Pretty long battery life. 250mAh battery gives up to a month of usage without charging;
+* Wide availability and range of [compatible keycaps](https://ergonautkb.com/docs/switches/gateron-low-profile#keycaps-compatibility);
+* Easily replaceable [switches](https://ergonautkb.com/docs/switches/gateron-low-profile#ks-33-v2) thanks to hot-swap sockets;
+* Budget-friendly, because:
+  * It uses relatively cheap and widely available [Seeed Studio XIAO nRF52840](https://wiki.seeedstudio.com/XIAO_BLE/) as MCU;
+  * It uses one PCB design for both halves of the keyboard;
+  * Everything except PCB's, components and hardware (screws, nuts) can be 3D printed.
+* Beginner-friendly, because:
+  * PCB is easy to solder;
+  * Cases are easy to print.
+* Wireless by design - no unnecessary wires, no unused connectors on the board;
+* Free in terms of hardware design. It's licensed under permissive [CERN-OHL-P v2](https://ohwr.org/cern_ohl_p_v2.pdf) license, which means:
+  * you are free to manufacture it yourself;
+  * you are free to sell your manufactured hardware for profit.
+
+## Build Guide
+
+BOM and Build Guide can be found in [Ergonaut Keyboards Documentation Portal](https://ergonautkb.com/docs/keyboards/ergonaut-one/intro).
+
+## Firmware
+
+Firmware can be found in [one-zmk-config](https://github.com/ergonautkb/one-zmk-config) repository.
+
+## Gerbers
+
+| Front                                            | Back                                                 |
+| ------------------------------------------------ | ---------------------------------------------------- |
+| ![front](../../releases/latest/download/pcb.png) | ![back](../../releases/latest/download/pcb_back.png) |
+
+* [Gerbers for JLCPCB](../../releases/latest/download/pcb-JLCPCB_gerbers.zip)
+* [Gerbers for PCBWay](../../releases/latest/download/pcb-PCBWay_gerbers.zip)
+
+## Community projects
+
+### Accessories
+
+* [Frames for Magic Trackpad 2/3 and Laptops](https://www.thingiverse.com/thing:6447743) by [Alex Kh](https://www.thingiverse.com/alehano777/designs)
+
+## Contacts
+
+* Documentation portal: https://ergonautkb.com
+* Telegram: https://ergonautkb.t.me
+* Telegram (ru): https://ergonautkb_ru.t.me

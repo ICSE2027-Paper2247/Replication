@@ -1,0 +1,441 @@
+* Prepare Code Test
+#+BEGIN_HTML
+<a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
+<a href="https://github.com/DennyZhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
+<a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/slack.png" alt="slack"/></a>
+<a href="https://github.com/DennyZhang"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
+
+<br/><br/>
+
+<a href="http://makeapullrequest.com" target="_blank" rel="nofollow"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"/></a>
+#+END_HTML
+
+File me [[https://github.com/DennyZhang/code.dennyzhang.com/issues][Issues]] or star [[https://github.com/DennyZhang/code.dennyzhang.com][this repo]].
+
+- *My blog about coder interview*: https://code.dennyzhang.com/
+- Join our slack group: https://code.dennyzhang.com/slack
+
+My profile in [[https://leetcode.com/dennyzhang][LeetCode]] and [[https://www.lintcode.com/user/DennyZhang][LintCode]]
+#+BEGIN_HTML
+<div style="overflow: hidden;">
+<div style="float: left; padding: 5px"><a href="https://leetcode.com/dennyzhang"><img style="width:189px;height:329px;" src="https://cdn.dennyzhang.com/images/brain/denny_leetcode.png" alt="leetcode" /></a></div>
+</div>
+#+END_HTML
+
+#+BEGIN_HTML
+<br/>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=dennyzhang-20&marketplace=amazon&region=US&placement=B06X6MJQMG&asins=B06X6MJQMG&linkId=2d749436703bc629f8ceafcb19e3fac9&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+</iframe>
+#+END_HTML
+
+See more challenges from Denny: [[https://github.com/topics/denny-challenges][#denny-challenges]]
+** More Resources
+ License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
+ #+BEGIN_HTML
+ <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
+ <a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+
+ <a href="https://www.linkedin.com/in/dennyzhang001"><img align="bottom" src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
+ <a href="https://github.com/DennyZhang"><img align="bottom"src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
+ <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img align="bottom" src="https://www.dennyzhang.com/wp-content/uploads/sns/slack.png" alt="slack"/></a>
+ #+END_HTML
+* org-mode configuration                                           :noexport:
+#+STARTUP: overview customtime noalign logdone hidestars
+#+DESCRIPTION:
+#+KEYWORDS:
+#+AUTHOR: Denny Zhang
+#+EMAIL:  denny@dennyzhang.com
+#+TAGS: noexport(n)
+#+PRIORITIES: A D C
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_EXCLUDE_TAGS: exclude noexport BLOG
+#+SEQ_TODO: TODO HALF ASSIGN | DONE BYPASS DELEGATE CANCELED DEFERRED
+#+LINK_UP:
+#+LINK_HOME:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* DONE code snippet refresh tags                                   :noexport:
+  CLOSED: [2019-09-03 Tue 10:12]
+#+BEGIN_SRC sh
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+set -o nounset
+
+cd /Users/zdenny/Dropbox/git_code/code.dennyzhang.com/
+for f in $(find /Users/zdenny/Dropbox/git_code/code.dennyzhang.com/ -name "README.org"); do
+    echo "$f"
+    sed -i "" 's!https://code.dennyzhang.com/tag/presum!https://code.dennyzhang.com/followup-presum!g' $f
+done
+#+END_SRC
+
+#+BEGIN_SRC sh
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+set -o nounset
+
+cd /Users/zdenny/Dropbox/git_code/code.dennyzhang.com/
+for f in $(find /Users/zdenny/Dropbox/git_code/code.dennyzhang.com/ -name "README.org"); do
+    echo "$f"
+    # sed -i "" 's!\[\[https://code.dennyzhang.com/tag/dynamicprogramming\]\[#dynamicprogramming\]\]!\[\[https://code.dennyzhang.com/review-dynamicprogramming\]\[#dynamicprogramming\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/backtracking\]\[#backtracking\]\]!\[\[https://code.dennyzhang.com/review-backtracking\]\[#backtracking\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/bfs\]\[#bfs\]\]!\[\[https://code.dennyzhang.com/review-bfs\]\[#bfs\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/binarysearch\]\[#binarysearch\]\]!\[\[https://code.dennyzhang.com/review-binarysearch\]\[#binarysearch\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/combination\]\[#combination\]\]!\[\[https://code.dennyzhang.com/review-combination\]\[#combination\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/complexity\]\[#complexity\]\]!\[\[https://code.dennyzhang.com/review-complexity\]\[#complexity\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/review-multithread\]\[#concurrency\]\]!\[\[https://code.dennyzhang.com/review-concurrency\]\[#concurrency\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/dfs\]\[#dfs\]\]!\[\[https://code.dennyzhang.com/review-dfs\]\[#dfs\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/divideconquer\]\[#divideconquer\]\]!\[\[https://code.dennyzhang.com/review-divideconquer\]\[#divideconquer\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/game\]\[#game\]\]!\[\[https://code.dennyzhang.com/review-game\]\[#game\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/gcd\]\[#gcd\]\]!\[\[https://code.dennyzhang.com/review-gcd\]\[#gcd\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/graph\]\[#graph\]\]!\[\[https://code.dennyzhang.com/review-graph\]\[#graph\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/greedy\]\[#greedy\]\]!\[\[https://code.dennyzhang.com/review-greedy\]\[#greedy\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/hard\]\[#hard\]\]!\[\[https://code.dennyzhang.com/review-hard\]\[#hard\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/hashmap\]\[#hashmap\]\]!\[\[https://code.dennyzhang.com/review-hashmap\]\[#hashmap\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/heap\]\[#heap\]\]!\[\[https://code.dennyzhang.com/review-heap\]\[#heap\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/inspiring\]\[#inspiring\]\]!\[\[https://code.dennyzhang.com/review-inspiring\]\[#inspiring\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/interval\]\[#interval\]\]!\[\[https://code.dennyzhang.com/review-interval\]\[#interval\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/linkedlist\]\[#linkedlist\]\]!\[\[https://code.dennyzhang.com/review-linkedlist\]\[#linkedlist\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/manydetails\]\[#manydetails\]\]!\[\[https://code.dennyzhang.com/review-manydetails\]\[#manydetails\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/review-math\]\[#math\]\]!\[\[https://code.dennyzhang.com/review-math\]\[#math\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/median\]\[#median\]\]!\[\[https://code.dennyzhang.com/review-median\]\[#median\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/minmax\]\[#minmax\]\]!\[\[https://code.dennyzhang.com/review-minmax\]\[#minmax\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/review-math\]\[#math\]\]!\[\[https://code.dennyzhang.com/review-math\]\[#math\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/mod\]\[#mod\]\]!\[\[https://code.dennyzhang.com/review-mod\]\[#mod\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/oodesign\]\[#oodesign\]\]!\[\[https://code.dennyzhang.com/review-oodesign\]\[#oodesign\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/palindrome\]\[#palindrome\]\]!\[\[https://code.dennyzhang.com/review-palindrome\]\[#palindrome\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/rectangle\]\[#rectangle\]\]!\[\[https://code.dennyzhang.com/review-rectangle\]\[#rectangle\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/recursive\]\[#recursive\]\]!\[\[https://code.dennyzhang.com/review-recursive\]\[#recursive\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/segmenttree\]\[#segmenttree\]\]!\[\[https://code.dennyzhang.com/review-segmenttree\]\[#segmenttree\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/slidingwindow\]\[#slidingwindow\]\]!\[\[https://code.dennyzhang.com/review-slidingwindow\]\[#slidingwindow\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/sqrt\]\[#sqrt\]\]!\[\[https://code.dennyzhang.com/review-sqrt\]\[#sqrt\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/sql\]\[#sql\]\]!\[\[https://code.dennyzhang.com/review-sql\]\[#sql\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/stack\]\[#stack\]\]!\[\[https://code.dennyzhang.com/review-stack\]\[#stack\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/string\]\[#string\]\]!\[\[https://code.dennyzhang.com/review-string\]\[#string\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/treetraversal\]\[#treetraversal\]\]!\[\[https://code.dennyzhang.com/review-treetraversal\]\[#treetraversal\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/trie\]\[#trie\]\]!\[\[https://code.dennyzhang.com/review-trie\]\[#trie\]\]!g' $f
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/twopointer\]\[#twopointer\]\]!\[\[https://code.dennyzhang.com/review-twopointer\]\[#twopointer\]\]!g' $f    
+    sed -i "" 's!\[\[https://code.dennyzhang.com/tag/unionfind\]\[#unionfind\]\]!\[\[https://code.dennyzhang.com/review-unionfind\]\[#unionfind\]\]!g' $f
+done
+#+END_SRC
+* DONE [#A] CSS: The syntax highlighting is too bright overall     :noexport:
+  CLOSED: [2020-07-25 Sat 22:32]
+https://mail.google.com/mail/u/0/#inbox/FMfcgxwJWXZgsrLMZrnJWpLSgSBLCmpl
+https://github.com/gongzhitaao/orgcss
+https://emacs.stackexchange.com/questions/7629/the-syntax-highlight-and-indentation-of-source-code-block-in-exported-html-file
+* DONE [#A] width is not long enough: https://code.dennyzhang.com/132-pattern :noexport:
+  CLOSED: [2020-07-25 Sat 22:32]
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#A] Role Models                                            :noexport:
+https://github.com/donnemartin/interactive-coding-challenges
+** Sample https://github.com/scottszb1987/LeetCodeInCSharp
+** Sample https://github.com/awangdev/LintCode
+** TODO opensource improvement: 刷题网站                           :noexport:
+ https://startupnextdoor.com/how-to-rock-the-programming-portion-of-your-interview/
+* TODO [#A] Layout                                                 :noexport:
+** TODO function color issue: https://code.dennyzhang.com/construct-binary-tree-from-preorder-and-postorder-traversal :noexport:
+* TODO [#A] Make it more useful                                    :noexport:
+** TODO blog improvement: how to utilize community to improve the content :noexport:
+* TODO [#A] Content                                                :noexport:
+** Add series #buddystring https://code.dennyzhang.com/tag/buddystring
+** Add series #interview: https://code.dennyzhang.com/tag/interview
+* TODO Reduce overhead                                             :noexport:
+** HALF [#A] automate take screenshot for leetcode badge           :noexport:
+ cp /Users/zdenny/Dropbox/Screenshots/denny_leetcode.png /Users/zdenny/git_code/codecommit/blog_cdn/images/brain/denny_leetcode.png
+ convert -resize 263x459 /Users/zdenny/git_code/codecommit/blog_cdn/images/brain/denny_leetcode.png /Users/zdenny/git_code/codecommit/blog_cdn/images/brain/denny_leetcode.png
+ (cd /Users/zdenny/git_code/codecommit/blog_cdn/images/brain && git commit -am "update images" && git push origin master)
+
+ open /Users/zdenny/git_code/codecommit/blog_cdn/images/brain/denny_leetcode.png
+* TODO Quick scan leetcode                                         :noexport:
+http://delta.logdown.com/posts/2014/09/19/leetcode-3
+* TODO [#A] leetcode active users                                  :noexport:
+** stefan altohme: 光头哥
+** lee215: https://leetcode.com/problems/short-encoding-of-words/discuss/125784/Trie-Solution/126838?page=1
+* HALF [#A] code.dennyzhang.com                                    :noexport:
+https://www.sigmainfy.com/blog/leetcode-handbook-all-problem-solution-index.html
+
+https://code.dennyzhang.com/majority-element-ii
+/Users/DennyZhang/Dropbox/private_data/project/devops_consultant/consultant_code/github/leetcode/challenges-leetcode-interesting/majority-element-ii/README.org
+
+1. Aggregate quiz by category: Backtracking, Greedy, DP, Search, Sum, Tree, Linked List, Array, Simulation, Math, Hash, Bit Operation
+2. From GitHub To Wordpress: Embrace Community effort
+** DONE
+*** DONE Identity a sample post and others can follow
+    CLOSED: [2018-01-09 Tue 15:01]
+*** DONE add github link
+    CLOSED: [2018-01-09 Tue 15:01]
+*** DONE list questions by tag/category: Basic, Amusing, Hard, Contact
+    CLOSED: [2018-01-09 Tue 15:01]
+*** DONE shutdown cheatsheet.dennyzhang.com, and increase memeory of code.dennyzhang.com
+    CLOSED: [2018-01-10 Wed 15:27]
+*** CANCELED WordPress GitHub Sync
+  CLOSED: [2018-01-09 Tue 12:40]
+https://wordpress.org/plugins/wp-github-sync/
+https://github.com/mAAdhaTTah/wordpress-github-sync
+https://pressable.com/blog/2017/07/13/deploy-wordpress-sites-github-bitbucket-deployhq/
+
+brain_wordpress_token
+7d958fa7533ed0a4fe1698c5fa6e2af382053a59
+
+Allows readers to submit proposed improvements to WordPress-served content via GitHub's Pull Request model
+**** nginx vhost: allow anyone to publish
+**** TODO Semaphore is locked, import\/export already in progress.
+https://github.com/mAAdhaTTah/wordpress-github-sync/issues/174
+*** DONE update posts: ## Basic Idea:
+    CLOSED: [2018-01-21 Sun 23:00]
+*** DONE avoid manually update the uri
+    CLOSED: [2018-01-21 Sun 23:01]
+*** DONE [#A] export more questions: #redo, #todobrain
+    CLOSED: [2018-01-21 Sun 23:01]
+*** DONE [#A] verify whether google Adsense works
+    CLOSED: [2018-01-21 Sun 23:01]
+*** DONE [#A] finish the first 200 puzzles
+    CLOSED: [2018-01-21 Sun 23:01]
+*** DONE script to: generate readme.org to readme.md
+    CLOSED: [2018-01-21 Sun 23:01]
+*** DONE Update tags: https://code.dennyzhang.com/tags/
+    CLOSED: [2018-01-21 Sun 23:01]
+*** DONE Create a WordPress Tag Page
+   CLOSED: [2018-01-21 Sun 23:00]
+https://premium.wpmudev.org/blog/wordpress-tag-page/
+https://wordpress.stackexchange.com/questions/38906/how-to-create-wordpress-page-that-shows-posts-with-specific-tags
+https://wordpress.org/plugins/tags-page/
+*** DONE Support adding similar blog posts recommendation
+    CLOSED: [2018-01-24 Wed 10:18]
+*** DONE [#A] wordpress plugin: show similar blog posts with the same tag :IMPORTANT:
+   CLOSED: [2018-01-24 Wed 10:53]
+https://wordpress.org/plugins/contextual-related-posts/
+*** DONE blog enable https
+    CLOSED: [2018-01-26 Fri 12:02]
+*** DONE [#A] generate certificate for slack.dennyzhang.com, dennyzhang.com: https://code.dennyzhang.com
+    CLOSED: [2018-02-12 Mon 16:38]
+*** DONE [#A] Good sample of code syntax: http://sdytlm.github.io/blog/2016/09/10/leetcode-utf-8-validation/
+    CLOSED: [2018-02-12 Mon 16:38]
+*** DONE Interlink: bring more traffic
+    CLOSED: [2018-02-12 Mon 16:40]
+*** DONE [#A] Show the list for tagged problems: https://code.dennyzhang.com/review-binarytree/
+    CLOSED: [2018-02-12 Mon 16:40]
+*** DONE Show all review blog posts as default
+    CLOSED: [2018-02-25 Sun 18:18]
+*** DONE wordpress homepage show posts of certain tag
+  CLOSED: [2018-02-19 Mon 16:27]
+https://stackoverflow.com/questions/12059819/display-latest-posts-from-a-specific-tag-in-wordpress
+index.php
+#+BEGIN_EXAMPLE
+ <?php
+    if ( is_home() ) {
+        $args=array(
+            'showposts'=> (int) get_option('aggregate_homepage_posts'),
+            'paged'=>$paged,
+            'tag'=>"the tag u want shown",
+            'category__not_in' => (array) get_option('aggregate_exlcats_recent')
+        );
+        if (get_option('aggregate_duplicate') == 'false') {
+            global $ids;
+            $args['post__not_in'] = $ids;
+        }
+        query_posts($args);
+        global $paged;
+    }
+    $i = 0;
+?>
+#+END_EXAMPLE
+https://generatepress.com/forums/topic/can-blog-homepage-display-only-posts-with-certain-tagcategory/
+https://wordpress.stackexchange.com/questions/174403/set-homepage-to-only-display-posts-from-one-tag
+*** DONE wordpress get a table of posts with a certain tag
+    CLOSED: [2018-02-19 Mon 17:45]
+*** DONE write summary post: sample
+   CLOSED: [2018-02-25 Sun 18:18]
+http://bangbingsyb.blogspot.com/2014/11/data-structurealgorithm.html
+*** CANCELED [#A] Write a compaign blog post
+    CLOSED: [2018-08-19 Sun 11:05]
+*** DONE [#A] emacs: publish all blog posts with one command
+    CLOSED: [2018-08-19 Sun 11:05]
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** similar blog
+Grandyang: http://www.cnblogs.com/grandyang/
+细语呢喃: https://www.hrwhisper.me/
+在线疯狂: http://bookshadow.com/weblog/authors/%E5%9C%A8%E7%BA%BF%E7%96%AF%E7%8B%82/
+
+http://traceformula.blogspot.com/
+
+http://bookshadow.com/weblog/
+https://github.com/kamyu104/LeetCode/tree/master/Python
+https://www.geeksforgeeks.org/
+http://blog.csdn.net/v_july_v/article/details/6543438
+** Morris Traversal: https://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html
+** Why we neeed it: https://leetcode.com/problems/majority-element-ii/discuss/
+One common reason for this problem could be fault-tolerant
+computing. You perform multiple redundant computations and then verify
+that a majority of the results agree.
+** https://leetcode.com/articles/?category=&search=Introduction
+** TODO What Morris traverse is?
+** [#A] One single sentence summary
+*** recursive: the same question with small scale
+Boundary of the small dataset
+*** greedy: partion optimal vs global optimal
+*** dp: Use space to save time. reduce duplicate caculation
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO [#A] Search blog posts with two tag enabled: #graph + #codetemplate
+** TODO One command to download the renewed certificates
+** TODO Use new docker image for certificate refresh
+** TODO [#A] avoid use cdn: just another vhost; automate the change
+** TODO [#A] sort tags by importance, instead of lexicographical order
+** TODO Similar github repo: https://github.com/kamyu104/LeetCode
+** TODO Wrong indent for the bullet points: https://code.dennyzhang.com/system-design-interview
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO [#A] doc: list all element under one tag
+** TODO [#A] doc: list all element under with two tag enabled
+** TODO Add TOC to the blog post: interesting skills, and code template
+** TODO [#A] Add SNS Sharing: http://sdytlm.github.io/blog/2016/09/10/leetcode-utf-8-validation/
+** TODO better slack emoji
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO Blog: What I learned from code test preparation
+** HALF reference format issue: https://code.dennyzhang.com/design-db-replication#fn.2
+** TODO Why slack no thumbnail: https://code.dennyzhang.com/design-books
+** #  --8<-------------------------- separator ------------------------>8-- :noexport:
+** TODO code.dennyzhang.com: search for two tags combined
+* TODO [#A] change target scenario of code blog                    :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO Image: [[image-blog:Cousins in Binary Tree][https://raw.githubusercontent.com/dennyzhang/code.dennyzhang.com/master/problems/cousins-in-binary-tree/cousin-tree1.png :noexport:
+* TODO Add review: 3sum: https://code.dennyzhang.com/tag/3sum      :noexport:
+
+* TODO Add review: iterator: https://code.dennyzhang.com/tag/iterator :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO Blog: BrainTeaser for family fun                            :noexport:
+* TODO [#A] Ask Facebook to replace the link: https://github.com/Techsture/sre_study_guide :noexport:
+* TODO code blog: change function color: https://code.dennyzhang.com/integer-replacement :noexport:
+* TODO code.dennyzhang.com: spam messages: https://code.dennyzhang.com/wp-admin/edit-comments.php :noexport:
+
+* TODO code add github and social medium link: https://code.dennyzhang.com/partition-array-into-disjoint-intervals :noexport:
+* TODO [#A] Besides tag: add series or review links automatically: https://code.dennyzhang.com/partition-array-into-disjoint-intervals :noexport:
+* TODO generate series [[https://code.dennyzhang.com/tag/walkrobot][#walkrobot]], [[https://code.dennyzhang.com/tag/wiggle][#wiggle]]                         :noexport:
+* TODO sereie: maximum https://leetcode.com/problems/maximum-sum-circular-subarray/description/ :noexport:
+* TODO [#A] code.dennyzhang.com: elisp save hook, make sure list-post-meta-new create folders; set url link :noexport:
+* TODO doc: trending feeds: sliding window的Top K                  :noexport:
+https://pkghosh.wordpress.com/2014/09/10/realtime-trending-analysis-with-approximate-algorithms/
+http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/
+https://techcrunch.com/2016/09/06/ultimate-guide-to-the-news-feed/
+
+其实就是sliding window的Top K
+ dennyzhang
+i see
+ Bo Yang
+统计前一分钟Top 10的热搜, sth like that :)
+* TODO [#A] google adsense image icon: https://code.dennyzhang.com/ :noexport:
+<<<<<<< HEAD
+* HALF classic: doc: sort one array, according to another array: https://leetcode.com/problems/find-and-replace-in-string/description/ :noexport:
+* TODO https://github.com/MisterBooo/LeetCodeAnimation             :noexport:
+* HALF YouTube: https://www.youtube.com/watch?v=gwlevtaC-u0&list=PL6ED884C7AEE68027 :noexport:
+* graph                                                            :noexport:
+- travel salemen
+- shortest distance
+* rearrange: https://code.dennyzhang.com/tag/rearrange             :noexport:
+** Rearrange a string so that all same characters become at least d distance away
+https://www.geeksforgeeks.org/rearrange-a-string-so-that-all-same-characters-become-atleast-d-distance-away/
+** Rearrange characters in a string such that no two adjacent are same
+https://www.geeksforgeeks.org/rearrange-characters-string-no-two-adjacent/
+** Rearrange a string so that all same characters become d distance away
+https://www.geeksforgeeks.org/rearrange-a-string-so-that-all-same-characters-become-at-least-d-distance-away/
+* TODO combination & permutation                                   :noexport:
+* TODO tree traversal                                              :noexport:
+https://en.wikibooks.org/wiki/A-level_Computing_2009/AQA/Problem_Solving,_Programming,_Operating_Systems,_Databases_and_Networking/Programming_Concepts/Tree_traversal_algorithms_for_a_binary_tree
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO Review: bitmanipulation: https://code.dennyzhang.com/review-bitmanipulation/ :noexport:
+* TODO Review: rotateoperation: https://code.dennyzhang.com/tag/rotateoperation/ :noexport:
+* TODO Questions with easy way to do follow-up                     :noexport:
+* TODO YouTube: https://www.youtube.com/user/xxfflower/playlists   :noexport:
+* TODO https://en.wikipedia.org/wiki/Category:Optimization_algorithms_and_methods :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO codeforces; hdoj; Google的Kick start比赛                    :noexport:
+* TODO classic: backtracking                                       :noexport:
+* TODO classic: sliding window                                     :noexport:
+* TODO tip: use array instead of hashmap                           :noexport:
+https://leetcode.com/problems/subarray-sums-divisible-by-k/description/
+* TODO #presum: problem                                            :noexport:
+* TODO #minpathsum: problem                                        :noexport:
+* TODO #postorder problem                                          :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#A] List posts with two labels                             :noexport:
+* TODO Add difficulty level of the problems                        :noexport:
+* TODO adsense doesn't show promptly: https://code.dennyzhang.com/palindrome-permutation-ii :noexport:
+* TODO Learn from https://github.com/aQuaYi/LeetCode-in-Go         :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO Add fork for review posts: https://code.dennyzhang.com/review-complexity :noexport:
+* TODO Promote my github repo: https://github.com/dennyzhang/code.dennyzhang.com :noexport:
+* TODO syntax color: https://code.dennyzhang.com/max-consecutive-ones-iii :noexport:
+* TODO code blog: change a better wordpress template               :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO rename braindenny to Dennyzhang                             :noexport:
+https://code.dennyzhang.com/tag/redo/page/5
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO change the menu of the blog                                 :noexport:
+* TODO bash export no font coloring                                :noexport:
+* TODO better CSS for code snippets                                :noexport:
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/discuss/393503/Golang-stack
+https://code.dennyzhang.com/remove-all-adjacent-duplicates-in-string-ii
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO make code block bigger                                      :noexport:
+https://code.dennyzhang.com/web-crawler-multithreaded
+* TODO Merge two posts: https://code.dennyzhang.com/review-code-problems, https://code.dennyzhang.com/followup-all :noexport:
+* TODO make the css block longer: https://architect.dennyzhang.com/explain-delayedqueue :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO Add similar floating github: https://oi-wiki.org/dp/#dag    :noexport:
+* TODO [#A] detect 404 images: https://code.dennyzhang.com/binary-tree-cameras :noexport:
+https://code.dennyzhang.com/the-dining-philosophers
+* TODO Can't push java code snippet: https://code.dennyzhang.com/the-dining-philosophers :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO maintain similar link like https://leetcode.com/discuss/interview-question/448285/list-of-questions-sorted-by-common-patterns :noexport:
+* TODO [#A] Doesn't show the full problem list: https://code.dennyzhang.com/review-knapsack :noexport:
+https://code.dennyzhang.com/review-backtracking
+* TODO Change menu: https://code.dennyzhang.com/                   :noexport:
+* TODO Add a menu: category #Series                                :noexport:
+* TODO Doesn't show ads fast enough: https://code.dennyzhang.com/rotate-function :noexport:
+* TODO detect 404 images: https://code.dennyzhang.com/largest-component-size-by-common-factor :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO See more blogposts.: https://code.dennyzhang.com/followup-intervaldp :noexport:
+* TODO Make sure code.dennyzhang.com is mobile-friendly            :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#B] contribute back to leetcode test suite                 :noexport:
+last substring: aaaaaa
+* TODO typical code problems                                       :noexport:
+https://www.1point3acres.com/bbs/thread-617777-1-1.html
+** TODO Segment Tree，Binary Index Tree
+** TODO Manacher
+** TODO Hungarian
+** TODO Morris Traversal
+** TODO MaxFlowMinCut
+* TODO [#A] 认识 花花酱                                            :noexport:
+https://www.youtube.com/channel/UC5xDNEcvb1vgw3lE21Ack2Q
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#B] search with two tags                                   :noexport:
+* TODO [#A] problem: Credits To -> Add Tag:                        :noexport:
+* TODO [#A] avoid adsense for coding problems                      :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#A] 将top 100再刷一遍; 将leetcode hard 300题刷一遍!        :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#A] code slogan: show the relavant problems                :noexport:
+* TODO [#A] Code website: adsense doesn't show up quickly          :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO [#A] Doesn't show all posts: https://code.dennyzhang.com/review-oodesign :noexport:
+https://code.dennyzhang.com/review-binarytree
+
+https://displayposts.com/docs/parameters/
+
+#+BEGIN_EXAMPLE
+bash-3.2$  git diff
+diff --git a/plugins/display-posts-shortcode/display-posts-shortcode.php b/plugins/display-posts-shortcode/display-posts-shortcode.php
+index b103714..45af4a0 100644
+--- a/plugins/display-posts-shortcode/display-posts-shortcode.php
++++ b/plugins/display-posts-shortcode/display-posts-shortcode.php
+@@ -98,7 +98,7 @@ function be_display_posts_shortcode( $atts ) {
+ 			'post_parent__not_in'   => false,
+ 			'post_status'           => 'publish',
+ 			'post_type'             => 'post',
+-			'posts_per_page'        => '10',
++			'posts_per_page'        => '30',
+ 			's'                     => false,
+ 			'tag'                   => '',
+ 			'tax_operator'          => 'IN',
+#+END_EXAMPLE

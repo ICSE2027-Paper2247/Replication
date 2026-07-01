@@ -1,0 +1,129 @@
+= Chronicle Runtime Compiler
+Chronicle Software
+:css-signature: demo
+:toc: macro
+:sectnums:
+:source-highlighter: rouge
+
+image:https://maven-badges.herokuapp.com/maven-central/net.openhft/compiler/badge.svg[]
+image:https://javadoc.io/badge2/net.openhft/compiler/javadoc.svg[]
+image:https://img.shields.io/badge/release%20notes-subscribe-brightgreen[link="https://chronicle.software/release-notes/"]
+image:https://sonarcloud.io/api/project_badges/measure?project=OpenHFT_Java-Runtime-Compiler&metric=alert_status[]
+
+toc::[]
+
+This library lets you feed _plain Java source as a_ `String`, compile it in-memory and immediately load the resulting `Class<?>` - perfect for hot-swapping logic while the JVM is still running.
+
+== Quick-Start
+
+[source,xml,subs=+quotes]
+----
+<!-- Maven -->
+<dependency>
+    <groupId>net.openhft</groupId>
+    <artifactId>compiler</artifactId>
+    <version>Look up the most recent version on Maven Central.</version>
+</dependency>
+----
+
+[source,groovy,subs=+quotes]
+----
+/* Gradle (Kotlin DSL) */
+implementation("net.openhft:compiler:Look up the most recent version on Maven Central.")
+----
+
+.Example: compile and run a _Runnable_ at runtime
+[source,java]
+----
+import net.openhft.compiler.CompilerUtils;
+
+String className = "mypackage.MyDynamicClass";
+String src = """
+    package mypackage;
+    public class MyDynamicClass implements Runnable {
+        public void run() {
+            System.out.println("Hello World");
+        }
+    }
+""";
+
+Class<?> clazz = CompilerUtils.CACHED_COMPILER.loadFromJava(className, src);
+((Runnable) clazz.getDeclaredConstructor().newInstance()).run();
+----
+
+== Installation
+
+* Requires a *full JDK* (8, 11, 17 or 21 LTS), _not_ a slim JRE.
+* On Java 11 + supply these flags (copy-paste safe):
+
+[source,bash]
+----
+--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+--add-opens=jdk.compiler/com.sun.tools.javac=ALL-UNNAMED
+----
+
+* Spring-Boot / fat-JAR users
+** unpack Chronicle jars:
+`bootJar { requiresUnpack("**/chronicle-*.jar") }`
+
+== Feature Highlights
+
+|===
+| Feature | Benefit
+
+| In-memory compile & load
+| Hot-swap code without restarting JVM
+
+| CachedCompiler
+| Skips recompilation of unchanged source
+
+| Debug Mode
+| Writes `.java` / `.class` so IDE breakpoints work
+
+| Custom ClassLoader support
+| Isolate plugins or enable class unloading
+
+| Nested-class handling
+| Build helper hierarchy in a single call
+|===
+
+== Advanced Usage & Patterns
+
+* Hot-swappable _strategy interface_ for trading engines
+** Rule-engine: compile business rules implementing `Rule`
+*** Supports validator hook to vet user code
+** Replace reflection: generate POJO accessors, 10 x faster
+** Off-heap accessors with Chronicle Bytes / Map
+
+== Operational Notes
+
+* Compile on a background thread at start-up; then swap instances.
+** Re-use class names _or_ child classloaders to control Metaspace.
+*** Use `CompilerUtils.DEBUGGING = true` during dev; remember to prune artefacts.
+** SLF4J categories: `net.openhft.compiler` (INFO), compilation errors at ERROR.
+** Micrometer timers/counters: `compiler.compiles`, `compiler.failures`.
+
+== Documentation & Requirements
+
+* link:src/main/docs/project-requirements.adoc[Project requirements] outline functional, non-functional, and compliance obligations.
+
+== FAQ / Troubleshooting
+
+* _`ToolProvider.getSystemJavaCompiler() == null`_
+* You are running on a JRE; use a JDK.
+* _`ClassNotFoundException: com.sun.tools.javac.api.JavacTool`_
+* tools.jar is required on JDK <= 8. Newer JDKs need the `--add-exports` and `--add-opens` flags.
+* Classes never unload
+* Generate with a unique `ClassLoader` per version so classes can unload; each loader uses Metaspace.
+* Illegal-reflective-access warning
+* Add the `--add-opens` & `--add-exports` flags shown above.
+
+== CI / Build & Test
+
+* GitHub Actions workflow runs `mvn verify`, unit & race-condition tests.
+** Code-coverage report published to SonarCloud badge above.
+
+== Contributing & License
+
+* Fork -> feature branch -> PR; run `mvn spotless:apply` before pushing.
+** All code under the _Apache License 2.0_ - see `LICENSE`.

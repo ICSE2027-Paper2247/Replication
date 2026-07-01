@@ -1,0 +1,97 @@
+Short description:
+GarminPlugin is a browser plugin to support Garmin Devices on Linux.
+Currently (02.12.2010) there is no official browser plugin support for Linux from Garmin.
+
+This plugin has nothing to do with the company Garmin (http://www.garmin.com)
+
+Long description:
+This browser plugin has the same methods and properties as the official
+Garmin Communicator Plugin (http://www8.garmin.com/products/communicator/).
+It can be used to transfer GPX files (Geocache Descriptions) to your garmin
+device using the official Garmin Javascript API. Its functionality depends on
+the device you use.
+- Edge305/Forerunner305: ReadFitnessData, ReadGpsData, No write support
+- Edge705/Oregon/Dakota: ReadFitnessData, ReadGpsData, Write Gpx files
+- Edge800: ReadFitnessData, Write Gpx/Tcx Files
+- Other devices: Executes external command to write Gpx to device
+
+Motivation:
+Garmin introduced paperless geocaching a while ago on their devices. This
+works great using Windows and geocaching.com because a windows plugin is
+available that gives you the possibility to transfer geocaches with one click
+to the device. Having to boot Windows every time I wanted to go geocaching
+felt like a waste of time. I had many different ideas on how to best transfer
+geocaches to my garmin device, but they were all based on parsing the
+geocaching.com website because they do not offer an official API to access
+the geocaches. The idea of having to update my application every time they
+change their layout did stop me from going that approach. Writing a browser
+plugin that simulates the garmin plugin seemed to be the best idea. Using a
+javascript debugger soon revealed that the effort of writing such a plugin
+wasn't that huge - so I got started...
+
+Features:
+  - Write a GPX file to disk
+  - Call a script after the GPX file was written to disk
+  - Read FitnessData from device
+
+GarminPlugin is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+GarminPlugin is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+This software was written by Andreas Diesner [ andreas.diesner [AT] gmx [DOT] de ]
+The project is hosted on http://www.andreas-diesner.de/garminplugin/
+The source code is hosted on GitHub http://github.com/adiesner/GarminPlugin
+
+Dependencies to other projects:
+garmintools     - http://code.google.com/p/garmintools/
+libusb          - http://www.libusb.org/
+ticpp           - http://code.google.com/p/ticpp/
+zlib            - http://www.zlib.net
+gcrypt          - http://www.gnupg.org/
+
+Thanks goes to
+	- Christian Kurek
+	- Bob Trower (http://base64.sourceforge.net)
+	- Gray Watson (MD5-Code) (http://256.com/gray/)
+	- Ralf Treinen (solving license issues)
+	- The contributors of the above projects
+
+Howto compile GarminPlugin:
+
+# This example shows how to compile GarminPlugin on a 64bit Ubuntu System
+
+sudo apt-get install build-essential subversion git-core zlib1g-dev libusb-dev libgcrypt11-dev
+git clone http://github.com/adiesner/GarminPlugin.git
+svn export http://garmintools.googlecode.com/svn/trunk/ garmintools
+svn export http://ticpp.googlecode.com/svn/trunk/ ticpp
+wget http://downloads.sourceforge.net/project/premake/Premake/4.2.1/premake-4.2.1-linux.tar.gz
+
+# compile ticpp
+tar xvzf premake-4.2.1-linux.tar.gz
+cd ticpp
+../premake4 --cc=gcc --os=linux --platform=x64 gmake
+# if you are not able to execute premake4 on a 64bit machine install ia32-libs and try again
+sed --in-place 's/$(CFLAGS)/$(CFLAGS) -fPIC/g' TiCPP.make
+make config=release64
+cd ..
+
+# compile garmintools
+cd garmintools
+./configure CXXFLAGS="-fPIC -g -O2" CFLAGS="-g -O2 -fPIC"
+make
+cd ..
+
+# compile GarminPlugin
+cd GarminPlugin/src
+/configure --with-garmintools-incdir=../../garmintools/src --with-garmintools-libdir=../../garmintools/src/.libs/
+make
+cd ../..
+
+# Install the plugin
+sudo cp GarminPlugin/src/npGarminPlugin.so /usr/lib/mozilla/plugins

@@ -1,0 +1,63 @@
+# Project Archived!
+This project has not been maintained since late 2012. As such, `CrowdDetox` has been set to archive (read only) status. The project will remain listed with hopes the code is useful for future projects or communities.
+
+---
+
+CrowdStrike CrowdDetox Plugin for Hex-Rays
+
+CrowdDetox version 1.0.2 Beta
+by Jason Geffner (jason@crowdstrike.com)
+
+The CrowdDetox plugin for Hex-Rays automatically removes junk code and variables from Hex-Rays function decompilations.
+
+
+LICENSE
+
+Please see the LICENSE file for complete licensing details.  
+
+
+BUILD INSTRUCTIONS
+
+Pre-built versions of the plugin for Windows, Mac OS, and Linux (hexrays_CrowdDetox.plw, hexrays_CrowdDetox.pmc, and hexrays_CrowdDetox.plx, respectively) can be downloaded from http://www.crowdstrike.com/community-tools/index.html
+
+If you would like to use the pre-built plugin, you may skip to INSTALLATION INSTRUCTIONS. Otherwise, follow the steps below to build the CrowdDetox plugin.
+
+1. Install IDA Pro with Hex-Rays (https://www.hex-rays.com)
+2. Download and extract the IDA Pro SDK (https://www.hex-rays.com/products/ida/support/download.shtml)
+3. Install CMake (http://www.cmake.org/cmake/resources/software.html)
+4. Install a C++ compiler
+5. Run CMake on the included CMakeLists.txt file with the following command line arguments: -D IDA_DIR=<path to IDA Pro installation> -D IDA_SDK=<path to IDA Pro SDK>
+
+   For example, if you want to build the CrowdDetox plugin with Visual Studio 11 in Windows, your command line may look as follows:
+   cmake.exe -G "Visual Studio 11" -D CMAKE_MAKE_PROGRAM="C:\Program Files\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe" -D IDA_DIR="C:\Program Files\IDA 6.4" -D IDA_SDK="C:\idasdk64" CMakeLists.txt
+
+6. Build the solution using a C++ compiler. If using Visual Studio in Windows, open the created CrowdDetox.sln solution and build the CrowdDetox project. In Mac OS or Linux, run make.
+
+
+INSTALLATION INSTRUCTIONS
+
+Copy hexrays_CrowdDetox.plw (for Windows), hexrays_CrowdDetox.pmc (for Mac OS), or hexrays_CrowdDetox.plx (for Linux) to the IDA Pro plugins folder.
+
+
+UNINSTALLATION INSTRUCTIONS
+
+Remove hexrays_CrowdDetox.plw (for Windows), hexrays_CrowdDetox.pmc (for Mac OS), or hexrays_CrowdDetox.plx (for Linux) from the IDA Pro plugins folder.
+
+
+USAGE INSTRUCTIONS
+
+To detox a function's decompilation, press 'Shift-F5'.
+
+By default, CrowdDetox considers values and variables used in return statements to be legitimate. Users can manually set a function's prototype to specify a return type of 'void' if the user doesn't want CrowdDetox to consider a function's returned variables to automatically be considered legitimate.
+
+
+RELEASE NOTES
+
+1.0.2 Beta
+-- Defined _countof macro
+1.0.1 Beta
+-- Detoxing is no longer automatic; users may now press 'Shift-F5' to detox a function's decompilation
+-- Returned variables now always considered legitimate by default; users can manually set a function's prototype to specify a return type of 'void' if the user doesn't want CrowdDetox to consider a function's returned variables to automatically be considered legitimate
+-- Improved handling of 'continue', 'return', and 'asm' statements
+1.0 Beta
+-- Initial release

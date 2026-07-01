@@ -1,0 +1,68 @@
+# glsl-lut [![unstable](https://badges.github.io/stability-badges/dist/unstable.svg)](https://github.com/badges/stability-badges)
+
+![ABTest](https://github.com/mattdesl/glsl-lut/assets/1383811/28f0efce-f89a-4c44-8028-2f19f01094c0)
+
+[Demo here](https://mattdesl.github.io/glsl-lut/example/demo.html)
+
+Use a texture as a lookup table to apply color transforms in a shader. Original implementation from GPUImage, see [here](https://liovch.blogspot.ca/2012/07/add-instagram-like-effects-to-your-ios.html). For more details on the concept, see [here](https://developer.nvidia.com/gpugems/GPUGems2/gpugems2_chapter24.html).
+
+This is geared towards OpenGL ES, so no 3D textures are used, and the lookup table is 512x512 (using every 4th color).
+
+## Usage
+
+[![NPM](https://nodei.co/npm/glsl-lut.png)](https://nodei.co/npm/glsl-lut/)
+
+First, grab the original (un-altered) lookup table from the [image](image) folder, or with the [CLI](#cli).
+
+Then you can apply any filters with Photoshop or at runtime to the lookup table image. These can be things like curves, levels, grayscale, etc. Each transform must be independent of surrounding pixels (no blurs, median, etc).
+
+In your shader, sample the lookup texture (`uLookup` below) and pass the original `vec4` color to the transform method.
+
+```glsl
+
+uniform sampler2D uLookup;
+
+#pragma glslify: transform = require('glsl-lut')
+
+...
+    vec4 original = texture2D(uTexture, vUv);
+	gl_FragColor = transform(original, uLookup);
+```
+
+> ❗**Important**: Make sure to set `TEXTURE_MIN_FILTER` and `TEXTURE_MAG_FILTER` to `NEAREST` on the lookup table texture.
+
+## Flipped Y Lookup
+
+Depending on your environment, the Y texture coordinate may need to be inverted during the lookup to get the correct color output. If your colours look messed up, this is most likely the case. Require the inverted function like so:
+
+```
+#pragma glslify: transform = require(glsl-lut/flipY)
+```
+
+## Defines
+
+Requiring `glsl-lut/flipY` is the same as making a define for `LUT_FLIP_Y`. You can also define `LUT_NO_CLAMP` before requiring the function and the incoming texture color will not have a `clamp(c, 0.0, 1.0)` operation applied. This may be useful if you plan to take advantage of hardware texture wrapping.
+
+## CLI
+
+You can also use this tool as a command-line application to create a new (default) lookup table PNG image.
+
+```sh
+npm install -g glsl-lut
+```
+
+Then:
+
+```sh
+glsl-lut > images/lut.png
+```
+
+## LUT Generation
+
+You can also generate the LUT in software, for example see [example/generate.mjs](./example/generate.mjs) (requires node@v20.11 or higher) which generates a new LUT and writes the PNG to disk. This gives you the option to create specific filtering, for example "desaturate all colours some distance from a target hue in OKLAB color space," which is difficult to achieve with just Photoshop colour adjustments.
+
+<sup>See [this file](https://github.com/BradLarson/GPUImage/blob/master/framework/Source/GPUImageLookupFilter.h) for further details on generating a lookup table programmatically.</sup>
+
+## License
+
+MIT, see [LICENSE.md](https://github.com/mattdesl/glsl-lut/blob/master/LICENSE.md) for details.

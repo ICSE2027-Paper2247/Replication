@@ -1,0 +1,55 @@
+= Magical Language Lyrical Lisp
+
+Let's play in Lisp!
+
+
+== How to run Lyrical Lisp
+
+Lyrical Lisp is consist of text data, graphic data, and sound data. This
+repository has only source code of text data. In order to get all data,
+download ``lyricallisp_free-X.X.zip'' from following URL:
+
+  https://lyrical.zick.run/download.html
+
+If you unzip it, ``lyricallisp_free'' directory is created. You can run Lyrical
+Lisp by double-clicking the ``nsclisper.exe'' in the directory.
+
+
+== How to compile your source code
+
+In order to run Lyrical Lisp with your source code, you must make ``nscript.dat''
+and put it to ``lyricallisp_free'' directory.
+
+You can compile your source files (``X.txt'') into ``nscript.dat'' using
+``nscmake.exe'' which can be downloaded from following URL:
+
+  http://www.nscripter.com/
+
+Or you can also make ``nscript.dat'' with following commands:
+
+% vi a.c
+#include <stdio.h>
+int main(int argc, char** argv) {
+  int i;
+  for (i = 1; i < argc; ++i) {
+    char b;
+    FILE* fp = fopen(argv[i], "r");
+    while (fread(&b, 1, 1, fp)) {
+      if (b != '\r') {
+        printf("%c", b ^ 0x84);
+      }
+    }
+    printf("%c", '\n' ^ 0x84);
+    fclose(fp);
+  }
+  return 0;
+}
+% gcc -o a a.c
+% ./a *.txt > nscript.dat
+
+
+== License
+
+Unless otherwise noted, the Magical Language Lyrical Lisp source files are
+distributed under the BSD-style license found in the LICENSE file.
+

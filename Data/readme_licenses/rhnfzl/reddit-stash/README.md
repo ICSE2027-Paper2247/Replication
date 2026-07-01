@@ -1,0 +1,3651 @@
+# Reddit Stash: Automatically Save Reddit Posts and Comments to Local, Dropbox, or S3
+
+[![Python](https://img.shields.io/badge/Python-3.10--3.12-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Workflow-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+[![Docker](https://img.shields.io/badge/Docker-Available-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/rhnfzl/reddit-stash/pkgs/container/reddit-stash)
+[![Dropbox](https://img.shields.io/badge/Dropbox-Integration-0061FF?style=for-the-badge&logo=dropbox&logoColor=white)](https://www.dropbox.com/)
+[![AWS S3](https://img.shields.io/badge/AWS_S3-Integration-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
+[![Reddit](https://img.shields.io/badge/Reddit-API-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/dev/api/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+> **Reddit API Policy Change (November 2025):** Reddit now requires pre-approval to create new API apps. **If you already have API credentials, they still work normally.** New users must apply at [Reddit's API Request Form](https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164) (expect 2-4 weeks for approval). Alternatively, you can use the [GDPR Export Mode](#gdpr-only-mode-no-api-credentials-needed) to create an index of your saved content without any API credentials. See [Getting API Credentials](#getting-api-credentials) for full details.
+
+**Reddit Stash** is a Python script designed to help you effortlessly back up your Reddit **saved/ posted/ upvoted** posts and comments to Dropbox, AWS S3, or your local machine. Utilizing GitHub Actions, this script runs every 3 hours during peak hours and twice during off-peak hours, automating the process of archiving your Reddit data after a simple setup.
+
+> **Looking for search & AI chat?** Check out [reddit-stash-insights](https://github.com/rhnfzl/reddit-stash-insights) — a companion tool that adds semantic search and RAG chat to your Reddit archive.
+
+## 📋 What You Get
+
+When Reddit Stash runs successfully, your saved content is organized by subreddit in a clean folder structure and stored as markdown files:
+
+```
+reddit/
+├── r_AskReddit/
+│   ├── POST_abcd123.md           # Your posted content
+│   ├── COMMENT_efgh456.md        # Your comments
+│   ├── SAVED_POST_xyz789.md      # Posts you saved
+│   └── SAVED_COMMENT_def012.md   # Comments you saved
+├── r_ProgrammerHumor/
+│   ├── UPVOTE_POST_ghi345.md     # Posts you upvoted
+│   ├── UPVOTE_COMMENT_mno901.md  # Comments you upvoted
+│   └── GDPR_POST_jkl678.md       # From GDPR export (if enabled)
+├── gdpr_data/                    # GDPR CSV files (if processing enabled)
+│   ├── saved_posts.csv
+│   └── saved_comments.csv
+└── file_log.json                 # Tracks processed items
+```
+
+Each post and comment is formatted with:
+- Original title and content
+- Author information
+- Post/comment URL
+- Timestamp
+- Subreddit details
+- Any images or links from the original post
+
+When Reddit Stash completes processing, you'll receive detailed storage information:
+```
+Processing completed. 150 items processed, 25 items skipped.
+Markdown file storage: 12.45 MB
+Media file storage: 89.32 MB
+Total combined storage: 101.77 MB
+```
+
+This gives you clear visibility into:
+- **Text content storage**: How much space your saved posts and comments use
+- **Media storage**: How much space downloaded images and videos use
+- **Total storage**: Combined space used for your complete Reddit archive
+
+## Table of Contents
+- [What You Get](#-what-you-get)
+- [How It Works](#how-it-works)
+- [Quick Start](#-quick-start)
+  - [Setup Method Comparison](#setup-method-comparison)
+- [Key Features](#key-features)
+- [Why Use Reddit Stash](#-why-use-reddit-stash)
+- [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+    - [GitHub Action Installation](#github-action-installation-recommended)
+    - [Local Installation](#local-installation)
+    - [Docker Installation](#docker-installation)
+  - [Setup Verification Checklist](#setup-verification-checklist)
+- [Configuration](#configuration)
+  - [Configuration Quick Reference](#configuration-quick-reference)
+  - [Configuration Sections](#configuration-sections)
+    - [[Settings] - Core Application Behavior](#settings---core-application-behavior)
+    - [[Configuration] - Reddit API Credentials](#configuration---reddit-api-credentials)
+    - [[Media] - Advanced Media Download System](#media---advanced-media-download-system)
+    - [[Imgur] - Imgur API Configuration](#imgur---imgur-api-configuration)
+    - [[Recovery] - Content Recovery System](#recovery---content-recovery-system)
+    - [[Retry] - Retry Queue Configuration](#retry---retry-queue-configuration)
+    - [[Storage] - Cloud Storage Backend](#storage---cloud-storage-backend)
+  - [Important Configuration Notes](#important-configuration-notes)
+  - [Getting API Credentials](#getting-api-credentials)
+  - [GDPR-Only Mode (No API Credentials Needed)](#gdpr-only-mode-no-api-credentials-needed)
+  - [Setting Up Reddit Environment Variables](#setting-up-reddit-environment-variables)
+  - [Setting Up Dropbox App](#setting-up-dropbox-app)
+  - [Setting Up AWS S3](#setting-up-aws-s3)
+  - [Migrating Between Storage Providers](#migrating-between-storage-providers)
+  - [Settings Index (Alphabetical)](#settings-index-alphabetical)
+- [Docker Environment Variables](#docker-environment-variables)
+- [Alternative Scheduling: External Cron Setup](#alternative-scheduling-external-cron-setup)
+- [Important Notes](#important-notes)
+  - [About Unsaving](#important-note-about-unsaving)
+  - [GDPR Data Processing](#gdpr-data-processing)
+- [File Organization and Utilities](#file-organization-and-utilities)
+- [Frequently Asked Questions](#frequently-asked-questions)
+- [Troubleshooting](#-troubleshooting)
+- [Security Considerations](#-security-considerations)
+- [Contributing](#contributing)
+- [Acknowledgement](#acknowledgement)
+- [Project Status](#project-status)
+  - [Future Enhancements](#future-enhancements)
+- [License](#license)
+
+## How It Works
+
+```mermaid
+graph LR
+    A[Reddit API] -->|Fetch Content| B[Reddit Stash Script]
+    B -->|Save as Markdown| C[Local Storage]
+    B -->|Check Settings| D{Save Type}
+    D -->|SAVED| E[Saved Posts/Comments]
+    D -->|ACTIVITY| F[User Posts/Comments]
+    D -->|UPVOTED| G[Upvoted Content]
+    D -->|ALL| H[All Content Types]
+    C -->|Optional| I[Cloud Upload]
+    I -->|Dropbox or S3| K[Cloud Storage]
+    J[GDPR Export] -->|Optional| B
+```
+
+### Workflow Summary
+
+1. **Data Collection**:
+   - The script connects to Reddit's API to fetch your saved, posted, or upvoted content
+   - Optionally, it can process your GDPR export data for a complete history
+
+2. **Processing & Organization**:
+   - Content is processed based on your settings (SAVED, ACTIVITY, UPVOTED, or ALL)
+   - Files are organized by subreddit in a clean folder structure
+   - A log file tracks all processed items to avoid duplicates
+
+3. **Storage Options**:
+   - Local storage: Content is saved as markdown files on your machine
+   - Cloud storage: Optional integration with Dropbox or AWS S3 for backup
+
+4. **Deployment Methods**:
+   - **GitHub Actions**: Fully automated with scheduled runs and cloud storage integration (Dropbox or S3)
+   - **Local Installation**: Run manually or schedule with cron jobs on your machine
+   - **Docker**: Run in a containerized environment with optional volume mounts
+
+The script is designed to be flexible, allowing you to choose how you collect, process, and store your Reddit content.
+
+## ⚡ Quick Start
+
+For those who want to get up and running quickly, here's a streamlined process:
+
+### Option 1: GitHub Actions (Easiest Setup)
+
+1. Fork this repository.
+2. Set up the required secrets in your GitHub repository:
+   - From Reddit: `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET`, `REDDIT_USERNAME`, `REDDIT_PASSWORD`
+   - For Dropbox storage: `DROPBOX_APP_KEY`, `DROPBOX_APP_SECRET`, `DROPBOX_REFRESH_TOKEN`
+   - For S3 storage: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_S3_BUCKET`, `STORAGE_PROVIDER` (set to `s3`)
+3. Manually trigger the workflow from the Actions tab.
+
+### Option 2: Local Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/reddit-stash.git
+   cd reddit-stash
+   ```
+   Replace `YOUR_USERNAME` with your GitHub username (or use `rhnfzl` if using the original repository).
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up your environment variables and run:
+   ```bash
+   python reddit_stash.py
+   ```
+
+### Option 3: Docker Installation
+
+1. Build the Docker image:
+   ```bash
+   docker build -t reddit-stash .
+   ```
+2. Run with your environment variables:
+   ```bash
+   docker run -it \
+     -e REDDIT_CLIENT_ID=your_client_id \
+     -e REDDIT_CLIENT_SECRET=your_client_secret \
+     -e REDDIT_USERNAME=your_username \
+     -e REDDIT_PASSWORD=your_password \
+     -v $(pwd)/reddit:/app/reddit \
+     reddit-stash
+   ```
+   *Add cloud storage env vars as needed: Dropbox (`DROPBOX_APP_KEY`, `DROPBOX_APP_SECRET`, `DROPBOX_REFRESH_TOKEN`) or S3 (`STORAGE_PROVIDER=s3`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_S3_BUCKET`). See [Setting Up Dropbox App](#setting-up-dropbox-app) or [Setting Up AWS S3](#setting-up-aws-s3) for details.*
+
+For detailed setup instructions, continue reading the [Setup](#setup) section.
+
+### Setup Method Comparison
+
+| Feature | GitHub Actions | Local Installation | Docker |
+|---------|---------------|-------------------|--------|
+| **Ease of Setup** | ⭐⭐⭐ (Easiest) | ⭐⭐ | ⭐⭐ |
+| **Automation** | ✅ Runs on schedule | ✅ Manual control or cron | ✅ Built-in scheduling support |
+| **Requirements** | GitHub account | Python 3.10-3.12 | Docker |
+| **Data Storage** | Dropbox or S3 | Local, Dropbox, or S3 | Local, Dropbox, or S3 |
+| **Maintenance** | Minimal | More hands-on | Low to Medium |
+| **Privacy** | Credentials in GitHub secrets | Credentials on local machine | Credentials in container |
+| **Best For** | Set & forget users | Power users with customization needs | Containerized environments & flexible scheduling |
+
+## Key Features
+
+- 🤖 **Automated Reddit Backup:** Automatically retrieves saved posts and comments from Reddit, even your posts and comments if you set it up.
+- 🔄 **Flexible Storage Options:** Allows for flexible saving options (all activity or only saved items) via `settings.ini`.
+- 📦 **Cloud Storage Integration:** Sync your archive to Dropbox or AWS S3 (with Glacier support for low-cost archival).
+- 📝 **Markdown Support:** Saves the content as markdown files.
+- 🔍 **File Deduplication:** Uses intelligent file existence checking to avoid re-downloading content.
+- ⏱️ **Rate Limit Management:** Implements dynamic sleep timers to respect Reddit's API rate limits.
+- 🔒 **GDPR Data Processing:** Optional processing of Reddit's GDPR export data.
+- 🖼️ **Enhanced Media Downloads:** Download images, videos, and other media with dramatically improved success rates (~80% vs previous ~10%), featuring intelligent fallback systems and modern web compatibility.
+- 🔄 **Content Recovery System:** 4-provider cascade for failed downloads (Wayback Machine, PullPush.io, Reddit Previews, Reveddit) with SQLite caching and automatic retry across runs.
+
+## 🎯 Why Use Reddit Stash
+
+Reddit Stash was designed with specific use cases in mind:
+
+### 1. Overcome Reddit's Limitations
+Reddit only shows your most recent 1000 saved posts. With Reddit Stash, you can save everything and go beyond this limitation.
+
+### 2. Create a Personal Knowledge Base
+Many users save technical posts, tutorials, or valuable discussions on Reddit. Reddit Stash helps you build a searchable archive of this knowledge.
+
+### 3. Preserve Content Before It's Deleted
+Reddit posts and comments can be deleted by users or moderation. Reddit Stash preserves this content in your personal archive.
+
+### 4. Access Your Content Offline
+All of your saved posts are available locally in markdown format, making them easily accessible even without an internet connection.
+
+### 5. Integration with Note-Taking Systems
+Since content is saved in markdown, you can easily import it into note-taking systems like Obsidian, Notion, or any markdown-compatible tool.
+
+### 6. Media Preservation
+Beyond text, Reddit Stash can download and preserve images, videos, and other media from posts, ensuring you have complete archives even if external hosting services go offline.
+
+## Setup
+
+### Prerequisites
+- ✅ Python 3.10-3.12 (Python 3.12 recommended for best performance)
+- 🔑 Reddit API credentials
+- 📊 A cloud storage account (optional): Dropbox with API token, or an AWS account with S3 access
+
+### Installation
+
+Before proceeding with any installation method, ensure that you have set the Reddit environment variables. Follow [Reddit API guide](#setting-up-reddit-environment-variables) to create a Reddit app and obtain the necessary credentials.
+
+#### GitHub Action Installation (Recommended)
+
+**Note:** Cloud storage is optional. To use Dropbox, see the [Dropbox App setup](#setting-up-dropbox-app). To use AWS S3 instead, see [Setting Up AWS S3](#setting-up-aws-s3). The GitHub Actions workflow runs the script every 3 hours during peak hours (6:00-21:00 UTC) and twice during off-peak hours (23:00 and 3:00 UTC), syncing files to your configured cloud storage. The workflow is defined in `.github/workflows/reddit_scraper.yml`.
+
+1. **Fork this repository**.
+
+2. **Set Up Secrets:**
+- Go to your forked repository's **Settings** > **Secrets and variables** > **Actions** > Click on **New repository secret**.
+- Add the following secrets individually:
+    - `REDDIT_CLIENT_ID`
+    - `REDDIT_CLIENT_SECRET`
+    - `REDDIT_USERNAME`
+    - `REDDIT_PASSWORD`
+    For Dropbox cloud storage (optional — see [Setting Up Dropbox App](#setting-up-dropbox-app))
+    - `DROPBOX_APP_KEY`
+    - `DROPBOX_APP_SECRET`
+    - `DROPBOX_REFRESH_TOKEN`
+    For S3 cloud storage (optional — see [Setting Up AWS S3](#setting-up-aws-s3))
+    - `AWS_ACCESS_KEY_ID`
+    - `AWS_SECRET_ACCESS_KEY`
+    - `AWS_S3_BUCKET`
+    - `STORAGE_PROVIDER` = `s3`
+    For Enhanced Media Downloads (Optional - Imgur API registration is permanently closed)
+    - `IMGUR_CLIENT_ID` (only if you already have an existing Imgur application)
+    - `IMGUR_CLIENT_SECRET` (only if you already have an existing Imgur application)
+- Enter the respective secret values without any quotes.
+
+After adding all secrets: ![Repository Secrets](resources/repository_secrets.png).
+
+3. **Manually Trigger the Workflow**:
+- Go to the **Actions** tab > Select the **Reddit Stash Scraper** from the list on the left > Click **Run workflow** > Select the branch `main` > Click the green **Run workflow** button. The workflow will then be triggered, and you can monitor its progress in the Actions tab. Upon successful completion, you should see the Reddit folder in your configured cloud storage (Dropbox or S3) or in the Actions artifacts.
+
+4. The workflow runs automatically on a schedule:
+   - Every 3 hours during *peak hours* (6:00-21:00 UTC)
+   - Twice during *off-peak hours* (23:00 and 3:00 UTC)
+   - You can adjust these times in the workflow file to match your timezone if needed.
+
+5. **Additional Workflows**: The repository includes automated workflows for maintenance and testing:
+   - `python-compatibility.yml`: Tests compatibility across Python versions 3.10-3.12
+
+#### Local Installation
+
+1. **Clone this repository**:
+   ```
+   git clone https://github.com/YOUR_USERNAME/reddit-stash.git
+   cd reddit-stash
+   ```
+   Replace `YOUR_USERNAME` with your GitHub username (or use `rhnfzl` if using the original repository).
+
+2. Install the required Python packages:
+    ```
+    pip install -r requirements.txt
+    ```
+
+3. Set up cloud storage (optional). Choose one:
+   - **Dropbox**: Follow [Setting Up Dropbox App](#setting-up-dropbox-app)
+   - **AWS S3**: Follow [Setting Up AWS S3](#setting-up-aws-s3)
+   - **Local only**: Skip this step if you only want to save files locally on your system.
+
+4. Edit the settings.ini file, here is [how to](#settingsini-file)
+
+5. Set Environment Variables (Optional but preferred):
+
+    For macOS and Linux:
+    ```
+    export REDDIT_CLIENT_ID='your_client_id'
+    export REDDIT_CLIENT_SECRET='your_client_secret'
+    export REDDIT_USERNAME='your_username'
+    export REDDIT_PASSWORD='your_password'
+    # Optional: Dropbox cloud storage
+    export DROPBOX_APP_KEY='dropbox-app-key'
+    export DROPBOX_APP_SECRET='dropbox-secret-key'
+    export DROPBOX_REFRESH_TOKEN='dropbox-secret-key'
+    # Optional: AWS S3 cloud storage (instead of Dropbox)
+    export AWS_ACCESS_KEY_ID='your_access_key'
+    export AWS_SECRET_ACCESS_KEY='your_secret_key'
+    export AWS_S3_BUCKET='your-bucket-name'
+    export STORAGE_PROVIDER='s3'
+    # Optional, for enhanced Imgur downloading (if you have existing API access)
+    export IMGUR_CLIENT_ID='your_imgur_client_id'
+    export IMGUR_CLIENT_SECRET='your_imgur_client_secret'
+    ```
+
+    For Windows:
+
+    ```
+    set REDDIT_CLIENT_ID='your_client_id'
+    set REDDIT_CLIENT_SECRET='your_client_secret'
+    set REDDIT_USERNAME='your_username'
+    set REDDIT_PASSWORD='your_password'
+    # Optional: Dropbox cloud storage
+    set DROPBOX_APP_KEY='dropbox-app-key'
+    set DROPBOX_APP_SECRET='dropbox-secret-key'
+    set DROPBOX_REFRESH_TOKEN='dropbox-secret-key'
+    # Optional: AWS S3 cloud storage (instead of Dropbox)
+    set AWS_ACCESS_KEY_ID='your_access_key'
+    set AWS_SECRET_ACCESS_KEY='your_secret_key'
+    set AWS_S3_BUCKET='your-bucket-name'
+    set STORAGE_PROVIDER='s3'
+    # Optional, for enhanced Imgur downloading (if you have existing API access)
+    set IMGUR_CLIENT_ID='your_imgur_client_id'
+    set IMGUR_CLIENT_SECRET='your_imgur_client_secret'
+    ```
+
+    You can verify the setup with:
+    ```
+    echo $REDDIT_CLIENT_ID
+    echo $REDDIT_CLIENT_SECRET
+    echo $REDDIT_USERNAME
+    echo $REDDIT_PASSWORD
+    # If using Dropbox:
+    echo $DROPBOX_APP_KEY
+    echo $DROPBOX_APP_SECRET
+    echo $DROPBOX_REFRESH_TOKEN
+    # If using S3:
+    echo $AWS_ACCESS_KEY_ID
+    echo $AWS_SECRET_ACCESS_KEY
+    echo $AWS_S3_BUCKET
+    echo $STORAGE_PROVIDER
+    # If using Imgur:
+    echo $IMGUR_CLIENT_ID
+    echo $IMGUR_CLIENT_SECRET
+    ```
+
+6. Usage:
+    * First-time setup:
+    ```
+    python reddit_stash.py
+    ```
+    To upload to cloud storage (optional):
+    ```
+    python storage_utils.py --upload     # Works with Dropbox or S3
+    python dropbox_utils.py --upload     # Dropbox-only (legacy)
+    ```
+    * Subsequent runs, as per your convenience:
+    1. Download from cloud storage (optional):
+    ```
+    python storage_utils.py --download   # Works with Dropbox or S3
+    ```
+    2. Process Reddit saved items:
+    ```
+    python reddit_stash.py
+    ```
+    3. Upload to cloud storage (optional):
+    ```
+    python storage_utils.py --upload
+    ```
+
+#### Docker Installation
+
+🐳 **Pre-built Images Available!** No build required - pull and run directly from GitHub Container Registry.
+
+**📁 Important: File Storage Location**
+
+When running via Docker, files are downloaded to `/app/reddit/` **inside the container**. Without a volume mount, these files are **lost when the container stops**.
+
+To persist your downloaded Reddit content, you **must** mount a volume:
+
+- **Named Volume** (recommended): `-v reddit-data:/app/reddit` - Docker manages storage, data persists across container restarts
+- **Bind Mount** (direct access): `-v $(pwd)/reddit:/app/reddit` - Files stored directly on your host machine at `./reddit/`
+- **NAS Path**: `-v /volume1/reddit-stash:/app/reddit` - Store on your NAS at a specific location
+
+##### Option 1: Use Pre-built Images (Recommended for NAS/HomeLab)
+
+Pull pre-built multi-platform images (AMD64/ARM64) from GitHub Container Registry:
+
+```bash
+# Pull the latest stable image
+docker pull ghcr.io/rhnfzl/reddit-stash:latest
+
+# Run with your credentials
+docker run -d \
+  --name reddit-stash \
+  -v reddit-data:/app/reddit \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**Available Image Tags:**
+
+| Tag | Description | Use Case |
+|-----|-------------|----------|
+| `latest` | Latest stable from main branch | Production deployments |
+| `develop` | Development version | Testing new features |
+| `py3.10-latest`, `py3.11-latest`, `py3.12-latest` | Python-specific versions | Specific Python requirements |
+| `v1.0.0` | Semantic version tags | Version pinning |
+| `sha-abc123` | Commit-specific builds | Reproducible deployments |
+
+**Platform Support:**
+- ✅ **AMD64** (x86_64) - Standard x86 systems
+- ✅ **ARM64** - Raspberry Pi, ARM-based NAS devices
+
+**NAS/HomeLab Compatibility:**
+- Synology DSM (Container Manager)
+- QNAP (Container Station)
+- TrueNAS SCALE
+- unRAID (Community Applications)
+- OpenMediaVault (Docker plugin)
+- Proxmox (LXC/Docker)
+- Portainer, Yacht, CasaOS, Dockge
+
+**Periodic execution with pre-built image:**
+```bash
+docker run -d \
+  --name reddit-stash \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e SCHEDULE_MODE='periodic' \
+  -e SCHEDULE_INTERVAL='7200' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+---
+
+#### Docker Compose (Recommended for NAS/HomeLab)
+
+Docker Compose is the recommended deployment method for NAS and HomeLab environments. It provides easier management, configuration persistence, and works seamlessly with Portainer, Yacht, CasaOS, and other GUI tools.
+
+**1. Create docker-compose.yml**
+
+**Basic Setup (Local-only with Periodic Execution):**
+
+```yaml
+version: '3.8'
+
+services:
+  reddit-stash:
+    image: ghcr.io/rhnfzl/reddit-stash:latest
+    container_name: reddit-stash
+    restart: unless-stopped
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - REDDIT_USERNAME=${REDDIT_USERNAME}
+      - REDDIT_PASSWORD=${REDDIT_PASSWORD}
+      - SCHEDULE_MODE=periodic
+      - SCHEDULE_INTERVAL=7200
+    volumes:
+      - reddit-data:/app/reddit
+
+volumes:
+  reddit-data:
+```
+
+**2. Create .env file**
+
+Create a `.env` file in the same directory as your `docker-compose.yml`:
+
+```env
+REDDIT_CLIENT_ID=your_client_id_here
+REDDIT_CLIENT_SECRET=your_client_secret_here
+REDDIT_USERNAME=your_reddit_username
+REDDIT_PASSWORD=your_reddit_password
+```
+
+**3. Run with Docker Compose**
+
+```bash
+# Start the service
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the service
+docker-compose down
+
+# Update to latest image
+docker-compose pull && docker-compose up -d
+```
+
+**With Dropbox Sync:**
+
+```yaml
+version: '3.8'
+
+services:
+  reddit-stash:
+    image: ghcr.io/rhnfzl/reddit-stash:latest
+    container_name: reddit-stash
+    restart: unless-stopped
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - REDDIT_USERNAME=${REDDIT_USERNAME}
+      - REDDIT_PASSWORD=${REDDIT_PASSWORD}
+      - DROPBOX_APP_KEY=${DROPBOX_APP_KEY}
+      - DROPBOX_APP_SECRET=${DROPBOX_APP_SECRET}
+      - DROPBOX_REFRESH_TOKEN=${DROPBOX_REFRESH_TOKEN}
+      - SCHEDULE_MODE=periodic
+      - SCHEDULE_INTERVAL=7200
+    volumes:
+      - reddit-data:/app/reddit
+
+volumes:
+  reddit-data:
+```
+
+Add to your `.env`:
+```env
+DROPBOX_APP_KEY=your_dropbox_app_key
+DROPBOX_APP_SECRET=your_dropbox_app_secret
+DROPBOX_REFRESH_TOKEN=your_dropbox_refresh_token
+```
+
+**With AWS S3 Sync:**
+
+```yaml
+version: '3.8'
+
+services:
+  reddit-stash:
+    image: ghcr.io/rhnfzl/reddit-stash:latest
+    container_name: reddit-stash
+    restart: unless-stopped
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - REDDIT_USERNAME=${REDDIT_USERNAME}
+      - REDDIT_PASSWORD=${REDDIT_PASSWORD}
+      - STORAGE_PROVIDER=s3
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_S3_BUCKET=${AWS_S3_BUCKET}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+      - SCHEDULE_MODE=periodic
+      - SCHEDULE_INTERVAL=7200
+    volumes:
+      - reddit-data:/app/reddit
+
+volumes:
+  reddit-data:
+```
+
+Add to your `.env`:
+```env
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_S3_BUCKET=your-bucket-name
+AWS_DEFAULT_REGION=us-east-1
+```
+
+**With Imgur API (for Better Rate Limits):**
+
+```yaml
+version: '3.8'
+
+services:
+  reddit-stash:
+    image: ghcr.io/rhnfzl/reddit-stash:latest
+    container_name: reddit-stash
+    restart: unless-stopped
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - REDDIT_USERNAME=${REDDIT_USERNAME}
+      - REDDIT_PASSWORD=${REDDIT_PASSWORD}
+      - IMGUR_CLIENT_ID=${IMGUR_CLIENT_ID}
+      - SCHEDULE_MODE=periodic
+      - SCHEDULE_INTERVAL=7200
+    volumes:
+      - reddit-data:/app/reddit
+
+volumes:
+  reddit-data:
+```
+
+Add to your `.env`:
+```env
+IMGUR_CLIENT_ID=your_imgur_client_id
+```
+
+**Full-Featured Example:**
+
+```yaml
+version: '3.8'
+
+services:
+  reddit-stash:
+    image: ghcr.io/rhnfzl/reddit-stash:latest
+    container_name: reddit-stash
+    restart: unless-stopped
+    environment:
+      # Reddit credentials
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - REDDIT_USERNAME=${REDDIT_USERNAME}
+      - REDDIT_PASSWORD=${REDDIT_PASSWORD}
+      # Cloud storage — choose Dropbox OR S3 (both optional)
+      - DROPBOX_APP_KEY=${DROPBOX_APP_KEY}
+      - DROPBOX_APP_SECRET=${DROPBOX_APP_SECRET}
+      - DROPBOX_REFRESH_TOKEN=${DROPBOX_REFRESH_TOKEN}
+      # - STORAGE_PROVIDER=s3               # Uncomment for S3
+      # - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      # - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      # - AWS_S3_BUCKET=${AWS_S3_BUCKET}
+      # Imgur API (optional - for better rate limits)
+      - IMGUR_CLIENT_ID=${IMGUR_CLIENT_ID}
+      # Scheduling
+      - SCHEDULE_MODE=periodic
+      - SCHEDULE_INTERVAL=7200
+    volumes:
+      - reddit-data:/app/reddit
+      # Optional: mount custom settings.ini
+      # - ./settings.ini:/app/settings.ini:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+
+volumes:
+  reddit-data:
+```
+
+**Using with Portainer:**
+
+1. Go to **Stacks** → **Add stack**
+2. Name your stack (e.g., `reddit-stash`)
+3. Paste one of the compose examples above
+4. Scroll down to **Environment variables** and add your credentials:
+   - `REDDIT_CLIENT_ID` = your_client_id
+   - `REDDIT_CLIENT_SECRET` = your_client_secret
+   - `REDDIT_USERNAME` = your_username
+   - `REDDIT_PASSWORD` = your_password
+   - (Add others as needed)
+5. Click **Deploy the stack**
+
+**Bind Mounts for Specific Paths:**
+
+If you prefer to use a specific directory instead of a named volume, use bind mounts:
+
+```yaml
+volumes:
+  # Named volume (recommended)
+  - reddit-data:/app/reddit
+
+  # OR bind mount to specific path
+  # Synology:
+  # - /volume1/docker/reddit-stash:/app/reddit
+  # unRAID:
+  # - /mnt/user/appdata/reddit-stash:/app/reddit
+  # Generic:
+  # - ./reddit:/app/reddit
+```
+
+---
+
+#### Additional Docker CLI Examples
+
+**With Dropbox Sync (Single Run):**
+
+```bash
+docker run --rm \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e DROPBOX_APP_KEY='your_dropbox_key' \
+  -e DROPBOX_APP_SECRET='your_dropbox_secret' \
+  -e DROPBOX_REFRESH_TOKEN='your_dropbox_token' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**With Dropbox Sync (Periodic):**
+
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e DROPBOX_APP_KEY='your_dropbox_key' \
+  -e DROPBOX_APP_SECRET='your_dropbox_secret' \
+  -e DROPBOX_REFRESH_TOKEN='your_dropbox_token' \
+  -e SCHEDULE_MODE='periodic' \
+  -e SCHEDULE_INTERVAL='7200' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**With AWS S3 Sync (Periodic):**
+
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e STORAGE_PROVIDER='s3' \
+  -e AWS_ACCESS_KEY_ID='your_access_key' \
+  -e AWS_SECRET_ACCESS_KEY='your_secret_key' \
+  -e AWS_S3_BUCKET='your-bucket-name' \
+  -e SCHEDULE_MODE='periodic' \
+  -e SCHEDULE_INTERVAL='7200' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**With Imgur API for Better Rate Limits:**
+
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e IMGUR_CLIENT_ID='your_imgur_client_id' \
+  -e SCHEDULE_MODE='periodic' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**With 2FA Authentication:**
+
+If you use Reddit's Two-Factor Authentication, append your 6-digit code to your password:
+
+```bash
+docker run -d \
+  --name reddit-stash \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password:123456' \
+  -e SCHEDULE_MODE='periodic' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**With Custom settings.ini:**
+
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e SCHEDULE_MODE='periodic' \
+  -v reddit-data:/app/reddit \
+  -v /path/to/your/settings.ini:/app/settings.ini:ro \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**Custom Interval (e.g., every hour):**
+
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e SCHEDULE_MODE='periodic' \
+  -e SCHEDULE_INTERVAL='3600' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+---
+
+#### Special Operations
+
+**Cloud Storage Upload Only (Unified CLI):**
+
+Upload local content to your configured cloud provider without running the main Reddit scraper:
+
+```bash
+# Dropbox
+docker run --rm \
+  -e DROPBOX_APP_KEY='your_dropbox_key' \
+  -e DROPBOX_APP_SECRET='your_dropbox_secret' \
+  -e DROPBOX_REFRESH_TOKEN='your_dropbox_token' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest \
+  storage_utils.py --upload
+
+# S3
+docker run --rm \
+  -e STORAGE_PROVIDER='s3' \
+  -e AWS_ACCESS_KEY_ID='your_access_key' \
+  -e AWS_SECRET_ACCESS_KEY='your_secret_key' \
+  -e AWS_S3_BUCKET='your-bucket-name' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest \
+  storage_utils.py --upload
+```
+
+**Cloud Storage Download Only:**
+
+Download content from your cloud provider to local storage:
+
+```bash
+# Dropbox
+docker run --rm \
+  -e DROPBOX_APP_KEY='your_dropbox_key' \
+  -e DROPBOX_APP_SECRET='your_dropbox_secret' \
+  -e DROPBOX_REFRESH_TOKEN='your_dropbox_token' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest \
+  storage_utils.py --download
+
+# S3
+docker run --rm \
+  -e STORAGE_PROVIDER='s3' \
+  -e AWS_ACCESS_KEY_ID='your_access_key' \
+  -e AWS_SECRET_ACCESS_KEY='your_secret_key' \
+  -e AWS_S3_BUCKET='your-bucket-name' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest \
+  storage_utils.py --download
+```
+
+> **Legacy note:** `dropbox_utils.py --upload` and `dropbox_utils.py --download` still work for Dropbox-only use.
+
+---
+
+#### Volume Management
+
+**Named Volumes (Recommended for NAS):**
+
+Named volumes are portable across different NAS systems and don't require specific path configurations:
+
+```bash
+-v reddit-data:/app/reddit
+```
+
+View volume location:
+```bash
+docker volume inspect reddit-data
+```
+
+**Bind Mounts (Specific Paths):**
+
+Use bind mounts when you need data in a specific directory:
+
+```bash
+# Synology DSM
+-v /volume1/docker/reddit-stash:/app/reddit
+
+# QNAP
+-v /share/Container/reddit-stash:/app/reddit
+
+# TrueNAS SCALE
+-v /mnt/tank/apps/reddit-stash:/app/reddit
+
+# unRAID
+-v /mnt/user/appdata/reddit-stash:/app/reddit
+
+# Generic Linux/macOS
+-v /path/to/reddit:/app/reddit
+-v $(pwd)/reddit:/app/reddit
+```
+
+**Volume Permissions:**
+
+The container runs as UID 1000. If you encounter permission errors with bind mounts:
+
+```bash
+sudo chown -R 1000:1000 /path/to/reddit
+```
+
+---
+
+#### Advanced Configuration
+
+**Resource Limits for NAS Devices:**
+
+Limit CPU and memory usage to prevent overloading your NAS:
+
+**Docker CLI:**
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  --memory="512m" \
+  --memory-swap="1g" \
+  --cpus="1.0" \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e SCHEDULE_MODE='periodic' \
+  -v reddit-data:/app/reddit \
+  ghcr.io/rhnfzl/reddit-stash:latest
+```
+
+**Docker Compose:**
+```yaml
+services:
+  reddit-stash:
+    # ... other config ...
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+```
+
+**Monitoring & Logs:**
+
+```bash
+# View real-time logs
+docker logs -f reddit-stash
+
+# View last 100 lines
+docker logs --tail 100 reddit-stash
+
+# View logs since specific time
+docker logs --since 1h reddit-stash
+
+# Monitor resource usage
+docker stats reddit-stash
+```
+
+**Updating the Container:**
+
+```bash
+# Stop and remove old container
+docker stop reddit-stash
+docker rm reddit-stash
+
+# Pull latest image
+docker pull ghcr.io/rhnfzl/reddit-stash:latest
+
+# Recreate with same command or docker-compose up -d
+```
+
+Or with Docker Compose:
+```bash
+docker-compose pull
+docker-compose up -d
+```
+
+---
+
+#### Platform-Specific Deployment Guides
+
+For detailed step-by-step guides specific to your NAS platform, see **[docs/DOCKER_DEPLOYMENT.md](docs/DOCKER_DEPLOYMENT.md)**:
+
+- **Synology DSM** - Container Manager setup
+- **QNAP** - Container Station configuration
+- **TrueNAS SCALE** - Apps deployment
+- **unRAID** - Docker tab and Community Applications
+- **OpenMediaVault** - Docker plugin setup
+- **Proxmox** - LXC container with Docker
+- **Portainer** - Stack deployment
+
+---
+
+##### Option 2: Build Locally
+
+If you prefer to build the Docker image yourself:
+
+**1. Clone and Build:**
+
+```bash
+# Clone the repository
+git clone https://github.com/rhnfzl/reddit-stash.git
+cd reddit-stash
+
+# Build with default Python 3.12
+docker build -t reddit-stash:local .
+
+# Or build with specific Python version
+docker build --build-arg PYTHON_VERSION=3.11 -t reddit-stash:py3.11 .
+docker build --build-arg PYTHON_VERSION=3.10 -t reddit-stash:py3.10 .
+```
+
+**2. Run the Locally Built Image:**
+
+After building, use your local image tag (`reddit-stash:local`) instead of the GitHub Container Registry image (`ghcr.io/rhnfzl/reddit-stash:latest`) in any of the examples from Option 1 above.
+
+**Example:**
+```bash
+docker run -d \
+  --name reddit-stash \
+  --restart unless-stopped \
+  -e REDDIT_CLIENT_ID='your_client_id' \
+  -e REDDIT_CLIENT_SECRET='your_client_secret' \
+  -e REDDIT_USERNAME='your_username' \
+  -e REDDIT_PASSWORD='your_password' \
+  -e SCHEDULE_MODE='periodic' \
+  -v reddit-data:/app/reddit \
+  reddit-stash:local
+```
+
+**For all other usage scenarios** (Dropbox/S3 sync, Imgur API, docker-compose, special operations, etc.), refer to the examples in Option 1 above, simply replacing the image name.
+
+---
+
+#### Docker Notes:
+
+- **Python Support**: Build supports Python 3.10, 3.11, and 3.12 (3.12 is default)
+- **Security**: The container runs as a non-root user for security
+- **Data Persistence**: Data is persisted through a volume mount (`-v $(pwd)/reddit:/app/reddit`) to your local machine
+- **Runtime Configuration**: Environment variables must be provided at runtime
+- **Flexibility**: The container supports running different scripts (main script, storage operations)
+- **Interactive Mode**: Use `-it` flags for interactive operation with output visible in your terminal
+- **Shell Special Characters**: Always use single quotes around environment variable values to prevent shell interpretation of special characters (!, &, $, etc.)
+- **Execution Modes**:
+  - **Single execution** (`SCHEDULE_MODE=once`, default): Runs once and exits
+  - **Periodic execution** (`SCHEDULE_MODE=periodic`): Runs continuously on schedule
+- **Scheduling Options**:
+  - **Default interval**: 2 hours (7200 seconds)
+  - **Custom interval**: Set `SCHEDULE_INTERVAL` to any value ≥ 60 seconds
+  - **Graceful shutdown**: Responds to SIGTERM/SIGINT for clean container stops
+- **Two Main Storage Modes**:
+  - **Local-only**: Just Reddit credentials, saves to mounted volume
+  - **Cloud sync**: Dropbox or S3 credentials for automatic cloud backup
+- **Detached Mode**: You can also run in detached mode with `-d` if you prefer:
+  ```bash
+  docker run -d \
+    -e REDDIT_CLIENT_ID='your_client_id' \
+    [other environment variables] \
+    -v $(pwd)/reddit:/app/reddit \
+    reddit-stash
+  ```
+- **Logging**: Logs are available through Docker's logging system when running in detached mode:
+  ```bash
+  docker logs <container_id>
+  ```
+
+### 🍴 Fork Setup Guide
+
+If you've forked this repository to make custom modifications, follow these setup steps:
+
+#### Using Docker with Your Fork
+
+Docker works the same way with your fork - just build locally:
+
+```bash
+# Clone your fork
+git clone https://github.com/YOUR_USERNAME/reddit-stash.git
+cd reddit-stash
+
+# Build your customized version
+docker build -t reddit-stash .
+
+# Run your custom build (with Dropbox)
+docker run -it \
+  -e REDDIT_CLIENT_ID=your_client_id \
+  -e REDDIT_CLIENT_SECRET=your_client_secret \
+  -e REDDIT_USERNAME=your_username \
+  -e REDDIT_PASSWORD=your_password \
+  -e DROPBOX_APP_KEY=your_dropbox_key \
+  -e DROPBOX_APP_SECRET=your_dropbox_secret \
+  -e DROPBOX_REFRESH_TOKEN=your_dropbox_token \
+  -v $(pwd)/reddit:/app/reddit \
+  reddit-stash
+
+# Or with S3
+docker run -it \
+  -e REDDIT_CLIENT_ID=your_client_id \
+  -e REDDIT_CLIENT_SECRET=your_client_secret \
+  -e REDDIT_USERNAME=your_username \
+  -e REDDIT_PASSWORD=your_password \
+  -e STORAGE_PROVIDER=s3 \
+  -e AWS_ACCESS_KEY_ID=your_access_key \
+  -e AWS_SECRET_ACCESS_KEY=your_secret_key \
+  -e AWS_S3_BUCKET=your-bucket-name \
+  -v $(pwd)/reddit:/app/reddit \
+  reddit-stash
+```
+
+Replace `YOUR_USERNAME` with your GitHub username.
+
+### Setup Verification Checklist
+
+After completing your chosen installation method, verify that everything is working correctly:
+
+#### For GitHub Actions Setup:
+- [ ] Repository forked successfully
+- [ ] All required secrets added to repository settings
+- [ ] Workflow manually triggered at least once
+- [ ] Workflow completes without errors (check Actions tab)
+- [ ] Reddit folder appears in your cloud storage (Dropbox account or S3 bucket)
+- [ ] Content files are present and readable
+
+#### For Local Installation:
+- [ ] Python 3.10-3.12 installed and working (3.12 recommended)
+- [ ] Repository cloned successfully
+- [ ] Dependencies installed via `pip install -r requirements.txt`
+- [ ] Environment variables set correctly
+- [ ] Script runs without errors
+- [ ] Content saved to specified directory
+- [ ] (Optional) Content uploaded to cloud storage (Dropbox or S3) if configured
+
+#### For Docker Installation:
+- [ ] Docker installed and daemon running
+- [ ] Image built successfully
+- [ ] Container runs without errors
+- [ ] Content appears in mounted volume
+- [ ] (Optional) Content uploaded to cloud storage (Dropbox or S3) if configured
+
+## Configuration
+
+The `settings.ini` file in the root directory of the project allows you to configure how Reddit Stash operates. This comprehensive configuration system controls everything from basic saving behavior to advanced media processing and content recovery.
+
+### Configuration Quick Reference
+
+Jump to any section or browse the complete settings index:
+
+| Section | Settings Count | Purpose | Jump To |
+|---------|----------------|---------|---------|
+| **[Settings]** | 8 | Core behavior (save paths, types, file checking) | [↓ View](#settings---core-application-behavior) |
+| **[Configuration]** | 4 | Reddit API credentials (use env vars!) | [↓ View](#configuration---reddit-api-credentials) |
+| **[Media]** | 12 | Media download controls (images, videos, albums) | [↓ View](#media---advanced-media-download-system) |
+| **[Imgur]** | 3 | Imgur API configuration (optional) | [↓ View](#imgur---imgur-api-configuration) |
+| **[Recovery]** | 9 | Content recovery system (4-provider cascade) | [↓ View](#recovery---content-recovery-system) |
+| **[Retry]** | 7 | Retry queue management (exponential backoff) | [↓ View](#retry---retry-queue-configuration) |
+| **[Storage]** | 5 | Cloud storage backend (Dropbox, S3) | [↓ View](#storage---cloud-storage-backend) |
+| **Total** | **48 settings** | **Complete system configuration** | [↓ Settings Index](#settings-index-alphabetical) |
+
+**Quick Tips:**
+- 🔒 **Security First**: Use environment variables for credentials, not settings.ini
+- ⚡ **Performance**: `check_type=LOG`, `max_concurrent_downloads=3-5`
+- 💾 **Storage**: Configure `max_image_size`, `max_video_size`, `max_daily_storage_mb`
+- 🔄 **Recovery**: Enable all 4 providers for best deleted content recovery
+- 📖 **Full Docs**: Each setting includes type, defaults, examples, and trade-offs
+
+---
+
+### Configuration Sections
+
+#### `[Settings]` - Core Application Behavior
+
+```ini
+[Settings]
+save_directory = reddit/                # Local directory for saved content
+dropbox_directory = /reddit             # Dropbox folder path
+save_type = ALL                        # Content types to save
+check_type = LOG                       # File existence checking method
+unsave_after_download = false          # Auto-unsave after downloading
+process_gdpr = false                   # Process GDPR export data
+process_api = true                     # Use Reddit API for content
+ignore_tls_errors = false              # Bypass SSL certificate validation (use with caution)
+```
+
+#### Core Settings Explained:
+
+* **`save_directory`** - Where to save downloaded content locally
+  - **Type**: String (directory path)
+  - **Default**: `reddit/`
+  - **Valid Values**: 
+    - Relative paths: `reddit/`, `./backup/`, `../archives/reddit/`
+    - Absolute paths: `/home/user/reddit-archive/`, `C:\Users\Name\Documents\reddit\`
+  - **Behavior**: 
+    - Creates directory if it doesn't exist
+    - Relative paths are relative to script location
+    - Subdirectories created automatically for each subreddit
+  - **Examples**:
+    ```ini
+    save_directory = reddit/              # Default, creates ./reddit/
+    save_directory = /var/backups/reddit/ # Absolute Unix path
+    save_directory = D:\Reddit\           # Absolute Windows path
+    ```
+  - **Considerations**:
+    - Ensure sufficient disk space (typical usage: 100MB-10GB+ depending on media)
+    - Write permissions required for the directory
+    - Avoid network drives for better performance
+
+* **`dropbox_directory`** - Dropbox cloud storage path
+  - **Type**: String (Dropbox path)
+  - **Default**: `/reddit`
+  - **Valid Values**: Any valid Dropbox path starting with `/`
+  - **Format Rules**:
+    - Must start with `/` (Dropbox root)
+    - Forward slashes only (even on Windows)
+    - Case-sensitive on Dropbox side
+  - **Examples**:
+    ```ini
+    dropbox_directory = /reddit              # Root level folder
+    dropbox_directory = /Backups/reddit      # Nested folder
+    dropbox_directory = /Archives/2024/reddit # Deep nesting
+    ```
+  - **Notes**:
+    - Folder created automatically if it doesn't exist
+    - Used as the Dropbox folder path or the S3 key prefix (with leading `/` stripped for S3)
+    - Syncs file_log.json and all content
+
+* **`save_type`** - What content to download from Reddit
+  - **Type**: String (enum)
+  - **Default**: `ALL`
+  - **Valid Values**: `ALL`, `SAVED`, `ACTIVITY`, `UPVOTED` (case-insensitive)
+  - **Detailed Options**:
+    
+    | Value | What It Downloads | File Prefixes | Use Case |
+    |-------|------------------|---------------|----------|
+    | **`ALL`** | Everything: your posts, comments, saved items, upvoted items | `POST_`, `COMMENT_`, `SAVED_POST_`, `SAVED_COMMENT_`, `UPVOTE_POST_`, `UPVOTE_COMMENT_` | Complete Reddit archive |
+    | **`SAVED`** | Only items you saved | `SAVED_POST_`, `SAVED_COMMENT_` | Personal knowledge base |
+    | **`ACTIVITY`** | Only your posts & comments | `POST_`, `COMMENT_` | Your Reddit contributions |
+    | **`UPVOTED`** | Only upvoted items | `UPVOTE_POST_`, `UPVOTE_COMMENT_` | Track interests |
+    
+  - **Performance Comparison** (approximate, 1000 items each):
+    ```
+    ALL:      ~15-30 minutes (processes 4 categories)
+    SAVED:    ~5-10 minutes  (1 category)
+    ACTIVITY: ~5-10 minutes  (1 category)
+    UPVOTED:  ~5-10 minutes  (1 category)
+    ```
+  - **API Rate Limit Impact**: Reddit limits to ~100 requests/minute, so `ALL` uses 4x more requests
+  - **Examples**:
+    ```ini
+    save_type = ALL       # Everything
+    save_type = SAVED     # Just saved items
+    save_type = all       # Case doesn't matter
+    ```
+
+* **`check_type`** - How to detect already-downloaded files
+  - **Type**: String (enum)
+  - **Default**: `LOG`
+  - **Valid Values**: `LOG`, `DIR` (case-insensitive)
+  - **Detailed Comparison**:
+    
+    | Feature | `LOG` | `DIR` |
+    |---------|-------|-------|
+    | **Speed** | ⚡ Very fast (in-memory check) | 🐢 Slower (filesystem scan) |
+    | **Accuracy** | Requires intact `file_log.json` | Always accurate |
+    | **Recovery** | Fails if log corrupted/deleted | Self-healing |
+    | **Scalability** | Excellent (10,000+ files) | Degrades with size |
+    | **Best For** | GitHub Actions, automated runs | Local use, manual management |
+    
+  - **`LOG` Mode Details**:
+    - Uses `file_log.json` in save_directory
+    - Tracks: filename, timestamp, subreddit, content type
+    - JSON structure: `{"file_id-subreddit-type-category": {...}}`
+    - Loads entire log into memory (typically <10MB for 10,000 items)
+    - **Risk**: If log file deleted, treats all files as new (duplicates)
+    - **Fix**: If log corrupted, switch to `DIR` temporarily to rebuild
+  
+  - **`DIR` Mode Details**:
+    - Scans filesystem for matching files
+    - Checks filename patterns: `POST_*.md`, `SAVED_POST_*.md`, etc.
+    - Builds in-memory index during startup
+    - Performance: ~1 second per 1,000 files
+    - **Benefits**: No dependency on log file, always correct
+    - **Drawback**: Slow for large archives (10,000+ files = ~10s startup)
+  
+  - **Examples**:
+    ```ini
+    check_type = LOG    # Fast, recommended for automation
+    check_type = DIR    # Thorough, recommended for local
+    ```
+  
+  - **When to Switch**:
+    - `LOG` → `DIR`: Log file corrupted, seeing duplicate downloads
+    - `DIR` → `LOG`: Archive stable, want faster processing
+
+* **`unsave_after_download`** - Automatically unsave items after downloading
+  - **Type**: Boolean
+  - **Default**: `false`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0` (case-insensitive)
+  - **⚠️ CRITICAL WARNING**: THIS IS PERMANENT AND IRREVERSIBLE!
+  - **How It Works**:
+    1. Downloads post/comment to local file
+    2. Verifies download successful
+    3. Unsaves item from Reddit (removes from your saved list)
+    4. Waits 0.5 seconds (rate limit protection)
+    5. Continues to next item
+  - **Use Case - Breaking the 1000-Item Limit**:
+    - Reddit shows max 1000 saved items in your list
+    - Older items beyond 1000 are hidden (but still saved on Reddit)
+    - By unsaving downloaded items, older items "bubble up" into view
+    - Run script multiple times to access progressively older saves
+  - **Workflow Example**:
+    ```
+    Run 1: Download 1000 most recent, unsave them → Access items 1001-2000
+    Run 2: Download next 1000, unsave them → Access items 2001-3000
+    Run 3: Download next 1000, unsave them → Access items 3001-4000
+    Continue until no more items found
+    ```
+  - **Safety Recommendations**:
+    1. **First Run**: Keep `false`, verify downloads work correctly
+    2. **Backup**: Ensure `file_log.json` is backed up (Dropbox/S3/Git)
+    3. **Test**: Try with `save_type = UPVOTED` first (less critical)
+    4. **Enable**: Set to `true` only when confident
+    5. **Monitor**: Check logs for "unsave failed" messages
+  - **Error Handling**:
+    - If unsave fails (API error), script continues (doesn't stop)
+    - Failed unsaves logged but don't retry automatically
+    - Item remains saved on Reddit, can be re-downloaded (will skip if in log)
+  - **Examples**:
+    ```ini
+    unsave_after_download = false  # Safe default
+    unsave_after_download = true   # Enable with caution
+    unsave_after_download = yes    # Also valid
+    ```
+
+* **`process_gdpr`** - Process Reddit GDPR export files
+  - **Type**: Boolean
+  - **Default**: `false`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **Purpose**: Access complete Reddit history including items beyond 1000-item API limits
+  - **Requirements**:
+    - GDPR export CSV files in `{save_directory}/gdpr_data/`
+    - Expected files: `saved_posts.csv`, `saved_comments.csv`
+  - **How It Works**:
+    1. Reads post/comment IDs from CSV files
+    2. Fetches full content via Reddit API (one API call per item)
+    3. Saves with `GDPR_POST_` or `GDPR_COMMENT_` prefix
+    4. Respects rate limits (same 100 req/min as normal processing)
+  - **GDPR Export Process**:
+    1. Visit https://www.reddit.com/settings/data-request
+    2. Request data (takes 2-30 days to process)
+    3. Download ZIP file when ready
+    4. Extract `saved_posts.csv` and `saved_comments.csv`
+    5. Place in `{save_directory}/gdpr_data/`
+  - **Performance Impact**:
+    - Processes AFTER regular API content
+    - Each item requires separate API call
+    - 1000 GDPR items ≈ 10-15 additional minutes
+  - **Deduplication**: Items already in log are skipped (no duplicates)
+  - **Examples**:
+    ```ini
+    process_gdpr = false   # Default, skip GDPR processing
+    process_gdpr = true    # Process GDPR files if present
+    ```
+  - **Common Issues**:
+    - "GDPR directory not found" → Create `{save_directory}/gdpr_data/`
+    - "No CSV files found" → Verify files named exactly `saved_posts.csv`
+    - Deleted content → GDPR has IDs but content may be deleted (404 errors normal)
+
+* **`process_api`** - Fetch content from Reddit API
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **Purpose**: Control whether to fetch current content from Reddit API
+  - **Use Cases**:
+    
+    | `process_api` | `process_gdpr` | Behavior |
+    |---------------|----------------|----------|
+    | `true` | `false` | Normal mode: Fetch current saved/posted/upvoted content |
+    | `true` | `true` | Complete mode: Current content + GDPR history |
+    | `false` | `true` | GDPR-only: Only process export files (no API calls for current) |
+    | `false` | `false` | ⚠️ Does nothing (no content fetched) |
+    
+  - **When to Set `false`**:
+    - You only want to process GDPR export files
+    - Testing GDPR processing without affecting API rate limits
+    - Already ran API processing, want to add GDPR data only
+  - **Examples**:
+    ```ini
+    process_api = true    # Normal operation
+    process_api = false   # Skip API, only process GDPR
+    ```
+
+* **`ignore_tls_errors`** - Bypass SSL certificate verification
+  - **Type**: Boolean
+  - **Default**: `false`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **⚠️ SECURITY WARNING**: Setting to `true` reduces security significantly!
+  - **What It Does**:
+    - `false` (default): Validates SSL certificates, rejects expired/invalid/self-signed certs
+    - `true`: Accepts ANY certificate, including expired, self-signed, or invalid
+  - **Security Implications**:
+    - Vulnerable to man-in-the-middle attacks
+    - No guarantee you're downloading from legitimate source
+    - Should NEVER be used with sensitive content
+  - **Legitimate Use Cases** (rare):
+    - Archiving content from sites with expired certificates
+    - Corporate networks with self-signed proxy certificates
+    - Historical content preservation where security less critical
+  - **What It Affects**:
+    - Only affects media downloads (images, videos)
+    - Does NOT affect Reddit API (always uses valid TLS)
+    - Third-party hosting: Imgur, Gfycat, etc.
+  - **Warnings Generated**:
+    - Script prints "⚠️ TLS verification disabled" on startup
+    - Configuration validator shows security warning
+  - **Examples**:
+    ```ini
+    ignore_tls_errors = false   # Secure default (recommended)
+    ignore_tls_errors = true    # Insecure, use only if absolutely necessary
+    ```
+  - **Better Alternatives**:
+    - Use content recovery system (often has archived copies)
+    - Manually download problematic images
+    - Report invalid certificates to site owners
+
+#### `[Configuration]` - Reddit API Credentials
+
+```ini
+[Configuration]
+client_id = None                       # Reddit app client ID
+client_secret = None                   # Reddit app client secret  
+username = None                        # Reddit username
+password = None                        # Reddit password (or password:2FA_code)
+```
+
+#### ⚠️ **CRITICAL SECURITY RECOMMENDATION**
+
+**🔒 USE ENVIRONMENT VARIABLES, NOT settings.ini FOR CREDENTIALS!**
+
+Unless you **absolutely know what you're doing** and have a specific reason to store credentials in settings.ini (like an isolated, encrypted system), **always use environment variables instead**.
+
+**Why Environment Variables Are Safer:**
+
+| Risk | settings.ini | Environment Variables |
+|------|-------------|----------------------|
+| **Accidental Git Commit** | ❌ VERY HIGH - Credentials exposed publicly | ✅ Safe - Not in version control |
+| **File Sharing** | ❌ HIGH - Shared accidentally with settings | ✅ Safe - Not in shared files |
+| **Backup Exposure** | ❌ MEDIUM - In all backups/archives | ✅ Safe - Not in file backups |
+| **Log Exposure** | ❌ MEDIUM - May appear in logs | ✅ Safer - Separate from logs |
+| **Access Control** | ❌ File permissions only | ✅ Better - OS-level protection |
+
+**Real-World Danger Example:**
+```
+You: Edit settings.ini with credentials
+You: Test locally, everything works
+You: git add . && git commit -m "Update settings"
+You: git push
+Result: 🚨 YOUR CREDENTIALS ARE NOW PUBLIC ON GITHUB 🚨
+Anyone can: Access your Reddit account, download your data, post as you
+```
+
+##### API Configuration Settings:
+
+* **`client_id`** - Reddit application client ID
+  - **Type**: String or `None`
+  - **Default**: `None`
+  - **⚠️ SECURITY**: Use environment variable `REDDIT_CLIENT_ID` instead
+  - **When to Use settings.ini**: 
+    - Isolated test environment (not connected to internet)
+    - Encrypted filesystem only you access
+    - Single-use throwaway credentials
+  - **Never Use settings.ini If**:
+    - Repository is public or will be shared
+    - File will be backed up to cloud
+    - Multiple people access the system
+    - You're not 100% sure about security implications
+  - **Environment Variable Method** (RECOMMENDED):
+    ```bash
+    # Linux/macOS
+    export REDDIT_CLIENT_ID='your_client_id_here'
+    
+    # Windows
+    set REDDIT_CLIENT_ID=your_client_id_here
+    ```
+  - **settings.ini Method** (NOT RECOMMENDED):
+    ```ini
+    client_id = your_client_id_here  # ⚠️ DANGEROUS
+    ```
+
+* **`client_secret`** - Reddit application client secret
+  - **Type**: String or `None`
+  - **Default**: `None`
+  - **⚠️ CRITICAL SECURITY**: This is your API password! Use `REDDIT_CLIENT_SECRET` env var
+  - **Exposure Risk**: CRITICAL - Full API access
+  - **If Compromised**: Attacker can use your Reddit app credentials
+  - **NEVER commit this to version control**
+  - **Environment Variable** (REQUIRED for any shared/public code):
+    ```bash
+    export REDDIT_CLIENT_SECRET='your_secret_here'
+    ```
+
+* **`username`** - Your Reddit username
+  - **Type**: String or `None`
+  - **Default**: `None`
+  - **Security Level**: Medium (username is public anyway, but indicates which account)
+  - **Environment Variable** (RECOMMENDED):
+    ```bash
+    export REDDIT_USERNAME='your_username'
+    ```
+  - **Note**: Less critical than password, but still recommended to use env var
+
+* **`password`** - Your Reddit account password
+  - **Type**: String or `None`
+  - **Default**: `None`
+  - **⚠️ MAXIMUM SECURITY RISK**: YOUR REDDIT PASSWORD!
+  - **Exposure = Account Takeover**: Someone with this can log into your Reddit account
+  - **2FA Format**: If you have two-factor authentication: `your_password:123456`
+  - **NEVER EVER put this in settings.ini** unless isolated system
+  - **Environment Variable** (ABSOLUTELY REQUIRED):
+    ```bash
+    export REDDIT_PASSWORD='your_password'
+    # With 2FA:
+    export REDDIT_PASSWORD='your_password:123456'
+    ```
+
+##### Credential Priority (How Reddit Stash Checks):
+
+1. **Environment Variables** (checked first) ← USE THIS
+2. **settings.ini values** (fallback) ← AVOID THIS
+
+If environment variable exists, settings.ini value is **completely ignored**.
+
+##### Safe settings.ini Configuration:
+
+**✅ SAFE - Keep credentials as None:**
+```ini
+[Configuration]
+client_id = None
+client_secret = None
+username = None
+password = None
+```
+
+**❌ UNSAFE - Credentials in file:**
+```ini
+[Configuration]
+client_id = abc123def456           # ⚠️ WILL BE EXPOSED
+client_secret = secret_key_here    # ⚠️ CRITICAL RISK
+username = your_username           # ⚠️ ACCOUNT IDENTIFIER  
+password = your_password           # ⚠️ ACCOUNT TAKEOVER RISK
+```
+
+##### When settings.ini Credentials Might Be Acceptable:
+
+Only use settings.ini for credentials if **ALL** of these are true:
+
+- ✅ System is completely isolated (no internet, air-gapped)
+- ✅ Filesystem is encrypted
+- ✅ Only you have access (no shared users)
+- ✅ File will never be committed to version control
+- ✅ File will never be backed up to cloud
+- ✅ File will never be shared with anyone
+- ✅ You fully understand the security implications
+- ✅ You're using test/throwaway credentials only
+
+**If you're unsure about even ONE of these, use environment variables!**
+
+##### How to Verify Your Setup is Secure:
+
+```bash
+# Check if credentials are in settings.ini
+grep -E "client_id|client_secret|username|password" settings.ini
+
+# Safe output (all None):
+client_id = None
+client_secret = None
+username = None
+password = None
+
+# Unsafe output (has values):
+client_id = abc123  # ⚠️ FIX THIS
+```
+
+##### Additional Security Best Practices:
+
+1. **Add settings.ini to .gitignore** (even with None values, for safety)
+2. **Use .env files** for local development (also in .gitignore)
+3. **Rotate credentials** if you suspect exposure
+4. **Use GitHub Secrets** for GitHub Actions (already encrypted)
+5. **Never screenshot** settings with credentials
+6. **Check git history** if you accidentally committed credentials
+
+##### Setup Guide:
+
+For detailed instructions on setting up environment variables properly, see [Setting Up Reddit Environment Variables](#setting-up-reddit-environment-variables)
+
+#### `[Media]` - Advanced Media Download System
+
+```ini
+[Media]
+# Global media download controls
+download_enabled = true                # Master switch for all media downloads
+download_images = true                 # Enable image downloads
+download_videos = true                 # Enable video downloads  
+download_audio = true                  # Enable audio downloads
+
+# Image processing settings
+thumbnail_size = 800                   # Thumbnail dimensions in pixels
+max_image_size = 5242880              # Max image file size (5MB in bytes)
+create_thumbnails = true               # Generate thumbnails for large images
+
+# Video settings  
+video_quality = high                   # Video quality preference
+max_video_size = 209715200            # Max video file size (200MB in bytes)
+
+# Album settings
+download_albums = true                 # Process image albums/galleries
+max_album_images = 50                 # Max images per album (0 = unlimited)
+
+# Performance and resource limits
+max_concurrent_downloads = 3           # Parallel download streams
+download_timeout = 30                  # Download timeout in seconds
+max_daily_storage_mb = 1024           # Daily storage limit in MB
+```
+
+#### Media Settings Explained:
+
+**Global Controls:**
+
+* **`download_enabled`** - Master switch for all media downloads
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**: 
+    - `true`: Enables media download system, attempts to download images/videos/audio
+    - `false`: Completely disables media downloads, only saves text content (markdown)
+  - **Performance Impact**:
+    - Enabled: Adds 5-30 minutes per 1000 posts (depends on media count)
+    - Disabled: ~80% faster processing, minimal storage usage
+  - **Storage Impact**:
+    - Enabled: 50MB-5GB+ depending on content (images are heavy!)
+    - Disabled: <50MB for 10,000 text-only posts
+  - **Examples**:
+    ```ini
+    download_enabled = true   # Enable media downloads
+    download_enabled = false  # Text-only archiving
+    ```
+
+* **`download_images`** - Control image downloads
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **Requires**: `download_enabled = true`
+  - **What It Downloads**: 
+    - Direct image links (i.redd.it, i.imgur.com)
+    - Reddit galleries
+    - External images (direct URLs)
+  - **Success Rate**: ~80% with modern web compatibility
+  - **Examples**:
+    ```ini
+    download_images = true   # Download all images
+    download_images = false  # Skip images
+    ```
+
+* **`download_videos`** - Control video downloads
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **Requires**: `download_enabled = true`
+  - **What It Downloads**:
+    - v.redd.it videos (with audio merging via ffmpeg if available)
+    - Direct video links (.mp4, .webm, .mov)
+    - Embedded videos from supported hosts
+  - **Dependencies**: 
+    - ffmpeg recommended for v.redd.it audio merging
+    - Without ffmpeg: video-only (no audio track)
+  - **Storage Warning**: Videos are large! Single video can be 50-500MB
+  - **Examples**:
+    ```ini
+    download_videos = true   # Download videos
+    download_videos = false  # Skip videos (save storage)
+    ```
+
+* **`download_audio`** - Control audio downloads
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **Requires**: `download_enabled = true`
+  - **What It Downloads**:
+    - Audio-only posts (podcasts, music)
+    - Audio tracks from videos (when separated)
+  - **Note**: Rarely used by Reddit, most audio is embedded in video
+  - **Examples**:
+    ```ini
+    download_audio = true   # Download audio files
+    download_audio = false  # Skip audio
+    ```
+
+**Image Processing:**
+
+* **`thumbnail_size`** - Maximum thumbnail dimension in pixels
+  - **Type**: Integer (positive)
+  - **Default**: `800`
+  - **Valid Range**: 100-4096 (recommended: 300-1200)
+  - **What It Means**: 
+    - Thumbnails are resized to fit within this width × height box
+    - Aspect ratio is preserved
+    - If image is 1920×1080 and thumbnail_size=800: → 800×450
+  - **Storage Impact Per Image**:
+    - 300px: ~50KB (very small)
+    - 800px: ~150KB (balanced)
+    - 1200px: ~300KB (high quality)
+  - **Use Cases**:
+    - 300-500: Quick previews, storage-constrained
+    - 800-1000: Balanced quality/size (recommended)
+    - 1200-2000: High quality, display on large screens
+  - **Examples**:
+    ```ini
+    thumbnail_size = 400   # Small previews
+    thumbnail_size = 800   # Default, good balance
+    thumbnail_size = 1200  # High quality
+    ```
+
+* **`max_image_size`** - Maximum image file size in bytes
+  - **Type**: Integer (positive)
+  - **Default**: `5242880` (5MB)
+  - **Valid Range**: 100,000 (100KB) to 52,428,800 (50MB)
+  - **What It Does**: 
+    - Images larger than this are SKIPPED (not downloaded)
+    - Not resized - full skip to save bandwidth/storage
+    - Applies BEFORE download (uses Content-Length header if available)
+  - **Size Conversion Guide**:
+    ```
+    1 MB  = 1048576 bytes
+    2 MB  = 2097152 bytes
+    5 MB  = 5242880 bytes (default)
+    10 MB = 10485760 bytes
+    20 MB = 20971520 bytes
+    50 MB = 52428800 bytes
+    ```
+  - **Trade-offs**:
+    - Small limit (1-2MB): Saves storage, may miss high-res images
+    - Medium limit (5-10MB): Balanced, gets most images
+    - Large limit (20-50MB): Complete archive, heavy storage
+  - **Examples**:
+    ```ini
+    max_image_size = 1048576   # 1MB limit (minimal)
+    max_image_size = 5242880   # 5MB limit (default)
+    max_image_size = 20971520  # 20MB limit (comprehensive)
+    ```
+
+* **`create_thumbnails`** - Generate thumbnail versions of images
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**:
+    - `true`: Creates smaller preview version alongside original
+    - `false`: Only saves original full-size image
+  - **File Naming**:
+    - Original: `abc123_media.jpg`
+    - Thumbnail: `abc123_media_thumb.jpg`
+  - **Storage Cost**: +10-20% additional space
+  - **Benefits**:
+    - Fast loading in file browsers
+    - Preview without opening large files
+    - Useful for browsing archives offline
+  - **Processing Cost**: +2-5 seconds per image
+  - **Examples**:
+    ```ini
+    create_thumbnails = true   # Generate previews
+    create_thumbnails = false  # Original only
+    ```
+
+**Video Processing:**
+
+* **`video_quality`** - Download quality preference for videos
+  - **Type**: String (enum)
+  - **Default**: `high`
+  - **Valid Values**: `high`, `low` (case-insensitive)
+  - **What It Means**:
+    
+    | Quality | Resolution | Bitrate | File Size (per min) | Use Case |
+    |---------|-----------|---------|---------------------|----------|
+    | **`high`** | 720p-1080p+ | High | 10-50MB/min | Best quality, storage available |
+    | **`low`** | 360p-480p | Lower | 3-10MB/min | Save bandwidth/storage |
+    
+  - **How It Works**:
+    - v.redd.it: Selects from available quality levels
+    - YouTube: Requests specific quality (if available)
+    - Gfycat: Downloads HD vs SD version
+  - **Important**: Not all sources provide multiple qualities
+  - **Examples**:
+    ```ini
+    video_quality = high   # Best quality (default)
+    video_quality = low    # Save storage
+    video_quality = HIGH   # Case doesn't matter
+    ```
+
+* **`max_video_size`** - Maximum video file size in bytes
+  - **Type**: Integer (positive)
+  - **Default**: `209715200` (200MB)
+  - **Valid Range**: 1,048,576 (1MB) to 1,073,741,824 (1GB)
+  - **What It Does**: Videos larger than this limit are SKIPPED
+  - **Size Conversion Guide**:
+    ```
+    10 MB  = 10485760 bytes
+    50 MB  = 52428800 bytes
+    100 MB = 104857600 bytes
+    200 MB = 209715200 bytes (default)
+    500 MB = 524288000 bytes
+    1 GB   = 1073741824 bytes
+    ```
+  - **Typical Video Sizes**:
+    - Short clip (30s): 5-20MB
+    - Medium video (2-5 min): 20-100MB
+    - Long video (10+ min): 100-500MB
+    - HD long video: 500MB-2GB
+  - **Recommendations By Use Case**:
+    - Storage-constrained: 50-100MB
+    - Balanced: 200-300MB (default range)
+    - Complete archive: 500MB-1GB
+  - **Examples**:
+    ```ini
+    max_video_size = 52428800   # 50MB (minimal)
+    max_video_size = 209715200  # 200MB (default)
+    max_video_size = 524288000  # 500MB (comprehensive)
+    ```
+
+**Album Handling:**
+
+* **`download_albums`** - Process multi-image posts (albums/galleries)
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Handles**:
+    - Imgur albums (imgur.com/a/XXXXX)
+    - Reddit galleries (multiple images in one post)
+    - Other multi-image services
+  - **File Naming**: `{post_id}_media_001.jpg`, `{post_id}_media_002.jpg`, etc.
+  - **Storage Impact**: Albums can be 2-100+ images each
+  - **Examples**:
+    ```ini
+    download_albums = true   # Download all album images
+    download_albums = false  # Skip albums entirely
+    ```
+
+* **`max_album_images`** - Limit images per album
+  - **Type**: Integer (non-negative)
+  - **Default**: `50`
+  - **Valid Values**: `0` (unlimited) or positive integer (1-1000+)
+  - **What It Does**:
+    - `0`: Download ALL images in album (no limit)
+    - `Positive number`: Download only first N images, skip rest
+  - **Why Limit?**:
+    - Some albums have 100+ images (massive storage)
+    - Prevent single post from consuming too much space
+    - Faster processing
+  - **Behavior Example**:
+    - Album has 80 images
+    - `max_album_images = 50`: Download first 50, skip remaining 30
+    - `max_album_images = 0`: Download all 80
+  - **Recommendations**:
+    - Conservative: 20-30 images
+    - Balanced: 50 images (default)
+    - Complete: 0 (unlimited, use with caution)
+  - **Examples**:
+    ```ini
+    max_album_images = 10   # First 10 only
+    max_album_images = 50   # First 50 (default)
+    max_album_images = 0    # No limit
+    ```
+
+**Performance Controls:**
+
+* **`max_concurrent_downloads`** - Parallel download streams
+  - **Type**: Integer (positive)
+  - **Default**: `3`
+  - **Valid Range**: 1-20 (recommended: 1-10)
+  - **What It Does**: Number of media files downloaded simultaneously
+  - **Trade-offs**:
+    
+    | Value | Speed | CPU Usage | Memory Usage | Network Load | Best For |
+    |-------|-------|-----------|--------------|--------------|----------|
+    | **1** | Slow | Low | Low | Light | Slow connections, low-power devices |
+    | **3** | Moderate | Medium | Medium | Moderate | Default, balanced |
+    | **5-7** | Fast | High | High | Heavy | Fast connections, powerful machines |
+    | **10+** | Fastest | Very High | Very High | Very Heavy | Server environments, very fast connections |
+    
+  - **Limiting Factors**:
+    - GitHub Actions: 3-5 recommended (shared resources)
+    - Home internet: Based on bandwidth (3-5 typical)
+    - Fast connection: 5-10
+  - **Warning**: Too high can trigger rate limits!
+  - **Examples**:
+    ```ini
+    max_concurrent_downloads = 1  # One at a time (safest)
+    max_concurrent_downloads = 3  # Default (balanced)
+    max_concurrent_downloads = 5  # Fast (requires good connection)
+    ```
+
+* **`download_timeout`** - Per-file download timeout in seconds
+  - **Type**: Integer (positive)
+  - **Default**: `30`
+  - **Valid Range**: 5-600 (recommended: 15-120)
+  - **What It Does**: Max time to wait for single file download
+  - **What Happens on Timeout**: 
+    - Download cancelled
+    - Item added to retry queue
+    - Script continues to next file
+  - **Recommendations By File Type**:
+    - Images only: 15-30 seconds
+    - Mixed (images + small videos): 30-60 seconds (default range)
+    - Large videos: 60-300 seconds
+  - **Network Speed Considerations**:
+    - Slow connection (<1 Mbps): 60-120 seconds
+    - Medium (1-10 Mbps): 30-60 seconds
+    - Fast (10+ Mbps): 15-30 seconds
+  - **Examples**:
+    ```ini
+    download_timeout = 15   # Fast timeout (risk more failures)
+    download_timeout = 30   # Default (balanced)
+    download_timeout = 120  # Patient (for large files/slow networks)
+    ```
+
+* **`max_daily_storage_mb`** - Daily storage consumption limit in megabytes
+  - **Type**: Integer (positive)
+  - **Default**: `1024` (1GB)
+  - **Valid Range**: 10-100,000+ (10MB to 100GB+)
+  - **What It Does**: 
+    - Tracks total storage used for media per run
+    - Stops downloading media when limit reached
+    - Text content (markdown) still saved
+    - Resets on next script run (not calendar day)
+  - **Why Use It**:
+    - Prevent unexpected storage exhaustion
+    - Control cloud storage costs (Dropbox/S3)
+    - GitHub Actions storage limits
+    - Predictable resource usage
+  - **Size Planning Guide**:
+    ```
+    100 MB:   ~500-1000 images OR ~2-5 short videos
+    500 MB:   ~2500-5000 images OR ~10-25 videos
+    1 GB:     ~5000-10000 images OR ~20-50 videos (default)
+    5 GB:     ~25000+ images OR 100+ videos
+    10 GB:    Complete large archive
+    ```
+  - **Recommendations By Use Case**:
+    - Testing: 100-200MB
+    - GitHub Actions (free): 500-1000MB
+    - Home backup: 2000-5000MB (2-5GB)
+    - Complete archive: 10000+ MB (10GB+)
+  - **Examples**:
+    ```ini
+    max_daily_storage_mb = 100    # Testing/minimal
+    max_daily_storage_mb = 1024   # 1GB default
+    max_daily_storage_mb = 5120   # 5GB comprehensive
+    max_daily_storage_mb = 0      # No limit (use with caution!)
+    ```
+
+#### `[Imgur]` - Imgur API Configuration
+
+```ini
+[Imgur]
+# Optional: Comma-separated client IDs for rate limit rotation
+client_ids = None                      # Multiple Imgur client IDs
+client_secrets = None                  # Corresponding client secrets  
+recover_deleted = true                 # Attempt recovery of deleted content
+```
+
+#### Imgur Settings Explained:
+
+⚠️ **CRITICAL NOTE**: Imgur API registration permanently closed to new users in May 2024. These settings only work if you already have existing Imgur application credentials.
+
+* **`client_ids`** - Imgur application client IDs for API access
+  - **Type**: String (comma-separated list in settings.ini, single value in env var)
+  - **Default**: `None`
+  - **Valid Values**: 
+    - `None`: No Imgur API access (uses fallback methods)
+    - Single ID: `abc123def456`
+    - Multiple IDs (settings.ini only): `id1,id2,id3` (for rate limit rotation)
+  - **Format Rules**:
+    - No spaces around commas: `id1,id2,id3` ✅
+    - With spaces (invalid): `id1, id2, id3` ❌
+    - Each ID is alphanumeric, typically 15 characters
+  - **What It Does**:
+    - Enables official Imgur API access
+    - Higher rate limits (12,500 requests/day per app)
+    - Album support and metadata
+    - Multiple IDs (settings.ini only) rotate to avoid single-app rate limits
+  - **Without API Access**:
+    - Falls back to direct HTTP downloads
+    - Lower success rate (~30-40% vs ~70-80% with API)
+    - Frequent 429 rate limit errors (expected and normal)
+    - No album support
+  - **Configuration Methods**:
+    
+    | Method | Single ID | Multiple IDs | Best For |
+    |--------|-----------|--------------|----------|
+    | **Environment Variable** | ✅ Yes | ❌ No | Most users, single app |
+    | **settings.ini** | ✅ Yes | ✅ Yes | Advanced: rate limit rotation |
+    
+  - **How to Get** (only if you registered before May 2024):
+    1. Go to https://imgur.com/account/settings/apps
+    2. Select your application
+    3. Copy the "Client ID" value
+  - **Examples**:
+    ```ini
+    # settings.ini - Multiple IDs supported
+    client_ids = None                           # No API (most users)
+    client_ids = abc123def456                   # Single app
+    client_ids = abc123,def456,ghi789          # Multiple apps (rotation) ⚠️ settings.ini only
+    ```
+    ```bash
+    # Environment variable - Single ID only
+    export IMGUR_CLIENT_ID='abc123def456'       # Single app only
+    ```
+  - **⚠️ Important**: Multiple client ID rotation is **only supported in settings.ini**, not via environment variables. If you need rotation across multiple Imgur apps, you must use settings.ini configuration.
+
+* **`client_secrets`** - Imgur application client secrets
+  - **Type**: String (comma-separated list in settings.ini, single value in env var)
+  - **Default**: `None`
+  - **Valid Values**: 
+    - `None`: No Imgur API access
+    - Comma-separated secrets matching `client_ids` order (settings.ini only)
+  - **MUST MATCH** `client_ids`:
+    - If `client_ids` has 3 IDs, `client_secrets` must have 3 secrets
+    - Order matters: `client_ids[0]` pairs with `client_secrets[0]`
+  - **Format Rules**:
+    - Same as client_ids: no spaces
+    - Each secret is alphanumeric, typically 40 characters
+    - Keep these SECRET (never commit to version control!)
+  - **Security Warning**:
+    - These are sensitive credentials
+    - Environment variables recommended for single app
+    - Never share or expose publicly
+  - **Configuration Methods**:
+    
+    | Method | Single Secret | Multiple Secrets | Recommended |
+    |--------|--------------|------------------|-------------|
+    | **Environment Variable** | ✅ Yes | ❌ No | ✅ Most secure |
+    | **settings.ini** | ✅ Yes | ✅ Yes | ⚠️ Only if multiple apps |
+    
+  - **Examples**:
+    ```ini
+    # settings.ini - Multiple secrets supported
+    client_secrets = None                                                    # No API
+    client_secrets = abcdef1234567890abcdef1234567890abcdef12              # Single
+    client_secrets = secret1_40chars,secret2_40chars,secret3_40chars        # Multiple ⚠️ settings.ini only
+    ```
+    ```bash
+    # Environment variable - Single secret only (RECOMMENDED)
+    export IMGUR_CLIENT_SECRET='abcdef1234567890abcdef1234567890abcdef12'
+    ```
+  - **Validation**: Script checks that count matches `client_ids`
+  - **⚠️ Note**: Multiple client secrets are **only supported in settings.ini**. For single app (most users), use environment variable for better security.
+
+* **`recover_deleted`** - Attempt recovery of deleted/unavailable Imgur content
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**:
+    - `true`: When Imgur returns 404, triggers content recovery cascade
+    - `false`: Skip recovery, treat as permanent failure
+  - **Recovery Process**:
+    1. Imgur returns 404 (not found) or 429 (rate limited)
+    2. System tries Wayback Machine for archived copy
+    3. Falls back to Reddit preview URLs
+    4. Checks other recovery providers
+    5. Caches result (success or failure) to avoid re-trying
+  - **Success Rates** (for deleted Imgur content):
+    - Recent deletions (<1 month): ~40-60% recovery
+    - Older deletions (1-6 months): ~20-40% recovery
+    - Very old (>6 months): ~10-20% recovery
+    - Popular images: Higher success (more likely archived)
+  - **Performance Impact**:
+    - Adds 5-15 seconds per failed Imgur image
+    - Only activates on failures (no cost for successful downloads)
+    - Results cached (subsequent failures instant)
+  - **When to Disable**:
+    - You don't care about deleted content
+    - Want faster processing (skip recovery attempts)
+    - Already know most Imgur links are dead
+  - **Examples**:
+    ```ini
+    recover_deleted = true   # Try to recover (default)
+    recover_deleted = false  # Skip recovery, faster
+    ```
+
+#### `[Recovery]` - Content Recovery System
+
+```ini
+[Recovery]
+# Recovery providers (4-provider cascade)
+use_wayback_machine = true             # Internet Archive Wayback Machine
+use_pushshift_api = true               # PullPush.io (Pushshift successor) 
+use_reddit_previews = true             # Reddit's preview/thumbnail system
+use_reveddit_api = true                # Reveddit deleted content recovery
+
+# Performance settings
+timeout_seconds = 10                   # Per-provider timeout
+cache_duration_hours = 24              # Cache recovery results
+
+# Cache management  
+max_cache_entries = 10000              # Maximum cached recovery results
+max_cache_size_mb = 100               # Cache size limit in MB
+cleanup_interval_minutes = 60          # Cache cleanup frequency
+enable_background_cleanup = true       # Automatic cache maintenance
+```
+
+#### Content Recovery Explained:
+
+Reddit Stash includes a sophisticated 4-provider cascade system that attempts to recover deleted, removed, or unavailable content.
+
+#### Recovery Provider Settings:
+
+* **`use_wayback_machine`** - Use Internet Archive Wayback Machine
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**: Archives web snapshots going back to 1996
+  - **Best For**: Popular content, older deletions, historical preservation
+  - **Success Rate**: 60-80% for popular content, 20-40% for obscure content
+  - **Coverage**: Billions of web pages, extensive image archives
+  - **Rate Limit**: 60 requests/minute (respectful, non-blocking)
+  - **Response Time**: 2-10 seconds average
+  - **Examples**:
+    ```ini
+    use_wayback_machine = true   # Enable (recommended)
+    use_wayback_machine = false  # Disable to save time
+    ```
+
+* **`use_pushshift_api`** - Use PullPush.io (Pushshift successor)
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**: Reddit-specific archive of posts and comments
+  - **Best For**: Deleted/removed Reddit text content, metadata
+  - **Success Rate**: 40-70% for Reddit content (higher for older content)
+  - **Coverage**: Reddit posts/comments from 2005-present
+  - **Rate Limit**: 12 requests/minute (conservative, respects soft limit of 15)
+  - **Response Time**: 1-3 seconds average
+  - **Note**: Sometimes slower or down (community-run service)
+  - **Examples**:
+    ```ini
+    use_pushshift_api = true   # Enable (recommended for Reddit content)
+    use_pushshift_api = false  # Disable if service unavailable
+    ```
+
+* **`use_reddit_previews`** - Use Reddit's preview/thumbnail system
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**: Reddit's own cached preview images
+  - **Best For**: Recent posts with images, when original host is down
+  - **Success Rate**: 20-50% (only works if Reddit generated preview)
+  - **Coverage**: Images from posts where Reddit created thumbnails
+  - **Quality**: Usually lower resolution (preview quality, not original)
+  - **Rate Limit**: 30 requests/minute
+  - **Response Time**: <1 second (very fast)
+  - **Limitations**: 
+    - Only works for posts Reddit previewed
+    - Lower quality than originals
+    - May not work for very old posts
+  - **Examples**:
+    ```ini
+    use_reddit_previews = true   # Enable (fast fallback)
+    use_reddit_previews = false  # Disable if quality matters
+    ```
+
+* **`use_reveddit_api`** - Use Reveddit deleted content recovery
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**: Specialized service for recovering deleted Reddit content
+  - **Best For**: Recently deleted posts/comments (within days/weeks)
+  - **Success Rate**: 30-60% for recent deletions, lower for older
+  - **Coverage**: Reddit posts and comments deleted by users or moderators
+  - **Rate Limit**: 20 requests/minute
+  - **Response Time**: 2-5 seconds average
+  - **Note**: Most effective for recent deletions (<30 days)
+  - **Examples**:
+    ```ini
+    use_reveddit_api = true   # Enable (good for recent deletions)
+    use_reveddit_api = false  # Disable to save time
+    ```
+
+#### Recovery Performance Settings:
+
+* **`timeout_seconds`** - Maximum wait time per provider attempt
+  - **Type**: Integer (positive)
+  - **Default**: `10`
+  - **Valid Range**: 3-120 seconds (recommended: 5-30)
+  - **What It Does**: Max time to wait for each recovery provider to respond
+  - **Behavior on Timeout**:
+    - Provider attempt cancelled
+    - Moves to next provider in cascade
+    - Failure logged but doesn't stop processing
+  - **Trade-offs**:
+    
+    | Timeout | Success Rate | Speed | Best For |
+    |---------|-------------|-------|----------|
+    | **5s** | Lower (~50%) | Fast | Quick pass, fast networks |
+    | **10s** | Good (~70%) | Moderate | Default, balanced |
+    | **20-30s** | Higher (~85%) | Slow | Thorough recovery, slow networks |
+    
+  - **Cascade Example** (timeout=10s, 4 providers):
+    - Wayback: Try for 10s → Success/Fail → Next
+    - PullPush: Try for 10s → Success/Fail → Next
+    - Reddit Preview: Try for 10s → Success/Fail → Next
+    - Reveddit: Try for 10s → Success/Fail → Give up
+    - Total: 0-40 seconds per item (stops at first success)
+  - **Examples**:
+    ```ini
+    timeout_seconds = 5    # Fast, may miss some content
+    timeout_seconds = 10   # Default, balanced
+    timeout_seconds = 30   # Thorough, slow
+    ```
+
+* **`cache_duration_hours`** - How long to cache recovery results
+  - **Type**: Integer (positive)
+  - **Default**: `24`
+  - **Valid Range**: 1-720 hours (1 hour to 30 days)
+  - **What It Does**: Stores recovery results (success/failure) to avoid re-trying
+  - **What Gets Cached**:
+    - Successful recoveries: URL → recovered content location
+    - Failed attempts: URL → "not found" (avoid retrying same failure)
+  - **Cache Database**: `.recovery_cache.db` in save directory (SQLite)
+  - **Why Cache?**:
+    - Avoid re-querying same URL across runs
+    - Respect provider rate limits
+    - Speed up subsequent runs (instant cache hits)
+    - Reduce network usage
+  - **Duration Recommendations**:
+    
+    | Duration | Use Case | Behavior |
+    |----------|----------|----------|
+    | **1-6 hours** | Testing, rapidly changing content | Short-term cache |
+    | **24-48 hours** | Normal use, daily runs | Default, balanced |
+    | **168 hours (1 week)** | Weekly runs, stable content | Longer persistence |
+    | **720 hours (30 days)** | Monthly runs, archival | Maximum persistence |
+    
+  - **Auto-Cleanup**: Expired entries automatically removed based on `cleanup_interval_minutes`
+  - **Examples**:
+    ```ini
+    cache_duration_hours = 6     # 6 hours (short-term)
+    cache_duration_hours = 24    # 24 hours (default)
+    cache_duration_hours = 168   # 1 week (long-term)
+    ```
+
+#### Recovery Cache Management:
+
+* **`max_cache_entries`** - Maximum number of cached results
+  - **Type**: Integer (positive)
+  - **Default**: `10000`
+  - **Valid Range**: 100-1,000,000+
+  - **What It Does**: Limits total number of entries in cache database
+  - **Cleanup Behavior**:
+    - When limit reached: Oldest entries removed first (FIFO)
+    - Expired entries removed first, then oldest
+    - Cleanup triggered automatically
+  - **Storage Per Entry**: ~200-500 bytes average
+  - **Total Storage Examples**:
+    ```
+    1,000 entries   = ~0.5 MB
+    10,000 entries  = ~5 MB (default)
+    100,000 entries = ~50 MB
+    1,000,000 entries = ~500 MB
+    ```
+  - **Recommendations**:
+    - Small archive (<1000 posts): 1,000-5,000 entries
+    - Medium archive (1000-10000): 10,000-50,000 entries (default range)
+    - Large archive (10000+): 50,000-500,000 entries
+  - **Examples**:
+    ```ini
+    max_cache_entries = 1000    # Minimal cache
+    max_cache_entries = 10000   # Default
+    max_cache_entries = 100000  # Large cache
+    ```
+
+* **`max_cache_size_mb`** - Cache size limit in megabytes
+  - **Type**: Integer (positive)
+  - **Default**: `100`
+  - **Valid Range**: 1-10,000 MB (1MB to 10GB)
+  - **What It Does**: Limits total disk space used by cache database
+  - **Cleanup Trigger**: When cache file exceeds this size
+  - **Relationship with `max_cache_entries`**:
+    - Both limits enforced independently
+    - Whichever limit reached first triggers cleanup
+    - Typically entries limit hits first
+  - **Recommendations**:
+    ```
+    10 MB:   Testing, minimal cache
+    100 MB:  Default, sufficient for most users
+    500 MB:  Large archives, lots of recovery attempts
+    1000 MB: Very large archives, maximum persistence
+    ```
+  - **Examples**:
+    ```ini
+    max_cache_size_mb = 10    # Minimal
+    max_cache_size_mb = 100   # Default
+    max_cache_size_mb = 500   # Large
+    ```
+
+* **`cleanup_interval_minutes`** - How often to run cache cleanup
+  - **Type**: Integer (positive)
+  - **Default**: `60`
+  - **Valid Range**: 5-1440 minutes (5 minutes to 24 hours)
+  - **What It Does**: Automatic cleanup of expired cache entries
+  - **What Gets Cleaned**:
+    - Entries older than `cache_duration_hours`
+    - Excess entries beyond `max_cache_entries`
+    - If size exceeds `max_cache_size_mb`
+  - **Trigger Timing**: Based on wall clock time
+  - **Performance Impact**: Minimal (<1 second per cleanup)
+  - **Recommendations**:
+    ```
+    15-30 min:  Frequent runs, tight control
+    60 min:     Default, balanced (hourly cleanup)
+    120-240 min: Infrequent runs, less overhead
+    1440 min:   Once per day (very infrequent runs)
+    ```
+  - **Examples**:
+    ```ini
+    cleanup_interval_minutes = 30    # Every 30 minutes
+    cleanup_interval_minutes = 60    # Every hour (default)
+    cleanup_interval_minutes = 1440  # Daily
+    ```
+
+* **`enable_background_cleanup`** - Automatic cache maintenance
+  - **Type**: Boolean
+  - **Default**: `true`
+  - **Valid Values**: `true`, `false`, `yes`, `no`, `on`, `off`, `1`, `0`
+  - **What It Does**:
+    - `true`: Runs cleanup automatically based on `cleanup_interval_minutes`
+    - `false`: Only cleans up when limits exceeded (manual mode)
+  - **Background Mode** (`true`):
+    - Periodic automatic cleanup
+    - Prevents cache bloat
+    - Recommended for most users
+  - **Manual Mode** (`false`):
+    - Only cleans when forced (size/entry limits hit)
+    - Slightly less overhead
+    - Cache may grow larger before cleanup
+    - Use if you want maximum cache retention
+  - **Examples**:
+    ```ini
+    enable_background_cleanup = true   # Automatic (recommended)
+    enable_background_cleanup = false  # Manual only
+    ```
+
+#### `[Retry]` - Retry Queue Configuration
+
+```ini
+[Retry]
+# Retry behavior
+max_retries = 5                        # Maximum retry attempts per item
+base_retry_delay_high = 5              # Base delay for high priority (seconds)
+base_retry_delay_medium = 10           # Base delay for medium priority (seconds)  
+base_retry_delay_low = 15              # Base delay for low priority (seconds)
+
+# Exponential backoff
+exponential_base_delay = 60            # Base delay for exponential backoff
+max_retry_delay = 86400               # Maximum delay (24 hours in seconds)
+
+# Dead letter queue
+dead_letter_threshold_days = 7         # Days before moving to dead letter queue
+```
+
+#### Retry System Explained:
+
+The retry system ensures failed downloads are automatically retried across multiple runs with intelligent priority-based backoff strategies. Failed items are queued in a persistent SQLite database (`.retry_queue.db`) and retried on subsequent script runs.
+
+#### Retry Attempt Settings:
+
+* **`max_retries`** - Maximum retry attempts before giving up
+  - **Type**: Integer (positive)
+  - **Default**: `5`
+  - **Valid Range**: 1-50 (recommended: 3-10)
+  - **What It Does**: How many times to retry a failed download before moving to dead letter queue
+  - **Retry Counter**:
+    - Attempt 1: Initial download (not a retry)
+    - Attempts 2-6: Actual retries (if max_retries=5)
+    - After attempt 6: Move to dead letter queue
+  - **What Triggers Retries**:
+    - Network timeouts
+    - HTTP errors (403, 429, 500, 502, 503, 504)
+    - Temporary service unavailability
+    - Rate limit errors
+  - **What Doesn't Retry**:
+    - 404 Not Found (permanent, triggers content recovery instead)
+    - Invalid URLs
+    - File too large (exceeds size limits)
+  - **Recommendations By Use Case**:
+    ```
+    3 retries:   Quick processing, accept some failures
+    5 retries:   Default, balanced persistence
+    10 retries:  Maximum persistence, thorough recovery
+    20+ retries: Extreme cases, very unstable networks
+    ```
+  - **Examples**:
+    ```ini
+    max_retries = 3   # Quick, fewer attempts
+    max_retries = 5   # Default, balanced
+    max_retries = 10  # Persistent, thorough
+    ```
+
+#### Priority-Based Delay Settings:
+
+Failed items are assigned priorities that determine their retry delays:
+
+* **Priority Assignment** (automatic):
+  - **High Priority**: Small files (<1MB), recently saved posts, first-time failures
+  - **Medium Priority**: Medium files (1-10MB), standard content
+  - **Low Priority**: Large files (>10MB), repeated failures, low-value content
+
+* **`base_retry_delay_high`** - Base delay for high-priority items (seconds)
+  - **Type**: Integer (positive)
+  - **Default**: `5`
+  - **Valid Range**: 1-300 seconds
+  - **When Used**: Small, recent, important content
+  - **Examples**:
+    ```ini
+    base_retry_delay_high = 1    # Retry almost immediately
+    base_retry_delay_high = 5    # Default, 5 second delay
+    base_retry_delay_high = 30   # More patient
+    ```
+
+* **`base_retry_delay_medium`** - Base delay for medium-priority items (seconds)
+  - **Type**: Integer (positive)
+  - **Default**: `10`
+  - **Valid Range**: 5-600 seconds
+  - **When Used**: Standard content, typical failures
+  - **Examples**:
+    ```ini
+    base_retry_delay_medium = 5    # Quick retry
+    base_retry_delay_medium = 10   # Default
+    base_retry_delay_medium = 60   # Patient retry
+    ```
+
+* **`base_retry_delay_low`** - Base delay for low-priority items (seconds)
+  - **Type**: Integer (positive)
+  - **Default**: `15`
+  - **Valid Range**: 10-1800 seconds
+  - **When Used**: Large files, repeated failures
+  - **Examples**:
+    ```ini
+    base_retry_delay_low = 10   # Relatively quick
+    base_retry_delay_low = 15   # Default
+    base_retry_delay_low = 120  # Very patient (2 minutes)
+    ```
+
+**Priority Delay Example**:
+```
+High priority item (attempt 1): Wait 5 seconds
+Medium priority item (attempt 1): Wait 10 seconds  
+Low priority item (attempt 1): Wait 15 seconds
+```
+
+#### Exponential Backoff Settings:
+
+After the base delay, subsequent retries use exponential backoff to avoid hammering failing services.
+
+* **`exponential_base_delay`** - Base delay for exponential backoff calculation
+  - **Type**: Integer (positive)
+  - **Default**: `60`
+  - **Valid Range**: 10-3600 seconds (10 seconds to 1 hour)
+  - **Formula**: `delay = exponential_base_delay × 2^(attempt_number - 1)`
+  - **Backoff Examples** (base=60):
+    ```
+    Attempt 1: 60 × 2^0 = 60 seconds (1 minute)
+    Attempt 2: 60 × 2^1 = 120 seconds (2 minutes)
+    Attempt 3: 60 × 2^2 = 240 seconds (4 minutes)
+    Attempt 4: 60 × 2^3 = 480 seconds (8 minutes)
+    Attempt 5: 60 × 2^4 = 960 seconds (16 minutes)
+    ```
+  - **Purpose**: Gradual backoff reduces load on failing services, increases success chance
+  - **Recommendations**:
+    ```
+    30s:  Quick backoff, impatient
+    60s:  Default, balanced (1 minute base)
+    300s: Slow backoff, very patient (5 minute base)
+    ```
+  - **Examples**:
+    ```ini
+    exponential_base_delay = 30   # Quick backoff
+    exponential_base_delay = 60   # Default (1 min)
+    exponential_base_delay = 300  # Slow backoff (5 min)
+    ```
+
+* **`max_retry_delay`** - Maximum delay between retries (cap)
+  - **Type**: Integer (positive)
+  - **Default**: `86400` (24 hours)
+  - **Valid Range**: 60-604800 seconds (1 minute to 7 days)
+  - **What It Does**: Caps exponential backoff to prevent extremely long delays
+  - **Without Cap**: Attempt 10 with base=60 would be 30,720 seconds (8.5 hours!)
+  - **With Cap** (86400): Any delay >24 hours is capped at 24 hours
+  - **Delay Capping Example** (base=60, max=86400):
+    ```
+    Attempt 1:  60s    (1 min)
+    Attempt 2:  120s   (2 min)
+    Attempt 3:  240s   (4 min)
+    Attempt 4:  480s   (8 min)
+    Attempt 5:  960s   (16 min)
+    Attempt 6:  1920s  (32 min)
+    Attempt 7:  3840s  (64 min)
+    Attempt 8:  7680s  (128 min ≈ 2 hours)
+    Attempt 9:  15360s (256 min ≈ 4 hours)
+    Attempt 10: 30720s (512 min ≈ 8.5 hours)
+    Attempt 11: 61440s → CAPPED at 86400s (24 hours)
+    ```
+  - **Recommendations**:
+    ```
+    3600s (1 hour):     Quick turnaround, frequent runs
+    86400s (24 hours):  Default, daily runs
+    604800s (7 days):   Weekly runs, maximum patience
+    ```
+  - **Examples**:
+    ```ini
+    max_retry_delay = 3600   # 1 hour max
+    max_retry_delay = 86400  # 24 hours (default)
+    max_retry_delay = 604800 # 7 days max
+    ```
+
+#### Dead Letter Queue Settings:
+
+Items that exceed retry limits are moved to a "dead letter queue" for manual review or permanent archiving.
+
+* **`dead_letter_threshold_days`** - Days before giving up permanently
+  - **Type**: Integer (positive)
+  - **Default**: `7`
+  - **Valid Range**: 1-365 days (1 day to 1 year)
+  - **What It Does**: After this many days of retrying, item moves to dead letter queue
+  - **Dead Letter Queue Behavior**:
+    - Items marked as "permanently failed"
+    - No longer retried automatically
+    - Kept in database for manual review
+    - Can be manually cleared or re-queued
+  - **Calculation**:
+    - Based on first_failure_timestamp, not retry count
+    - Example: Item first fails on Jan 1, threshold=7 days → Moves to DLQ on Jan 8
+  - **What Happens After DLQ**:
+    - Item logged as permanent failure
+    - Visible in retry queue status
+    - Manual intervention required to retry
+    - Can be cleared to reduce database size
+  - **Recommendations**:
+    ```
+    1-2 days:   Quick cleanup, aggressive pruning
+    7 days:     Default, balanced (1 week)
+    30 days:    Patient, thorough recovery attempts
+    365 days:   Maximum persistence (1 year)
+    ```
+  - **Examples**:
+    ```ini
+    dead_letter_threshold_days = 1    # Move to DLQ after 1 day
+    dead_letter_threshold_days = 7    # Default (1 week)
+    dead_letter_threshold_days = 30   # Patient (1 month)
+    ```
+
+**Dead Letter Queue Management**:
+- View DLQ items: Check `.retry_queue.db` with SQLite browser
+- Clear DLQ: Delete database file (creates fresh on next run)
+- Re-queue items: Manual SQL UPDATE statements
+- Monitor: Check logs for "moved to dead letter queue" messages
+
+**Complete Retry Flow Example** (max_retries=5, threshold=7 days):
+```
+Day 1, Run 1: Download fails → Queue (attempt 1/5, high priority, 5s delay)
+Day 1, Run 2: Retry fails → Queue (attempt 2/5, 60s backoff)
+Day 2, Run 1: Retry fails → Queue (attempt 3/5, 120s backoff)
+Day 3, Run 1: Retry fails → Queue (attempt 4/5, 240s backoff)
+Day 4, Run 1: Retry fails → Queue (attempt 5/5, 480s backoff)
+Day 5, Run 1: Final retry fails → Max retries exceeded, keep in queue
+Day 8: Item in queue for >7 days → Move to dead letter queue
+```
+
+---
+
+#### `[Storage]` - Cloud Storage Backend
+
+```ini
+[Storage]
+# Provider: none, dropbox, s3
+provider = none                       # Which cloud storage to use
+# S3 settings (ignored when provider != s3)
+s3_bucket = None                      # Your S3 bucket name
+s3_region = None                      # AWS region (e.g., us-east-1)
+s3_storage_class = STANDARD_IA        # S3 storage class for content files
+s3_endpoint_url = None                # Custom endpoint (MinIO, LocalStack)
+```
+
+#### Storage Settings Explained:
+
+The storage system lets you sync your Reddit archive to a cloud provider. Currently supports **Dropbox** (original) and **AWS S3** (new). You can use either one, or neither (local-only).
+
+* **`provider`** - Which cloud storage backend to use
+  - **Type**: String (enum)
+  - **Default**: `none`
+  - **Valid Values**: `none`, `dropbox`, `s3`
+  - **Behavior**:
+
+    | Value | What It Does | Requirements |
+    |-------|-------------|--------------|
+    | **`none`** | No cloud sync, files stay local | Nothing |
+    | **`dropbox`** | Sync to Dropbox (original behavior) | Dropbox app credentials |
+    | **`s3`** | Sync to AWS S3 bucket | AWS credentials + S3 bucket |
+
+  - **Environment Variable Override**: `STORAGE_PROVIDER`
+  - **Examples**:
+    ```ini
+    provider = none      # Local-only (default)
+    provider = dropbox   # Use Dropbox
+    provider = s3        # Use AWS S3
+    ```
+
+* **`s3_bucket`** - Name of your S3 bucket
+  - **Type**: String
+  - **Default**: `None`
+  - **Required**: Yes, when `provider = s3`
+  - **Rules**:
+    - Bucket must already exist (not auto-created)
+    - Must follow [S3 naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html): lowercase, 3-63 characters, no underscores
+    - Must be accessible with your AWS credentials
+  - **Environment Variable Override**: `AWS_S3_BUCKET`
+  - **Examples**:
+    ```ini
+    s3_bucket = my-reddit-archive
+    s3_bucket = backups-2024-reddit
+    ```
+
+* **`s3_region`** - AWS region where your bucket is located
+  - **Type**: String
+  - **Default**: `None` (uses AWS SDK default, typically from `~/.aws/config`)
+  - **Common Values**: `us-east-1`, `us-west-2`, `eu-west-1`, `eu-central-1`, `ap-southeast-1`
+  - **Environment Variable Override**: `AWS_DEFAULT_REGION`
+  - **Examples**:
+    ```ini
+    s3_region = us-east-1        # US East (Virginia) - cheapest
+    s3_region = eu-central-1     # Europe (Frankfurt)
+    s3_region = ap-southeast-1   # Asia Pacific (Singapore)
+    ```
+
+* **`s3_storage_class`** - Storage class for content files (posts, comments, media)
+  - **Type**: String (enum)
+  - **Default**: `STANDARD_IA`
+  - **Environment Variable Override**: `S3_STORAGE_CLASS`
+  - **Available Classes**:
+
+    | Storage Class | Monthly Cost/GB | Min Duration | Best For | Retrieval |
+    |--------------|----------------|--------------|----------|-----------|
+    | **`STANDARD`** | ~$0.023 | None | Frequent access | Free |
+    | **`STANDARD_IA`** | ~$0.0125 | 30 days | Infrequent access (recommended) | $0.01/GB |
+    | **`ONEZONE_IA`** | ~$0.01 | 30 days | Non-critical, infrequent | $0.01/GB |
+    | **`INTELLIGENT_TIERING`** | ~$0.023-$0.004 | None | Unpredictable access | Varies |
+    | **`GLACIER_IR`** | ~$0.004 | 90 days | Rare access, minutes retrieval | $0.03/GB |
+    | **`GLACIER`** | ~$0.0036 | 90 days | Archive, hours retrieval | $0.03/GB |
+    | **`DEEP_ARCHIVE`** | ~$0.00099 | 180 days | Long-term, 12hr retrieval | $0.02/GB |
+
+  - **Important Notes**:
+    - `file_log.json` is **always** stored as `STANDARD` regardless of this setting (it's read every run)
+    - **Glacier classes** (GLACIER_IR, GLACIER, DEEP_ARCHIVE) have minimum storage duration charges. If you re-upload a file before the minimum period, you pay for the full period. Reddit Stash automatically skips uploads when the file hasn't changed to avoid this
+    - All files are encrypted with SSE-S3 (AES-256) at no extra cost
+  - **Recommendations**:
+    ```
+    Just starting out:          STANDARD       (no surprises)
+    Regular use, save money:    STANDARD_IA    (recommended default)
+    Budget-conscious:           ONEZONE_IA     (slightly less durability)
+    Long-term archive:          GLACIER_IR     (cheap, but 90-day minimum)
+    Deep cold storage:          DEEP_ARCHIVE   (cheapest, 180-day minimum)
+    ```
+  - **Examples**:
+    ```ini
+    s3_storage_class = STANDARD_IA       # Best balance of cost and access
+    s3_storage_class = STANDARD          # Safest, no retrieval fees
+    s3_storage_class = GLACIER_IR        # Cheapest for archives you rarely read
+    ```
+
+* **`s3_endpoint_url`** - Custom S3-compatible endpoint URL
+  - **Type**: String (URL)
+  - **Default**: `None` (uses official AWS S3)
+  - **When to Use**: Only for S3-compatible services like MinIO, Wasabi, Backblaze B2, or LocalStack for testing
+  - **Environment Variable Override**: `S3_ENDPOINT_URL`
+  - **SSL**: Automatically disabled for non-`amazonaws.com` endpoints unless the URL starts with `https://`
+  - **Examples**:
+    ```ini
+    s3_endpoint_url = None                        # Default: AWS S3
+    s3_endpoint_url = http://localhost:4566        # LocalStack (testing)
+    s3_endpoint_url = http://192.168.1.100:9000   # Self-hosted MinIO
+    s3_endpoint_url = https://s3.wasabisys.com    # Wasabi
+    ```
+
+---
+
+### Settings Index (Alphabetical)
+
+Quick alphabetical reference of all 43 settings with links to detailed documentation:
+
+#### A-C
+- **`base_retry_delay_high`** (Integer, default: 5) - High-priority retry delay | [→ Retry Section](#priority-based-delay-settings)
+- **`base_retry_delay_low`** (Integer, default: 15) - Low-priority retry delay | [→ Retry Section](#priority-based-delay-settings)
+- **`base_retry_delay_medium`** (Integer, default: 10) - Medium-priority retry delay | [→ Retry Section](#priority-based-delay-settings)
+- **`cache_duration_hours`** (Integer, default: 24) - Cache recovery results duration | [→ Recovery Section](#recovery-performance-settings)
+- **`check_type`** (String, default: LOG) - File existence checking method | [→ Settings Section](#core-settings-explained)
+- **`cleanup_interval_minutes`** (Integer, default: 60) - Cache cleanup frequency | [→ Recovery Section](#recovery-cache-management)
+- **`client_id`** (String, default: None) - Reddit API client ID | [→ Configuration Section](#api-configuration-settings)
+- **`client_ids`** (String, default: None) - Imgur client IDs (multiple in settings.ini only) | [→ Imgur Section](#imgur-settings-explained)
+- **`client_secret`** (String, default: None) - Reddit API client secret | [→ Configuration Section](#api-configuration-settings)
+- **`client_secrets`** (String, default: None) - Imgur client secrets (multiple in settings.ini only) | [→ Imgur Section](#imgur-settings-explained)
+- **`create_thumbnails`** (Boolean, default: true) - Generate thumbnail versions | [→ Media Section](#media-settings-explained)
+
+#### D-I
+- **`dead_letter_threshold_days`** (Integer, default: 7) - Days before moving to DLQ | [→ Retry Section](#dead-letter-queue-settings)
+- **`download_albums`** (Boolean, default: true) - Process multi-image posts | [→ Media Section](#media-settings-explained)
+- **`download_audio`** (Boolean, default: true) - Control audio downloads | [→ Media Section](#media-settings-explained)
+- **`download_enabled`** (Boolean, default: true) - Master media download switch | [→ Media Section](#media-settings-explained)
+- **`download_images`** (Boolean, default: true) - Control image downloads | [→ Media Section](#media-settings-explained)
+- **`download_timeout`** (Integer, default: 30) - Per-file download timeout | [→ Media Section](#media-settings-explained)
+- **`download_videos`** (Boolean, default: true) - Control video downloads | [→ Media Section](#media-settings-explained)
+- **`dropbox_directory`** (String, default: /reddit) - Cloud storage path (Dropbox folder / S3 key prefix) | [→ Settings Section](#core-settings-explained)
+- **`enable_background_cleanup`** (Boolean, default: true) - Automatic cache maintenance | [→ Recovery Section](#recovery-cache-management)
+- **`exponential_base_delay`** (Integer, default: 60) - Exponential backoff base delay | [→ Retry Section](#exponential-backoff-settings)
+- **`ignore_tls_errors`** (Boolean, default: false) - Bypass SSL certificate validation | [→ Settings Section](#core-settings-explained)
+
+#### M-P
+- **`max_album_images`** (Integer, default: 50) - Limit images per album | [→ Media Section](#media-settings-explained)
+- **`max_cache_entries`** (Integer, default: 10000) - Maximum cached recovery results | [→ Recovery Section](#recovery-cache-management)
+- **`max_cache_size_mb`** (Integer, default: 100) - Cache size limit in MB | [→ Recovery Section](#recovery-cache-management)
+- **`max_concurrent_downloads`** (Integer, default: 3) - Parallel download streams | [→ Media Section](#media-settings-explained)
+- **`max_daily_storage_mb`** (Integer, default: 1024) - Daily storage limit in MB | [→ Media Section](#media-settings-explained)
+- **`max_image_size`** (Integer, default: 5242880) - Max image file size in bytes | [→ Media Section](#media-settings-explained)
+- **`max_retries`** (Integer, default: 5) - Maximum retry attempts | [→ Retry Section](#retry-attempt-settings)
+- **`max_retry_delay`** (Integer, default: 86400) - Maximum retry delay cap | [→ Retry Section](#exponential-backoff-settings)
+- **`max_video_size`** (Integer, default: 209715200) - Max video file size in bytes | [→ Media Section](#media-settings-explained)
+- **`password`** (String, default: None) - Reddit account password | [→ Configuration Section](#api-configuration-settings)
+- **`process_api`** (Boolean, default: true) - Fetch content from Reddit API | [→ Settings Section](#core-settings-explained)
+- **`process_gdpr`** (Boolean, default: false) - Process GDPR export files | [→ Settings Section](#core-settings-explained)
+
+#### P-R
+- **`provider`** (String, default: none) - Cloud storage backend | [→ Storage Section](#storage-settings-explained)
+- **`recover_deleted`** (Boolean, default: true) - Attempt Imgur content recovery | [→ Imgur Section](#imgur-settings-explained)
+
+#### S-U
+- **`s3_bucket`** (String, default: None) - S3 bucket name | [→ Storage Section](#storage-settings-explained)
+- **`s3_endpoint_url`** (String, default: None) - Custom S3-compatible endpoint | [→ Storage Section](#storage-settings-explained)
+- **`s3_region`** (String, default: None) - AWS region | [→ Storage Section](#storage-settings-explained)
+- **`s3_storage_class`** (String, default: STANDARD_IA) - S3 storage class | [→ Storage Section](#storage-settings-explained)
+- **`save_directory`** (String, default: reddit/) - Local save directory | [→ Settings Section](#core-settings-explained)
+- **`save_type`** (String, default: ALL) - What content to download | [→ Settings Section](#core-settings-explained)
+- **`thumbnail_size`** (Integer, default: 800) - Thumbnail dimensions in pixels | [→ Media Section](#media-settings-explained)
+- **`timeout_seconds`** (Integer, default: 10) - Per-provider recovery timeout | [→ Recovery Section](#recovery-performance-settings)
+- **`unsave_after_download`** (Boolean, default: false) - Auto-unsave after download | [→ Settings Section](#core-settings-explained)
+- **`use_pushshift_api`** (Boolean, default: true) - Use PullPush.io provider | [→ Recovery Section](#recovery-provider-settings)
+- **`use_reddit_previews`** (Boolean, default: true) - Use Reddit preview system | [→ Recovery Section](#recovery-provider-settings)
+- **`use_reveddit_api`** (Boolean, default: true) - Use Reveddit provider | [→ Recovery Section](#recovery-provider-settings)
+- **`use_wayback_machine`** (Boolean, default: true) - Use Internet Archive | [→ Recovery Section](#recovery-provider-settings)
+- **`username`** (String, default: None) - Reddit username | [→ Configuration Section](#api-configuration-settings)
+
+#### V
+- **`video_quality`** (String, default: high) - Video quality preference | [→ Media Section](#media-settings-explained)
+
+**💡 Tip**: Use your browser's search (Ctrl+F / Cmd+F) to quickly find a specific setting in the detailed sections above.
+
+---
+
+## Important Configuration Notes
+
+### Performance vs. Reliability Trade-offs
+
+**For Maximum Speed:**
+```ini
+check_type = LOG
+max_concurrent_downloads = 5
+download_timeout = 15
+```
+
+**For Maximum Reliability:**
+```ini
+check_type = DIR  
+max_concurrent_downloads = 1
+download_timeout = 60
+```
+
+### Storage Optimization
+
+**Minimal Storage:**
+```ini
+download_images = true
+download_videos = false
+create_thumbnails = false
+max_image_size = 1048576  # 1MB
+```
+
+**Complete Archive:**
+```ini
+download_albums = true
+max_video_size = 524288000  # 500MB
+max_album_images = 0  # unlimited
+```
+
+### Security Considerations
+
+* **Never commit settings.ini with credentials to version control**
+* **Use environment variables for production deployments**
+* **Keep `ignore_tls_errors = false` unless absolutely necessary**
+* **Regularly rotate API credentials**
+
+Note: Environment variables always take precedence over settings.ini values for credentials.
+
+#### Media Download Configuration
+
+Reddit Stash includes an advanced media download system that can download images, videos, and other media from Reddit posts and comments. Through modern web technologies and intelligent retry mechanisms, this system achieves **~80% success rates** for media downloads - a dramatic improvement over basic HTTP methods (~10% success).
+
+**What this means for you:**
+- Most images and videos from your saved posts will actually be downloaded and preserved
+- Better compatibility with modern hosting services and anti-bot protection
+- Automatic recovery from temporary failures and rate limiting
+- Separate tracking shows you exactly how much media content was successfully saved
+
+##### Imgur API Integration (Enhanced Download Support)
+
+**⚠️ Important: Imgur API is permanently closed to new users**
+
+**What this means for you:**
+- **Most users**: Reddit Stash works great without Imgur API - you'll get occasional Imgur download failures, which is normal
+- **Lucky few**: If you already had an Imgur application before 2024, you can use it for better Imgur downloads
+
+##### If You DON'T Have Imgur API Access (Most Users)
+
+**This is the normal experience** - don't worry about trying to get Imgur credentials:
+
+✅ **What works perfectly**:
+- Reddit-hosted images and videos (i.redd.it, v.redd.it)
+- Most other image hosting services
+- All text content and metadata
+
+⚠️ **What you might see occasionally**:
+- Some Imgur images fail with "429 rate limit" errors
+- This is expected and normal - not something you need to fix
+
+##### If You DO Have Existing Imgur API Access (Rare)
+
+If you already have an Imgur application from before 2024:
+
+1. **Find your credentials** at https://imgur.com/account/settings/apps
+2. **Set environment variables**:
+   ```bash
+   export IMGUR_CLIENT_ID='your_imgur_client_id'
+   export IMGUR_CLIENT_SECRET='your_imgur_client_secret'
+   ```
+3. **Enjoy enhanced features**: Better reliability, album support, fewer rate limits
+
+##### Media Download Environment Variables
+
+For enhanced media downloading, you can optionally set these environment variables:
+
+```bash
+# Imgur API (if you have existing credentials)
+export IMGUR_CLIENT_ID='your_imgur_client_id'
+export IMGUR_CLIENT_SECRET='your_imgur_client_secret'
+
+# These improve download reliability and enable advanced features
+# Leave unset if you don't have Imgur API access - basic downloads will still work
+```
+
+#### Getting API Credentials
+
+> **Since November 2025**, Reddit's [Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy) requires pre-approval before you can create new API apps. Self-service app creation at `reddit.com/prefs/apps` is no longer available for new users.
+
+**If you already have API credentials** (created before November 2025): Your existing `client_id` and `client_secret` continue to work. No action needed.
+
+**If you need new API credentials:**
+
+1. Apply at [Reddit's API Request Form](https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164)
+2. In your application, mention:
+   - This is for **personal data backup** (non-commercial)
+   - Low request volume (personal use only)
+   - You only access your own account data
+   - No AI training or commercial use
+3. Wait for approval (typically 2-4 weeks)
+4. Once approved, follow the [Setting Up Reddit Environment Variables](#setting-up-reddit-environment-variables) instructions below
+
+**Don't have API credentials?** See [GDPR-Only Mode](#gdpr-only-mode-no-api-credentials-needed) below for an alternative that works without any API access.
+
+#### GDPR-Only Mode (No API Credentials Needed)
+
+If you can't obtain API credentials, you can still create a structured index of your saved Reddit content using Reddit's GDPR data export:
+
+1. **Request your Reddit data** at https://www.reddit.com/settings/data-request (takes 2-30 days)
+2. Download and extract the ZIP file
+3. Place `saved_posts.csv` and `saved_comments.csv` in `{save_directory}/gdpr_data/`
+4. Configure `settings.ini`:
+   ```ini
+   [Settings]
+   process_api = false
+   process_gdpr = true
+   ```
+5. Run the script:
+   ```bash
+   python reddit_stash.py
+   ```
+
+In CSV-only mode, the script creates markdown files with Reddit links for each saved item, organized by subreddit. This gives you a searchable index of your saved content. If you later obtain API credentials, you can re-run with `process_api = true` to fetch full content for each item.
+
+#### Setting Up Reddit Environment Variables
+
+> **Note:** Since November 2025, you must first obtain approval through the [Getting API Credentials](#getting-api-credentials) process above before you can create a Reddit app.
+
+* Create a Reddit app at https://www.reddit.com/prefs/apps or https://old.reddit.com/prefs/apps/
+* Set up the name, select `script`, and provide the `redirect_uri` as per the [PRAW docs](https://praw.readthedocs.io/en/latest/getting_started/authentication.html#password-flow).
+
+![Step 1](resources/reddit_create_app1.png)
+
+* Copy the provided `REDDIT_CLIENT_ID` and the `REDDIT_CLIENT_SECRET` based on the following screenshot:
+
+![Step 2](resources/reddit_create_app2.png)
+
+* `REDDIT_USERNAME` is your reddit username
+* `REDDIT_PASSWORD` is your reddit password
+
+**Important for Two-Factor Authentication (TFA):**
+If your Reddit account has TFA enabled, you must provide your password and TFA code together, separated by a colon (`:`), e.g.:
+```
+REDDIT_PASSWORD='your_password:123456'
+```
+where `123456` is your current TFA code. Alternatively, you can disable TFA for the account to use prawcore authentication.
+If neither is done, prawcore authentication will fail.
+Keep these credentials for the setup.
+
+#### Setting Up Dropbox app
+* Go to [Dropbox Developer App](https://www.dropbox.com/developers/apps).
+* Click on Create app.
+* Select `Scoped access` and choose `Full Dropbox` or `App folder` for access type.
+* give a Name to your app and click `Create app`.
+![dropbox1](resources/dropbox_app1.png)
+- In the `Permissions` tab, ensure the following are checked under `Files and folders`:
+    * `files.metadata.write`
+    * `files.metadata.read`
+    * `files.content.write`
+    * `files.content.read`
+    * Click `Submit` in the bottom.
+![dropbox2](resources/dropbox_app2.png)
+* Your `DROPBOX_APP_KEY` and `DROPBOX_APP_SECRET` are in the settings page of the app you created.
+![dropbox3](resources/dropbox_app3.png)
+* To get the `DROPBOX_REFRESH_TOKEN` follow the follwing steps:
+
+Replace `<DROPBOX_APP_KEY>` with your `DROPBOX_APP_KEY` you got in previous step and add that in the below Authorization URL
+
+https://www.dropbox.com/oauth2/authorize?client_id=<DROPBOX_APP_KEY>&token_access_type=offline&response_type=code
+
+Paste the URL in browser and complete the code flow on the Authorization URL. You will receive an `<AUTHORIZATION_CODE>` at the end, save it you will need this later.
+
+Go to [Postman](https://www.postman.com/), and create a new POST request with below configuration
+
+* Add Request URL- https://api.dropboxapi.com/oauth2/token
+![postman1](resources/postman_post1.png)
+
+* Click on the **Authorization** tab -> Type = **Basic Auth** -> **Username** = `<DROPBOX_APP_KEY>` , **Password** = `<DROPBOX_APP_SECRET>`
+(Refer this [answer](https://stackoverflow.com/a/28529598/18744450) for cURL -u option)
+
+![postman2](resources/postman_post2.png)
+
+* Body -> Select "x-www-form-urlencoded"
+
+|    Key   |      Value          |
+|:--------:|:-------------------:|
+|    code  |`<AUTHORIZATION_CODE>` |
+|grant_type| authorization_code  |
+
+![postman3](resources/postman_post3.png)
+
+After you click send the request, you will receive JSON payload containing **refresh_token**.
+```
+{
+    "access_token": "sl.****************",
+    "token_type": "bearer",
+    "expires_in": 14400,
+    "refresh_token": "*********************",
+    "scope": <SCOPES>,
+    "uid": "**********",
+    "account_id": "***********************"
+}
+```
+
+and add/export the above **refresh_token** to DROPBOX_REFRESH_TOKEN in your environment.
+For more information about the setup visit [OAuth Guide](https://developers.dropbox.com/oauth-guide).
+
+
+- Credits for above DROPBOX_REFRESH_TOKEN solution : https://stackoverflow.com/a/71794390/12983596
+
+#### Setting Up AWS S3
+
+AWS S3 provides a cost-effective, highly durable alternative to Dropbox for storing your Reddit archive. Here's a step-by-step guide to set it up:
+
+##### Step 1: Create an AWS Account
+
+If you don't already have one:
+1. Go to [aws.amazon.com](https://aws.amazon.com/) and click **Create an AWS Account**
+2. Follow the signup process (requires email, phone number, and a payment method)
+3. AWS has a generous [Free Tier](https://aws.amazon.com/free/) that includes 5 GB of S3 Standard storage for 12 months
+
+##### Step 2: Create an S3 Bucket
+
+1. Go to the [S3 Console](https://s3.console.aws.amazon.com/s3/home)
+2. Click **Create bucket**
+3. Choose a **globally unique** bucket name (e.g., `my-reddit-archive-2024`)
+   - Must be lowercase, 3-63 characters
+   - Only letters, numbers, and hyphens
+4. Select an **AWS Region** close to you (e.g., `us-east-1` for US East, `eu-central-1` for Europe)
+5. Leave **Block all public access** enabled (your data stays private)
+6. Click **Create bucket**
+
+##### Step 3: Create an IAM User (for API Access)
+
+1. Go to [IAM Console](https://console.aws.amazon.com/iam/home)
+2. Click **Users** → **Create user**
+3. Enter a name like `reddit-stash-bot`
+4. Click **Next** → **Attach policies directly**
+5. Search for and select **AmazonS3FullAccess** (or create a more restrictive policy for just your bucket)
+6. Click **Create user**
+7. Select the user → **Security credentials** tab → **Create access key**
+8. Choose **Application running outside AWS** → **Create access key**
+9. **Save both values** (you won't be able to see the secret key again):
+   - `Access key ID` → this becomes `AWS_ACCESS_KEY_ID`
+   - `Secret access key` → this becomes `AWS_SECRET_ACCESS_KEY`
+
+> **Security tip**: For GitHub Actions, you can use [OIDC federation](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services) instead of static keys for enhanced security (no long-lived secrets).
+
+##### Step 4: Configure Reddit Stash
+
+**Option A: Environment Variables (recommended for GitHub Actions and Docker)**
+
+```bash
+export STORAGE_PROVIDER=s3
+export AWS_S3_BUCKET=my-reddit-archive-2024
+export AWS_DEFAULT_REGION=us-east-1
+export AWS_ACCESS_KEY_ID=AKIA...your_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+
+# Optional: storage class (default: STANDARD_IA)
+export S3_STORAGE_CLASS=STANDARD_IA
+```
+
+**Option B: settings.ini (for local installation)**
+
+```ini
+[Storage]
+provider = s3
+s3_bucket = my-reddit-archive-2024
+s3_region = us-east-1
+s3_storage_class = STANDARD_IA
+```
+
+And set your AWS credentials as environment variables (don't put them in settings.ini):
+```bash
+export AWS_ACCESS_KEY_ID=AKIA...your_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+```
+
+##### Step 5: Install the S3 Dependency
+
+```bash
+pip install -r requirements-s3.txt
+```
+
+This installs `boto3`, the official AWS SDK for Python.
+
+##### Step 6: Test the Connection
+
+Run a download (even on a fresh bucket, this verifies connectivity):
+```bash
+python storage_utils.py --download
+```
+
+You should see:
+```
+ -- S3 connected: s3://my-reddit-archive-2024 (STANDARD_IA) --
+```
+
+##### Step 7: Run Reddit Stash
+
+Now process your Reddit data and upload to S3:
+```bash
+python reddit_stash.py                # Process Reddit content
+python storage_utils.py --upload      # Upload to S3
+```
+
+##### GitHub Actions Setup
+
+For GitHub Actions, add these secrets to your repository (Settings → Secrets and variables → Actions):
+
+| Secret Name | Value |
+|------------|-------|
+| `AWS_ACCESS_KEY_ID` | Your IAM user access key |
+| `AWS_SECRET_ACCESS_KEY` | Your IAM user secret key |
+| `AWS_DEFAULT_REGION` | Your bucket region (e.g., `us-east-1`) |
+| `AWS_S3_BUCKET` | Your bucket name |
+
+Also add these **secrets** (same Secrets tab):
+
+| Secret Name | Value |
+|------------|-------|
+| `STORAGE_PROVIDER` | `s3` |
+| `S3_STORAGE_CLASS` | `STANDARD_IA` (optional, this is the default) |
+
+The workflow will automatically use S3 instead of Dropbox.
+
+##### Cost Estimate
+
+For a typical Reddit archive (~500 MB of markdown + media):
+
+| Storage Class | Monthly Cost | Annual Cost |
+|--------------|-------------|-------------|
+| STANDARD | ~$0.012 | ~$0.14 |
+| STANDARD_IA | ~$0.006 | ~$0.08 |
+| GLACIER_IR | ~$0.002 | ~$0.02 |
+
+Plus minimal costs for PUT/GET requests (~$0.005/1000 requests). Most users will pay **less than $0.10/month**.
+
+---
+
+#### Migrating Between Storage Providers
+
+If you're switching from Dropbox to S3 (or vice versa), Reddit Stash includes a built-in migration tool that copies all your data between providers.
+
+##### How It Works
+
+1. **Dry-run first** — shows what would be transferred without making changes
+2. **Execute** — downloads everything from source, uploads to target
+
+##### Step-by-Step Migration (Dropbox → S3)
+
+1. **Ensure both providers are configured** with credentials (see setup guides above)
+
+2. **Preview the migration** (dry-run, no data moved):
+   ```bash
+   python storage_utils.py --migrate --source dropbox --target s3
+   ```
+
+   You'll see:
+   ```
+   Migration plan: Dropbox -> AWS S3
+     Files: 1,234
+     Total size: 456.78 MB
+
+   To execute this migration, add --execute:
+     python storage_utils.py --migrate --source dropbox --target s3 --execute
+   ```
+
+3. **Execute the migration**:
+   ```bash
+   python storage_utils.py --migrate --source dropbox --target s3 --execute
+   ```
+
+4. **Update your configuration** to use the new provider:
+   ```ini
+   [Storage]
+   provider = s3
+   ```
+
+##### Migration Notes
+
+- Migration copies **all files** including `file_log.json`, so your deduplication state is preserved
+- Existing files on the target are **not deleted** — migration only adds files
+- For large archives, migration may take a while (all files pass through your machine)
+- You can migrate in either direction: Dropbox → S3, or S3 → Dropbox
+
+---
+
+## Docker Environment Variables
+
+When using Docker, you can control the scheduling behavior using these additional environment variables:
+
+### Scheduling Variables
+
+- **`SCHEDULE_MODE`**: Controls execution mode
+  - `once` (default): Run the script once and exit
+  - `periodic`: Run the script continuously on a schedule
+
+- **`SCHEDULE_INTERVAL`**: Time between executions in periodic mode
+  - Default: `7200` (2 hours)
+  - Minimum: `60` (1 minute)
+  - Units: seconds
+  - Examples:
+    - `3600` = 1 hour
+    - `1800` = 30 minutes
+    - `14400` = 4 hours
+
+### Usage Examples
+
+**Run once (default behavior):**
+```bash
+docker run -it [...other env vars...] reddit-stash
+```
+
+**Run every 2 hours:**
+```bash
+docker run -it -e SCHEDULE_MODE=periodic [...other env vars...] reddit-stash
+```
+
+**Run every 30 minutes:**
+```bash
+docker run -it -e SCHEDULE_MODE=periodic -e SCHEDULE_INTERVAL=1800 [...other env vars...] reddit-stash
+```
+
+**Stopping periodic execution:**
+Use `Ctrl+C` or send SIGTERM to the container for graceful shutdown.
+
+## Alternative Scheduling: External Cron Setup
+
+While Docker's built-in scheduling (`SCHEDULE_MODE=periodic`) is convenient, some users prefer external scheduling for more control. Here's how to set up cron jobs to run Docker containers on a schedule.
+
+### When to Use External Cron vs Built-in Scheduling
+
+**Use External Cron when:**
+- You want system-level control over scheduling
+- You need complex scheduling patterns (weekdays only, multiple times per day, etc.)
+- You prefer containers to start/stop rather than run continuously
+- You want to integrate with existing cron workflows
+- You need different schedules for different operations (main script vs cloud storage uploads)
+
+**Use Built-in Scheduling when:**
+- You want simple, consistent intervals
+- You prefer minimal setup
+- You want the container to run continuously
+- You don't need complex scheduling patterns
+
+### Linux/macOS Cron Setup
+
+**1. Edit your crontab:**
+```bash
+crontab -e
+```
+
+**2. Add cron jobs for different schedules:**
+
+**Every 2 hours (Reddit data fetch + cloud sync):**
+```bash
+0 */2 * * * docker run --rm --env-file /home/user/.reddit-stash.env -v /home/user/reddit-data:/app/reddit reddit-stash >> /var/log/reddit-stash.log 2>&1
+```
+
+**Daily at 9 AM:**
+```bash
+0 9 * * * docker run --rm -e REDDIT_CLIENT_ID='your_client_id' -e REDDIT_CLIENT_SECRET='your_client_secret' -e REDDIT_USERNAME='your_username' -e REDDIT_PASSWORD='your_password' -v /home/user/reddit-data:/app/reddit reddit-stash >> /var/log/reddit-stash.log 2>&1
+```
+
+**Weekdays only, every 3 hours during work hours (9 AM - 6 PM):**
+```bash
+0 9,12,15,18 * * 1-5 docker run --rm -e REDDIT_CLIENT_ID='your_client_id' -e REDDIT_CLIENT_SECRET='your_client_secret' -e REDDIT_USERNAME='your_username' -e REDDIT_PASSWORD='your_password' -v /home/user/reddit-data:/app/reddit reddit-stash >> /var/log/reddit-stash.log 2>&1
+```
+
+**Separate cloud storage upload job (runs 30 minutes after main job):**
+```bash
+# Dropbox
+30 */2 * * * docker run --rm -e DROPBOX_APP_KEY='your_dropbox_key' -e DROPBOX_APP_SECRET='your_dropbox_secret' -e DROPBOX_REFRESH_TOKEN='your_dropbox_token' -v /home/user/reddit-data:/app/reddit reddit-stash storage_utils.py --upload >> /var/log/reddit-stash-upload.log 2>&1
+
+# S3
+30 */2 * * * docker run --rm -e STORAGE_PROVIDER='s3' -e AWS_ACCESS_KEY_ID='your_key' -e AWS_SECRET_ACCESS_KEY='your_secret' -e AWS_S3_BUCKET='your-bucket' -v /home/user/reddit-data:/app/reddit reddit-stash storage_utils.py --upload >> /var/log/reddit-stash-upload.log 2>&1
+```
+
+### Windows Task Scheduler Setup
+
+**1. Open Task Scheduler** (search "Task Scheduler" in Start menu)
+
+**2. Create Basic Task:**
+- Name: "Reddit Stash"
+- Trigger: Daily/Weekly/Custom
+- Action: "Start a program"
+- Program: `docker`
+- Arguments:
+  ```
+  run --rm -e REDDIT_CLIENT_ID=your_client_id -e REDDIT_CLIENT_SECRET=your_client_secret -e REDDIT_USERNAME=your_username -e REDDIT_PASSWORD=your_password -v C:\reddit-data:/app/reddit reddit-stash
+  ```
+
+**3. Advanced Options:**
+- Run whether user is logged on or not
+- Run with highest privileges
+- Configure for your Windows version
+
+### Environment Variables in Cron
+
+**Option 1: Create an environment file**
+
+Create `/home/user/.reddit-stash.env`:
+```bash
+REDDIT_CLIENT_ID=your_client_id
+REDDIT_CLIENT_SECRET=your_client_secret
+REDDIT_USERNAME=your_username
+REDDIT_PASSWORD=your_password
+# For Dropbox:
+DROPBOX_APP_KEY=your_dropbox_key
+DROPBOX_APP_SECRET=your_dropbox_secret
+DROPBOX_REFRESH_TOKEN=your_dropbox_token
+# For S3 (instead of Dropbox):
+# STORAGE_PROVIDER=s3
+# AWS_ACCESS_KEY_ID=your_access_key
+# AWS_SECRET_ACCESS_KEY=your_secret_key
+# AWS_S3_BUCKET=your-bucket-name
+```
+
+Then use in cron:
+```bash
+0 */2 * * * docker run --rm --env-file /home/user/.reddit-stash.env -v /home/user/reddit-data:/app/reddit reddit-stash >> /var/log/reddit-stash.log 2>&1
+```
+
+**Option 2: Create a shell script**
+
+Create `/home/user/run-reddit-stash.sh`:
+```bash
+#!/bin/bash
+docker run --rm \
+  --env-file /home/user/.reddit-stash.env \
+  -v /home/user/reddit-data:/app/reddit \
+  reddit-stash
+```
+*Uses the `.reddit-stash.env` file from Option 1 above (supports Dropbox or S3 credentials).*
+
+Make it executable and add to cron:
+```bash
+chmod +x /home/user/run-reddit-stash.sh
+```
+
+Cron entry:
+```bash
+0 */2 * * * /home/user/run-reddit-stash.sh >> /var/log/reddit-stash.log 2>&1
+```
+
+### Docker Compose with Cron-like Scheduling
+
+Create `docker-compose.yml`:
+```yaml
+version: '3.8'
+services:
+  reddit-stash:
+    image: reddit-stash
+    environment:
+      - REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}
+      - REDDIT_CLIENT_SECRET=${REDDIT_CLIENT_SECRET}
+      - REDDIT_USERNAME=${REDDIT_USERNAME}
+      - REDDIT_PASSWORD=${REDDIT_PASSWORD}
+      # Cloud storage — choose Dropbox OR S3
+      - DROPBOX_APP_KEY=${DROPBOX_APP_KEY}
+      - DROPBOX_APP_SECRET=${DROPBOX_APP_SECRET}
+      - DROPBOX_REFRESH_TOKEN=${DROPBOX_REFRESH_TOKEN}
+      # - STORAGE_PROVIDER=s3
+      # - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      # - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      # - AWS_S3_BUCKET=${AWS_S3_BUCKET}
+    volumes:
+      - ./reddit:/app/reddit
+    profiles:
+      - manual
+```
+
+Run via cron:
+```bash
+0 */2 * * * cd /path/to/reddit-stash && docker-compose --profile manual run --rm reddit-stash >> /var/log/reddit-stash.log 2>&1
+```
+
+### Logging and Monitoring
+
+**View cron logs:**
+```bash
+# Ubuntu/Debian
+tail -f /var/log/syslog | grep CRON
+
+# CentOS/RHEL
+tail -f /var/log/cron
+
+# Your application logs
+tail -f /var/log/reddit-stash.log
+```
+
+**Monitor container execution:**
+```bash
+# Check if containers are running
+docker ps
+
+# View recent container logs
+docker logs $(docker ps -lq)
+
+# Monitor Docker events
+docker events --filter container=reddit-stash
+```
+
+### Troubleshooting Cron Jobs
+
+**Common Issues:**
+
+1. **Path issues**: Cron has limited PATH. Use full paths:
+   ```bash
+   0 */2 * * * /usr/bin/docker run --rm [...] reddit-stash
+   ```
+
+2. **Environment variables**: Cron doesn't inherit your shell environment. Use `--env-file` or set in crontab:
+   ```bash
+   PATH=/usr/local/bin:/usr/bin:/bin
+   0 */2 * * * docker run --rm [...] reddit-stash
+   ```
+
+3. **Permissions**: Ensure your user can run Docker without sudo:
+   ```bash
+   sudo usermod -aG docker $USER
+   # Log out and back in
+   ```
+
+4. **Testing cron jobs**: Test your command manually first:
+   ```bash
+   # Run the exact command from your crontab
+   docker run --rm -e REDDIT_CLIENT_ID='...' [...] reddit-stash
+   ```
+
+### Resource Management Tips
+
+**Using `--rm` flag:**
+- Automatically removes containers after execution
+- Prevents accumulation of stopped containers
+- Essential for cron-based scheduling
+
+**Memory limits:**
+```bash
+docker run --rm --memory=512m -e [...] reddit-stash
+```
+
+**CPU limits:**
+```bash
+docker run --rm --cpus=0.5 -e [...] reddit-stash
+```
+
+**Cleanup old images periodically:**
+```bash
+# Add to weekly cron
+0 0 * * 0 docker image prune -f >> /var/log/docker-cleanup.log 2>&1
+```
+
+## Important Notes
+
+### Important Note About Unsaving
+
+⚠️ **The script includes an option to automatically unsave posts after downloading them (`unsave_after_download` in settings.ini). This feature can be used to cycle through older saved posts beyond Reddit's 1000-item limit.**
+
+#### How it works:
+1. The script downloads and saves a post/comment
+2. If successful, it attempts to unsave the item
+3. A small delay is added between unsave operations to respect Reddit's rate limits
+4. Error handling ensures that failed unsaves don't stop the script
+
+#### Important Considerations:
+- **This process is irreversible** - Once items are unsaved, they cannot be automatically restored to your saved items list
+- **Create backups first** - Always ensure you have a backup of your saved items before enabling this feature
+- **Use with caution** - It's recommended to first run the script without unsaving to verify everything works as expected
+- **Rate Limiting** - The script includes built-in delays to avoid hitting Reddit's API limits
+- **Error Recovery** - If an unsave operation fails, the script will continue processing other items
+
+#### Usage:
+1. Set `unsave_after_download = true` in your settings.ini file
+2. Run the script as normal
+3. The script will now unsave items after successfully downloading them
+4. Run the script multiple times to gradually access older saved items
+
+#### Recommended Workflow:
+1. First run: Keep `unsave_after_download = false` and verify all content downloads correctly
+2. Create a backup of your downloaded content
+3. Enable unsaving by setting `unsave_after_download = true`
+4. Run the script multiple times to access progressively older content
+
+### GDPR Data Processing
+
+The script can process Reddit's GDPR data export to access your complete saved post history. When API credentials are available, it uses PRAW to fetch full content for each saved item. **When API credentials are not available** (e.g., due to the [November 2025 API policy change](#getting-api-credentials)), it runs in CSV-only mode, creating a structured index of your saved content with Reddit links. See [GDPR-Only Mode](#gdpr-only-mode-no-api-credentials-needed) for setup without API credentials.
+
+#### How to Use GDPR Export:
+
+1. Request your Reddit data:
+   - Go to https://www.reddit.com/settings/data-request
+   - Request your data (processing may take several days)
+   - Download the ZIP file when ready
+
+2. Extract and place the CSV files:
+   - Inside your save directory (from settings.ini), create a `gdpr_data` folder
+   - Example structure:
+     ```
+     reddit/              # Your save directory
+     ├── gdpr_data/      # GDPR data directory
+     │   ├── saved_posts.csv
+     │   └── saved_comments.csv
+     ├── subreddit1/     # Regular saved content
+     └── file_log.json
+     ```
+
+3. Enable GDPR processing:
+   ```ini
+   [Settings]
+   process_gdpr = true
+   ```
+
+4. Run the script:
+   ```bash
+   python reddit_stash.py
+   ```
+
+#### Technical Details:
+- Uses PRAW's built-in rate limiting
+- Processes both submissions and comments
+- Maintains consistent file naming with "GDPR_" prefix
+- Integrates with existing file logging system
+- Handles API errors and retries gracefully
+
+#### Important Notes:
+- GDPR processing runs after regular API processing
+- Each item requires a separate API call to fetch full content
+- Rate limits are shared with regular API processing
+- Large exports may take significant time to process
+- Duplicate items are automatically skipped via file logging
+
+### File Organization and Utilities
+
+Reddit Stash organizes content by subreddit with a clear file naming convention:
+
+- **Your Posts**: `POST_[post_id].md`
+- **Your Comments**: `COMMENT_[comment_id].md`
+- **Saved Posts**: `SAVED_POST_[post_id].md`
+- **Saved Comments**: `SAVED_COMMENT_[comment_id].md`
+- **Upvoted Posts**: `UPVOTE_POST_[post_id].md`
+- **Upvoted Comments**: `UPVOTE_COMMENT_[comment_id].md`
+- **GDPR Posts**: `GDPR_POST_[post_id].md`
+- **GDPR Comments**: `GDPR_COMMENT_[comment_id].md`
+
+The system includes several utility modules:
+
+- **file_operations.py**: Handles all file saving and organization logic
+- **save_utils.py**: Contains the core content formatting functions
+- **gdpr_processor.py**: Processes the GDPR data export
+- **time_utilities.py**: Manages rate limiting and API request timing
+- **log_utils.py**: Tracks processed files to avoid duplicates
+
+## Frequently Asked Questions
+
+### General Questions
+
+**Q: Why would I want to backup my Reddit content?**  
+A: Reddit only allows you to access your most recent 1000 saved items. This tool lets you preserve everything beyond that limit and ensures you have a backup even if content is removed from Reddit.
+
+**Q: How often does the automated backup run?**
+A: If you use the GitHub Actions setup, it runs on a schedule:
+- Every 3 hours during peak hours (6:00-21:00 UTC)
+- Twice during off-peak hours (23:00 and 3:00 UTC)
+
+**Q: Can I run this without GitHub Actions?**  
+A: Yes, you can run it locally on your machine or set up the Docker container version. The README provides instructions for both options.
+
+### Technical Questions
+
+**Q: Does this access private/NSFW subreddits I've saved content from?**  
+A: Yes, as long as you're logged in with your own Reddit credentials, the script can access any content you've saved, including from private or NSFW subreddits.
+
+**Q: How can I verify the script is working correctly?**  
+A: Check your specified save directory for the backed-up files. They should be organized by subreddit with clear naming conventions.
+
+**Q: Will this impact my Reddit account in any way?**  
+A: No, unless you enable the `unsave_after_download` option. This script only reads your data by default; it doesn't modify anything on Reddit unless that specific option is enabled.
+
+**Q: What happens if the script encounters rate limits?**  
+A: The script has built-in dynamic sleep timers to respect Reddit's API rate limits. It will automatically pause and retry when necessary.
+
+## 🔐 Security Considerations
+
+When using Reddit Stash, keep these security considerations in mind:
+
+### API Credentials
+
+- **Never share your Reddit API credentials**, Dropbox tokens, or AWS access keys with others
+- When using GitHub Actions, your credentials are stored as encrypted secrets
+- For local installations, consider using environment variables instead of hardcoding credentials in the settings file
+- Regularly rotate your API keys and tokens, especially if you suspect they may have been compromised
+
+### Content Security
+
+- Reddit Stash downloads and stores all content from saved posts, including links and images
+- Be aware that this may include sensitive or private information if you've saved such content
+- Consider where you're storing the backed-up content and who has access to that location
+- Cloud storage encryption (Dropbox encryption or S3 SSE-S3) provides some protection, but for highly sensitive data, consider additional encryption
+
+### GitHub Actions Security
+
+- The GitHub Actions workflow runs in GitHub's cloud environment
+- While GitHub has strong security measures, be aware that your Reddit content is processed in this environment
+- The workflow has access to your repository secrets and the content being processed
+- For maximum security, consider running the script locally on a trusted machine
+
+### Local Storage Considerations
+
+- Content is stored in plain text markdown files
+- If storing content locally, ensure your device has appropriate security measures (encryption, access controls)
+- If you back up your local storage to other services, be mindful of where your Reddit content might end up
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you have any improvements or bug fixes.
+
+### Acknowledgement
+- This project was inspired by [reddit-saved-saver](https://github.com/tobiasvl/reddit-saved-saver).
+
+## Project Status
+
+### Future Enhancements
+Have an idea for improving Reddit Stash? Feel free to suggest it in the issues or contribute a pull request!
+
+**✅ Recently Implemented:**
+- **Content Recovery System** - 4-provider cascade for failed downloads (Wayback Machine, PullPush.io, Reddit Previews, Reveddit) with SQLite caching and automatic retry across runs
+- **Advanced Media Download System** - Modern web compatibility with HTTP/2 support and browser impersonation
+- **Comprehensive Rate Limiting** - Multi-layer rate limiting with provider-specific limits and intelligent backoff
+
+**🔮 Planned Enhancements:**
+- [ ] Improve error handling for edge cases
+- [ ] Add support for additional cloud storage providers (Google Drive, OneDrive)
+- [ ] Create a simple web interface for configuration
+- [ ] **Enhanced Media Processing**
+  - Video compression and format conversion options
+  - Parallel downloads with queue management
+  - Selective downloads by file size/type with user-defined rules
+  - Download progress tracking and statistics
+- [ ] **Additional Recovery Providers**
+  - Archive.today integration
+  - Library of Congress web archive
+  - Custom recovery provider plugins
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -1,0 +1,25 @@
+= Rednode
+
+Rednode is a pure ruby implementation of the native C++ parts of Node.js (currently very incomplete, but it's a start). 
+Rednode uses http://github.com/cowboyd/therubyracer - an embedded V8 engine
+that runs in the same process as Ruby.
+
+== Why Rednode?
+
+* You can mix Ruby code and Javascript code in your node app.
+* You can launch your (possibly pure js) node app from Ruby, allowing you to use e.g. Cucumber to test it (synchronously, which is easier).
+* Mount a node.js app under rack alongside other ruby rack apps.
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Charles Lowell, Aslak Hellesøy. See LICENSE for details.

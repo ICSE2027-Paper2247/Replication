@@ -1,0 +1,31 @@
+
+h2. Ember: A component based entity framework for Flash and Flex with DI
+
+Ember is a flexible expandable game development framework. Ember is designed to address the issues with traditional game architecture and encourage reuse and flexibility of component systems. Ember makes use of dependency injection for ease of coding without compromising speed.
+
+Ember enables:
+
+* Component based game architecture
+* Automated Injection in game systems
+* Freedom to implement the game as you see fit
+* Fully modular
+
+
+
+h3. Code
+
+* "Ember Framework":http://github.com/tdavies/Ember
+
+
+h3. Other Resources
+
+* "SwiftSuspenders":http://github.com/tschneidereit/SwiftSuspenders
+
+
+h2. License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A

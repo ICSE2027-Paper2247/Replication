@@ -1,0 +1,82 @@
+NOTE: This project is no longer maintained. 
+
+   ____                   ____  __    ______
+  / __ \____  ___  ____  / __ \/ /   / ____/
+ / / / / __ \/ _ \/ __ \/ /_/ / /   / /     
+/ /_/ / /_/ /  __/ / / / ____/ /___/ /___   
+\____/ .___/\___/_/ /_/_/   /_____/\____/   
+    /_/                                     
+
+----------------------------------------------------------------------------
+The MIT License
+
+Copyright (c) 2011 University of Nebraska, Omaha
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+This product will be used for good, not evil.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+usbstack -  This module is based on the Honken USB Stack, which is released
+            under the Creative Commons Share-Alike License.
+
+dhcpc, uip  -   These modules are from uIP, and are released under the
+                BSD license.
+
+----------------------------------------------------------------------------
+INTRODUCTION
+
+OpenPLC is designed to offer a cheap, open source alternative platform for
+control when security and safety are not an issue.  The device uses similar
+ladder logic and ModBus protocols as major PLC.  It also can produce and read
+24V Hardware IO. Using these tools, this device is capable of performing
+comparable work to that of a more expensive PLC.
+
+The code is laid out as follows:
+include - Global includes.
+lib     - Global Libraries.
+logic   - The Logic module: runs ladder logic and maintains virtual registers.
+core    - The core PLC functions. main is here.
+dhcpc   - The DHCP layer.
+uip     - The open-source TCP-IP stack module
+usb     - The usb module.
+usbstack- The Honken USB stack
+arch    - Architecture-specific functions (i.e. IO, Timers, etc.)
+
+----------------------------------------------------------------------------
+INSTALLATION
+
+There is currently a setup-deb.sh file in this folder.  Look it over, In the
+event you are connected to the canonical repository, this should probably set
+you up.
+
+----------------------------------------------------------------------------
+MODULE OVERVIEW
+----------------------------------------------------------------------------
+ARCH
+
+The arch module contains the hardware-specific controls needed to interface
+with the board.  It has subfolders containing the different supported
+architectures for the system.
+
+USBSTACK
+
+The Usbstack module is based on the Honken USB Stack. Look at
+DangerousPrototypes for more information. This has had to be severely
+modified in order to make it compile for our system.
+

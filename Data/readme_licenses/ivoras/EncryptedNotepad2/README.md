@@ -1,0 +1,85 @@
+# Encrypted Notepad II
+
+This is a spiritual successor to the "Encrypted Notepad" app [previously developed on SourceForge](https://sourceforge.net/projects/enotes/) by the same author. The goal is still the same: *"Encrypted Notepad II" does only one thing, but aims to do it perfectly - a Notepad-like simple text editor where files are saved (and later loaded) encrypted with industrial strength algorithms*. No ads, no network connection required, no bloat, just run it. If you know how to use the Windows Notepad app, you know how to use this app. It's a Notepad clone where the file format is PGP's symmetrically encrypted ASCII-armoured (`.asc`) data.
+
+![Screenshot of the Windows app](screenshot.png)
+
+![Screenshot of the Android app](screenshot-android.png)
+
+
+This app works on old-fashioned files - not internal databases, not proprietary storage, not even SQLite. There's nothing to import or export. Each document is its own file, saved in the encrypted OpenPGP ASCII-armoured format. That's it.
+
+# Current Status
+
+Alpha version 0.4 - major features are done (de/encryption is complete), but there's space for improvement, especially in UX.
+
+# An Experiment in Sustainable Open Source
+
+*Note from the author*
+
+I am an Open Source veteran. I've put my code out there since before GitHub existed, and you can see my (early and embarrasing) work on SourceForge. All this time, I did it because I made something I want to share with the world, without expecting anything in return. But that isn't really sustainable. Software needs to be maintained. Bitrot is real. Operating systems get updated and move on, and once published, apps might not even run in a decade. That's what's happened with the original Encrypted Notepad.
+
+Encrypted Notepad II is my experiment in combining Open Source with a business model. The source code in its entirety is on GitHub, but the binaries are not. If you want to build them yourself, you are welcome to. If Linux distro maintainers want to include it, they are also welcome to. But if you want to download binaries for Windows, Android, or even Linux (and possibly MacOS and IOS too) - I'm going to charge for that. Not as a subscription, but as a one-time payment with a lifetime of upgrades.
+
+# Downloading Encrypted Notepad II
+
+[Here is a link where you can buy binaries and priority support for Encrypted Notepad II](https://payhip.com/b/q9s7S). By buying this product you support its future development, and get this in return:
+
+* Windows, Linux, and Android versions of the software (OS X and iOS will be provided if there's enough interest)
+* Lifetimes of updates for those binaries, for a single payment
+* Priority support for any issues.
+
+This is an open source app developed on GitHub. What you are buying here are the binaries and priority support. If you know how to, you can always build your own binaries from source.
+
+# Building Encrypted Notepad II
+
+You will need Go 1.22+ installed. After cloning the repo, run:
+
+```
+go build
+```
+
+and run:
+
+```
+./EncryptedNotepad2
+```
+
+## Note: Linux dependancies
+
+For Linux builds, you'll also need the following packages installed before building:
+
+* `xorg-dev`
+
+# Encryption
+
+The files are encrypted using AES-256 and stored in the PGP/OpenPGP `.asc` format, that is interoperable with any other tool using the same standard. The OpenPGP and general crypto libraries used are:
+
+* [ProtonMail's libraries](https://github.com/ProtonMail)
+* [CloudFlare's circl](https://github.com/cloudflare/circl)
+* [Golang's x/crypto](https://golang.org/x/crypto)
+
+Feel free to inspect `go.mod` for details.
+
+# F.A.Q.
+
+## Will you support other encryption algorithms?
+
+No. Really, there's no need to. Either you trust AES, and in that case this is what you want, or you don't, in which case you most likely don't need this tool.
+
+## Will you support more file formats (other than OpenPGP ASCII-armoured messages)?
+
+Maybe - depends if there's a good use case and enough people want it.
+
+## What is the actual cipher mode of AES-256 used in Encrypted Notepad II?
+
+When saving in OpenPGP's message format (the `.asc`) files, the mode is dictated by the OpenPGP spec. It is [OCFB-MDC](https://web.archive.org/web/20231230093732/https://articles.59.ca/doku.php?id=pgpfan:mdc). It is an AEAD mode, providing tamper protection as well as encryption.
+
+## Why is the UI clunky / strange / not native?
+
+This one isn't new - the old version was written in Java, and that means it required a JRE to run. The current version is written mostly in Go, with TK for the UI. In that light, the new version is actually lighter-weight.
+
+# Changelog
+
+* v0.5 - Rewritten the desktop app with the TK UI, rewritten the Android app to be native
+* v0.4 - If the filename isn't given a file extension while saving, the default ".asc" extension will be used.

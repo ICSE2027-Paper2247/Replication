@@ -1,0 +1,246 @@
+= tb - manipulation tool for tables
+
+tb provides a command and a library for manipulating tables:
+Unix filter like operations (sort, cat, cut, ls, etc.),
+SQL like operations (join, group, etc.),
+other table operations (search, gsub, rename, cross, melt, unmelt, etc.),
+information extractions (git, svn, tar),
+and more.
+
+tb supports various table formats: CSV, TSV, JSON, NDJSON, LTSV, etc.
+
+== Example
+
+There is a CSV file for programming languages and their birth year in
+sample/ directory in tb package.
+
+  % head sample/langs.csv
+  language,year
+  FORTRAN,1955
+  LISP,1958
+  COBOL,1959
+  ALGOL 58,1958
+  APL,1962
+  Simula,1962
+  SNOBOL,1962
+  BASIC,1964
+  PL/I,1964
+
+"tb" command has many subcommands.
+"sort" subcommand sort a CSV file.
+You don't need to care header: header is retained as is.
+
+  % tb sort sample/langs.csv|head
+  language,year
+  ALGOL 58,1958
+  APL,1962
+  Ada,1983
+  B,1969
+  BASIC,1964
+  BCPL,1967
+  C,1972
+  C#,2001
+  C++,1980
+
+"sort" subcommand takes -f option to specify a field to sort.
+You don't need to count the position of the field.
+Also, the comparison method used in tb is smart to sort numbers correctly.
+
+  % tb sort -f year sample/langs.csv|head
+  language,year
+  FORTRAN,1955
+  LISP,1958
+  ALGOL 58,1958
+  COBOL,1959
+  APL,1962
+  SNOBOL,1962
+  Simula,1962
+  BASIC,1964
+  PL/I,1964
+
+"search" subcommand search CSV file.
+
+  % tb search R sample/langs.csv
+  language,year
+  FORTRAN,1955
+  Ruby,1993
+
+"search" subcommand takes -f with field name and -v to show non-matching rows.
+You don't need to care field separators (comma) to match.
+Following example searches languages which name contains a non-alphabet character.
+
+  % tb search -vf language '\A[A-Za-z]*\z' sample/langs.csv
+  language,year
+  ALGOL 58,1958
+  PL/I,1964
+  C++,1980
+  Objective-C,1983
+  Common Lisp,1984
+  Visual Basic,1991
+  C#,2001
+  F#,2002
+
+"search" subcommand can take Ruby expression, instead of a regexp.
+The variable, "_", contains a hash which represents a record.
+
+  % tb search --ruby '(1990..1999).include?(_["year"].to_i)' sample/langs.csv
+  language,year
+  Haskell,1990
+  Python,1991
+  Visual Basic,1991
+  Ruby,1993
+  Lua,1993
+  CLOS,1994
+  Java,1995
+  Delphi,1995
+  JavaScript,1995
+  PHP,1995
+  D,1999
+
+"cut" subcommand extract one or more fields.
+This is similar to "cut" command of Unix and projection of relational algebra.
+
+  % tb cut language sample/langs.csv |head
+  language
+  FORTRAN
+  LISP
+  COBOL
+  ALGOL 58
+  APL
+  Simula
+  SNOBOL
+  BASIC
+  PL/I
+
+"group" subcommand groups rows for specified field.
+-a option specifies aggregation expression to aggregate the grouped rows.
+
+  % tb group year -a count -a 'values(language)' sample/langs.csv |head
+  year,count,values(language)
+  1955,1,FORTRAN
+  1958,2,"LISP,ALGOL 58"
+  1959,1,COBOL
+  1962,3,"APL,Simula,SNOBOL"
+  1964,2,"BASIC,PL/I"
+  1967,1,BCPL
+  1968,1,Logo
+  1969,1,B
+  1970,2,"Pascal,Forth"
+
+There are more subcommands.
+"help" subcommand shows list of subcommand.
+
+  % tb help
+  Usage:
+    tb help [OPTS] [SUBCOMMAND]
+    tb to-csv [OPTS] [TABLE ...]
+    tb to-tsv [OPTS] [TABLE]
+    tb to-ltsv [OPTS] [TABLE]
+    tb to-pnm [OPTS] [TABLE]
+    tb to-json [OPTS] [TABLE]
+    tb to-yaml [OPTS] [TABLE]
+    tb to-pp [OPTS] [TABLE]
+    tb search [OPTS] REGEXP [TABLE ...]
+    tb gsub [OPTS] REGEXP STRING [TABLE ...]
+    tb sort [OPTS] [TABLE]
+    tb cut [OPTS] FIELD,... [TABLE]
+    tb rename [OPTS] SRC,DST,... [TABLE]
+    tb newfield [OPTS] FIELD VALUE [TABLE]
+    tb cat [OPTS] [TABLE ...]
+    tb join [OPTS] [TABLE1 TABLE2 ...]
+    tb consecutive [OPTS] [TABLE ...]
+    tb group [OPTS] KEY-FIELD1,... [TABLE ...]
+    tb cross [OPTS] VKEY-FIELD1,... HKEY-FIELD1,... [TABLE ...]
+    tb melt KEY-FIELDS-LIST [OPTS] [TABLE ...]
+    tb unmelt [OPTS] [TABLE ...]
+    tb nest [OPTS] NEWFIELD,OLDFIELD1,OLDFIELD2,... [TABLE ...]
+    tb unnest [OPTS] FIELD [TABLE ...]
+    tb shape [OPTS] [TABLE ...]
+    tb mheader [OPTS] [TABLE]
+    tb crop [OPTS] [TABLE ...]
+    tb ls [OPTS] [FILE ...]
+    tb tar [OPTS] [TAR-FILE ...]
+    tb svn [OPTS] -- [SVN-LOG-ARGS]
+    tb git [OPTS] [GIT-DIR ...]
+
+tb help -s shows one line summary of the subcommands.
+
+  % tb help -s
+  help        : Show help message of tb command.
+  to-csv      : Convert a table to CSV (Comma Separated Values).
+  to-tsv      : Convert a table to TSV (Tab Separated Values).
+  to-ltsv     : Convert a table to LTSV (Labeled Tab Separated Values).
+  to-pnm      : Convert a table to PNM (Portable Anymap: PPM, PGM, PBM).
+  to-json     : Convert a table to JSON (JavaScript Object Notation).
+  to-yaml     : Convert a table to YAML (YAML Ain't a Markup Language).
+  to-pp       : Convert a table to pretty printed format.
+  search      : Search rows using regexp or ruby expression.
+  gsub        : Substitute cells.
+  sort        : Sort rows.
+  cut         : Select columns.
+  rename      : Rename field names.
+  newfield    : Add a field.
+  cat         : Concatenate tables vertically.
+  join        : Concatenate tables horizontally as left/right/full natural join.
+  consecutive : Concatenate consecutive rows.
+  group       : Group and aggregate rows.
+  cross       : Create a cross table. (a.k.a contingency table, pivot table)
+  melt        : split value fields into records.
+  unmelt      : merge melted records into a record.
+  nest        : Nest fields.
+  unnest      : Unnest a field.
+  shape       : Show table size.
+  mheader     : Collapse multi rows header.
+  crop        : Extract rectangle in a table.
+  ls          : List directory entries as a table.
+  tar         : Show the file listing of tar file.
+  svn         : Show the SVN log as a table.
+  git         : Show the GIT log as a table.
+
+== Install
+
+  gem install tb
+
+== Run without gem
+
+  git clone https://github.com/akr/tb.git
+  ruby -Itb/lib tb/bin/tb help
+
+== Links
+
+* ((<source repository on github|URL:https://github.com/akr/tb>))
+* ((<tb on rubygems.org|URL:http://rubygems.org/gems/tb>))
+
+== Author
+
+Tanaka Akira <akr@fsij.org>
+
+== License
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above
+    copyright notice, this list of conditions and the following
+    disclaimer in the documentation and/or other materials provided
+    with the distribution.
+ 3. The name of the author may not be used to endorse or promote
+    products derived from this software without specific prior
+    written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+(The modified BSD licence)

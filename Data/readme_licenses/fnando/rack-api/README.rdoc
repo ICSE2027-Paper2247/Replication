@@ -1,0 +1,294 @@
+= Rack::API
+
+Create web app APIs that respond to one or more formats using an elegant DSL.
+
+== Installation
+
+  gem install rack-api
+
+== Usage
+
+=== Basic example
+
+  Rack::API.app do
+    prefix "api"
+
+    version :v1 do
+      get "users(.:format)" do
+        User.all
+      end
+
+      get "users/:id(.:format)" do
+        User.find(params[:id])
+      end
+    end
+  end
+
+=== Starting a server with Rack
+
+To run Rack::API through Rack (`config.ru`), you just need to provide your class. If
+you're using the DSL format, you need to provide the Rack::API class.
+
+  require "rack/api"
+  run Rack::API
+
+Otherwise, just provide your custom class.
+
+  require "rack/api"
+
+  class MyApp < Rack::API
+    get "/" do
+      {:message => "Hello World"}
+    end
+  end
+
+  run MyApp
+
+Now, you can execute `rackup` and your app will be available through the 9292 port.
+
+  $ rackup -p 3000
+  [2011-08-05 20:38:11] INFO  WEBrick 1.3.1
+  [2011-08-05 20:38:11] INFO  ruby 1.9.3 (2011-07-31) [x86_64-darwin11.0.0]
+  [2011-08-05 20:38:11] INFO  WEBrick::HTTPServer#start: pid=95318 port=3000
+
+  $ curl localhost:3000
+  {"message" => "Hello World"}
+
+You can also run other application servers that recognize Rack, like Thin.
+
+  $ thin -R config.ru start
+  >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+  >> Maximum connections set to 1024
+  >> Listening on 0.0.0.0:3000, CTRL+C to stop
+
+  $ curl localhost:9292
+  {"message" => "Hello World"}
+
+=== Rails Integration
+
+First, set up your Gemfile like this:
+
+  gem "rack-api", "~> 1.0", :require => "rack/api"
+
+Create your API somewhere. In this example, we'll add it to <tt>lib/api.rb</tt>.
+
+  Rack::API.app do
+    prefix "api"
+
+    version :v1 do
+      get "status(.:format)" do
+        {:success => true, :time => Time.now}
+      end
+    end
+  end
+
+Load this file somehow. I'd create a <tt>config/initializers/dependencies.rb</tt> with something like
+
+  require "lib/api"
+
+Finally, you can set up the API routing. Open <tt>config/routes.rb</tt> and add the following line:
+
+  mount Rack::API => "/"
+
+If you define your API by inheriting from the Rack::API class, remember to mount your class instead.
+
+  mount MyAPI => "/"
+
+For additional examples, see https://github.com/fnando/rack-api/tree/master/examples.
+
+=== Using RSpec with Rack::API
+
+You can easily test Rack::API apps by using Rack::Test. This applies to both RSpec and Test Unit. See what you need to do if you want to use it with RSpec.
+
+First, open your <tt>spec/spec_helper.rb</tt> and add something like this:
+
+  require "rspec"
+  require "rack/test"
+
+  RSpec.configure do |config|
+    config.include Rack::Test::Methods
+  end
+
+Then you can go to your spec file, say, <tt>spec/api_spec.rb</tt>. You need to define a helper method called +app+, which will point to your Rack::API (the class itself or your own class).
+
+  require "spec_helper"
+
+  describe Rack::API do
+    # Remember to use your own class if you
+    # inherited from Rack::API
+    def app; Rack::API; end
+
+    it "renders status page" do
+      get "/api/v1/status"
+      last_response.body.should == {:status => "running"}.to_json
+      last_response.status.should == 200
+    end
+  end
+
+If you want to do expectations over basic authentication, you'll have some like this:
+
+  require "spec_helper"
+
+  describe Rack::API do
+    def basic_auth(username, password)
+      "Basic " + Base64.encode64("#{username}:#{password}")
+    end
+
+    it "requires authentication" do
+      get "/api/v1/status"
+      last_response.status.should == 401
+    end
+
+    it "grants access" do
+      get "/api/v1/status", {"HTTP_AUTHORIZATION" => basic_auth("john", "test")}
+      last_response.status.should == 200
+    end
+  end
+
+To reduce duplication, you can move both <tt>basic_auth</tt> and <tt>app</tt> methods to a module, which will be included on RSpec.
+
+  RSpec.configure do |config|
+    config.include Rack::Test::Methods
+    config.include Helpers
+  end
+
+Your <tt>Helpers</tt> module may look like this:
+
+  module Helpers
+    def app
+      Rack::API
+    end
+
+    def basic_auth(username, password)
+      "Basic " + Base64.encode64("#{username}:#{password}")
+    end
+  end
+
+== Helpers
+
+Every Rack::API action has several helper methods available through the
+Rack::API::Controller class. Here's some of them:
+
+=== logger
+
+Logs specified message to the STDOUT.
+
+  get "/" do
+    logger.info "Hello index page!"
+    {}
+  end
+
+=== headers
+
+Define custom headers that will be sent to the client.
+
+  get "/" do
+    headers["X-Awesome"] = "U R Awesome"
+    {}
+  end
+
+== params
+
+Return current request parameters.
+
+  get "/" do
+    {:message => "Hello #{params[:name]}"}
+  end
+
+== request
+
+Return an object relative to the current request.
+
+== credentials
+
+This method will return an array container both username and password if client
+sent Basic Authentication headers.
+
+  get "/" do
+    user, pass = credentials
+    {:message => "Hello #{user}"}
+  end
+
+== url_for
+
+Build an URL by merging segments, default URL options and hash with parameters.
+
+  Rack::API.app do
+    default_url_options :host => "example.com", :protocol => "https"
+
+    version "v1" do
+      get "/" do
+        {:url => url_for(:users, User.find(params[:id])), :format => :json}
+      end
+    end
+  end
+
+== Useful middlewares
+
+=== Rack::API::Middleware::SSL
+
+This middleware will accept only HTTPS requests. Any request over HTTP will be dropped.
+
+  Rack::API.app do
+    use Rack::API::Middleware::SSL
+  end
+
+=== Rack::API::Middleware::Limit
+
+This middleware will limit access to API based on requests per hour. It requires a Redis connection.
+
+  Rack::API.app do
+    # Use the default settings.
+    # Will accept 60 requests/hour limited by IP address (REMOTE_ADDR)
+    use Rack::API::Middleware::Limit, :with => Redis.new
+  end
+
+Other usages:
+
+  # Set custom limit/hour.
+  # Will accept ± 1 request/second.
+  use Rack::API::Middleware::Limit, :with => $redis, :limit => 3600
+
+  # Set custom string key.
+  # Will limit by something like env["X-Forwarded-For"].
+  use Rack::API::Middleware::Limit, :with => $redis, :key => "X-Forwarded-For"
+
+  # Set custom block key.
+  # Will limit by credential (Basic Auth).
+  Rack::API.app do
+    basic_auth do |user, pass|
+      User.authorize(user, pass)
+    end
+
+    use Rack::API::Middleware::Limit, :with => $redis, :key => proc {|env|
+      request = Rack::Auth::Basic::Request.new(env)
+      request.credentials[0]
+    }
+  end
+
+== Maintainer
+
+* Nando Vieira (http://nandovieira.com.br)
+
+== License
+
+(The MIT License)
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

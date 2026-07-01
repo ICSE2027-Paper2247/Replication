@@ -1,0 +1,25 @@
+What is g3data?
+---------------
+g3data is a tool for extracting data from scanned graphs. For graphs
+published in scientific articles the actual data is usually not
+explicitly given; g3data makes the process of extracting this data easy.
+
+Web: http://github.com/pn2200/g3data/
+
+License
+-------
+g3data is distributed under the GNU General Public License (GPL), as
+described in the 'COPYING' file.
+
+Building from source
+--------------------
+First, install the required prerequisite libraries, which are the
+development versions of gtk2 and glib2. On Fedora 25, these packages are
+gtk2-devel and glib2-devel.
+
+Then use autoreconf to invoke the various parts of the GNU Build system:
+     autoreconf -i
+
+Then build:
+     ./configure
+     make

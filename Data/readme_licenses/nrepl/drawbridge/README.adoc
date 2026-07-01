@@ -1,0 +1,170 @@
+= Drawbridge (HTTP Transport for nREPL)
+Bozhidar Batsov <https://github.com/bbatsov>
+
+// Settings:
+:idprefix:
+:idseparator: -
+ifndef::env-github[:icons: font]
+ifdef::env-github,env-browser[]
+:toc: preamble
+:toclevels: 1
+endif::[]
+ifdef::env-github[]
+:status:
+:!toc-title:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+endif::[]
+
+image:https://img.shields.io/clojars/v/nrepl/drawbridge.svg[Clojars Project,link=https://clojars.org/nrepl/drawbridge]
+image:https://cljdoc.org/badge/nrepl/drawbridge[cljdoc badge,link=https://cljdoc.org/d/nrepl/drawbridge/CURRENT]
+image:https://github.com/nrepl/drawbridge/actions/workflows/ci.yml/badge.svg[Build Status,link=https://github.com/nrepl/drawbridge/actions/workflows/ci.yml]
+
+HTTP transport support for Clojure's
+http://github.com/nrepl/nrepl[nREPL] implemented as a
+http://github.com/ring-clojure/ring[Ring] handler.
+
+== Installation
+
+NOTE: The coordinates of the project changed from `cemerick/drawbridge` to
+`nrepl/drawbridge` in version 0.1.
+
+Drawbridge is available in Clojars. Add this `:dependency` to your Leiningen
+`project.clj`:
+
+[source,clojure]
+----
+[nrepl/drawbridge "0.3.0"]
+----
+
+Or, add this to your `deps.edn`:
+
+[source,clojure]
+----
+nrepl/drawbridge {:mvn/version "0.3.0"}
+----
+
+Or, add this to your Maven project's `pom.xml`:
+
+[source,xml]
+----
+<repository>
+  <id>clojars</id>
+  <url>http://clojars.org/repo</url>
+</repository>
+
+<dependency>
+  <groupId>nrepl</groupId>
+  <artifactId>drawbridge</artifactId>
+  <version>0.3.0</version>
+</dependency>
+----
+
+NOTE: Drawbridge requires Java 17+, Clojure 1.10+, and nREPL 1.0+.
+
+=== Upgrade notes
+
+If you're upgrading from 0.0.7 keep in mind that the namespaces of the
+project were changed as following:
+
+* `cemerick.drawbridge` \-> `drawbridge.core`
+* `cemerick.drawbridge.client` \-> `drawbridge.client`
+
+== Usage
+
+While nREPL provides a solid REPL backend for Clojure, typical
+socket-based channels are often unsuitable.  Being able to deploy
+applications that allow for REPL access via HTTP and HTTPS simplifies
+configuration and can alleviate security concerns, and works around
+limitations in various deployment environments where traditional
+socket-based channels are limited or entirely unavailable.
+
+=== In a Ring web application
+
+Once you have added Drawbridge to your project's dependencies, just
+add its Ring handler to your application.  For example, if you're using
+https://github.com/weavejester/compojure[Compojure] for routing and
+such:
+
+[source,clojure]
+----
+(require 'drawbridge.core)
+
+(let [nrepl-handler (drawbridge.core/ring-handler)]
+  (ANY "/repl" request (nrepl-handler request)))
+----
+
+With this, any HTTP or HTTPS client can send nREPL messages to the
+`/repl` URI, and read responses from the same.  Conveniently, any
+security measures applied within your application will work fine in
+conjunction with Drawbridge; so, if you configure its route to require
+authentication or authorization to some application-specific role, those
+prerequisites will apply just as with any other Ring handler in the same
+context.
+
+`ring-handler` accepts the following options:
+
+* `:nrepl-handler` -- a custom nREPL handler (default: `nrepl.server/default-handler`)
+* `:default-read-timeout` -- milliseconds to wait for additional nREPL responses before finalizing each HTTP response (default: `0`)
+* `:cookie-name` -- the session cookie name (default: `"drawbridge-session"`)
+
+Some things to be aware of when using `drawbridge.core/ring-handler`:
+
+* It requires `GET` and `POST` requests
+to be routed to whatever URI to which it is mapped; other request
+methods result in an HTTP error response.
+* It requires these standard Ring middlewares to function properly:
+ ** `keyword-params`
+ ** `nested-params`
+ ** `wrap-params`
+
+Especially if you are going to be connecting to your webapp's nREPL
+endpoint with a client that uses Drawbridge's own HTTP/HTTPS client
+transport (see below), this is all you need to know.
+
+If you are interested in the implementation details and semantics,
+perhaps because you'd like to implement support for Drawbridge in
+non-Clojure nREPL clients, you'll want to review the documentation for
+`ring-handler`, which contains additional important details.
+
+=== Security
+
+WARNING: Drawbridge exposes a full nREPL session over HTTP. Anyone who can reach the
+endpoint can execute arbitrary code in your application. Always protect the
+endpoint with authentication and authorization middleware before deploying to
+production. Use HTTPS to prevent credentials and REPL traffic from being
+transmitted in cleartext.
+
+=== In Clojure tooling
+
+Drawbridge also provides a client-side nREPL transport implementation
+for the Ring handler in `drawbridge.client/ring-client-transport`.
+
+Note that the `drawbridge.client` namespace implicitly adds
+implementations to the `nrepl.core/url-connect` multimethod for
+`"http"` and `"https"` schemes. So, once this namespace is loaded, any
+tool that uses `url-connect` will use `ring-client-transport` for
+connecting to HTTP and HTTPS nREPL endpoints.
+
+=== Configuration
+
+The client supports additional HTTP headers, which is useful e.g. for
+using Bearer authorization to connect to the endpoint. The headers can
+be set in the nREPL configuration. For example, create `.nrepl.edn` in
+the working directory with the contents:
+
+[source,clojure]
+----
+{:drawbridge {:http-headers {:Authorization "Bearer <JWT token>"}}}
+----
+
+== Need Help?
+
+The primary support channel for Drawbridge is the http://clojurians.net/[Clojurians Slack]. Feel
+free to ask any questions on the `#nrepl` channel there.
+
+== License
+
+Copyright © 2012-2026 Chas Emerick, Bozhidar Batsov and other contributors.
+
+Distributed under the Eclipse Public License, the same as Clojure.

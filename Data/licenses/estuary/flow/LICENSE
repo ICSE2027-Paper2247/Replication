@@ -1,0 +1,6 @@
+This repository uses different licenses for different directories. All licensed work in this
+repository is available under the BSL license in LICENSE-BSL. For directories listed
+below, including all subdirectories, the Apache 2.0 license in LICENSE-APACHE may be used instead at your discretion.
+
+- go/protocols/
+

@@ -1,0 +1,116 @@
+= Fresh Ruby Enhanced SHell
+
+We love Ruby. And we love the command line. So... the shell needs to be rubyfied ;).
+
+== How does it work?
+
+Basically, fresh is a Ruby console like irb: Enter a Ruby expression and it gets evaluated. But not everything is interpreted as Ruby: The input is thrown against a regular expression to determine if it is meant to be a Ruby or a system command.
+
+May sound like voodoo, but works surprisingly well in practice ;).
+
+== Get fresh
+
+Install the gem with:
+
+  gem install ripl-fresh
+
+Start it with:
+
+  ripl fresh
+
+(or just <tt>fresh</tt>)
+
+Note, that it will also load your <tt>.irbrc</tt> file. To avoid this, you can do:
+
+  ripl -f fresh
+
+== Usage & configuration options
+
+Just start the shell and play around, to get a fresh feeling. For an example session, see {this blog entry}[https://rbjl.janlelis.com/43-use-fresh-ruby-as-your-shell].
+
+The main regexp to determine if the command should be interpreted as system command is similar to this one: <tt>/^\\w+\\s+.*/</tt> (match a single word followed by at least one space). See below for details.
+
+You can use the output of system commands and redirect it to a Ruby variable (or similar Ruby expression) like this:
+
+  ls => variable
+
+Please note: The "=> variable" part has to be at the line ending.
+The output of the <tt>ls</tt> command is now stored as array in <tt>variable</tt> and can be used in the next line. There are three variations of this command: 
+* <tt>=>></tt> append result to the array specified (or create it)
+* <tt>~></tt>  use command as string instead of an array
+* <tt>~>></tt> use command as string instead of an array and append (or create it)
+
+
+=== Prompt
+There is <tt>Riplc.config[:fresh_prompt]</tt> option, which takes a wide range of possible values. You can pass in a proc or a direct string. Furthermore, you can pass a symbol to get one of the following:
+* <tt>:default</tt> - usual fresh (directory) prompt
+* <tt>:PS1</tt> - use PS1 environment variable
+* <tt>:ripl</tt> - don't change prompt
+* <tt>:irb</tt> - use irbs :PROMPT_I (if set)
+* <tt>:simple</tt> - ">> "
+
+=== Command mode determination
+
+There are three different command modes: <tt>:ruby</tt>, <tt>:system</tt> and <tt>:mixed</tt>.
+
+<tt>:ruby</tt> is usual Ruby, <tt>:system</tt> means system command and <tt>:mixed</tt> looks like system command, but is just redirected to the Ruby method with that name.
+
+The input is matched against the regexps in <tt>Ripl.config[:fresh_patterns]</tt>. These regexps also contain named groups, to determine the command or if the command should be stored in a variable.
+
+When a regexp has matched, the command is searched for in <tt>Ripl.config[:fresh_ruby_commands]</tt>, <tt>Ripl.config[:fresh_system_commands]</tt> and <tt>Ripl.config[:fresh_mixed_commands]</tt> (in this order).
+
+The ruby command array contains some common Ruby words, e.g. <tt>def </tt>. The system command array is set to your <tt>ENV['PATH']</tt>. The mixed array currently contains only +cd+. You can adjust the arrays as you want to.
+
+As a fallback, _fresh_ checks <tt>Kernel.respond_to?</tt>, if there is a ruby method with that name.
+
+If the regexp did match, but the command could not be found in any of the three word arrays and <tt>respond_to?</tt> has not been successful, the command mode will be set to <tt>Ripl.config[:fresh_unknown_command_mode]</tt> (default <tt>:ruby</tt>). If the regexp did not match, <tt>Ripl.config[:fresh_default_mope]</tt> is used (default <tt>:ruby</tt>).
+
+You need to take a look at <tt>get_input</tt> method in the source file to 100% understand the command mode detection way.
+
+=== Patterns
+
+The <tt>Ripl.config[:fresh_patterns]</tt> contains three Regexps, which do the following:
+* match <tt>^</tt> to force system mode
+* match a single word
+* match a word followed by a space
+
+=== Defaults
+
+See <tt>lib/ripl/fresh/config.rb</tt> for all configuration options and its defaults.
+
+== Customization
+
+Besides customizing your fresh with the configuration options, you can further enhance it with Ruby plugins, because it's based on {ripl}[https://github.com/cldwalker/ripl]. Just install the <tt>ripl-plugin_name</tt> and add it to your <tt>.riplrc</tt> file:
+
+  require 'ripl/plugin_name'
+
+Currently, most {plugins}[http://github.com/cldwalker/ripl-color_error] {enable}[http://github.com/janlelis/ripl-color_result] {colors}[http://github.com/janlelis/ripl-color_streams] and {IRB}[http://github.com/janlelis/ripl-multi_line] -{like}[http://github.com/cldwalker/ripl-commands] {features}[http://github.com/cldwalker/ripl-irb].
+
+== TODO
+
+There are lots of things which can get better:
+
+* Refactor a little bit
+* Improve auto-completion
+* RVM support possible?
+* More cool (and colorful?) <tt>:mixed</tt> Ruby commands
+  * Respect "..." (single argument) for :mixed commands
+* Add tests
+* Be compatible (and installable) with JRuby/Rubinius
+* Fresh ideas
+
+Feel free to fork in your improvements ;)
+
+== Other gems you might find interesting
+
+* {rush}[https://github.com/adamwiggins/rush]  - Another Ruby shell, different concept
+* {ripl}[https://github.com/cldwalker/ripl]    - An irb alternative, _fresh_ is based on it
+* {rubsh}[https://github.com/danielb2/rubsh]   - Some similar ideas
+* {urchin}[https://github.com/Spakman/urchin]  - More unix like approach
+* {rubish}[https://github.com/hayeah/rubish]   - And another approach
+
+== Copyright
+
+Copyright (c) 2010 Jan Lelis, released under the MIT license.
+
+J-_-L

@@ -1,0 +1,129 @@
+KSHTMLWriter
+=============
+
+KSHTMLWriter is a set of classes for generating HTML and XML markup programmatically. It is quite easy in Cocoa to start producing XML by using `+stringWithFormat:` etc. but this can quickly grow to become unwieldy. KSHTMLWriter simplifies the task considerably, while offering plenty of flexibility.
+
+Another benefit is that markup is generated in a stream-like fashion, potentially cutting down on memory overhead. You can think of it as the opposite of `NSXMLParser` etc.
+
+`KSHTMLWriter` instances are safe to use on any thread, but should only be accessed by a single thread at a time.
+
+Adding KSHTMLWriter to your project
+====================================
+
+### Cross-Platform ###
+
+The simplest way to add KSHTMLWriter to your project is to directly add the source files to your project. For XML generation, the following are required:
+
+- KSWriter/*
+- KSXMLWriter.h
+- KSXMLWriter.m
+- KSElementInfo.h
+- KSElementInfo.m
+
+For HTML generation, add:
+
+- KSHTMLWriter.h
+- KSHTMLWriter.m
+
+### Mac ###
+
+Alternatively, `KSHTMLWriter.xcodeproj` is already set up to build a framework bundle. This includes the `KSWriter` family of classes. Add it to your app's bundle and link against it.
+
+For WebKit DOM integration, add:
+
+- DOM/*
+
+and link to `WebKit.framework`
+
+Potentially KSHTMLWriter could be built into a framework or static library instead. If you want to do this, feel free to make a fork and add this support; I'll be happy to pull it back into the master.
+
+Usage
+=====
+
+###KSXMLWriter###
+`KSXMLWriter` provides the real meat of the project. Creating elements is very straightforward, and can be thought of as NSXMLParser in reverse. So to write this XML:
+
+    <foo>bar</foo>
+
+you'd do:
+
+    [writer writeElement:@"foo" content:^{
+		[writer writeCharacters:@"bar"];
+	}];
+
+Simples! There's easy support for writing element attributes if you need it. Other features:
+
+- Nested elements are pretty printed with correct newlines and indentation
+- Empty elements are automatically written as `<foo />`
+- Built-in `-writeComment:` support
+
+If you need it, there's lower-level API to give precise control over indentation, inline elements, raw text, and element primitives. For more info, read through `KSXMLWriter.h`.
+
+###KSHTMLWriter###
+If you specifically need to generate (X)HTML, use `KSHTMLWriter`. It adds:
+
+- Many convenience methods for writing common HTML elements and attributes
+- Knowledge of whether an element should be written inline or on its own newline
+- If you enable it, support for HTML 4 and earlier by writing empty elements as `<br>`
+
+###KSWriter###
+`KSXMLWriter` and `KSHTMLWriter` know how to generate markup, but don't deal with storing that during writing. Instead, we copy a small portion of Java by adopting the concept of a "writer".
+
+You provide the XML writer with a suitable output writer at initialization time. To make life easy for you, NSMutableString is already supported. So to re-use our previous example, you would do:
+
+    NSMutableString *xml = [NSMutableString string];
+    KSXMLWriter *writer = [[KSXMLWriter alloc] initWithOutputWriter:xml];
+    
+    [writer startElement:@"foo" attributes:nil];
+    [writer writeCharacters:@"bar"];
+    [writer endElement];
+
+This will neatly append the markup to the mutable string.
+
+You can easily expand support by adopting `KSWriter` in your own classes. For example, a class that writes directly to disk, rather than an in-memory buffer. `KSXMLWriter` itself already adopts the protocol too, so you could chain multiple writers together if it took your fancy. I'm very interested in adding any new writers people come up with to the project.
+
+###KSStringWriter###
+`KSStringWriter` is a great example of a simple class that implements `KSWriter`. It provides an internal buffer for storing the incoming strings. You can then retrieve the currently written text with a call to `-string`.
+
+This isn't all that different to writing directly to an `NSMutableString` though, so `KSStringWriter` has a trick up its sleeve. The most expensive aspect of building up a long string is reallocating the underlying buffer to meet demand. `KSStringWriter` lets you work around this by recycling the same writer object. After it's done generating the first string, call `-removeAllCharacters` to reset the written string. It will return to empty, but not free up memory from the old string. The next sequence of writes can be performed quickly into the pre-allocated space, saving time.
+
+If you do need to reclaim the memory, a call to `-close` will do so.
+
+###XML Entity Escaping###
+As a bonus, we expose `KSStringXMLEntityEscaping.h/m`. It exposes what `KSXMLWriter` is using internally whenever strings need escaping.
+
+This is probably an area of the project that needs cleaning up though: better method naming (`ks` as a prefix or similar), documentation, and improved efficiency.
+
+###DOM Integration###
+In `DOM/KSHTMLWriter+DOM` you'll find code that takes a `DOMElement` (using WebKit.framework, so no iOS support, sorry!) and breaks it up into a series of commands for `KSHTMLWriter`. This is a lot like `-[DOMElement outerHTML]` etc., but more flexible as you can subclass to get hooks into the process if you wish.
+
+iOS
+===
+iOS support would be nice in the project. There's nothing to stop it that I can see (indeed, it may actually work at the moment for all I know!), but it's not a priority for us right now. If you do want this support, fork, and again I'll be more than happy to pull back into the main project.
+
+CSS
+===
+It would be nice to apply a similar technique to generating CSS if appropriate. We don't particularly need it at that moment, but there is a placeholder for getting started with in the `CSS` directory.
+
+Licensing
+=========
+
+Copyright © 2010-2013 Karelia Software
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

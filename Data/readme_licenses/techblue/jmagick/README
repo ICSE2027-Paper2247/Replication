@@ -1,0 +1,52 @@
+Copyright (C) 1998-2002 Eric Yeo. All rights reserved.
+As of 2008 maintained by Jacob Nordfalk
+This software has a LGPL license. Please see the file LICENSE for details.
+
+
+DEVELOPMENT ENVIRONMENT
+~~~~~~~~~~~~~~~~~~~~~~~
+JMagick is developed and tested under Ubuntu Linux with OpenJDK 1.7.
+It has not been tested on any other operating systems.
+
+Please see top of Changelog.txt to see which which versions of ImageMagick
+is currently supported.
+
+BUILD WITH DOCKER
+~~~~~~~~~~~~~~~~~~~~~~~
+From source directory run:
+	> docker build -t jmagick-builder .
+	> docker run -v `pwd`:/src -v `pwd`/build-result:/build jmagick-builder
+
+GIT REPOSITORY
+~~~~~~~~~~~~~~
+The JMagick source is now hosted on GitHub, although the mailing list still lives on SourceForge.
+Source can be obtained by running
+
+	> git clone git@github.com:techblue/jmagick.git
+
+
+WEB SITES
+~~~~~~~~~
+
+Information on JMagick can be found at:
+
+		https://github.com/techblue/jmagick
+		https://sourceforge.net/projects/jmagick/
+		https://sourceforge.net/p/jmagick/wiki/Home/
+
+MAILING LIST
+~~~~~~~~~~~~
+The JMagick mailing list is jmagick-users@lists.sourceforge.net.
+However, only list members are allowed to post to the mailing.
+To join the JMagick mailing list, please point your web brower at
+		https://lists.sourceforge.net/lists/listinfo/jmagick-users
+
+Please make use of the mailing list for help and bug reports.
+
+
+
+Jacob Nordfalk
+1 July 2008
+
+Andrew Kerr
+20 June 2014

@@ -1,0 +1,31 @@
+EchoWaves 2.0
+
+Intended infrastructure:
+	ruby 1.9.2
+	rails 3.1
+	  CoffeeScript, SASS
+	RSpec 2 with Capybara
+	JQuery	
+  web sockets
+  PostgreSQL
+
+Development environment setup
+  # Install RVM
+  # clone github repo
+  cd ./echowaves
+  bundle
+  cp config/database.yml-sample config/database.yml
+  rake ew:db:reset
+  rails s
+
+Run the socky server
+  socky -c socky_config.yml 
+  
+Web Page:
+  http://echowaves.github.com
+
+EW hosted at:
+  https://echowaves.com
+
+License
+  See LICENSE.

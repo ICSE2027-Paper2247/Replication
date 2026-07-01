@@ -1,0 +1,65 @@
+bLSM initial release
+====================
+
+This is an initial release of bLSM, which is scheduled to appear in 
+Sigmod 2012.  bLSM is a general-purpose log structured merge tree that
+targets highly-available, scalable, key-value storage systems.
+
+We have been careful to minimize the number of seeks performed by read 
+and scan optimizations, and have introduced a new spring-and-gear "level 
+scheduler" that bounds write latencies.
+
+The implementation is currently geared toward performance testing, and 
+has a number of limitations that we plan to address in short order:
+
+ * Recovery does not work until after enough data has been inserted to 
+   start filling disk with data.
+
+ * bLSM does not take advantage of write skew to reduce write 
+   amplification.  As a side effect, certain heavily skewed workloads will 
+   lead to unacceptably write latencies.  We plan to address this by
+   partitioning the state on disk, and scheduling merges based on the heat of
+   each partition.
+
+In the mean time, feel free to drop me a line!
+
+Licensing
+=========
+
+bLSM uses several 3rd party open source libraries and tools.
+
+This file summarizes the tools used, their purpose, and the licenses
+under which they're released.  Portions of bLSM are based upon Stasis'
+"Rose" LSM-Tree implementation.
+
+http://code.google.com/p/stasis/source/browse/trunk/benchmarks/rose.cpp
+
+Except as specifically stated below, the 3rd party software packages
+listed below are not distributed as part of this project, but instead
+are separately downloaded from the respective provider and built on
+the developer’s machine as a pre-build step.
+
+bLSM relies upon Stasis, a transactional storage library written and
+maintained by the authors of bLSM.
+
+TCL/TK license (BSD-style)
+http://code.google.com/p/stasis/source/browse/trunk/COPYING
+
+http://code.google.com/p/stasis/
+
+bLSM includes an example MapKeeper-compatible storage server, which
+relies upon the MapKeeper prototocol specification, which we also
+maintain:
+
+https://github.com/m1ch1/mapkeeper
+Apache 2.0 license: https://github.com/m1ch1/mapkeeper/blob/master/LICENSE.txt
+The generated MapKeeper files (and, therefore the bLSM MapKeeper
+bindings) also require Thrift and Boost.
+
+Thrift is a serialization and RPC framework:
+http://thrift.apache.org/
+Apache 2.0 license: http://svn.apache.org/viewvc/thrift/trunk/LICENSE?view=markup
+
+Boost is a collection of utility libraries for C++:
+http://www.boost.org/
+Boost Software License: http://www.boost.org/users/license.html

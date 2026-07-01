@@ -1,0 +1,138 @@
+# sh-todo: A minimal todo-list manager written in POSIX shell
+
+`sh-todo` is my take on the minimal, command-line task manager. It allows you 
+to add, view and complete tasks. It also supports marking tasks with a 
+label/tag/project/context (whatever you want to call it) and filtering the 
+effect of the supported commands to apply to only tasks with that label.  
+Completed tasks are marked with a completion date and appended to a log of 
+completed tasks kept in a separate file. They remain visible in your todo list 
+until you choose to clear them.
+
+To install just put the `todo`, `todone` and `todone-archive` scripts to 
+somewhere in your `$PATH` and copy `sh-todo` to `~/.sh-todo`, editing it to 
+your tastes. `sh-todo` has no external dependencies beyond a POSIX-compliant 
+shell.
+
+# Quick start/usage
+
+For the following examples, you'll have to use your imagination and view 
+`--text--` as strike-through. Output uses the ANSI escape sequence for 
+strike-through by default, which will be rendered by your terminal if it 
+supports it.
+
+Add a task (note, no need to enclose it in quotes):
+
+    $ todo update gogdl to take account changes to gog login @hacking @evening
+    $ todo make appointment with doctor for next Monday @chore
+
+View task list:
+
+    $ todo
+    • update gogdl to take account changes to gog login [@hacking @evening]
+    • make appointment with doctor for next Monday [@chore]
+
+Complete a task (just give a substring that will match, optionally limit match
+to given @labels):
+
+    $ todone make appointment
+    • --make appointment with doctor for next Monday [@chore] (2012-07-25 16:53)--
+
+View task list again:
+
+    $ todo
+    • update gogdl to take account changes to gog login [@hacking @evening]
+    • --make appointment with doctor for next Monday [@chore] (2012-07-25 16:53)--
+
+Take a look at the file containing the todo list (editing with a text editor 
+is encouraged):
+
+    $ cat path/to/my/todolist
+    TODO update gogdl to take account changes to gog login [@hacking @evening]
+    DONE make appointment with doctor for next Monday [@chore] (2012-07-25 16:53)
+
+View tasks with a given label:
+
+    $ todo @hacking
+    • update gogdl to take account changes to gog login [@hacking @evening]
+
+Remove completed todo items from main todo list:
+
+    $ todone-archive
+    • --make appointment with doctor for next Monday [@chore] (2012-07-25 16:53)--
+
+# Configuration
+
+Look in `sh-todo` - it should be self-explanatory. You just need to set up 
+`$TODO_F` and `$TODONE_F` which are where your current todo list and list of 
+previously completed tasks are kept. Storing these files in a Dropbox or 
+Ubuntu One folder is useful for syncing between multiple machines.
+
+# Credits/inspiration
+
+* My main inspiration is from Jerod Santo's [todo/todone in two single-line shell functions](http://blog.jerodsanto.net/2010/12/minimally-awesome-todos/).
+* Projects with a similar philosophy include [t](http://stevelosh.com/projects/t/) and [t-](http://www.penzba.co.uk/t-/).
+* See also 
+[gtdo](http://www.theoldmonk.net/blog/archives/2008/01/28/commandline_gtd_with_gtdo/) 
+which is a nice minimal todo system with GTD contexts and projects
+
+# Questions/problems
+
+## How can I re-order tasks/delete without completing/edit existing tasks etc etc?
+
+Just open your todo list in your favourite text editor. If you're a vim user, 
+you'll likely find it helpful to set bindings such as 
+[these](http://vim.wikia.com/wiki/Moving_lines_up_or_down) to assist in 
+re-ordering.
+
+## How can I review recently completed tasks?
+
+The todone file format is readable enough that `tac /path/to/my/todone | less` 
+may be sufficient, or for a more neatly-formatted solution use `todone-view` 
+which will group completed tasks in to the days they were completed, and 
+supports filtering by the given labels.
+
+## What is the `extras/` directory?
+
+This directory holds scripts which may have any combination of the following 
+properties: experimental, reliant on non-POSIX tools or languages, or 
+implementing a feature that is unlikely to be widely useful. Contributions 
+welcome.
+
+## I can't see any visual difference between completed and uncompleted tasks
+
+Unfortunately the strike-through ANSI escape sequence is not supported in many 
+terminal emulators (in fact, gnome-terminal seems to be about the only one). I 
+have a suggested alternative escape sequence to use you can enable in 
+`~/.sh-todo`, which displays completed items in grey.
+
+# Contact
+
+If you have any comments, suggestions, patches either submit them through 
+github or email <asb@asbradbury.org>.
+
+# License
+
+Released under the MIT license reproduced below:
+
+    Copyright (c) 2011-2013 Alex Bradbury
+
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following
+    conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.

@@ -1,0 +1,158 @@
+= Census
+
+Census is a Rails plugin that collects searchable demographics data for each
+of your application's users. The data to be collected is defined using a simple
+admin interface that Census provides.
+
+== Setup
+
+After installing the Census gem, require it in your Rails app and run the census
+generator.
+
+In your config/environment.rb:
+
+  config.gem 'census'
+
+Run the generator and migrate your database:
+
+  script/generate census
+  rake db:migrate
+
+== Configuration
+	
+The generator creates a sample configuration file in config/initializers/census.rb.
+At the top of this file, you'll see a configuration option that allows you to
+restrict access to the Census admin user interface. You'll probably want to set
+this option, or anyone will be able to access the admin UI. Assuming your app has
+an authentication system that implements a current_user method, and that your user
+model has an admin? method, you could do something like this:
+
+  Census.configure do |config|
+    config.admin_role = 'current_user.admin?'
+  end
+	
+The remainder of the configuration file defines various data types that you can use
+for the data you'll be collecting. Census comes with a few data types already
+defined, and you can add additional types if needed. When defining a data type,
+you can provide various Ruby procs that are used to convert the data to and from
+a string representation that will be stored in the database. The procs you can
+provide are:
+
+* :sql_transform - returns a SQL fragment that will be used for comparing data when doing search queries
+
+* :format_data   - used to convert data from its string representation
+
+* :validate_data - used to validate form field submissions, and should return nil if the data is valid or an error message if it is invalid
+
+As an example, here's the data type definition for integer data:
+
+  Census::DataType.define(
+    "Number",
+    :sql_transform  => lambda {|column_name| "CAST(#{column_name} AS SIGNED INTEGER)"},
+    :format_data    => lambda {|data| data.to_i unless data.blank? },
+    :validate_data  => lambda {|data| "must be a number" unless data =~ /^\d*$/}
+  )
+
+== Defining Questions
+
+You can access the Census admin UI at /census/admin. You may want to add a link
+to census_admin_path somewhere in your app's administration interface. Using the
+admin interface, you'll be able to create questions and their optional
+multiple-choice answers. Questions are organized into data groups and can be
+reordered using drag and drop.
+
+You could also create DataGroup, Question, and Choice instances programatically
+if you'd prefer not to use the admin UI.
+
+== Allowing Users to Answer Your Questions
+
+Census provides a partial that you can include in a form that collects answers
+from your users. This partial assumes it's inside of a form_for(:user) block. It
+will render fields for each of the questions you've defined.
+
+ <%= render 'census/user_questions', :user => @user %>
+
+Data groups are rendered as fieldsets that contain a list of input fields, one
+for each question. If you take a look at the rendered HTML, you'll see several
+class and id attributes that you can use to style the form fields as needed.
+
+== Displaying a User's Answers
+
+Census provides a partial that you can use to display a user's answers.
+Somewhere in your app, probably in users/show.html.erb, add the following
+to render the partial:
+
+  <%= render 'census/user_answers', :user => @user %>
+
+== Accessing a User's Answers
+
+From your User object, you can get to that user's answers using methods that
+are automatically generated for each of your data groups and questions. For
+example, let's assume you have a data group called "Physical Attributes" with
+questions for "Weight" and "Hair Color." You can retrieve a user's answers
+like this:
+
+	user.census_data.physical_attributes.weight
+	user.census_data.physical_attributes.hair_color
+
+If your data group and question names change frequently, or if you've exposed
+the census admin UI so that the questions can be changed by your users, you'll
+probably want to avoid relying on the auto-generated method names. Instead,
+you can access the user's answers using strings, like this:
+
+  user.census_data['Physical Attributes']['Weight']
+  user.census_data['Physical Attributes']['Hair Color']
+
+== Exposing census answers as model attributes
+
+Starting with version 0.4.2, census allows you to expose its data as attributes
+directly on your model class.  This is especially useful if you're trying to display
+census answers in forms and you'd like Rails' default form handling to work for
+that data.
+
+If we assume that you have census questions defined as in the previous section,
+you can add the following in your User class:
+
+  expose_census_data('Physical Attributes', 'Weight', :weight)
+  expose_census_data('Physical Attributes', 'Hair Color', :hair_color)
+
+And then you can get or set the census answers directly on the user, like this:
+
+  user.weight = 148          # set the user's weight
+  user.weight                # returns 148
+
+  user.hair_color = "Blond"  # set the user's hair color
+  user.hair_color            # returns "Blond"
+
+== Searching
+
+Census provides a search interface for finding users whose answers match a list
+of search criteria. To perform a search, first create a Census::Search object,
+passing your search criteria as a hash of questions and values. We'll assume
+for this example that we have questions for "Hair Color" and "Age," and
+we'll look them up by name.
+
+  hair_color = Question.find_by_prompt('Hair Color')
+  age = Question.find_by_prompt('Age')
+  search = Census::Search.new(hair_color => 'Brown', age => 25)
+
+The search listed above will find all users who have brown hair and are 25 years
+old. You can also pass arrays or ranges, like this:
+
+  search = Census::Search.new(hair_color => ['Brown', 'Blond'], age => 25..30)
+
+That search will find all users between the ages of 25 and 30 that have either
+brown or blond hair. Once you've created the Search object, call its perform
+method to query the database and get back the list of matching users.
+
+  users = search.perform
+
+== Running the tests
+
+In order to run the test suite for Census, first make sure you have all of the dependencies installed. Then, you need create a blank rails app in the test/rails_root folder and add 'shoulda' and 'factory_girl' as gem dependencies for that app's test environment (test/rails_root/config/environments/test.rb).
+
+The default rake task runs the test suite for Census.
+
+== Copyright
+
+Copyright (c) 2010 Envy Labs LLC. See LICENSE for details.

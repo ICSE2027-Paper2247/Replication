@@ -1,0 +1,51 @@
+My tiny (~54k on osx/x86_64; smaller on 32 bit machines) & ancient
+(first written sometime in 1979 (in USCD pascal; I converted it to C
+ sometime in the early 1980s)) almost-vi-clone.
+
+I think it implements about 95% of visual mode;  I still use it on
+most of my machines and only notice things lacking in exec mode
+(I don't implement :g and :v) and when displaying long lines (standard
+vi wraps, I -- following the lead of the USCD pascal editor -- truncate.)
+
+Over its life it's been built on
+
+* USCD pascal (in Pascal, then in p2; those sources may no longer exist
+  because 8" floppies were expensive and I didn't do version control
+  because they were tiny)
+* TOS on the Atari ST
+* MS-DOS
+* Flexos
+* iRMX
+* OS/2
+* Linux (the first version to make it into SCCS, in 1993, after 13 or
+  14 years of use, porting, and development)
+* FreeBSD
+* NetBSD
+* Macosx
+* Windows 10
+
+And it's currently (version 4) being built on Unixes (osx,*bsd,Linux),
+Windows 10, and OS/2 v4 (both windows 10 & OS/2 are using their
+respective console ANSI emulation, both of which have issues.)
+
+
+The configuration options are
+
+*  --use-termcap; link with termcap instead of curses, if at all possible.
+*  --partial-install; don't install the lv, lv(1) name links.
+*  --size=NNN; use an NNN-byte editor buffer (this is the maximum sized
+   file that can be edited without truncation.
+*  --stdio; use stdio for buffered i/o whenever practical
+*  --logging; write copious logs to levee.log (in the startup directory)
+*  --tputs; write control strings using the pacing functions in termcap
+*  --noglob; don't use the system glob() function to expand wildcards
+*  --ucsd; enable reading ucsd pascal .text files (via the -p option)
+*  --dos; build for ms-dos
+*  --tos; build for TOS
+*  --rmx; build for iRMX
+*  --flexos; build for flexOS
+*  --win10; build for Windows (only tested on Windows 10)
+*  --prefix; root of where to install things (defaults to /usr/local)
+*  --execdir; where to install binaries ($prefix/bin)
+*  --mandir; where to install the manpages ($prefix/man or $prefix/share/man)
+

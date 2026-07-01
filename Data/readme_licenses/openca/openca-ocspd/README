@@ -1,0 +1,176 @@
+=============================================================================
+                             OpenCA's OCSP Responder
+               (c) 2001-2018 by Massimiliano Pala and OpenCA Labs
+                             OpenCA Licensed Software
+=============================================================================
+
+1. General Description
+======================
+
+The OCSP (OnLine Certificate Status Protocol) is becoming ever more supported
+by current clients as it provides an easy way to get a reliable and fast on-
+Line verification of the required certificate(s) status.
+
+The provided responder is capable of answering to complex OCSP requests, an
+example of a configuration file and a way to start and make request to the
+responded can be found into the etc/ directory.
+
+To get a full list of the supported command-line options simply call the
+openca-ocspd program with '-h' as an argument:
+
+	$ openca-ocspd -h
+
+
+2. INSTALL
+==========
+
+Since v2.0.0+ , the OCSPD server requires the LibPKI package to be installed.
+You can download the latest package from any of our servers, more information
+about the LibPKI software can be found here:
+
+   https://www.openca.org/projects/libpki/
+
+Please Read the Online install documentation on wiki pages for both the LibPKI
+and the OCSPD packages at:
+
+   https://www.openca.org/wiki/index.php/LibPKI
+   https://www.openca.org/wiki/index.php/OCSP_Daemon
+
+NOTE: v3.1.2+ requires LibPKI v0.8.9+
+
+3. Provided files
+=================
+
+In the $prefix/etc/ocspd directory you'll find some example files for simple
+configuration of the responder. All options are, I guess, self-explicative
+and very easy to understand.
+
+In particular, since the OCSP server (v2.0.0+) is based on LibPKI, you will
+find:
+
+o $prefix/etc/ocspd/pki - the directory where all the configurations for the
+  OCSPD token(s) are kept. You can add/configure new tokens in the token.d
+  directory. Keep in mind that tokens are identified by name (not file name).
+
+o $prefix/etc/ocspd/ca.d - the directory which carries all the configuration
+  files for the supported CAs. Each file carries the information about a
+  CA the responder will provide responses for.
+
+o $prefix/etc/ocspd/private - the directory with the private key of the OCSP
+  server. You can change this by editing the token configuration in token.d.
+
+o $prefix/etc/ocspd/certs - the directory with the certificates related to the
+  OCSP server's tokens. You can change this by editing the token configuration
+  in the token.d/ directory.
+
+
+4. OCSP Responder certificate
+=============================
+
+The OCSP Responder must have its own certificate/key pair to be able to build
+and sign the responses. To aceive this you can simply generate a PKCS#10 req
+and upload it to your CA by using the appropriate command. Remember that the
+certificate MUST contain the "OCSPSigning" extension in the extendedKeyUsage
+extension: if requested you'll need to define a new extension file on the ca
+(conf/openssl/extfiles) for the OCSP certificate profile.
+
+We provide a script which will generate a new keypair and request in the
+bin/ directory. Please use the provided script and send the generated request
+file to your CA in order to get the OCSP certificate. To do so, use:
+
+   $ cd PREFIX
+   $ sudo bin/ocspd-genreq.sh
+
+this will generate the key in the etc/ocspd/private/ directory and the
+request in the etc/ocspd/ one. Once the certificate is installed properly
+(follow the instructions provided by the script), you can start/stop the
+server by using the etc/init.d/ocspd script:
+
+   $ PREFIX/etc/init.d/ocspd start
+
+and
+
+   $ PREFIX/etc/init.d/ocspd stop
+
+You can also activate extra debugging information, by using the start-debug
+startup option as follows:
+
+   $ PREFIX/etc/init.d/ocspd start-debug
+
+This will activate a lot of debugging messages that might help you when more
+info is required (e.g., an unknown error).
+
+In order to force CRL reloading for the configured CAs, use the following:
+
+   $ PREFIX/etc/init.d/ocspd reload-crl
+
+5. Reverse Proxy Installation
+=============================
+
+It is possible to install the server behind a full-fledged HTTP server like
+apache. A typical configuration for that would be the OCSP server listening
+on the internal interface (e.g., 127.0.0.1 at port 2560) and the apache web
+server listening on the generic port 80 on the external interface and act
+as a reverse proxy to the OCSP server's interface.
+
+To do that, here's an example configuration of the Apache Web Server:
+
+  <VirtualHost _default_:80>
+
+    Servername ocsp.example.com
+    DocumentRoot /dev/null
+
+    CustomLog /var/log/httpd/testocsp.kyrio.com-access.log combined
+    ErrorLog /var/log/httpd/testocsp.kyrio.com-error.log
+
+    # Just use the ProxyPass option from Apache to redirect the requests
+    # to the OpenCA's OCSP server
+    ProxyPass / http://127.0.0.1:2560
+
+    # Using the RewriteEngine configuration instead of the
+    # ProxyPass is another possibility, here's an example
+    #
+    # RewriteEngine on
+    # RewriteCond %{CONTENT_TYPE} !^application/ocsp-request$
+    # RewriteRule ^/(.*) http://localhost:2560/ [P]
+
+  </VirtualHost>
+
+More information can be found at http://wiki.cacert.org/OcspResponder. However,  
+because of SELinux configuration, you might get an error from Apache when trying
+to connect to the localhost at port 2560. In order to fix that, you need to
+give Apache the possibility to open the connection. This is done by using the
+following command:
+
+  [root@ocsp]# setsebool -P httpd_can_network_connect 1
+
+more on this issue (SELinux) can be found here:
+
+  https://wiki.apache.org/httpd/13PermissionDenied
+
+
+6. Known Bugs
+=============
+
+Since we re-engineered the server, no extensive testing has been perfomed.
+Therefore, we encourage you to report any issue or wrong behavior.
+
+Currently the responder has been tested with Mozilla and it has been reported
+to work correctly.
+
+
+4. Contacts
+===========
+
+If you have further questions, please, contact the OpenCA team. More infos on
+OpenCA LABS and OpenCA Team can be found at http://www.openca.org
+
+
+Enjoy the Open Source Community!
+
+
+                                                Dr. Massimiliano Pala
+                                                OpenCA Labs Director
+                                                director@openca.org
+
+

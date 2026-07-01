@@ -1,0 +1,71 @@
+# Open Source Archetypes: A Framework For Purposeful Open Source
+
+Note: The home page for this report is
+[opentechstrategies.com/archetypes](https://opentechstrategies.com/archetypes),
+and there is a [PDF available
+there](https://opentechstrategies.com/archetypes-files/open-source-archetypes-v2.pdf).
+This repository is only useful if you want to look at the editing
+history of the report, or to suggest a change, report a bug, etc.
+
+This report is currently on version 2.
+
+# Overview
+
+"Open source" is a broad term that encompasses many different types of
+projects.  There is a wide range of open source approaches, and
+sometimes it helps to think through how your open source approach
+matches your goals, resources, and environment.
+
+We often see "open source project" used as a catch-all term to
+describe very different projects that share only the fact that their
+source code is distributed under an open source license.  We don't
+have a common vocabulary to discuss open source development in ways
+that take account of important differences between various types of
+open source project.
+
+This report is a first step in providing that common vocabulary.  OTS
+prepared the first edition for Mozilla in the first half of 2018, and
+the second edition in November 2019.  The report
+catalogs a number of open source archetypes we have observed through
+watching many projects over a couple of decades.  We have found these
+archetypes to be a useful resource when crafting strategy, weighing
+tradeoffs, and committing support to open source endeavors.
+
+We hope it is useful to you as you design open source initiatives,
+weigh tradeoffs in strategy, and pick metrics to track success.  The
+archetypes we list are useful comparison points for anybody trying to
+maximize the benefits of their open source investment.
+
+# A Word of Caution
+
+The boundaries between these archetypes are fuzzy.  One shouldn't
+expect a real-world project to fit perfectly into exactly one
+archetype.  The archetypes are not a taxonomy: a project may fit
+multiple archetypes at once, and we had heated discussions on how to
+characterize some projects.  Many successful projects change
+archetypes over their lifecycle.
+
+# How to Build the PDF
+
+This report is written in
+[LaTeX](https://en.wikipedia.org/wiki/LaTeX), and uses the [OTS
+Doctools](https://code.librehq.com/ots/ots-doctools) system
+to generate the PDF output.  Once you have the `ots-doctools`
+infrastructure installed properly, running `make` should just work, if
+you're on a Unix-like system that has GNU Make.  We don't have
+experience building this document on Windows, but if you do, please let us know
+how it goes and how we can improve these instructions.
+
+# License, Copyright, and Publication
+
+This document was originally authored by Karl Fogel, James Vasile, and
+Cecilia Donnelly of Open Tech Strategies as a work-for-hire under
+contract to Mozilla Corporation.  It is copyrighted by the Mozilla
+Foundation and Open Tech Strategies, and licensed to you under
+[CC-BY-SA](LICENSE).  To provide attribution, please link to
+[opentechstrategies.com/archetypes](https://opentechstrategies.com/archetypes).
+
+Mozilla reviewed drafts and provided a great deal of helpful
+commentary, but exercised no editorial control over content.  Open
+Tech Strategies is solely responsible for the content of the report,
+including any errors.

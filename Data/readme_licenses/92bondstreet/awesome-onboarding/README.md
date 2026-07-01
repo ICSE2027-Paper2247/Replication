@@ -1,0 +1,41 @@
+# Awesome Onboarding
+
+A curated list of awesome *onboarding new developers* resources.
+
+## Articles & Posts
+
+1. [Onboarding New Hires with Trello](https://medium.com/@Liz_Hall1/onboarding-new-hires-with-trello-ecc87e87ffd5)
+1. [Developer & employee onboarding best practices](http://fr.slideshare.net/mkomarev/developer-onboarding-best-practices)
+1. [If you want your new engineers to hit the ground running, give them a soft landing](https://blog.asana.com/2013/02/onboarding-new-engineers/)
+1. [Facebook Engineering Bootcamp](https://www.facebook.com/note.php?note_id=177577963919)
+1. [The grunts are geeks at Facebook Bootcamp](https://www.latimes.com/archives/la-xpm-2010-aug-01-la-fi-facebook-bootcamp-20100801-story.html)
+1. [Supporting developer-onboarding with enhanced
+resource finding and visual exploration](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1054&context=computerscidiss)
+1. [Get New IT Pros Up to Speed Fast With This Onboarding Checklist](http://www.cio.com/article/2384870/careers-staffing/get-new-it-pros-up-to-speed-fast-with-this-onboarding-checklist.html)
+1. [How to Build an Onboarding Plan for a New Hire](http://www.inc.com/guides/2010/04/building-an-onboarding-plan.html)
+1. [The First Day On The Job](http://www.inc.com/magazine/19860601/8052.html)
+1. [Bizarre Hiring Rituals](http://www.inc.com/magazine/20100301/bizarre-hiring-rituals.html)
+1. [Alternative On-Boarding: Getting Employees Happy on Day One](http://www.talentmgt.com/blogs/1-all-onboard/post/alternative-on-boarding-getting-employees-happy-on-day-one)
+1. [Onboarding](http://www.ebaytechblog.com/2011/05/04/onboarding/#.VM1myVWG9Aw)
+1. [Why you don’t commit code on your first day (Archive.org)](https://web.archive.org/web/20150319042556/http://bowery.io/posts/why-no-commit-first-day/)
+1. [Deploy Code Your First Day](http://www.bignerdranch.com/blog/deploy-code-your-first-day/)
+1. [Onboarding your new designer](https://medium.com/@theUXswitch/onboarding-your-new-designer-f23ec4f1c204)
+1. [How to make your Developer On-boarding Process Idiot Proof(Resistant)](http://shiporgetoffthepot.com/how-to-make-your-developer-onboarding-process-idiot-proofresistant/)
+1. [Onboarding New Developers](https://dev.to/codemouse92/onboarding-new-developers)
+1. [How to Onboard a New Developer](https://medium.com/manifestly/how-to-onboard-a-new-developer-c0ea181bce0)
+
+## Videos
+
+1. [Atlassian Bootcamp: How We Onboard New Developers](https://summit.atlassian.com/archives/2012/dev-speed/how-we-onboard-new-developers)
+
+## Contribution
+
+To contribute, click README.md and then the pencil icon. Make your changes and click the "Propose file change" button to submit a pull request. Make sure to follow the contributions guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Inspiration
+
+Inspired by [awesome-remote-job](https://github.com/lukasz-madon/awesome-remote-job)
+
+## License
+
+[MIT license](http://www.opensource.org/licenses/Mit)

@@ -1,0 +1,180 @@
+= gritter_notices
+
+{<img src="http://travis-ci.org/dapi/gritter_notices.png" />}[http://travis-ci.org/dapi/gritter_notices]
+
+Использует модуль gritter для отображения flash сообщений, а также вводит механизм сохраняемых пользовательских сообщений (notice).
+
+Удобно применять для отправки пользователю flash-сообщений из фоновых задач.
+
+Визуально выглядит так: http://boedesign.com/demos/gritter/
+
+Рабочий пример использования этого модуля: http://gritter-notices-example.heroku.com/
+
+Модуль родился и активно используется в проекте http://planposter.com
+
+http://dl.dropbox.com/u/155427/gritter_notices.png
+
+== Установка
+
+Включаем модуль в Gemfile, не забываем затем сделать bundle install:
+
+    gem 'gritter_notices'
+
+Копируем jQuery-плагин Gritter (https://github.com/jboesch/Gritter) в проект:
+
+    bundle exec rake gritter:install
+
+## Если хотим посылать персональные сообщения пользователям (помимо отображения flash)
+
+Создаем таблицу `gritter_notices` где будут храниться сообщения:
+
+    bundle exec rails g gritter_notices
+    bundle exec rake db:migrate
+
+Подключаем notices в модель User:
+
+    class User < ActiveRecord::Base
+      has_gritter_notices
+      ...
+
+Где-то в layout делаем так:
+
+* haml-пример:
+
+    %head
+       = include_gritter
+    %body
+       = gflash # session сообщения, добавляемые через gritter-овский gflash :success=>траляля
+       = gritter_flash_messages # Все остальные сообщения добавляемые через вызовы типа flash[:success] или user.notice_*
+
+* erb-пример:
+
+    <head>
+      <%= include_gritter %>
+      ...
+    <body>
+       <%= gflash  %>
+       <%= gritter_flash_messages %>
+
+В `gritter_flash_messages` можно передать "белый список" ключей flash в опции `:only`, в этом случае будут показываться сообщения только из этого списка.
+
+Вместо `include_gritter` можно делать сразу `include_gritter_and_jquery`, подробнее тут: https://github.com/RobinBrouwer/gritter
+
+== Использование
+
+В расширяемую модель добавляются метод `notice`. Агрументы:
+
+* Текстовое сообщение (String) или ключ к строке локали (Symbol)
+* Хеш опций прозрачно сохраняемых в модели и используемые при подстановке в `I18n::translate`.
+** В хеше опций пожно указать :scope для трансляции локали (по умолчанию `:gritter_notices`) и
+** `:level` из поддерживаемых gritter-ом - [:success, :warning, :notice, :error, :progress], по умолчанию :notice
+** :title
+** :sticky
+** другие опции, понимаемые gritter-ом
+
+Примеры использования:
+
+    user.notice 'Просто текстовое сообщение'
+    user.notice 'Текстовое сообщение', :level=>:notice
+
+если в локали указать
+
+    ru:
+      gritter_notices:
+        import_contacts: Импортиорваны контакты (%{count})
+
+то можно будет использовать ключ, вместо текстового сообщения:
+
+    user.notice :import_contacts, :count=>123
+
+Для краткости можно :level указывать через подчеркивание после названия метода `notice`:
+
+    notice_success
+    notice_error
+    notice_warning
+    notice_progress
+    notice_notice    # синоним просто `notice`
+
+Также есть алиас gritter_notice со всеми вышеперечисленными типами сообщений.
+
+Далее во view вызываем:
+
+   = gritter_flash_messages
+
+который отображает и flash сообщения и накопившиеся `notices`.
+
+== Дополнительно
+
+Поддерживается  `universal_flash_messages` и `flash-message-conductor`, то есть сохранение во flash массивов сообщений, типа:
+
+   flash[:notice] = ['Сообщение1', 'Сообщение2']
+
+О плагине jQuery Gritter - http://ruseller.com/adds.php?rub=11&id=2106
+Также некоторая информация есть здесь: http://habrahabr.ru/blogs/ror/116754/
+
+== TODO
+
+1. Удалять gritter_notice только после того, как они закроются или их закроют
+
+Контроллер gritter_notices с одной акцией delivered. Ставить ее запуск на onclose. Сделать настраиваемым текущее поведение:
+
+   1. notices помечаются доставленными, когда показываются во view (контроллер не используется)
+   2. notices помечаются удаленными, когда закрываются (сами или принудительно) onclose
+   3. обычные notices по методу 1, sticky notices по методу 2.
+
+2. Показывать push-сообщения
+3. Написать драйверы для других способов отображения (список ниже)
+
+== Другие способы отображения
+
+* https://github.com/wavded/humane-js
+* https://github.com/rubiety/message_block
+* http://plapier.github.com/sexy-css3-flashes/
+* https://github.com/jyoungblood/smoke.js
+* https://github.com/needim/noty
+* http://code.google.com/p/jquery-purr/
+* https://github.com/CodeSeven/toastr
+* http://nijikokun.github.com/bootstrap-notify/
+* https://github.com/leonid-shevtsov/unobtrusive_flash
+* Еще?
+
+== Примеры:
+
+   * http://gritter-notices-example.heroku.com/
+   код: http://github.com/dapi/gritter_notices_example
+   * http://planposter.com/
+
+Друзья, присылайте ссылки на ваши проекты использующие gritter_notices.
+
+== Нечто отдаленно подобное (альтернативы):
+
+ Вместо flash_conductor-а
+ https://github.com/mattpolito/flash-message-conductor
+ https://rubygems.org/gems/glennr-flash-message-conductor
+ https://github.com/QuBiT/universal_flash_messages
+ https://github.com/snitko/frontend_notifier
+
+== Пишут о gritter_notices
+
+* http://dapi.ru/flash-delayedjob
+* http://pavlovnew.livejournal.com/20139.html
+* http://habrahabr.ru/blogs/ror/116754/
+
+== Credits
+* Robin Brouwer https://github.com/RobinBrouwer/gritter
+* Jordan Boesch http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/
+
+== Contributing to gritter_notices
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Danil Pismenny. See LICENSE.txt for
+further details.

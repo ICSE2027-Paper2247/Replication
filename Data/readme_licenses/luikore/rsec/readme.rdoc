@@ -1,0 +1,22 @@
+== Parser / Regexp Combinator for Ruby. 
+
+PEG grammar for Ruby, based on StringScanner. Consistently superior speed: up to 10 times faster than Treetop[https://github.com/nathansobo/treetop], and twice the speed of rex+racc.
+
+Compatible with Ruby v1.9 and above.
+
+== License 
+
+Same license as for Ruby.
+
+== Install 
+
+    gem in rsec
+
+== Doc
+
+http://rsec.herokuapp.com
+
+== Code
+
+http://github.com/luikore/rsec/tree/master
+

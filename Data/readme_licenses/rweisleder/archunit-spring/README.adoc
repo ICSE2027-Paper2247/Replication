@@ -1,0 +1,94 @@
+= ArchUnit Spring Integration
+
+The ArchUnit Spring Integration provides predefined https://github.com/TNG/ArchUnit[ArchUnit] rules for https://spring.io/projects[Spring] applications.
+
+image:https://maven-badges.herokuapp.com/maven-central/de.rweisleder/archunit-spring/badge.svg[link="https://central.sonatype.com/artifact/de.rweisleder/archunit-spring", title="Maven Central"]
+image:https://javadoc.io/badge2/de.rweisleder/archunit-spring/javadoc.svg[link="https://javadoc.io/doc/de.rweisleder/archunit-spring", title="Javadoc"]
+image:https://img.shields.io/github/license/rweisleder/archunit-spring.svg[link="https://github.com/rweisleder/archunit-spring/blob/main/LICENSE", title="License"]
+
+== Usage
+
+[source,xml]
+----
+<dependency>
+    <groupId>de.rweisleder</groupId>
+    <artifactId>archunit-spring</artifactId>
+    <version>1.2.0</version>
+    <scope>test</scope>
+</dependency>
+----
+
+The library expects that the required dependencies for Spring and ArchUnit are already declared.
+
+== Examples
+
+Given the following class:
+[source,java]
+----
+@RestController
+class HelloRestController {
+
+    @GetMapping("/hello")
+    String hello() {
+        return "Hello World";
+    }
+}
+----
+
+You can write architecture rules like this:
+
+[source,java]
+----
+import static de.rweisleder.archunit.spring.SpringAnnotationPredicates.springAnnotatedWith;
+
+methods()
+    // "that are annotated with @RequestMapping" (or @GetMapping, @PostMapping etc.)
+    .that(are(springAnnotatedWith(RequestMapping.class)))
+    // "should be declared in classes that are annotated with @Controller" (or @RestController etc.)
+    .should().beDeclaredInClassesThat(are(springAnnotatedWith(Controller.class)));
+----
+
+Unlike other rule libraries focused on architecture, this one encourages Spring-specific best practices and helps detect subtle bugs and antipatterns.
+
+How about this?
+
+[source,java]
+----
+@RestController("/hello")
+class HelloRestController {
+
+    @GetMapping
+    String hello() {
+        return "Hello World";
+    }
+}
+----
+
+Noticed the issue?
+A request to `GET /hello` would return HTTP 404.
+
+Spring does not use the bean name in `@RestController("...")` as a path mapping.
+The developer probably intended to write:
+
+[source,java]
+----
+@RestController
+@RequestMapping("/hello")
+class HelloRestController {
+    // ...
+}
+----
+
+With the predefined rule `SpringControllerRules.ControllerNameWithoutRequestMapping` we've got you covered.
+
+[source,java]
+----
+import de.rweisleder.archunit.spring.framework.SpringControllerRules;
+
+@ArchTest
+ArchRule ControllerNameWithoutRequestMapping = SpringControllerRules.ControllerNameWithoutRequestMapping;
+----
+
+== User Guide
+
+Please refer to the complete documentation https://github.com/rweisleder/archunit-spring/blob/main/src/main/docs/userguide.adoc[here] for detailed information.

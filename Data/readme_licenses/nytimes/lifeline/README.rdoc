@@ -1,0 +1,89 @@
+= lifeline
+
+Methods for creating lifeline tasks. This allows you to write cron jobs that
+restart processes that die while ensuring the code is only executing only once
+(avoiding the duplication that sometimes happens using the 'daemons') gem.
+Both a generic lifeline method is provided as well as methods to create 3
+lifeline rake tasks for managing lifelines.
+
+== The Lifeline Approach
+
+For all their history, daemons can be problematic. For starters, mechanisms
+for restarting daemons that have failed often rely on a third-party
+application like monit which is itself a daemon. In addition, PID-based
+mechanisms to ensure only one daemon is running at a time fail in both ways,
+sometimes preventing a daemon from starting up and other times not preventing
+multiple instances from running.
+
+The lifeline pattern (originally presented to me by Matt Todd of Highgroove
+Studios) is a different approach that uses a cron job that runs every minute
+as a lifeline to restart the daemon process if it has died. This lifeline
+calls ps to see if another instance of the same command is already running. If
+it is, the lifeline exits immediately. Otherwise, it stays running
+indefinitely (Cron starts all jobs via a fork, so it can run forever without
+stalling out cron). The trick is figuring out the right invocation to ps to
+ensure you are only checking for apps with the same name. But the lifeline gem
+handles all this to you.
+
+Although lifelines can work well for processes that run forever, the technique
+can also be used to safeguard any code you only want to run a single instance
+of at a time (eg, if you have a cron job that runs every 5 minutes and you
+want to ensure it doesn't run 2 processes should the first cron job get
+delayed.)
+
+== How a Lifeline Works
+
+More specifically, the lifeline method (and rake task that calls it) does the following steps:
+
+* Get a list of all running processes
+* Find the name of the current process by looking for the command associated with the current process id (the $$ variable)
+* If there is another process with the same command string, return and exit
+* Otherwise yield to run the passed block.
+
+Note that you do not pass a command name to the lifeline, it uses the command
+of the process invoking the Lifeline code. This means if you call lifeline
+code simultaneously from a Rake task and a Rails process, it will be executed
+in both cases (it's NOT a mutex or semaphore). Also, this mechanism uses a
+global namespace. means you will want to give unique names to the processes
+that ultimately invoke your lifeline code. If app1 and app2 both have a rake
+task named "lifeline," they will interfere with each other ("app1:lifeline"
+and "app2:lifeline" are much better).
+
+== Examples
+
+  Lifeline.lifeline do
+    # some code you want to run in only a single process
+  end
+  
+  Lifeline.define_lifeline_tasks("appname") do
+    # some code you want to run in a single lifeline
+  end
+  
+  > rake -T appname
+  rake appname:lifeline   # A lifeline task for executing only one process of appname:run at a time
+  rake appname:run        # Runs the appname:run task
+  rake appname:terminate  # Terminates any running appname:lifeline tasks
+
+== Installation
+
+* gem install lifeline
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Contributors
+
+* Matt Todd
+* Jacob Harris
+* Ben Koski
+
+== Copyright
+
+Copyright (c) 2010 The New York Times. See LICENSE for details.
