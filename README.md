@@ -13,11 +13,11 @@ This repository contains the license data, taxonomy results, and derived empiric
 
 The following figures summarize the two taxonomies constructed in the study.
 
-![Multi-Licensing Target Taxonomy](Taxonomy/Multi-Licensing Target Taxonomy.png)
+![Multi-Licensing Target Taxonomy](Taxonomy/Multi-Licensing%20Target%20Taxonomy.png)
 
 The multi-licensing target taxonomy characterizes repository objects that may be covered by different licenses, including software artifacts, textual works, media assets, hardware design artifacts, and data/model artifacts.
 
-![License Term Taxonomy](Taxonomy/License Term Taxonomy.png)
+![License Term Taxonomy](Taxonomy/License%20Term%20Taxonomy.png)
 
 The license term taxonomy organizes fine-grained license terms into higher-level categories and indicates whether terms are covered by standard SPDX licenses or arise from customized licenses.
 
