@@ -8,6 +8,8 @@ This repository contains the license data, taxonomy results, and derived empiric
 - `Taxonomy/`: taxonomy results for multi-licensing targets and license terms.
 - `Result/`: derived JSON/JSONL results used in the empirical analysis.
 - `Validation/`: contains the manually annotated and reviewed datasets used to validate taxonomy construction, LLM-assisted consolidation, clause coverage, and multi-licensing target mapping.
+- `Compatibility/`: records the rules that determine which license terms participate in compatibility analysis.
+- `Prompt4Gpt5_4mini/`: contains the prompt templates used for the LLM-based tasks in this study.
 
 ## Taxonomy Results
 
