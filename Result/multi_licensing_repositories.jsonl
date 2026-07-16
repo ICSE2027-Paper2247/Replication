@@ -1,0 +1,658 @@
+{"repo": "06chaynes/http-cache", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "0x2a-42/lelwel", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "0xPolygon/pil-stark", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "0xPolygonZero/zk_evm", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "0xdeafbeef/jeprofl", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "2moe/tmoe", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "AI4Finance-Foundation/FinRL_Market_Simulator", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-NC-ND-2.0", "type": "spdx"}]}
+{"repo": "AdamLaurie/rompar", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "BSD", "type": "spdx"}]}
+{"repo": "AikidoSec/firewall-php", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": "AGPL-3.0-only"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "Autonomous-Racing-PG/ar-tu-do", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "Azure/azure-docs-json-samples", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "BenjaminKim/dokanx", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "BerriAI/litellm", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "BitDogLab/BitDogLab", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CERN-OHL-S-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Borber/seam", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "CGAL/cgal-swig-bindings", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "CapSoftware/Cap", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "CharlieTap/cachemap", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "Chewbaka69/PlexShare", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ChuanyuXue/tsnkit", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "Colonial-Dev/satpaper", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ComputationalRadiationPhysics/picongpu", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "LGPL-3.0-or-later", "type": "spdx"}]}
+{"repo": "CoralineAda/society", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "customized", "base_spdx": ""}]}
+{"repo": "Cykooz/fast_image_resize", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "DGriffin91/obvhs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "DanielKeep/cargo-script", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "DocumindHQ/documind", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "ENCCS/gpu-programming", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "EmuDeck/emudeck-electron", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "Evo-Forge/Essence", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "FDA/open.fda.gov", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC0-1.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "FLIF-hub/FLIF", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-or-later", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "FalconChristmas/fpp", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "CC-BY-ND-4.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "FriendCode/gittle", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "GChristensen/enso-portable", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "MPL-2.0", "type": "spdx"}]}
+{"repo": "GNOME/adwaita-icon-theme", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-3.0-US", "type": "spdx"}]}
+{"repo": "GNOME/evolution", "license_count": 5, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}, {"name": "GFDL-1.3-only", "type": "spdx"}, {"name": "OLDAP-2.8", "type": "spdx"}]}
+{"repo": "GNOME/gjs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "LGPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "GNOME/gnome-terminal", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "GFDL-1.3-only", "type": "spdx"}]}
+{"repo": "GNOME/gparted", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "GFDL-1.2-or-later", "type": "spdx"}]}
+{"repo": "GNOME/gtkmm", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "GNOME/vte", "license_count": 4, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "X11"}]}
+{"repo": "GamingMesh/Minecraft-Jobs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "Garux/netradiant-custom", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "GoogleChrome/devtools-docs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-3.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "Greedysky/TTKMusicPlayer", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "Green-Software-Foundation/learn", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Grokmoo/sulis", "license_count": 4, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-3.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "HEnquist/camilladsp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MPL-2.0", "type": "spdx"}]}
+{"repo": "Infrasys-AI/AIInfra", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "JAM-Software/Virtual-TreeView", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MPL-1.1", "type": "spdx"}, {"name": "LGPL-2.1", "type": "customized", "base_spdx": ""}]}
+{"repo": "JangoSteve/jQuery-CSSEmoticons", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "JanusGraph/janusgraph-docker", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "JimmXinu/FanFicFare", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "JoshMcguigan/timetrack", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "KDABLabs/DeclarativeWidgets", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "KDE/kdeconnect-kde", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "Kagami/ffmpeg.js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "KhronosGroup/glslang", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "Kindari/SublimeXdebug", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "WTFPL", "type": "spdx"}, {"name": "GPL-3.0-or-later", "type": "spdx"}]}
+{"repo": "KitSprout/QCopterFlightControl", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "Kiwi/clyde", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Lagrange-Labs/deep-prove", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "LibreSolar/bms-c1", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CERN-OHL-W-2.0", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "Lokathor/bytemuck", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "LokiJS-Forge/LokiDB", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "MPI-SWS/genmc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Maescool/Catacomb-Snatch", "license_count": 6, "has_customized_license": true, "licenses": [{"name": "CC-BY-NC-SA-3.0", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "LGPL-2.0-only", "type": "spdx"}]}
+{"repo": "Manishearth/oreutils", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "MeArm/MeArm", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "CC-BY-SA-3.0", "type": "spdx"}, {"name": "Beerware", "type": "customized", "base_spdx": "Beerware"}, {"name": "CC-BY-NC-SA-3.0", "type": "spdx"}]}
+{"repo": "Mellanox/libvma", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "Michael0x2a/curated-programming-resources", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "MicrosoftDocs/Contribute", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "MicrosoftDocs/cloud-developer-advocates", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "MicrosoftDocs/security", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "MicrosoftDocs/well-architected", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "MonoGame/MonoGame.Samples", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MS-PL", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Multibit-Legacy/multibit-hd", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Muukid/muCOSA", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "MythTV/mythweb", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.0-only", "type": "spdx"}]}
+{"repo": "NJU-PCALab/STAR", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "NSIS-Dev/nsis", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Zlib", "type": "spdx"}, {"name": "bzip2-1.0.6", "type": "spdx"}, {"name": "CPL-1.0", "type": "spdx"}]}
+{"repo": "NVIDIA/nccl", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "NVlabs/dream-in-4d", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "Nazariglez/notan", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Noxime/steamworks-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "OData/WebApi", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-3.0-US", "type": "spdx"}]}
+{"repo": "OSC/Open-OnDemand", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "OWASP/java-html-sanitizer", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "OfficeDev/office-js-docs-pr", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "OpenElectronicsLab/OpenHardwareExG", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CERN-OHL-1.2", "type": "spdx"}, {"name": "GPL-3.0-or-later", "type": "spdx"}]}
+{"repo": "OsnaCS/plantex", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Overv/VulkanTutorial", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "OwlCyberDefense/setools", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "PX4/eigen", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MPL-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "QQxiaoming/quard_star_tutorial", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "REIJI007/Adblock-Rule-Collection", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-NC-SA-4.0", "type": "spdx"}]}
+{"repo": "RafaGago/mini-async-log", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "Re-Ch-X/egui-doc-cn", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ReSpeak/tsdeclarations", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "RedHatOfficial/Overpass", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "OFL-1.1", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "RichardD2/NTFS-Streams", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "CPOL-1.02", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "RoaringBitmap/roaring-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Roenbaeck/anchor", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "RubyMetric/chsrc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "RunningGump/gsxt_captcha", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "WTFPL", "type": "spdx"}]}
+{"repo": "Rust-GPU/rust-gpu", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "RustAudio/rust-lv2", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "STMicroelectronics/STM32CubeF0", "license_count": 4, "has_customized_license": true, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "SLA0044", "type": "customized", "base_spdx": ""}]}
+{"repo": "Saishy/TinyBirdNet-Unity", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "AGPL-3.0-only"}]}
+{"repo": "SawfishWM/sawfish", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Artistic-2.0", "type": "spdx"}]}
+{"repo": "SeaQL/sea-schema", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "SiegeLord/Tango-D2", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AFL-3.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "SiliconLabs/gecko_sdk", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "SiliconLabs/simplicity_sdk", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "SimonCropp/CountryData", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "Simple-Station/Einstein-Engines", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "MPL-2.0", "type": "spdx"}]}
+{"repo": "SmartMeshFoundation/Spectrum", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "SoftUmeYa/Pyonkee", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-2.0", "type": "spdx"}]}
+{"repo": "SomMeri/less4j", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "EPL-1.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "SpinalHDL/SpinalHDL", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Stephane-D/SGDK", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-with-GCC-exception", "type": "customized", "base_spdx": "GCC-exception-3.1"}]}
+{"repo": "Templarian/MaterialDesign-Webfont", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Thomas-Sparber/wmi", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "TomK32/macruby-statusmenu", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "WTFPL", "type": "spdx"}]}
+{"repo": "Unity-Technologies/WaterScenes", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "LicenseRef-Unity-Companion", "type": "customized", "base_spdx": ""}, {"name": "LicenseRef-Unity-Package-Distribution", "type": "customized", "base_spdx": ""}, {"name": "LicenseRef-SpeedTree-EUA", "type": "customized", "base_spdx": ""}]}
+{"repo": "VuongN/jQuery-Fakecrop", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "Wave-Unity-Library/Motion-Mapping", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "MS-PL", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "WebAssembly/esm-integration", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "W3C-Software-and-Document-2015", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "WebAssembly/spec", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "W3C", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "XingangPan/DragGAN", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "CC-BY-NC-4.0", "type": "spdx"}, {"name": "LicenseRef-StyleGAN3", "type": "customized", "base_spdx": ""}]}
+{"repo": "Yandrik/kolibri", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "aaddrick/claude-desktop-debian", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "aadsm/node-id3", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "CC-BY-2.0", "type": "spdx"}]}
+{"repo": "aboulch/ConvPoint", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "aboutcode-org/scancode-toolkit", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "actix/actix-extras", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "adereth/dactyl-keyboard", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "aevyrie/bevy_editor_cam", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "aevyrie/bevy_eventlistener", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "af83/ucengine", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "agateau/pixelwheels", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "aggregateknowledge/rsyslog-zeromq", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "aheart/hearth", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "alecchen/doxygen-lua", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}]}
+{"repo": "alexcrichton/futures-await", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "alexjc/weboptout", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "ali-rantakari/peg-markdown-highlight", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "allusive-dev/compfy", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "MPL-2.0", "type": "spdx"}]}
+{"repo": "alpenlabs/alpen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "amdjs/amdjs-tests", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "amosyuen/FFmpegVideoRecorder", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "customized", "base_spdx": "GPL-2.0-or-later"}]}
+{"repo": "amzn/fire-app-builder", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "Amazon Software License", "type": "customized", "base_spdx": ""}]}
+{"repo": "anarchivist/worldcat", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "andymckay/arecibo", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "appsecco/breaking-and-pwning-apps-and-servers-aws-azure-training", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "apptainer/singularity", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "LBNL", "type": "customized", "base_spdx": "BSD-3-Clause"}]}
+{"repo": "areweguiyet/areweguiyet", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "arquillian/arquillian-graphene", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "asyncio-docs/asyncio-doc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "atdt/escapes.js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "autotrace/autotrace", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "LGPL-2.1-or-later", "type": "spdx"}]}
+{"repo": "b03505036/UniInst", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "barseghyanartur/tld", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MPL-1.1", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-or-later", "type": "spdx"}]}
+{"repo": "batterseapower/libcharsetdetect", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "MPL-1.1", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "bbidulock/blackboxwm", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "beclab/Olares", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "behdad/bicon", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "PSF-2.0", "type": "spdx"}, {"name": "X11", "type": "spdx"}]}
+{"repo": "benfulcher/hctsa", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-NC-SA-4.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "benoitc/socketpool", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "berb/diploma-thesis", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-3.0", "type": "spdx"}, {"name": "CC-BY-NC-SA-3.0", "type": "spdx"}]}
+{"repo": "berkmancenter/namae", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "bernd/cucumber-sinatra", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "bheisler/TinyTemplate", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "bibleforge/BibleForgeDB", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "bibviz/bibviz", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-3.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "bilelmoussaoui/Hardcode-Tray", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "biomejs/biome", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "bitwarden/web", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "bjorn3/browser_wasi_shim", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "bkosborne/jQuery-Feature-Carousel", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "blas-lapack-rs/lapack", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "bluespec/Toooba", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "bluss/arrayvec", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "bluss/maplit", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "bobcarroll/jira-client", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "botherder/targetedthreats", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "bounce-rs/bounce", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "bradfa/tlpi-dist", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "brho/akaros", "license_count": 4, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "LicenseRef-Lucent-1.02", "type": "customized", "base_spdx": "LPL-1.02"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "briansmith/ring", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "ISC", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "btholt/algorithms-exercises", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-NC-4.0", "type": "spdx"}]}
+{"repo": "c9/core", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "candlecorp/wick", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "Elastic-2.0", "type": "spdx"}]}
+{"repo": "capy-language/capy", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Apache-2.0 WITH LLVM-exception", "type": "customized", "base_spdx": "Swift-exception"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "cargonauts-rs/cargonauts", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "carpentries-lab/python-aos-lesson", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "carthage-software/mago", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "cbeuw/rustlantis", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "ceramicstudio/js-composedb", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "cflavio/yorg", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "chriseldredge/Lucene.Net.Linq", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "cinfony/cinfony", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "cisco/exanic-software", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ckeditor/ckeditor5-react", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "GPL-2.0-only"}]}
+{"repo": "cksac/rai", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "clojurewerkz/buffy", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "clojurewerkz/money", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "cloudflare/cloudflare-docs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "cmpute/dashu", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "commadelimited/autoComplete.js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "commadelimited/jQuery-Mobile-Icon-Pack", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "components/font-awesome", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "OFL-1.1", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "CC-BY-3.0", "type": "spdx"}]}
+{"repo": "confluentinc/schema-registry", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "cowboy/jquery-message-queuing", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "crunchy-labs/crunchyroll-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ct-austin/ifmt", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "cubiclesoft/email_sms_mms_gateways", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "cykod/AlienInvasion", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "cyndis/qmlrs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "dajobe/rasqal", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "danielbruce/entypo", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-3.0", "type": "spdx"}, {"name": "OFL-1.1", "type": "spdx"}]}
+{"repo": "dave-theunsub/clamtk", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-1.0-or-later", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "davidchambers/Base64.js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "WTFPL", "type": "spdx"}]}
+{"repo": "deck-of-cards/deck-of-cards", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "deepseek-ai/DeepSeek-Coder", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "deepseek-ai/DeepSeek-Coder-V2", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "deeptools/deepTools", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "deploy2/ruby-ip", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Ruby", "type": "customized", "base_spdx": "Ruby"}]}
+{"repo": "devinus/detergent", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "dexterpu/jquery.ui.chatbox", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "dholroyd/h264-reader", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "dionjwa/Hydrax", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "dirkwhoffmann/virtualc64", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "MPL-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "doom-fish/screencapturekit-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "dotnet/docs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "dpsanders/scipy_2014_julia", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "drewconway/NetworkX_Intro_Materials", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "CC-BY-SA-3.0-US", "type": "spdx"}]}
+{"repo": "drewconway/strata_bootcamp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "CC-BY-SA-3.0-US", "type": "spdx"}]}
+{"repo": "drewwilson/AutoSuggest", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "dribnet/pixray", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "drone-os/drone-core", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "dtecta/solid3", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "QPL-1.0", "type": "spdx"}]}
+{"repo": "dulldusk/phpfm", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "MPL-1.1-or-later", "type": "spdx"}]}
+{"repo": "duxing2007/ldd3-examples-3.x", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "dwd/rapidxml", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSL-1.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "dyve/jquery-autocomplete", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "earthlab/earthlab.github.io", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ebhrz/TDL-GNSS", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "MIT"}]}
+{"repo": "ebiggers/wimlib", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "LGPL-2.1-or-later", "type": "spdx"}]}
+{"repo": "eclipse-collections/eclipse-collections", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "EDL-1.0", "type": "spdx"}]}
+{"repo": "eclipse-leshan/leshan", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "eddturtle/TurtlePlayer", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "ekallevig/jShowOff", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "ekdevdes/storage.js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-or-later", "type": "spdx"}]}
+{"repo": "elast0ny/shared_memory", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "elclanrs/jq-idealforms", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "elichai/log-derive", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "elijah/r-node", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "elixir-lang/elixir-lang.github.com", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "emberjs/ember-test-helpers", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "emp-toolkit/emp-ot", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "erikzaadi/GithubSharp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "esp-rs/esp32-hal", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "estebank/redpen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "estuary/flow", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Business Source License 1.1", "type": "customized", "base_spdx": "Apache-2.0"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "etcd-io/website", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "ethereumclassic/ethereumclassic.github.io", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "euphoria-io/heim", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "eyre-rs/color-eyre", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "facebookresearch/audiocraft", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-NC-4.0", "type": "spdx"}]}
+{"repo": "facebookresearch/nougat", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-NC-4.0", "type": "spdx"}]}
+{"repo": "faisalman/simple-excel-js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "farsil/ibmfonts", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "fcitx/fcitx-qt5", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "feelpp/feelpp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "fiberplane/fp-bindgen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "filamentgroup/quickconcat", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "flammie/omorfi", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "flashbots/flashbots-docs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "flutter/website", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-3.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "forki/NaturalSpec", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "MS-PL", "type": "spdx"}]}
+{"repo": "formspree/formspree", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "fosrl/pangolin", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "AGPL-3.0-only"}]}
+{"repo": "fossasia/open-event-wsgen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "freeorion/freeorion", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}]}
+{"repo": "gabrielmagno/crab-dlna", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "garu/Data-Printer", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-1.0-or-later", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}]}
+{"repo": "gcamp/GCPagedScrollView", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "gdh1995/vimium-c", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "ged/bluecloth", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "BSD-2-Clause-Views", "type": "spdx"}]}
+{"repo": "georust/geo", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "georust/geo-index", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "geosolutions-it/imageio-ext", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-or-later", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "ggez/game-template", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ghaerr/microwindows", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MPL-1.1", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "giltene/jHiccup", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC0-1.0", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "gionkunz/chartist-js", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "WTFPL", "type": "spdx"}]}
+{"repo": "glazedlists/glazedlists", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "MPL-1.1", "type": "spdx"}]}
+{"repo": "gnu-smalltalk/smalltalk", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "gooddata/gooddata-ruby", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "google/santa-tracker-android", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "googlevr/gvr-unity-sdk", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "Google-APIs-TOS", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}, {"name": "OpenSSL", "type": "spdx"}]}
+{"repo": "gorhill/cronexpr", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "graphlab-fr/cosma", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CECILL-2.1", "type": "spdx"}]}
+{"repo": "graydon/bors", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "gtk2hs/gtk2hs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "guns/dnsmasq", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "gwihlidal/vk-mem-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "gwlucastrig/Tinfour", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "EDL-1.0", "type": "spdx"}]}
+{"repo": "h2database/h2database", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MPL-2.0", "type": "spdx"}, {"name": "EPL-1.0", "type": "spdx"}]}
+{"repo": "h3r2tic/dolly", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "hackclub/hackclub", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "hiddenswitch/Spellsource", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "hjimce/darknet_mobilenet", "license_count": 7, "has_customized_license": true, "licenses": [{"name": "YOLO License Version 2", "type": "customized", "base_spdx": ""}, {"name": "WTFPL-2.0", "type": "spdx"}, {"name": "RNN LICENSE Version 3", "type": "customized", "base_spdx": ""}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "META-LICENSE Version 1", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}, {"name": "YOLO License Version 1", "type": "customized", "base_spdx": ""}]}
+{"repo": "hpc/xpmem", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "hraban/cl-containers", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "LicenseRef-EKSL-NonCommercial", "type": "customized", "base_spdx": ""}]}
+{"repo": "hraban/cl-graph", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "hsddlz/faster-CTPN", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "huggingface/candle", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "hyperium/hyper-tls", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "iChun/Morph", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "iazarny/gitember", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "ibara/oksh", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "LicenseRef-Public-Domain", "type": "customized", "base_spdx": ""}, {"name": "BSD-2-Clause", "type": "spdx"}, {"name": "ISC", "type": "spdx"}]}
+{"repo": "icaven/glm", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "icons8/flat-color-icons", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Good Boy License", "type": "customized", "base_spdx": ""}]}
+{"repo": "iden3/go-iden3-core", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ilastik/ilastik", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "LGPL-2.1-or-later", "type": "spdx"}]}
+{"repo": "iliana/rust-crowbar", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "image-rs/image-png", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "imagecms/ImageCMS", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "imgui-rs/imgui-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "imp/dnsmasq", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "init4tech/trevm", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "intoolswetrust/jsignpdf", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MPL-2.0", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "intrepidusgroup/mallory", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "PSF-2.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "invertase/jet", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-3.0", "type": "spdx"}]}
+{"repo": "ivarbrandt/skin.nimbus", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "ivyl/rootkit", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "jackalope/jackalope-doctrine-dbal", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "janet-lang/circlet", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "GPL-2.0-only"}]}
+{"repo": "japaric/f3", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jarek-foksa/xel", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "jaystack/jaydata", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "jbdemonte/barcode", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CECILL-2.0", "type": "spdx"}]}
+{"repo": "jckantor/CBE20255", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-NC-SA-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jcornaz/benimator", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Unlicense", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jeapostrophe/racket-android", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jeelabs/esp-link", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "Beerware", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "jefftranter/6502", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "jez/pandoc-markdown-css-theme", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BlueOak-1.0.0", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "jfogarty/latex-nonfiction-ebook-template", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "FPL-1.0.0", "type": "spdx"}]}
+{"repo": "jidesoft/jide-oss", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-with-classpath-exception", "type": "customized", "base_spdx": ""}, {"name": "Customization", "type": "customized", "base_spdx": "GPL-3.0-only"}]}
+{"repo": "jkokkin/UberNet", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jlgreathouse/AMD_IBS_Toolkit", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "joaoleal/CppADCodeGen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "joelpurra/jq-hopkok", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "joho/sqltocsv", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "jonasschnelli/I7CoreTextExample", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "customized", "base_spdx": ""}]}
+{"repo": "jonasschnelli/UIView-i7Rotate360", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "jonasvp/django-beanstalkd", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MPL-1.1", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "joshka/tui-markdown", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jpetazzo/container.training", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "jpswalsh/academicons", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "OFL-1.1", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "CC-BY-3.0", "type": "spdx"}]}
+{"repo": "jruby/jruby-lint", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "js2xxx/oceanic", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "jsnyder/python-on-a-chip", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GFDL-1.2-only", "type": "spdx"}]}
+{"repo": "json-schema-org/json-schema-spec", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "AFL-3.0", "type": "spdx"}]}
+{"repo": "juliogomez/netdevops", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "karmazzin/eloquentjavascript_ru", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-NC-3.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "kbingham/libcamera", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "keepsimple1/mdns-sd", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "kflorence/flurid", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "killercup/trpl-ebook", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "kiyolee/zlib-win-build", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "kohya-ss/musubi-tuner", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "HunyuanVideo License", "type": "customized", "base_spdx": ""}, {"name": "HunyuanVideo 1.5 License", "type": "customized", "base_spdx": ""}]}
+{"repo": "kriszyp/cpm", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AFL-3.0", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "kriszyp/nodules", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "AFL-2.1", "type": "spdx"}]}
+{"repo": "kriszyp/xstyle", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "AFL-2.1", "type": "spdx"}]}
+{"repo": "kronosnet/kronosnet", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "kueblc/LDT", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "lalrpop/lalrpop", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "lambda-fairy/maud", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "laudiacay/barustenberg", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "laysakura/serde-encrypt", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "leaflabs/maple-ide", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "leanprover/elan", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "leetvr/hotham", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "leotaku/tower-livereload", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "less/less-docs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-3.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "lgersman/jquery.orangevolt-ampere", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "libbpf/libbpf-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "libjpeg-turbo/libjpeg-turbo", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "IJG", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "libp2p/go-libp2p-daemon", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "libp2p/js-libp2p", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "libtom/libtomfloat", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "LicenseRef-scancode-public-domain", "type": "customized", "base_spdx": ""}, {"name": "WTFPL", "type": "spdx"}]}
+{"repo": "libwww-perl/WWW-Mechanize", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-1.0-or-later", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}]}
+{"repo": "lua-cookbook/lua-cookbook", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-3.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "lukexor/tetanes", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "lunatic-solutions/lunatic", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "lurk-lab/lurk-beta", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "lwindolf/liferea", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "maidsafe-archive/crust", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "manubot/rootstock", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "matthijskooijman/arduino-lmic", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "mattrighetti/HNReaderApp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "mbitsnbites/soundbox", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "mct10/RepCodec", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-NC-4.0", "type": "spdx"}]}
+{"repo": "mdom/dategrep", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-1.0-or-later", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}, {"name": "GPL-3.0-or-later", "type": "spdx"}]}
+{"repo": "medialize/jQuery-store", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "melange-re/melange", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "memoakten/ofxKinect-demos", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "meta-rust/cargo-bitbake", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "methodofaction/Extremes", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "microsoft/AI-System", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "microsoft/AzureStorageExplorer", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "microsoft/GenStudio", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "microsoft/lamar-benchmark", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "minorninth/libresample", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "mmastrac/rust-ctor", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "modelcontextprotocol/inspector", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "modestyachts/ARS", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "modular/modular", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Apache-2.0 WITH LLVM-exception", "type": "customized", "base_spdx": ""}, {"name": "Modular Community License", "type": "customized", "base_spdx": ""}]}
+{"repo": "mozilla/moz-git-tools", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}]}
+{"repo": "mpirnat/lets-be-bad-guys", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}]}
+{"repo": "mrchantey/beet", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "mscdex/node-xxhash", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "mullvad/nftnl-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "murarth/linefeed", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "mutalyzer/mutalyzer2", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "mway-io/Espresso", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "mx-space/core", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "n8n-io/n8n", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Sustainable Use License", "type": "customized", "base_spdx": ""}, {"name": "n8n Enterprise License", "type": "customized", "base_spdx": ""}]}
+{"repo": "napcs/programming_for_kids", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "nekokak/p5-Teng", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-1.0-or-later", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}]}
+{"repo": "netguy204/roku_media_server", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "customized", "base_spdx": "GPL-3.0-only"}]}
+{"repo": "nette/code-checker", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "newspeaklanguage/newspeak", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "Squeak", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "nextstrain/nextstrain.org", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "nical/guillotiere", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "nical/kiwi", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "nodejs/nodejs-zh-CN", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "nrc/r4cppp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "nysenate/NYSenateMobileApp", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "ocaml/ocaml.org", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "ISC", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "ocaml/v2.ocaml.org", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "ISC", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "olegkoval/magento2-regenerate_url_rewrites", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "AFL-3.0", "type": "spdx"}, {"name": "OSL-3.0", "type": "spdx"}]}
+{"repo": "ompl/omplapp", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "onomojo/i18n-country-translations", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "onyx-dot-app/onyx", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "open-flash/open-flash", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "open-io/oio-sds", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "open5e/open5e-api", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "customized", "base_spdx": "MIT"}, {"name": "CC-BY-NC-4.0", "type": "spdx"}]}
+{"repo": "openTCS/opentcs", "license_count": 5, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}, {"name": "CC0-1.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "OFL-1.1", "type": "spdx"}]}
+{"repo": "openai/miniF2F", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "openjdk/jmc", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "UPL-1.0", "type": "spdx"}, {"name": "BSD-style", "type": "customized", "base_spdx": "UPL-1.0"}]}
+{"repo": "openlink/iODBC", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.0-only", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "opensiddur/opensiddur", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-or-later", "type": "spdx"}, {"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "OFL-1.1", "type": "spdx"}]}
+{"repo": "openwebos/qt", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GFDL-1.3-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "openwebwork/webwork2", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}]}
+{"repo": "oracle/node-oracledb", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "UPL-1.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "oracle/pgql-lang", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "UPL-1.0", "type": "spdx"}]}
+{"repo": "orhun/git-cliff-action", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ortec/euro-neurips-vrp-2022-quickstart", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-NC-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "osu-crypto/libPSI", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Unlicense", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "ozkriff/zoc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "paperclip-rs/paperclip", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "paulocheque/django-dynamic-fixture", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "pcwalton/rust-media", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "pen-lang/pen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "pengwynn/compass_formalize", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "petgraph/petgraph", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "pgvector/pgvector-rust", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "phillord/horned-owl", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "pierresouchay/consul-rust", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "piroor/copy-selected-tabs-to-clipboard", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MPL-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "piroor/multipletab", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MPL-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "pizzapanther/Neutron-IDE", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "pmaupin/pdfrw", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "pmed/v8pp", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSL-1.0", "type": "spdx"}]}
+{"repo": "posixninja/libimobiledevice", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "prjunnamed/prjunnamed", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "0BSD", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "processone/oneteam", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MPL-1.1", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "pulselabteam/PulseDB", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "ODbL-1.0", "type": "spdx"}, {"name": "CC-BY-NC-SA-4.0", "type": "spdx"}, {"name": "CC-BY-NC-SA-4.0", "type": "spdx"}]}
+{"repo": "python-ldap/python-ldap", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "python-ldap", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "qbs/qbs", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "customized", "base_spdx": "GPL-3.0-only"}, {"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "qca/open-ath9k-htc-firmware", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "BSD-3-Clause-Clear", "type": "customized", "base_spdx": "BSD-3-Clause-Clear"}, {"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "qir-alliance/qir-spec", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Community-Spec-1.0", "type": "spdx"}]}
+{"repo": "qmlbook/qt6book", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "CC-BY-NC-SA-4.0", "type": "spdx"}]}
+{"repo": "racket/web-server", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "railstutorial/sample_app_2nd_ed", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Beerware", "type": "spdx"}]}
+{"repo": "rcg4u/iphonessh", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "reborn-net/UniDevTools", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "reficio/soap-ws", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "riipandi/tauri-start-solid", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rkusa/sqlite-vfs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "rochus-keller/BUSY", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "rollerderby/scoreboard", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "ron-rs/ron", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "roogle-rs/roogle", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "roots/wordpress", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "ros-controls/control_toolbox", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "ros-industrial/abb", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "ros-industrial/fanuc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "rosco-m68k/rosco_m68k", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CERN-OHL-1.2", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "rotty/lexpr-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "rtreffer/AsmackService", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "LGPL-2.1-or-later", "type": "spdx"}]}
+{"repo": "ruby-processing/JRubyArt", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-2.1-only", "type": "spdx"}]}
+{"repo": "ruslanmv/ai-medical-chatbot", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-embedded/rust-sysfs-gpio", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-embedded/showcase", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "rust-fuzz/honggfuzz-rs", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}, {"name": "WTFPL", "type": "spdx"}]}
+{"repo": "rust-lang/annotate-snippets-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-lang/highfive", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "rust-lang/libc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-lang/log", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-lang/pin-utils", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-lang/regex", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-lang/rust.vim", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "rust-math/intel-mkl-src", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-pcap/pcap", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-random/rand", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "rust-syndication/atom", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rust-syndication/rss", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rustcc/coroutine-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rusterlium/rustler", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rusticata/der-parser", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rustonaut/vec1", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "rustyhorde/vergen", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "sachac/emacs-notes", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "GFDL-1.3-or-later", "type": "spdx"}]}
+{"repo": "sagan-software/eosio-rust", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "salesforce-ux/design-system", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "CC-BY-ND-4.0", "type": "spdx"}]}
+{"repo": "salesforce/matchbox", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "samtools/bcftools", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "scottjehl/eCSSential", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "seanmonstar/httparse", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "seanmonstar/unicase", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "sems-server/sems", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "OpenSSL-exception", "type": "customized", "base_spdx": ""}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "sentilo/sentilo", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EUPL-1.1", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "servo/euclid", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "shadyfennec/stupidalloc", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "sharkdp/lucid", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "shipshapecode/angular-shepherd", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "AGPL-3.0-only"}]}
+{"repo": "shizukachan/darknet-nnpack", "license_count": 6, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "WTFPL", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "signal11/m-stack", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "simplegeo/python-geohash", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "singularity/singularity", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}]}
+{"repo": "sipcapture/captagent", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "smartrevolution/clj-gae-datastore", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "smashub/choco", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "CC-BY-NC-SA-4.0", "type": "spdx"}]}
+{"repo": "snwh/moka-icon-theme", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "snwh/suru-icon-theme", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "solarus-games/solarus-quest-editor", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}]}
+{"repo": "solarus-games/zsdx", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "solokeys/solo-hw", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CERN-OHL-1.2", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}]}
+{"repo": "solokeys/solo1-cli", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "solokeys/solo2-cli", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "sparkfun/MaKeyMaKey", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "Beerware", "type": "customized", "base_spdx": ""}]}
+{"repo": "spring-attic/gs-maven", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spring-guides/gs-messaging-rabbitmq", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spring-guides/gs-producing-web-service", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spring-guides/gs-securing-web", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spring-guides/gs-spring-boot", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spring-guides/gs-testing-web", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spring-guides/gs-uploading-files", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-ND-3.0", "type": "spdx"}]}
+{"repo": "spruceid/siwe-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "stadiamaps/pmtiles-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "stalwartlabs/mail-parser", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "step-/JSON.awk", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "stephengold/Libbulletjme", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "Zlib", "type": "spdx"}]}
+{"repo": "steveyout/Freebies", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "AGPL-3.0-only", "type": "spdx"}]}
+{"repo": "stoermelder/vcvrack-packone", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "CC-BY-NC-ND-4.0", "type": "spdx"}]}
+{"repo": "storaged-project/udisks", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-or-later", "type": "spdx"}, {"name": "LGPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "storesafe/cordova-sqlcipher-adapter", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "strophe/libstrophe", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "stucchio/Python-LRU-cache", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "sturobson/Sassifaction", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Unlicense", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "styx/Raincat", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}]}
+{"repo": "swaldman/sbt-ethereum", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "EPL-1.0", "type": "spdx"}]}
+{"repo": "swanson/swanson.github.com", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "szaghi/FLAP", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "szaghi/VTKFortran", "license_count": 4, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tailhook/knuffel", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tardate/jquery.addtocalendar", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "tauri-apps/muda", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tauri-apps/tauri", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "tauri-apps/tauri-plugin-sql", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tauri-apps/wry", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tcr/hoodlum", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "technomancy/serializable-fn", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "EPL-1.0", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "termoshtt/accel", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tessel/t2-firmware", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tgstation/TerraGov-Marine-Corps", "license_count": 6, "has_customized_license": false, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-NC-3.0", "type": "spdx"}, {"name": "CC-BY-NC-SA-3.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}, {"name": "CC-BY-SA-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "the-road-to-react-with-firebase/react-firestore-authentication", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "thomasmarsh/ODE", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "tily/ruby-faker-japanese", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "tinystats/teacups-giraffes-and-statistics", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-NC-ND-2.0", "type": "spdx"}, {"name": "CC-BY-NC-SA-4.0", "type": "spdx"}]}
+{"repo": "tlhunter/neoinvoice", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "BSD-2-Clause", "type": "spdx"}]}
+{"repo": "tock/libtock-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tokio-rs/tokio-tls", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "tomdoeslinux/PixaPencil", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "tomerfiliba-org/reedsolomon", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Unlicense", "type": "spdx"}, {"name": "MIT-0", "type": "spdx"}]}
+{"repo": "tpetricek/Documents", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-2.5", "type": "spdx"}, {"name": "MS-PL", "type": "spdx"}]}
+{"repo": "trendmicro/tlsh", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "trunk-rs/trunk", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "tsoding/nob.h", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Unlicense", "type": "spdx"}]}
+{"repo": "tstriker/hamster-experiments", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "tum-vision/dvo_slam", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "turgu1/bt-keyboard", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "tvcutsem/harmony-reflect", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MPL-1.1", "type": "spdx"}]}
+{"repo": "twada/qunit-tap", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "twerdster/iPTAM", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "twistedfall/serde_rusqlite", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "tylercraft/jQuery-Retina", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "typst/svg2pdf", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "udacity/andfun-kotlin-dice-roller", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "udacity/ud843_DidYouFeelIt", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "CC-BY-NC", "type": "customized", "base_spdx": ""}]}
+{"repo": "ueberdosis/tiptap-docs", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "up/mashi", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "validator/htmlparser", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}, {"name": "BSD-3-Clause", "type": "spdx"}]}
+{"repo": "veeam/blksnap", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "verlok/picturePolyfill", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "vimpunk/cratetorrent", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "vinceliuice/Azure-theme", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "vincentbernat/wiremaps", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-or-later", "type": "spdx"}, {"name": "CC-BY-3.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "vivint/infectious", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-2-Clause", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "vkiryukhin/pretty-data", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "vleue/polyanya", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "vmware/photon", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "vti/pocketio", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "GPL-1.0-only", "type": "spdx"}, {"name": "Artistic-1.0", "type": "spdx"}, {"name": "Artistic-2.0", "type": "spdx"}]}
+{"repo": "vyos/vyos-1x", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-only", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "w3f/polkadot-spec", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "CC-BY-SA-2.0", "type": "spdx"}]}
+{"repo": "wasp-os/wasp-os", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-3.0-only", "type": "spdx"}, {"name": "LGPL-3.0-only", "type": "spdx"}]}
+{"repo": "wdelfuego/nova-calendar", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": "GPL-3.0-only"}]}
+{"repo": "webcomponents/webcomponents.github.io", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-SA-3.0", "type": "spdx"}]}
+{"repo": "westonruter/html5-audio-read-along", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "wgsl-tooling-wg/wesl-rs", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "wi4mpi/wi4mpi", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "BSD-3-Clause", "type": "spdx"}, {"name": "CECILL-B", "type": "spdx"}]}
+{"repo": "winapps-org/winapps", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "AGPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "winthemers/wiki", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "CC-BY-4.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "xairy/raw-gadget", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "xen-tools/xen-tools", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Artistic-1.0", "type": "spdx"}, {"name": "GPL-2.0-only", "type": "spdx"}]}
+{"repo": "xenith-studios/ataxia", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "xpressengine/XEIcon", "license_count": 3, "has_customized_license": false, "licenses": [{"name": "OFL-1.1", "type": "spdx"}, {"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "xrootd/xrootd", "license_count": 3, "has_customized_license": true, "licenses": [{"name": "LGPL-3.0-or-later", "type": "spdx"}, {"name": "BSD-3-Clause", "type": "customized", "base_spdx": "BSD-3-Clause"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "xtendui/xtendui", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "CC-BY-4.0", "type": "spdx"}]}
+{"repo": "xyzz/amonet", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "GPL-2.0-only", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "yacy/yacy_search_server", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.0-or-later", "type": "spdx"}, {"name": "GPL-2.0-or-later", "type": "spdx"}]}
+{"repo": "yishn/wasm-react", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "yoshuawuyts/exponential-backoff", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "Apache-2.0", "type": "spdx"}]}
+{"repo": "yoshuawuyts/futures-concurrency", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "yuki-koyama/unblending", "license_count": 2, "has_customized_license": true, "licenses": [{"name": "LGPL-3.0-only", "type": "spdx"}, {"name": "Customization", "type": "customized", "base_spdx": ""}]}
+{"repo": "zachstronaut/rotate3Di", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "MIT", "type": "spdx"}, {"name": "GPL-3.0-only", "type": "spdx"}]}
+{"repo": "zakarumych/rapid-qoi", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "zalando/skipper", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "zkcrypto/group", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "zkmopro/mopro", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "Apache-2.0", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
+{"repo": "zohooo/jaxedit", "license_count": 2, "has_customized_license": false, "licenses": [{"name": "LGPL-2.1-or-later", "type": "spdx"}, {"name": "MIT", "type": "spdx"}]}
