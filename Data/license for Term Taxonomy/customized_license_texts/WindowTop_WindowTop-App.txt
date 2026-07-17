@@ -1,0 +1,32 @@
+Copyright (c) 2017-2024, WindowTop.Info
+All rights reserved.
+
+You are NOT allowed to:
+1. Decompile or reverse-engineering the software product
+2. Redistribute the modified version of the program.
+3. Share not via the internet a modified version of the program with others.
+4. Bypass the activation check and unlock the full functionality without purchasing the activation code.
+5. Redistribute activation code.
+6. Use the software in a commercial environment without purchasing a license
+
+You are allowed to:
+1. Use the software
+2. Use the software in a commercial environment if you purchased a license
+
+NOTES:
+1. You may granted specific COPY permissions from the original developer (gileli121@gmail.com),
+in such a case, the restrictions above may be partially or fully removed.
+2. "modifed source" includes any modified text, including text that is not a code.
+3. Any restriction that violates the legal law of your country may not apply and shall be considered as removed.
+
+DISCLAIMER:
+THIS SOFTWARE IS PROVIDED BY gileli121@gmail.com ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL gileli121@gmail.com BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

@@ -1,0 +1,11 @@
+This is a custom component for the echarts.
+
+# iOS- Echarts - å°EChartså°è£æiOSæ§ä»¶
+æ¬é¡¹ç®æ¯å°ç¾åº¦çEChartså·¥å·å°è£æå¯¹åºçiOSçæ§ä»¶ï¼å¹¶ä¸å°å¶ä¸­javascriptçå±æ§å°è£æå¯¹åºçå¯¹è±¡ãæ¹ä¾¿ç¨åºåå¨ç¼åç¨åºçè¿ç¨ä¸­æ´å å³æ³¨OCçä»£ç ï¼é¿åå¨ä½¿ç¨ç¾åº¦çEChartså·¥å·çè¿ç¨ä¸­è¿å¤çå³æ³¨javascriptè¯­æ³åä¸javascriptä¹é´çäº¤äºã
+
+#Echartsä¿¡æ¯
+[Echarts Githubå°å](https://github.com/ecomfe/echarts)
+
+[Echarts å®ç½(ä¸­æ)](http://echarts.baidu.com/index.html)
+
+[Echarts WebSite(English)](http://echarts.baidu.com/index-en.html)

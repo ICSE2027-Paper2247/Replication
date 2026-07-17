@@ -1,0 +1,8 @@
+The subiquity/ directory is licensed under the GNU Affero General Public
+License version 3 or later.
+
+All other content is licensed under the GNU General Public License version 3
+(only).
+
+It is likely that a future version of this repository will all be licensed
+under the GNU General Public License version 3 (only).

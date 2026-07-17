@@ -1,0 +1,35 @@
+Copyright (c) 2020 Tak-Wai Hui. All rights reserved.
+
+This software and the associated documentation files (the "Software"), and the research paper
+LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation (the "Paper") 
+including but not limited to the figures and tables are provided for non-commercial use only and 
+without any warranty. Any commercial use requires a prior arrangement with the author (Tak-Wai Hui). 
+When using any parts of the Software or the Paper in your work, please cite the following papers:
+
+@InProceedings{hui20liteflownet3,
+ author = {Tak-Wai Hui and Chen Change Loy},
+ title = {{LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation}},
+ journal = {{Proceedings of the European Conference on Computer Vision (ECCV)}},
+ pages = {169--184},
+ year = {2020},
+}
+
+@InProceedings{hui20liteflownet2,
+ author = {Tak-Wai Hui and Xiaoou Tang and Chen Change Loy},
+ title = {{A Lightweight Optical Flow CNN - Revisiting Data Fidelity and Regularization},
+ journal = {{IEEE Transactions on Pattern Analysis and Machine Intelligence}},
+ year = {2020},
+ url = {http://mmlab.ie.cuhk.edu.hk/projects/LiteFlowNet/}
+}
+
+@InProceedings{hui18liteflownet,
+ author = {Tak-Wai Hui and Xiaoou Tang and Chen Change Loy},
+ title = {{LiteFlowNet: A Lightweight Convolutional Neural Network for Optical Flow Estimation}},
+ booktitle = {{Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}},
+ year = {2018},
+ pages = {8981--8989},
+ url = {http://mmlab.ie.cuhk.edu.hk/projects/LiteFlowNet/}
+}
+
+The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.

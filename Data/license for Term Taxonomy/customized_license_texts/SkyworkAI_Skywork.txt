@@ -1,0 +1,38 @@
+---
+language:
+  - en
+  - zh
+license: other
+tasks:
+  - text-generation
+
+---
+
+<!-- markdownlint-disable first-line-h1 -->
+<!-- markdownlint-disable html -->
+
+# <span id="Terms">å£°æä¸åè®®/Terms and Conditions</span>
+
+## å£°æ
+
+æä»¬å¨æ­¤å£°æï¼ä¸è¦å©ç¨Skyworkæ¨¡åè¿è¡ä»»ä½å±å®³å½å®¶ç¤¾ä¼å®å¨æè¿æ³çæ´»å¨ãå¦å¤ï¼æä»¬ä¹è¦æ±ä½¿ç¨èä¸è¦å° Skywork æ¨¡åç¨äºæªç»éå½å®å¨å®¡æ¥åå¤æ¡çäºèç½æå¡ãæä»¬å¸æææçä½¿ç¨èé½è½éµå®è¿ä¸ªååï¼ç¡®ä¿ç§æçåå±è½å¨è§èååæ³çç¯å¢ä¸è¿è¡ã
+
+æä»¬å·²ç»å°½æä»¬æè½ï¼æ¥ç¡®ä¿æ¨¡åè®­ç»è¿ç¨ä¸­ä½¿ç¨çæ°æ®çåè§æ§ãç¶èï¼å°½ç®¡æä»¬å·²ç»ååºäºå·¨å¤§çåªåï¼ä½ç±äºæ¨¡ååæ°æ®çå¤ææ§ï¼ä»æå¯è½å­å¨ä¸äºæ æ³é¢è§çé®é¢ãå æ­¤ï¼å¦æç±äºä½¿ç¨skyworkå¼æºæ¨¡åèå¯¼è´çä»»ä½é®é¢ï¼åæ¬ä½ä¸éäºæ°æ®å®å¨é®é¢ãå¬å±èè®ºé£é©ï¼ææ¨¡åè¢«è¯¯å¯¼ãæ»¥ç¨ãä¼ æ­æä¸å½å©ç¨æå¸¦æ¥çä»»ä½é£é©åé®é¢ï¼æä»¬å°ä¸æ¿æä»»ä½è´£ä»»ã
+
+We hereby declare that the Skywork model should not be used for any activities that pose a threat to national or societal security or engage in unlawful actions. Additionally, we request users not to deploy the Skywork model for internet services without appropriate security reviews and records. We hope that all users will adhere to this principle to ensure that technological advancements occur in a regulated and lawful environment.
+
+We have done our utmost to ensure the compliance of the data used during the model's training process. However, despite our extensive efforts, due to the complexity of the model and data, there may still be unpredictable risks and issues. Therefore, if any problems arise as a result of using the Skywork open-source model, including but not limited to data security issues, public opinion risks, or any risks and problems arising from the model being misled, abused, disseminated, or improperly utilized, we will not assume any responsibility.
+
+## åè®®
+
+ç¤¾åºä½¿ç¨Skyworkæ¨¡åéè¦éµå¾ª[ãSkywork æ¨¡åç¤¾åºè®¸å¯åè®®ã](https://github.com/SkyworkAI/Skywork/blob/main/Skywork%20æ¨¡åç¤¾åºè®¸å¯åè®®.pdf)ãSkyworkæ¨¡åæ¯æåä¸ç¨éï¼å¦ææ¨è®¡åå°Skyworkæ¨¡åæå¶è¡çåç¨äºåä¸ç®çï¼æ éåæ¬¡ç³è¯·ï¼ ä½è¯·æ¨ä»ç»éè¯»[ãSkywork æ¨¡åç¤¾åºè®¸å¯åè®®ã](https://github.com/SkyworkAI/Skywork/blob/main/Skywork%20æ¨¡åç¤¾åºè®¸å¯åè®®.pdf)å¹¶ä¸¥æ ¼éµå®ç¸å³æ¡æ¬¾ã 
+
+
+The community usage of Skywork model requires [Skywork Community License](https://github.com/SkyworkAI/Skywork/blob/main/Skywork%20Community%20License.pdf). The Skywork model supports commercial use. If you plan to use the Skywork model or its derivatives for commercial purposes, you must abide by terms and conditions within [Skywork Community License](https://github.com/SkyworkAI/Skywork/blob/main/Skywork%20Community%20License.pdf).
+
+  
+
+[ãSkywork æ¨¡åç¤¾åºè®¸å¯åè®®ãã]:https://github.com/SkyworkAI/Skywork/blob/main/Skywork%20æ¨¡åç¤¾åºè®¸å¯åè®®.pdf
+
+
+[skywork-opensource@kunlun-inc.com]: mailto:skywork-opensource@kunlun-inc.com

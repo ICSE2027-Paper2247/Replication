@@ -1,0 +1,39 @@
+
+MIT License
+
+Copyright (c) 2018-2020 megai2
+Copyright (c) 2017 Sean Barrett
+Copyright (c) 2015-2018 Baldur Karlsson 
+Copyright (c) 2018 Jeremiah van Oosten
+Copyright (C) 2007-2005 Ariya Hidayat (ariya@kde.org)
+Copyright (c) 2014-2019 Omar Cornut
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Uses: 
+
+stb single-file public domain libraries for C/C++ https://github.com/nothings/stb
+Proxy d3d9 library https://github.com/iorlas/D3D9Proxy
+StackWalker https://github.com/JochenKalmbach/StackWalker
+P7 http://baical.net/p7.html
+LearningDirectX12 https://github.com/jpvanoosten/LearningDirectX12/
+RenderDoc https://github.com/baldurk/renderdoc
+fastlz https://github.com/ariya/fastlz
+imgui https://github.com/ocornut/imgui

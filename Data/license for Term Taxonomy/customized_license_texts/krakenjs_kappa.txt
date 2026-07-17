@@ -1,0 +1,17 @@
+/*âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ*\
+â  Copyright (C) 2017 PayPal                                                  â
+â                                                                             â
+âhh ,'""`.                                                                    â
+â  / _  _ \  Licensed under the Apache License, Version 2.0 (the "License");  â
+â  |(@)(@)|  you may not use this file except in compliance with the License. â
+â  )  __  (  You may obtain a copy of the License at                          â
+â /,'))((`.\                                                                  â
+â(( ((  )) ))    http://www.apache.org/licenses/LICENSE-2.0                   â
+â `\ `)(' /'                                                                  â
+â                                                                             â
+â   Unless required by applicable law or agreed to in writing, software       â
+â   distributed under the License is distributed on an "AS IS" BASIS,         â
+â   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  â
+â   See the License for the specific language governing permissions and       â
+â   limitations under the License.                                            â
+\*âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ*/

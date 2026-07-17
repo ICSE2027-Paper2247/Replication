@@ -1,0 +1,504 @@
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+Preamble
+å¼è¨
+The GNU General Public License is a free, copyleft license for software and other kinds of works. GNUéç¨å¬å±è®¸å¯åè®®ï¼ä¸ºæ¹ä¾¿éè¯»ï¼ä»¥ä¸ç®ç§°âGPLåè®®âï¼æ¯ä¸ç§éç¨äºè½¯ä»¶åå¶ä»åç±»ä½åçèªç±ä¸ä¸å¯å ä»¥éå¶çï¼copyleftï¼çæè®¸å¯åè®®ã
+
+The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users. We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors. You can apply it to your programs, too.
+
+å¤§å¤æ°è½¯ä»¶åå¶ä»ä½åçè®¸å¯åè®®æ¯ä»¥æé¤åäº«åä¿®æ¹ä½åçæå©ä¸ºåºåç¹è¿è¡è®¾è®¡çãä¸ä¹ç¸åï¼GPLåè®®æå¨ä¿è¯åäº«ãä¿®æ¹ä¸é¡¹ç¨åºçåä¸ªçæ¬çèªç±ââä»¥ä¿è¯è¿ä¸ªç¨åºå¯¹ææç¨æ·é½æ¯èªç±è½¯ä»¶ãæä»¬èªç±è½¯ä»¶åºéä¼å¨èªå·±çå¤§é¨åè½¯ä»¶ä¸ä½¿ç¨äºGPLåè®®ï¼GPLåè®®åæ ·ä¹éç¨äºä»»ä½å¶ä»ç±ä½èä»¥æ­¤ç§æ¹å¼åå¸çä½åãä½ ä¹å¯ä»¥å°GPLåè®®éç¨äºä½ çç¨åºã
+
+When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things.
+
+å½æä»¬å¨è°è®ºfree softwareï¼èªç±è½¯ä»¶ï¼çæ¶åï¼è¿éçfreeæ¯æèªç±ï¼èä¸æ¯åè´¹ãæä»¬è®¾è®¡GPLåè®®å³æ¯ä¸ºäºç¡®ä¿ä½ è½å¤èªç±ååèªç±è½¯ä»¶çå¯æ¬ï¼ä½ å¯ä»¥ä¸ºæ­¤æ¶åè´¹ç¨ï¼ãæ¶å°æºä»£ç æèå¨éè¦çæ¶åè·åæºä»£ç ãä¿®æ¹è½¯ä»¶æèå¨æ°çèªç±ç¨åºä¸­ä½¿ç¨å¶ä¸­ççæ®µï¼å¹¶ä¿è¯ä½ è½å¤ç¡®ä¿¡èªå·±ææåä¸è¿°çäºæã
+
+To protect your rights, we need to prevent others from denying you these rights or asking you to surrender the rights. Therefore, you have certain responsibilities if you distribute copies of the software, or if you modify it: responsibilities to respect the freedom of others.
+
+ä¸ºäºä¿æ¤ä½ çæå©ï¼æä»¬éè¦é¿åä»äººæç»æ¿è®¤ä½ çæå©æèè¦æ±ä½ æ¾å¼èªå·±çæå©ãå æ­¤ï¼ä½ å¨ååè½¯ä»¶å¯æ¬æèä¿®æ¹è½¯ä»¶çæ¶åï¼ä¹åºå½è´èµ·å°éä»äººèªç±çè´£ä»»ã
+
+For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source code. And you must show them these terms so they know their rights.
+
+ä¾å¦ï¼å¦æä½ ååæ­¤ç±»ç¨åºçå¯æ¬ï¼æ è®ºæ¯å¦æ¶è´¹ï¼ä½ å¿é¡»ç»äºæ¶å°å¯æ¬çäººä¸ä½ åæ ·çèªç±ãä½ å¿é¡»ç¡®ä¿ä»äººè·å¾æèå¯ä»¥è·å¾ç¨åºçæºä»£ç ãåæ¶ä½ ä¹å¿é¡»åä»ä»¬æä¾æ¬åè®®çæ¡æ¬¾ï¼ä½¿ä»ä»¬ç¥æèªå·±çæå©ã
+
+Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it.
+
+ä½¿ç¨GPLåè®®çå¼åèéè¿ä¸¤ä¸ªæ­¥éª¤æ¥ä¿éä½ çæå©ï¼ï¼1ï¼ç³æè½¯ä»¶çæï¼ä»¥åï¼2ï¼åä½ æä¾æ¬è®¸å¯åè®®ä»¥ææä½ å¤å¶ãååå/æä¿®æ¹è¯¥è½¯ä»¶çåæ³è®¸å¯ã
+
+For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software. For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
+
+å¯¹äºå¼åèåä½èçä¿æ¤ï¼GPLåè®®æç¡®è¯´æäºè¯¥èªç±è½¯ä»¶ä¸å­å¨ä»»ä½ä¿è¯ãåæ¶ä¸ºäºç¨æ·åä½èï¼GPLåè®®è¦æ±åºå¯¹ä¿®æ¹åççæ¬è¿è¡æ æ³¨ï¼ä»¥åéè¯¯å°å°ä¿®æ¹çæ¬çé®é¢å½åäºååçæ¬çä½èã
+
+Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuse occurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
+
+å°½ç®¡çäº§ååå¯ä»¥å¨è®¾å¤ä¸­å®è£æè¿è¡è½¯ä»¶çä¿®æ¹çæ¬ï¼ä½æ¯é¨åè®¾å¤å¨è®¾è®¡ä¸è¿æ¯ä¼æç»ç¨æ·å¨å¶ä¸­å®è£æè¿è¡ä¿®æ¹çæ¬è½¯ä»¶çæéãè¿ä¸æä»¬ä¿æ¤ç¨æ·ä¿®æ¹è½¯ä»¶èªç±çç®æ å¨æ ¹æ¬ä¸æ¯çç¾çãè¿ç§ä¸å½çç³»ç»æ¨¡å¼å¨ä¸ªäººäº§åä¸­çåºç°æ°æ°æ¯ææ æ³æ¥åçãå æ­¤ï¼æä»¬è®¾è®¡äºè¿ä¸çGPLåè®®æ¥é²æ­¢æ­¤ç±»æåµãå¦ææ­¤ç±»é®é¢è¿åçå¨å¶ä»é¢åï¼æä»¬ä¹ä¸ºä¿æ¤ç¨æ·èªç±ï¼åå¥½äºå¨å°æ¥çGPLæ¡æ¬¾ä¸­æ©å±è¿äºé¢åçåå¤ã
+
+Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.
+
+æåï¼ææç¨åºé½é¢ä¸´çè½¯ä»¶ä¸å©çæç»­å¨èãå½å®¶ä¸åºè¯¥åè®¸ä¸å©éå¶éç¨è®¡ç®æºè½¯ä»¶çå¼ååä½¿ç¨ï¼ä½æ¯ï¼å¨å­å¨æ­¤ç±»éå¶çå½å®¶ï¼æä»¬å¸æé¿åéç¨äºèªç±ç¨åºçä¸å©å¯è½å¯¼è´è¯¥ç¨åºå®éä¸åä¸ºä¸æçç¹æ®å±é©ãä¸ºé²æ­¢æ­¤ç±»æåµçåçï¼GPLåè®®ç¡®ä¿äºä¸å©æ æ³ä½¿ç¨åºéèªç±åã
+
+The precise terms and conditions for copying, distribution and modification follow. ä»¥ä¸æ¯å³äºå¤å¶ãååä»¥åä¿®æ¹çè¯¦ç»æ¡æ¬¾åæ¡ä»¶ã
+
+TERMS AND CONDITIONS
+æ¡æ¬¾åæ¡ä»¶
+0. Definitions.
+0. å®ä¹
+âThis Licenseâ refers to version 3 of the GNU General Public License.
+
+âæ¬åè®®âæ¯æGNUéç¨å¬å±è®¸å¯åè®®ç¬¬3çã
+
+âCopyrightâ also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.
+
+âçæâäº¦åæ¬éç¨äºå¶ä»ç§ç±»ä½åçç±»çææ³å¾ï¼ä¾å¦åå¯¼ä½åç½©ã
+
+âThe Programâ refers to any copyrightable work licensed under this License. Each licensee is addressed as âyouâ. âLicenseesâ and ârecipientsâ may be individuals or organizations.
+
+âç¨åºâææ ¹æ®æ¬åè®®è¿è¡è®¸å¯çä»»ä½åçæä¿æ¤çä½åãæ¯ä¸ªè¢«è®¸å¯äººç§°ä¸ºâä½ âãâè¢«è®¸å¯äººâåâæ¥æ¶èâå¯ä»¥æ¯ä¸ªäººæç»ç»ã
+
+To âmodifyâ a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a âmodified versionâ of the earlier work or a work âbased onâ the earlier work.
+
+âä¿®æ¹ï¼modifyï¼âä¸ä¸ªä½åæ¯æä»¥éè¦çæè®¸å¯çæ¹å¼å¯¹ä½åçå¨é¨æé¨åè¿è¡å¤å¶ï¼copyï¼æèæ¹ç¼ï¼adaptï¼ï¼æå«äºå¶ä½ä¸è´çå¯æ¬ãæäº§ççä½åç§°ä¸ºåä½çâä¿®æ¹çâæâåºäºâåä½çä½åã
+
+A âcovered workâ means either the unmodified Program or a work based on the Program.
+
+âåä¿æ¤çä½åï¼covered workï¼âæ¯ææªç»ä¿®æ¹çç¨åºæèåºäºç¨åºèäº§ççä½åï¼a work based on the Programï¼ã
+
+To âpropagateâ a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.
+
+âä¼ æ­âä¸ä¸ªä½åæ¯æé¤å¨è®¡ç®æºä¸æ§è¡æèä¿®æ¹ç§æå¯æ¬ä»¥å¤çï¼æ ¹æ®æéç¨ççææ³å¾ï¼åªè¦æªç»è®¸å¯å®æ½å°±ä¼ä½¿ä½ æ¿æç´æ¥æé´æ¥ä¾µæè´£ä»»çä»»ä½è¡ä¸ºãä¼ æ­åæ¬å¤å¶ãååï¼æ è®ºä¿®æ¹ä¸å¦ï¼ãåå¬ä¼æä¾ãä»¥åå¨ä¸äºå½å®¶çå¶ä»è¡ä¸ºã
+
+To âconveyâ a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+âè½¬åâä¸ä¸ªä½åæ¯æä»»ä½ä¸ç§å¯ä»¥ä½¿å¶ä»æ¹å¶ä½ææ¥æ¶å¯æ¬çä¼ æ­è¡ä¸ºãä»ä»éè¿è®¡ç®æºç½ç»ä¸ç¨æ·è¿è¡äº¤äºï¼èæ²¡æä¼ è¾ä»»ä½å¯æ¬çè¡ä¸ºä¸å±äºè½¬åã
+
+An interactive user interface displays âAppropriate Legal Noticesâ to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.
+
+ä¸ä¸ªæ¾ç¤ºâéå½çæ³å¾å£°æâçç¨æ·äº¤äºçé¢åºå·æä¸åæ¹ä¾¿ä¸éç®çå¯è§ç¹å¾ï¼ï¼1ï¼æ¾ç¤ºéå½ççæå£°æï¼ä»¥åï¼2ï¼åç¥ç¨æ·è¯¥ä½åä¸å­å¨ä»»ä½ä¿è¯ï¼æä¾ä¿è¯çé¤å¤ï¼ãè¢«è®¸å¯äººå¯ä»¥æ ¹æ®æ¬åè®®è½¬åä½åä»¥åæ¥éæ¬åè®®çéå¾ãå¦æçé¢å±ç¤ºçæ¯ä¸ç³»åå½ä»¤æéé¡¹ï¼ä¾å¦èåï¼å¨åè¡¨æä¾éç®çéé¡¹æ¹è½æ»¡è¶³ä¸è¿°è¦æ±ã
+
+1. Source Code.
+1. æºä»£ç 
+The âsource codeâ for a work means the preferred form of the work for making modifications to it. âObject codeâ means any non-source form of a work.
+
+ä½åçâæºä»£ç âæ¯æå¯¹ä½åè¿è¡ä¿®æ¹æé¦éçä½åå½¢å¼ãâç®æ ä»£ç âæ¯æä½åçä»»ä½éæºä»£ç å½¢å¼ã
+
+A âStandard Interfaceâ means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
+
+âæ åæ¥å£âæ¯æç±åè®¤å¯çæ åç»ç»å®ä¹çå®æ¹æ åï¼æèå¨ç¹å®ç¼ç¨è¯­è¨ææå®çæ¥å£ä¸­ä¸ºè¯¥è¯­è¨çå¼åèæå¹¿æ³ä½¿ç¨çæ¥å£ã
+
+The âSystem Librariesâ of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A âMajor Componentâ, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
+
+å¯æ§è¡ä½åçâç³»ç»åºâåæ¬ä»»ä½ï¼aï¼ä¸å±äºä¸»è¦ç»ä»¶ï¼Major Componentï¼çä¸é¨åï¼ä½å´åå«å¨ä¸»è¦ç»ä»¶å°è£çä¸è¬ç»æä¸­ï¼å¹¶ä¸ï¼bï¼ä»ä¸ºä¸»è¦ç»ä»¶çå·¥ä½æä¾å¿è¦æ¯ææèä¸ºä½¿å¬ä¼è·åæºä»£ç èå®æ½æ åæ¥å£æä¾å¿è¦æ¯æçåå®¹ï¼èéè¯¥ä½åçæ´ä½ãâä¸»è¦ç»ä»¶âå¨æ­¤èæ¯ä¸æ¯æè¿è¡å¯æ§è¡ä½åæä¾èµçç¹å®æä½ç³»ç»ï¼å¦æï¼çä¸»è¦çãå¿ä¸å¯å°çç»ä»¶ï¼åæ ¸ãçªå£ç³»ç»ç­ï¼ï¼æç¨æ¥äº§çä½åçç¼è¯å¨ï¼æè¿è¡ä½åæéçç®æ ä»£ç è§£éå¨ã
+
+The âCorresponding Sourceâ for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
+
+ç®æ ä»£ç å½¢å¼çä½åï¼å¶âç¸åºçæºä»£ç âæ¯æçæ ãå®è£ãï¼å¯¹å¯æ§è¡ä½åæ¥è¯´ï¼è¿è¡ç®æ ä»£ç ä»¥åä¿®æ¹ä½åæéçå¨é¨æºä»£ç ï¼åæ¬æ§å¶ä¸è¿°æ´»å¨çèæ¬ãä½æ¯ï¼å¶ä¸­ä¸åå«ç³»ç»åºãéç¨å·¥å·æèå¨æªç»ä¿®æ¹çæåµä¸ä¸ºå®æ½ä¸è¿°æ´»å¨èä½¿ç¨çä¸è¬å¯è·å¾çä¸ä¸å±äºä½åçä¸é¨åçèªç±ç¨åºãä¾å¦ï¼ç¸åºçæºä»£ç åæ¬ä¸ä½åçæºæä»¶ç¸å³èçæ¥å£å®ä¹æä»¶ï¼ä»¥åä½åæç¡®ä¾èµçå±äº«åºåå¨æé¾æ¥å­ç¨åºçæºä»£ç ï¼è¯¸å¦å­ç¨åºä¸ä½åçå¶ä»é¨åä¹é´å­å¨å¯åçæ°æ®äº¤æ¢ææ§å¶æµçæå½¢ã
+
+The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
+
+ç¸åºçæºä»£ç ä¸éè¦åæ¬ç¨æ·å¯ä»¥éè¿ç¸åºçæºä»£ç çå¶å®é¨åèªå¨çæçåå®¹ã
+
+The Corresponding Source for a work in source code form is that same work.
+
+ä½åç¸åºçæºä»£ç å¦æ¯æºä»£ç å½¢å¼ï¼å¶å³ç­åäºä½åæ¬èº«ã
+
+2. Basic Permissions.
+2. åºæ¬è®¸å¯
+All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
+
+æ ¹æ®æ¬åè®®æäºçæææå©çæéä¸ºç¨åºççææéï¼æ­¤ç­ææå¨æ»¡è¶³æ¡ä»¶çæåµä¸æ¯ä¸å¯æ¤éçãæ¬åè®®æç¡®ç¡®è®¤ä½ ä¸åéå¶å°è¿è¡æªä¿®æ¹çç¨åºçæå©ãä»å¨è¾åºåå®¹ææåä¿æ¤çä½åæ¶ï¼è¿è¡åä¿æ¤çä½åæäº§ççè¾åºåæ¬åè®®ççº¦æãæ¬åè®®æ¿è®¤ä½ æ ¹æ®çææ³å¾æäº«æçåçä½¿ç¨çæå©ä»¥åå¶ä»ç­åçæå©ã
+
+You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
+
+åªè¦ä½ çè®¸å¯ä»ç¶ææï¼ä½ å°±å¯ä»¥æ æ¡ä»¶å°å¶ä½ãè¿è¡åä¼ æ­ä½ æªè½¬åçåä¿æ¤çä½åãä½ å¯ä»¥å°åä¿æ¤çä½åè½¬åç»ä»äººï¼è¯¥ç­è½¬åä»éäºä»äººä¸é¨ä¸ºä½ è¿è¡ä¿®æ¹æèä¸ºä½ æä¾è¿è¡è¯¥ä½åçè®¾å¤çç®çï¼å¹¶ä¸æ­¤ç­è½¬ååºä»¥ä½ å¨è½¬åä¸åçæä¸ç±ä½ ææ§å¶çæææ¶éµå®æ¬åè®®çæ¡æ¬¾ä¸ºåæãå æ­¤ï¼ä¸ºä½ å¶ä½æè¿è¡åä¿æ¤çä½åçäººå¿é¡»å¨æ¨çæå¯¼åæ§å¶ä¸ï¼ä¸åªè½ä»¥ä½ çåä¹ï¼å¹¶å¨ç¦æ­¢ä»ä»¬å¨é¤ä½ åä»ä»¬ä¹é´çå³ç³»ä¹å¤å¤å¶ä½ çåçæä¿æ¤çææçæ¡ä»¶ä¸æ¥å¶ä½æè¿è¡åä¿æ¤çä½åã
+
+Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary.
+
+å¶ä»æå½¢ä¸çè½¬åä»ä»å¨ç¬¦åä¸è¿°çæ¡ä»¶æ¶æè½è¢«åè®¸ãç¦æ­¢è½¬ææï¼è½¬ææå ç¬¬10æ¡çè§å®å¹¶ä¸å¿è¦ã
+
+3. Protecting Users' Legal Rights from Anti-Circumvention Law.
+3. éå¯¹åè§é¿ææ¯æªæ½æ³å¾çç¨æ·æå©ä¿æ¤
+No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
+
+åä¿æ¤çä½åä¸åºè¢«è§ä¸ºä»»ä½ï¼å±¥è¡12æ20æ¥éè¿çãWIPOçææ¡çº¦ãç¬¬11æ¡æè§å®ä¹å¡çåæ®æ³ï¼æéç¨çæ³å¾ï¼æèå¶ä»ç¦æ­¢æéå¶è§é¿ææ¯æªæ½çç¸ä¼¼æ³å¾ä¸ï¼ææçææ¯æªæ½çä¸é¨åã
+
+When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures.
+
+å½ä½ è½¬ååä¿æ¤çä½åæ¶ï¼ä½ åææ¾å¼ä»»ä½ç¦æ­¢ä¸ºè¡ä½¿æ¬åè®®ä¸ä¸åä¿æ¤çä½åç¸å³çæå©èå®æ½çè§é¿ææ¯æªæ½è¡ä¸ºçæå©ï¼å¹¶ä¸ä½ åææ¾å¼ä»¥æ§è¡ä½ åç¬¬ä¸æ¹æå·æçç¦æ­¢è§é¿ææ¯æªæ½è¡ä¸ºçæ³å¾æå©ä¸ºææ®µçä»»ä½éå¶ç¨æ·å¯¹ä½åè¿è¡æä½æä¿®æ¹çæå¾ã
+
+4. Conveying Verbatim Copies.
+4. è½¬åæªä¿®æ¹çå¯æ¬
+You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
+
+ä½ å¯ä»¥å¨æ¶å°ç¨åºæºä»£ç åéè¿ä»»ä½å½¢å¼è½¬åæªç»ä¿®æ¹çç¨åºæºä»£ç çå¯æ¬ï¼ä½ä½ é¡»å¨æ¯ä»½å¯æ¬ä¸­æ¾èèæ°å½å°åå¸éå½ççæå£°æï¼ä¿çéè¿°æ¬åè®®åæ ¹æ®æ¬åè®®ç¬¬7æ¡éç¨äºä»£ç çä»»ä½éè®¸å¯æ§æ¡æ¬¾çåå®¹çå®æ´å£°æã
+
+You may charge any price or no price for each copy that you convey, and you may offer support or warranty protection for a fee.
+
+ä½ å¯ä»¥åè´¹è½¬åå¯æ¬æèå¯¹è½¬åçå¯æ¬æ¶åè´¹ç¨ï¼ä¹å¯ä»¥æä¾æ¯ææä¿ä¿®ä»¥æ¶åè´¹ç¨ã
+
+5. Conveying Modified Source Versions.
+5. è½¬åä¿®æ¹åçæºä»£ç çæ¬
+You may convey a work based on the Program, or the modifications to produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:
+
+ä½ å¯ä»¥ä»¥ç¬¬4æ¡è§å®çæºä»£ç çå½¢å¼ï¼è½¬ååºäºæ¬ç¨åºçä½åæå¶ä¿®æ¹åå®¹ï¼ä½å¿é¡»åæ¶æ»¡è¶³ä¸åæ¡ä»¶ï¼
+
+a) The work must carry prominent notices stating that you modified it, and giving a relevant date.
+
+a) è¯¥ä½åé¡»å·ææ¾èçå£°æï¼è¯´ææ¨å¯¹è¯¥ä½åè¿è¡äºä¿®æ¹å¹¶æä¾ä¿®æ¹ç¸å³çæ¥æã
+
+b) The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to âkeep intact all noticesâ.
+
+b) è¯¥ä½åé¡»å·ææ¾èçå£°æï¼è¯´æè¯¥ä½åæ¯ä¾æ®æ¬åè®®ä»¥åæ ¹æ®ç¬¬7æ¡éå çæ¡ä»¶è¿è¡åå¸çãæ¬è¦æ±å°æç¬¬4æ¡æåçå¯¹åºè¦æ±ä¿®æ¹ä¸ºâä¿çâå®æ´ä¿çææå£°æã
+
+c) You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.
+
+c) ä½ å¿é¡»æ ¹æ®æ¬åè®®å°ä½åæ´ä½å®æ´å°è®¸å¯ç»ä»»ä½æ¥æå¶å¯æ¬çäººãæ¬åè®®åå¶éç¨çä»»ä½æ ¹æ®æ¬åè®®ç¬¬7æ¡éå çæ¡æ¬¾éç¨äºæ´ä¸ªä½ååä½åçææé¨åï¼æ è®ºå¶å¦ä½å°åãæ¬åè®®ä¸åè®¸ä»¥ä»»ä½å¶ä»æ¹å¼è®¸å¯è¯¥ä½åï¼ä½å¦æä½ åç¬æ¥åäºå¶ä»æ¹å¼çè®¸å¯ï¼æ¬åè®®å¹¶ä¸å½ç¶å¯¼è´è¯¥ç­è®¸å¯æ æã
+
+d) If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.
+
+d) å¦æè¯¥ä½åå·æäº¤äºå¼ç¨æ·çé¢ï¼åæ¯ä¸ªç¨æ·çé¢åé¡»æ¾ç¤ºéå½çæ³å¾å£°æï¼ä½å¦ææ¬ç¨åºå·æäº¤äºå¼ç¨æ·çé¢å´ä¸æ¾ç¤ºéå½çæ³å¾å£°æï¼ä½ çä½åä¹æ éè¿è¡æ¾ç¤ºã
+
+A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an âaggregateâ if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation's users beyond what the individual works permit. Inclusion of a covered work in an aggregate does not cause this License to apply to the other parts of the aggregate.
+
+å­å¨å¨å­å¨ç©ºé´æååä»è´¨ä¸çåä¿æ¤çä½åä¸å¶ä»ç¬ç«çä½åçæ±ç¼ï¼åæ¶å¶å¨æ§è´¨ä¸ä¸æ¯åä¿æ¤çä½åçæ©å±ï¼å¹¶ä¸æ²¡æä¸ä¹ç¸ç»åèæææ´å¤§çç¨åºï¼å¦æè¯¥æ±ç¼åå¶äº§çççææ²¡æè¢«ç¨æ¥è¶è¶å¶ä¸­çåä½ä½åçè®¸å¯å¯¹è¯¥æ±ç¼çç¨æ·çè®¿é®åæ³å¾æå©è¿è¡éå¶ï¼åç§°ä¹ä¸ºâèåâãå¨èåä¸­åå«åä¿æ¤çä½åå¹¶ä¸ä¼ä½¿æ¬åè®®éç¨äºè¯¥èåçå¶ä»é¨åã
+
+6. Conveying Non-Source Forms.
+6. ä»¥éæºä»£ç å½¢å¼è½¬å
+You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
+
+ä½ å¯ä»¥æ ¹æ®æ¬åè®®ç¬¬4æ¡åç¬¬5æ¡çè§å®è½¬åç®æ ä»£ç å½¢å¼çåä¿æ¤çä½åï¼ä½ä½ å¿é¡»åæ¶æ ¹æ®æ¬åè®®è½¬ååå¶å¯è¯»çç¸åºçæºç ï¼æ­¤ç­è½¬åéç¬¦åä¸åæ¹å¼ä¹ä¸ï¼
+
+a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+
+a) è½¬åæ¶å½å¨å®ä½äº§åï¼åæ¬å®ä½çåååªä»ï¼ä¸­çç®æ ä»£ç ï¼å¹¶éå¸¦åºå®å¨å¸¸ç¨äºè½¯ä»¶äº¤æ¢çèç¨åç©çä»è´¨ä¸çç¸åºçæºç ã
+
+b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+
+b) è½¬åæ¶å½å¨å®ä½äº§åï¼åæ¬å®ä½çåååªä»ï¼ä¸­çç®æ ä»£ç ï¼å¹¶éå¸¦ä¸ä»½ä¹¦é¢è¦çº¦ï¼è¯¥ä¹¦é¢è¦çº¦åºç»äºä»»ä½ææè¯¥ç®æ ä»£ç çä¸»ä½(1)ä»¥ä¸é«äºä½ å®éè¿è¡æºç è½¬åçåçææ¬çä»·æ ¼ï¼ä¸ä»½äº§åä¸­ææåæ¬åè®®çº¦æçè½¯ä»¶çç¸åºçæºç çå¯æ¬ï¼æ­¤å¯æ¬åºå¨å­ä¸å¸¸ç¨äºè½¯ä»¶äº¤æ¢çèç¨åç©çä»è´¨ä¹ä¸ï¼æè(2)å¯¹ç¸åºçæºç çåè´¹çç½ç»æå¡å¨è®¿é®ï¼æ­¤è¦çº¦å¨ä½ æä¸ºè¯¥äº§ååå·æä¾å¤ä»¶æå®¢æ·æ¯ææé´æç»­ææä¸æææè³å°ä¸ºä¸å¹´ã
+
+c) Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+
+c) è½¬ååç¬çç®æ ä»£ç çå¯æ¬å¹¶éå¸¦ä¸ä»½æä¾ç¸åºçæºç çä¹¦é¢è¦çº¦å¯æ¬ãæ­¤éé¡¹ä»è½å¨å¶å°æ§çä¸éåä¸æ§çæåµä¸æè½è¢«åè®¸ï¼å¹¶ä¸ç®æ ä»£ç æéçè¦çº¦åºç¬¦åç¬¬6bæ¡çè¦æ±ã
+
+d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+
+d) éè¿ä»æå®çå°ç¹æä¾è®¿é®ï¼åè´¹æä»è´¹ï¼æ¥è½¬åç®æ ä»£ç ï¼å¹¶ä»¥ç¸åçæ¹å¼ä»åä¸å°ç¹æä¾å¯¹ç¸åºçæºç æä¾åç­çè®¿é®ï¼æä¾å¯¹åºçæºç ä¸å¾æ¶åé¢å¤è´¹ç¨ãä½ æ éè¦æ±æ¥æ¶èåæ¶å¤å¶ç®æ ä»£ç åç¸åºçæºç ãå¦æå¤å¶ç®æ ä»£ç çå°ç¹æ¯ç½ç»æå¡å¨ï¼å¨ä½ äºç®æ ä»£ç æè®¾ç½®æ¸æ°æå¼å¹¶è¯´æå¨åªéå¯ä»¥æè®¸ç¸åºçæºç çåæä¸ï¼ä½ å¯ä»¥å°ç¸åºçæºç å¨å­å¨å¦ä¸å°æ¯æåæ ·çå¤å¶åè½å¢çæå¡å¨ä¸(è¯¥æå¡å¨ç±ä½ èéç¬¬ä¸æ¹è¿è¥)ãæ è®ºå¨ä»»ä½æå¡å¨æç®¡ç¸åºçæºç ï¼ä½ é½æä¹å¡ä¿è¯å®å¨ä¸ºæ»¡è¶³è¿äºè¦æ±æéçæé´åæ¯å¯ç¨çã
+
+e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
+
+e) ä½¿ç¨ç¹å¯¹ç¹ï¼p2pï¼ä¼ è¾è½¬åç®æ ä»£ç ï¼ä½ä½ å¿é¡»æ ¹æ®ç¬¬6dæ¡å°ä½ å¨ä½å¤åä¸è¬å¬ä¼åè´¹æä¾ä½åçç®æ ä»£ç åç¸åºçæºç çä¿¡æ¯éç¥ç»å¶ä»èç¹ã
+
+A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
+
+ç®æ ä»£ç çå¯åå²é¨åï¼å³å¶æºä»£ç ä½ä¸ºç³»ç»åºè¢«æé¤äºç¸åºçæºç çé¨åï¼å¨è½¬åæ¶éåå«å¨ç®æ ä»£ç ä½åä¹ä¸­ã
+
+A âUser Productâ is either (1) a âconsumer productâ, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, ânormally usedâ refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
+
+âç¨æ·äº§åâæ¯æ(1) âæ¶è´¹äº§åâï¼å³ä»»ä½éå¸¸ç¨äºä¸ªäººãå®¶åº­æèçæ´»ç®çæå½¢ä¸ªäººè´¢äº§ï¼æè(2)ä»»ä½ä¸ºå¨ä½å®ä¸­ä½¿ç¨èè®¾è®¡æéå®çç©åãå¨å¤æ­ä¸æ¬¾äº§åæ¯å¦å±äºæ¶è´¹äº§åæ¶ï¼å­ççæå½¢åºæç§æ©å¤§æ¶è´¹äº§åè¦çèå´çå¾åè¿è¡å³å®ãå¯¹äºç¹å®ç¨æ·æ¶å°çç¹å®äº§åï¼âéå¸¸ç¨äºâæ¯æå¯¹è¯¥ç±»äº§åå¸åçæå¸¸è§çä½¿ç¨ï¼ä¸è®ºè¯¥ç¹å®ç¨æ·çç¶ææå¶å®éä½¿ç¨ãé¢æä½¿ç¨æè¢«è¦æ±ä½¿ç¨è¯¥äº§åçæ¹å¼æ¯ææ ·çãæ è®ºäº§åæ¯å¦å·æå®è´¨ä¸çåä¸ãå·¥ä¸æèéæ¶è´¹èç¨éï¼è¿äºç¨éåä¸å½±åå¯¹æ¶è´¹äº§åçå¤æ­ï¼é¤éåè¿°ç¨éä»£è¡¨äºè¯¥äº§åå¯ä¸ä¸éè¦çä½¿ç¨æ¹å¼ã
+
+âInstallation Informationâ for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
+
+ç¨æ·äº§åçâå®è£ä¿¡æ¯âæ¯æä»»ä½æ¹æ³ãæµç¨ãææå¯é¥æå¶ä»å¨è¯¥ç¨æ·äº§åä¸­éè¿ç¸åºçæºç çä¿®æ¹çå®è£åæ§è¡ä¿®æ¹çåä¿æ¤çä½åçä¿¡æ¯ãè¯¥ä¿¡æ¯å¿é¡»è¶³ä»¥ç¡®ä¿ä¿®æ¹åçç®æ ä»£ç è½å¤å¨æç»­å·¥ä½ä¸­ä¸ä¼åçº¯å ä¿®æ¹èè¢«é»æ­¢æå¹²æ°ã
+
+If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+
+å¦æä½ æ ¹æ®æ¬æ¡è½¬åå¨ç¨æ·äº§åä¸­çãéåç¨æ·äº§åçæèä¸é¨ç¨äºç¨æ·äº§åçç®æ ä»£ç ä½åï¼å¹¶ä¸è¯¥è½¬åä½ä¸ºäº¤æçä¸é¨åä¼ä½¿ç¨æ·äº§åçå ææåä½¿ç¨æå¨å¨ä¸å®æéåææ°¸ä¹è½¬è®©ç»æ¥æ¶èï¼æ è®ºè¯¥äº¤ææ¯å¦ä½æè¿°çï¼ï¼æ ¹æ®æ¬æ¡æè½¬åçç¸åºçæºç å¿é¡»å·æå®è£ä¿¡æ¯ãä½æ¯ï¼æ­¤è¦æ±å¨ä½ æä»»ä½ç¬¬ä¸æ¹é½ä¸å·æå¨ç¨æ·äº§åä¸å®è£ä¿®æ¹ççç®æ ä»£ç çè½åçæåµä¸å¹¶ä¸éç¨ï¼ä¾å¦ä½åè¢«å®è£å¨ROMä¸çæåµï¼ã
+
+The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
+
+æä¾å®è£ä¿¡æ¯è¿ä¸è¦æ±ä¸­å¹¶ä¸åæ¬ç»§ç»­ä¸ºæ¥æ¶èå·²ä¿®æ¹æå®è£çä½åæç¨æ·äº§åæä¾æ¯ææå¡ãä¿ä¿®æèæ´æ°çè¦æ±ãå½æåçä¿®æ¹æ¬èº«å¯¹ç½ç»è¿è¡é æå®è´¨ä¸è´é¢çå½±åæèè¿åäºç½ç»éä¿¡åè®®åè§åæ¶ï¼å¯ä»¥æç»å¶ç½ç»è®¿é®ã
+
+Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
+
+æ ¹æ®æ¬æ¡æè½¬åçç¸åºçæºç ä»¥åææä¾çå®è£ä¿¡æ¯å¿é¡»éç¨æå¬å¼è®°å½çæ ¼å¼ï¼å¹¶ä¼´æå¬ä¼å¯ä»¥åå¾çæºä»£ç å½¢å¼çå·¥å·ï¼ï¼ä¸ä¸å¾å¯¹è§£åãè¯»åæå¤å¶è®¾ç½®å¯ç æå¯é¥ã
+
+6. Conveying Non-Source Forms.
+6. ä»¥éæºä»£ç å½¢å¼è½¬å
+You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
+
+ä½ å¯ä»¥æ ¹æ®æ¬åè®®ç¬¬4æ¡åç¬¬5æ¡çè§å®è½¬åç®æ ä»£ç å½¢å¼çåä¿æ¤çä½åï¼ä½ä½ å¿é¡»åæ¶æ ¹æ®æ¬åè®®è½¬ååå¶å¯è¯»çç¸åºçæºç ï¼æ­¤ç­è½¬åéç¬¦åä¸åæ¹å¼ä¹ä¸ï¼
+
+a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+
+a) è½¬åæ¶å½å¨å®ä½äº§åï¼åæ¬å®ä½çåååªä»ï¼ä¸­çç®æ ä»£ç ï¼å¹¶éå¸¦åºå®å¨å¸¸ç¨äºè½¯ä»¶äº¤æ¢çèç¨åç©çä»è´¨ä¸çç¸åºçæºç ã
+
+b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+
+b) è½¬åæ¶å½å¨å®ä½äº§åï¼åæ¬å®ä½çåååªä»ï¼ä¸­çç®æ ä»£ç ï¼å¹¶éå¸¦ä¸ä»½ä¹¦é¢è¦çº¦ï¼è¯¥ä¹¦é¢è¦çº¦åºç»äºä»»ä½ææè¯¥ç®æ ä»£ç çä¸»ä½(1)ä»¥ä¸é«äºä½ å®éè¿è¡æºç è½¬åçåçææ¬çä»·æ ¼ï¼ä¸ä»½äº§åä¸­ææåæ¬åè®®çº¦æçè½¯ä»¶çç¸åºçæºç çå¯æ¬ï¼æ­¤å¯æ¬åºå¨å­ä¸å¸¸ç¨äºè½¯ä»¶äº¤æ¢çèç¨åç©çä»è´¨ä¹ä¸ï¼æè(2)å¯¹ç¸åºçæºç çåè´¹çç½ç»æå¡å¨è®¿é®ï¼æ­¤è¦çº¦å¨ä½ æä¸ºè¯¥äº§ååå·æä¾å¤ä»¶æå®¢æ·æ¯ææé´æç»­ææä¸æææè³å°ä¸ºä¸å¹´ã
+
+c) Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+
+c) è½¬ååç¬çç®æ ä»£ç çå¯æ¬å¹¶éå¸¦ä¸ä»½æä¾ç¸åºçæºç çä¹¦é¢è¦çº¦å¯æ¬ãæ­¤éé¡¹ä»è½å¨å¶å°æ§çä¸éåä¸æ§çæåµä¸æè½è¢«åè®¸ï¼å¹¶ä¸ç®æ ä»£ç æéçè¦çº¦åºç¬¦åç¬¬6bæ¡çè¦æ±ã
+
+c)d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+
+d) éè¿ä»æå®çå°ç¹æä¾è®¿é®ï¼åè´¹æä»è´¹ï¼æ¥è½¬åç®æ ä»£ç ï¼å¹¶ä»¥ç¸åçæ¹å¼ä»åä¸å°ç¹æä¾å¯¹ç¸åºçæºç æä¾åç­çè®¿é®ï¼æä¾å¯¹åºçæºç ä¸å¾æ¶åé¢å¤è´¹ç¨ãä½ æ éè¦æ±æ¥æ¶èåæ¶å¤å¶ç®æ ä»£ç åç¸åºçæºç ãå¦æå¤å¶ç®æ ä»£ç çå°ç¹æ¯ç½ç»æå¡å¨ï¼å¨ä½ äºç®æ ä»£ç æè®¾ç½®æ¸æ°æå¼å¹¶è¯´æå¨åªéå¯ä»¥æè®¸ç¸åºçæºç çåæä¸ï¼ä½ å¯ä»¥å°ç¸åºçæºç å¨å­å¨å¦ä¸å°æ¯æåæ ·çå¤å¶åè½å¢çæå¡å¨ä¸(è¯¥æå¡å¨ç±ä½ èéç¬¬ä¸æ¹è¿è¥)ãæ è®ºå¨ä»»ä½æå¡å¨æç®¡ç¸åºçæºç ï¼ä½ é½æä¹å¡ä¿è¯å®å¨ä¸ºæ»¡è¶³è¿äºè¦æ±æéçæé´åæ¯å¯ç¨çã
+
+e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
+
+e) ä½¿ç¨ç¹å¯¹ç¹ï¼p2pï¼ä¼ è¾è½¬åç®æ ä»£ç ï¼ä½ä½ å¿é¡»æ ¹æ®ç¬¬6dæ¡å°ä½ å¨ä½å¤åä¸è¬å¬ä¼åè´¹æä¾ä½åçç®æ ä»£ç åç¸åºçæºç çä¿¡æ¯éç¥ç»å¶ä»èç¹ã
+
+A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
+
+ç®æ ä»£ç çå¯åå²é¨åï¼å³å¶æºä»£ç ä½ä¸ºç³»ç»åºè¢«æé¤äºç¸åºçæºç çé¨åï¼å¨è½¬åæ¶éåå«å¨ç®æ ä»£ç ä½åä¹ä¸­ã
+
+A âUser Productâ is either (1) a âconsumer productâ, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, ânormally usedâ refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
+
+âç¨æ·äº§åï¼User Productï¼âæ¯æ(1) âæ¶è´¹äº§åâï¼å³ä»»ä½éå¸¸ç¨äºä¸ªäººãå®¶åº­æèçæ´»ç®çæå½¢ä¸ªäººè´¢äº§ï¼æè(2)ä»»ä½ä¸ºå¨ä½å®ä¸­ä½¿ç¨èè®¾è®¡æéå®çç©åãå¨å¤æ­ä¸æ¬¾äº§åæ¯å¦å±äºæ¶è´¹äº§åæ¶ï¼å­ççæå½¢åºæç§æ©å¤§æ¶è´¹äº§åè¦çèå´çå¾åè¿è¡å³å®ãå¯¹äºç¹å®ç¨æ·æ¶å°çç¹å®äº§åï¼âéå¸¸ç¨äºâæ¯æå¯¹è¯¥ç±»äº§åå¸åçæå¸¸è§çä½¿ç¨ï¼ä¸è®ºè¯¥ç¹å®ç¨æ·çç¶ææå¶å®éä½¿ç¨ãé¢æä½¿ç¨æè¢«è¦æ±ä½¿ç¨è¯¥äº§åçæ¹å¼æ¯ææ ·çãæ è®ºäº§åæ¯å¦å·æå®è´¨ä¸çåä¸ãå·¥ä¸æèéæ¶è´¹èç¨éï¼è¿äºç¨éåä¸å½±åå¯¹æ¶è´¹äº§åçå¤æ­ï¼é¤éåè¿°ç¨éä»£è¡¨äºè¯¥äº§åå¯ä¸ä¸éè¦çä½¿ç¨æ¹å¼ã
+
+âInstallation Informationâ for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
+
+ç¨æ·äº§åçâå®è£ä¿¡æ¯ï¼Installation Informationï¼âæ¯æä»»ä½æ¹æ³ãæµç¨ãææå¯é¥æå¶ä»å¨è¯¥ç¨æ·äº§åä¸­éè¿ç¸åºçæºç çä¿®æ¹çå®è£åæ§è¡ä¿®æ¹çåä¿æ¤çä½åçä¿¡æ¯ãè¯¥ä¿¡æ¯å¿é¡»è¶³ä»¥ç¡®ä¿ä¿®æ¹åçç®æ ä»£ç è½å¤å¨æç»­å·¥ä½ä¸­ä¸ä¼åçº¯å ä¿®æ¹èè¢«é»æ­¢æå¹²æ°ã
+
+If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+
+å¦æä½ æ ¹æ®æ¬æ¡è½¬åå¨ç¨æ·äº§åä¸­çãéåç¨æ·äº§åçæèä¸é¨ç¨äºç¨æ·äº§åçç®æ ä»£ç ä½åï¼å¹¶ä¸è¯¥è½¬åä½ä¸ºäº¤æçä¸é¨åä¼ä½¿ç¨æ·äº§åçå ææåä½¿ç¨æå¨å¨ä¸å®æéåææ°¸ä¹è½¬è®©ç»æ¥æ¶èï¼æ è®ºè¯¥äº¤ææ¯å¦ä½æè¿°çï¼ï¼æ ¹æ®æ¬æ¡æè½¬åçç¸åºçæºç å¿é¡»å·æå®è£ä¿¡æ¯ãä½æ¯ï¼æ­¤è¦æ±å¨ä½ æä»»ä½ç¬¬ä¸æ¹é½ä¸å·æå¨ç¨æ·äº§åä¸å®è£ä¿®æ¹ççç®æ ä»£ç çè½åçæåµä¸å¹¶ä¸éç¨ï¼ä¾å¦ä½åè¢«å®è£å¨ROMä¸çæåµï¼ã
+
+The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
+
+æä¾å®è£ä¿¡æ¯è¿ä¸è¦æ±ä¸­å¹¶ä¸åæ¬ç»§ç»­ä¸ºæ¥æ¶èå·²ä¿®æ¹æå®è£çä½åæç¨æ·äº§åæä¾æ¯ææå¡ãä¿ä¿®æèæ´æ°çè¦æ±ãå½æåçä¿®æ¹æ¬èº«å¯¹ç½ç»è¿è¡é æå®è´¨ä¸è´é¢çå½±åæèè¿åäºç½ç»éä¿¡åè®®åè§åæ¶ï¼å¯ä»¥æç»å¶ç½ç»è®¿é®ã
+
+Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
+
+æ ¹æ®æ¬æ¡æè½¬åçç¸åºçæºç ä»¥åææä¾çå®è£ä¿¡æ¯å¿é¡»éç¨æå¬å¼è®°å½çæ ¼å¼ï¼å¹¶ä¼´æå¬ä¼å¯ä»¥åå¾çæºä»£ç å½¢å¼çå·¥å·ï¼ï¼ä¸ä¸å¾å¯¹è§£åãè¯»åæå¤å¶è®¾ç½®å¯ç æå¯é¥ã
+
+7. Additional Terms.
+7. éå æ¡æ¬¾
+âAdditional permissionsâ are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+
+âéå è®¸å¯ï¼additional permissionsï¼âæ¯æå¯¹æ¬åè®®çä¸ä¸ªæå¤ä¸ªæ¡ä»¶è®¾ç½®ä¾å¤çè¡¥åæ§æ¡æ¬¾ãéç¨äºæ´ä¸ªç¨åºçéå æ¡æ¬¾ï¼å¨æ ¹æ®æ¬åè®®ææçæåµä¸åºå½è¢«è§ä¸ºæ¬åè®®çä¸é¨åãå¦æéå è®¸å¯ä»éç¨äºé¨åç¨åºï¼åè¯¥é¨åå¯åç¬å¨è¿äºè®¸å¯ä¸ä½¿ç¨ï¼ä½æ´ä¸ªç¨åºä»åæ¬åè®®ççº¦æï¼èä¸èèéå è®¸å¯ã
+
+When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+
+å¨ä½ ä¼ æ­åä¿æ¤çä½åå¯æ¬æ¶ï¼ä½ å¯ä»¥éæ©ä»å¯æ¬æå¶é¨åä¸­ç§»é¤ä»»ä½éå è®¸å¯ãï¼éå è®¸å¯å¯ä»¥è¦æ±ä½ å¨ç¹å®æåµä¸å°å¶ç§»é¤ï¼å¯¹äºä½ æ·»å è³åä¿æ¤çä½åçææï¼å¦æä½ æ¥æè¿äºææææææäºè¿äºææçæè®¸å¯ï¼ä½ åå¯ä»¥å¯¹è¿äºææå¢æ·»éå è®¸å¯ã
+
+Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+
+å³ä½¿æ¬åè®®å¶ä»ä»»ä½æ¡æ¬¾å¦æè§å®ï¼ä½ å¯ä»¥ï¼å¦æç»è¯¥ææèä½æäººææï¼å¯¹æ¬åè®®æ¡æ¬¾è¿è¡ä»¥ä¸è¡¥åï¼
+
+a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+
+a) æ¾å¼ä¿è¯æèä»¥ä¸åäºç¬¬15ã16æ¡çæ¹å¼éå¶è´£ä»»ï¼æè
+
+b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+
+b) è¦æ±å¨è¯¥æææèå¨åå«ææçä½åæå±ç¤ºçéå½çæ³å¾å£°æä¸­ä¿çåççç¹å®æ³å¾å£°ææèä½èç½²åï¼æè
+
+c) Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+
+c) ç¦æ­¢å¯¹è¯¥æææ¥æºçä¸å½éè¿°ï¼æèè¦æ±è¯¥ææä¿®æ¹åççæ¬å¯¹å¶ä¸ä¸åäºåçååºåççæ æ³¨ï¼æè
+
+d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+
+d) éå¶ä»¥å®£ä¼ ä¸ºç®çä½¿ç¨è¯¥ææææèæä½èçåç§°ï¼æè
+
+e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+
+e) æç»æäºæ ¹æ®åæ æ³æäºåå·ãåæ æèæå¡è¡¨ç¤ºçæå©ï¼æè
+
+f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+
+f) å¨æç§ååçº¦å®æ¥æ¶èè´æè´£ä»»çæåµä¸ï¼è¦æ±ä»»ä½è½¬åè¯¥ææï¼æèå¶ä¿®æ¹çï¼çäººåææèåä½èåè¿è¡èµå¿ï¼ä»¥åè¿äºååè§å®ç´æ¥å¯¹ææèåä½èæ½ä»¥ä»»ä½è´£ä»»ã
+
+All other non-permissive additional terms are considered âfurther restrictionsâ within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+
+å¶ä»ææéè®¸å¯æ§éå æ¡æ¬¾ï¼åå±äºç¬¬10æ¡æè§å®çâå¶ä»éå¶âãå¨ä½ æ¶å°ç¨åºæé¨åç¨åºçå£°æä¸­ï¼å¦æé¤äºè¯´æç¨åºåæ¬åè®®çº¦æå¤è¿å«æå¶ä»éå¶ï¼ä½ åå¯ä»¥ç§»é¤è¯¥ç­æ¡æ¬¾ãå¦æä¸ä»½è®¸å¯æä»¶ä¸­å«æå¶ä»éå¶ä½å´åè®¸åè®¸å¯ææ ¹æ®æ¬åè®®è¿è¡è½¬åçï¼ä½ å¯ä»¥ååä¿æ¤çä½åä¸­æ·»å åæ­¤è®¸å¯æä»¶æ¡æ¬¾çº¦æçå¶ä»ææï¼ä½åºå½å¨åè®¸å¯æè½¬åæ¶ç§»é¤å¶ä»éå¶ã
+
+If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+
+è¥ä½ æ ¹æ®æ¬æ¡å¨åä¿æ¤çä½åä¸­å å¥äºæ¡æ¬¾ï¼ä½ å¿é¡»å¨éå æ¡æ¬¾éç¨çç¸å³æºæä»¶ä¸­å å¥å¯¹éå æ¡æ¬¾çè¯´ææèææå¨ä½å¤æ¾å°æéç¨æ¡æ¬¾çéç¥ã
+
+Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.
+
+ä¸è®ºæ¯è®¸å¯æ§è¿æ¯éè®¸å¯æ§ï¼éå æ¡æ¬¾å¯ä»¥ä»¥åç¬çä¹¦é¢è®¸å¯å½¢å¼åå¸æèä»¥ä¾å¤æå½¢è¿è¡è¯´æï¼ä»»ä½æ¹å¼ååºç¬¦åä¸è¿°çè¦æ±ã
+
+8. Termination.
+8. ç»æ­¢
+You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your rights under this License (including any patent licenses granted under the third paragraph of section 11).
+
+é¤éæç¡®ç»æ¬åè®®åè®¸ï¼ä¸å¾ä¼ æ­æä¿®æ¹åä¿æ¤çä½åãå¦åä»»ä½ä¼ æ­æä¿®æ¹åä¿æ¤çä½åçå°è¯åä¸åæ³ï¼å¹¶å°èªå¨ç»æ­¢ä½ å¨æ¬åè®®ä¸æå©ï¼åæ¬ä»»ä½æ ¹æ®ç¬¬11æ¡ç¬¬3æ®µæäºçä¸å©è®¸å¯ï¼ã
+
+However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
+
+ä½æ¯ï¼å¦æä½ åæ­¢ä¸åè¿åæ¬åè®®çè¡ä¸ºï¼ä½ ä»ç¹å®èä½æäººå¤è·å¾çè®¸å¯ (a) å°ä¼ä¸´æ¶æ¢å¤ï¼é¤éå¹¶ç´å°èä½æäººæç»æç¡®ç»æ­¢ä½ çè®¸å¯ï¼å(b) å¨èä½æäººå¨ä½ åæ­¢è¿ååè®®åç60æ¥åæªéè¿åçæ¹å¼éç¥ä½ çè¿ååè®®çæåµä¸ï¼å°ä¼æ°¸ä¹æ¢å¤ã
+
+Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
+
+æ­¤å¤ï¼ä½ ä»ç¹å®èä½æäººå¤è·å¾çè®¸å¯å¨èä½æäººéè¿åçæ¹å¼éç¥ä½ è¿ååè®®çæåµï¼å³ä½ ä»èä½æäººå¤é¦æ¬¡æ¶å°è¿åæ¬åè®®çéç¥ï¼å¯¹ä»»æä½åï¼ï¼ä½ åºå½å¨æ¶å°éç¥åç30å¤©åçº æ­£è¿ååè®®çè¡ä¸ºã
+
+Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.
+
+æ ¹æ®æ¬æ¡ç»æ­¢åè®®å¹¶ä¸ä¼ç»æ­¢æ ¹æ®æ¬åè®®ä»ä½ å¤æ¶å°å¯æ¬æææçå½äºäººä¹é´çè®¸å¯åè®®ãå¦æä½ çæå©å·²è¢«ç»æ­¢ä¸æ²¡ææ°¸ä¹æ¢å¤ï¼ä½ åå¤±å»æ ¹æ®ç¬¬10æ¡æ¥æ¶åæ ·ææçæ°çè®¸å¯çèµæ ¼ã
+
+9. Acceptance Not Required for Having Copies.
+9. ææå¯æ¬æ éæ¥ååè®®
+You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.
+
+ä½ æ éæ¥åæ¬åè®®å³å¯æ¥æ¶æè¿è¡ç¨åºçå¯æ¬ãä»å¨ç±äºå¨ä½¿ç¨ç¹å¯¹ç¹ä¼ è¾æ¥æ¥æ¶å¯æ¬æ¶èåççå¯¹åä¿æ¤çä½åçè¾å©ä¼ æ­æåµä¸ï¼äº¦æ éå¯¹æ¬åè®®è¿è¡æ¥åãä½æ¯ï¼åªææ¬åè®®æè½æäºä½ ä¼ æ­æä¿®æ¹ä»»ä½åä¿æ¤çä½åçæå©ãä½ å¨ä¸æ¥åæ¬åè®®çæåµä¸ä¼ æ­æä¿®æ¹ä»»ä½åä¿æ¤çä½åçè¡ä¸ºï¼å°ææèä½æä¾µæãå æ­¤ï¼è¥ä½ ä¿®æ¹æä¼ æ­åä¿æ¤çä½åï¼åè¡¨ç¤ºä½ åææ¥åæ¬åè®®ççº¦æã
+
+10. Automatic Licensing of Downstream Recipients.
+10. å¯¹ä¸æ¸¸æ¥æ¶èçèªå¨ææ
+Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.
+
+å½ä½ è½¬ååä¿æ¤çä½åæ¶ï¼æ¥æ¶èä¼æ ¹æ®æ¬åè®®ä»åå§ææèå¤èªå¨è·å¾è¿è¡ãä¿®æ¹åä¼ æ­è¯¥ä½åçè®¸å¯ãä½ ä¸éè¦å¯¹ç¬¬ä¸æ¹å°±æ¬åè®®çåè§è´è´£ã
+
+An âentity transactionâ is a transaction transferring control of an organization, or substantially all assets of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
+
+âå®ä½äº¤æï¼entity transactionï¼âæ¯æè½¬è®©ä¸ä¸ªç»ç»çæ§å¶ææèå¤§ä½ä¸çå¨é¨èµäº§ï¼äº¦ææ¯ç»ç»çåç«åå¹¶ãå¦æåä¿æ¤çä½åå å®ä½äº¤æä¼ æ­ï¼è¯¥å®ä½äº¤æä¸­æ¶å°ä½åå¯æ¬çå½äºæ¹ä¹ä¼è·å¾å¨åå©çç¸å³èï¼predecessor in interestï¼æå·æçæèè½å¤æ ¹æ®åä¸æ®µçåå®¹æç»äºçå¯¹è¯¥ä½åçè®¸å¯ï¼å¦å¤ï¼å¦æå¨åå©çç¸å³èæææéè¿åççåªåè½å¤è·å¾ä½åç¸åºçæºç ï¼è¯¥å®ä½äº¤æä¸­æ¶å°ä½åå¯æ¬çå½äºæ¹åæ¥æä»å¨åå©çç¸å³èå¤è·å¾ä½åç¸åºçæºç çæå©ã
+
+You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.
+
+ä½ ä¸å¾å¯¹æ ¹æ®æ¬åè®®ææäºæè¯å®çæå©çå®è¡æ½ä»¥ä»»ä½è¿ä¸æ­¥éå¶ãä¾å¦ï¼ä½ ä¸å¾å ä»äººè¡ä½¿æ¬è®¸å¯ä¸æäºçæå©èæ¶åè®¸å¯è´¹ãçç¨æå¶ä»è´¹ç¨ï¼å¹¶ä¸ä¸å¾ä»¥å¶é ãä½¿ç¨ãéå®ãè®¸è¯ºéå®æèè¿å£ç¨åºæç¨åºçä»»ä½é¨åä¾µç¯ä¸å©æå©è¦æ±ä¸ºç±æèµ·è¯è®¼ï¼åæ¬å¨è¯è®¼ä¸­æèµ·äº¤åè¯è®¼æåè¯ï¼ã
+
+11. Patents.
+11. ä¸å©
+A âcontributorâ is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's âcontributor versionâ. A contributor's âessential patent claimsâ are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, âcontrolâ includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
+
+âè´¡ç®èï¼contributorï¼âæ¯ææ ¹æ®æ¬åè®®å¯¹ç¨åºæèç¨åºæä¾èµçä½åè¿è¡ä½¿ç¨ææçèä½æäººãå æ­¤ï¼è¿æ ·çææä½åè¢«ç§°ä¸ºè´¡ç®èçâè´¡ç®èçæ¬ï¼contributor versionï¼âãè´¡ç®èçâåºæ¬ä¸å©æå©è¦æ±âæ¯æè´¡ç®èææææ§å¶çï¼å¯è½ä¼è¢«æ¬åè®®æåè®¸çå¶é ãä½¿ç¨æéå®å¶è´¡ç®èçæ¬çè¡ä¸ºä»¥æç§æ¹å¼æä¾µç¯ï¼çå¨é¨ä¸å©æå©è¦æ±ï¼æ è®ºæ¯å·²ç»åå¾çè¿æ¯å³å°è·å¾çï¼ä½ä¸åæ¬ä»å å¯¹è´¡ç®èçæ¬çè¿ä¸æ­¥ä¿®æ¹èåå°ä¾µç¯çæå©è¦æ±ãå¨æ¬å®ä¹ä¸­ï¼âæ§å¶ï¼controlï¼âåæ¬æ¥æä»¥ç¬¦åæ¬åè®®è¦æ±çæ¹å¼å¯¹ä¸å©è¿è¡è½¬ææçæå©ã
+
+Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
+
+æ¯ä¸ªè´¡ç®èæ ¹æ®è´¡ç®èçåºæ¬ä¸å©æå©è¦æ±æäºæ¨ä¸ä¸ªéæä»æ§çãå¨çèå´åçãåä¸å©è´¹çä¸å©è®¸å¯ï¼ç¨äºå¶ä½ãä½¿ç¨ãéå®ãè®¸è¯ºéå®ãè¿å£åä»¥å¶ä»æ¹å¼è¿è¡ãä¿®æ¹åä¼ æ­å¶è´¡ç®èçæ¬çåå®¹ã
+
+In the following three paragraphs, a âpatent licenseâ is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To âgrantâ such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
+
+å¨ä»¥ä¸ä¸æ®µä¸­ï¼âä¸å©è®¸å¯ï¼patent licenseï¼âæ¯æä»»ä½è¡¨ç¤ºä¸ä¼æ§è¡ä¸å©çæç¤ºåè®®ææ¿è¯ºï¼æ è®ºå¶å¦ä½å½åï¼ä¾å¦å®æ½ä¸å©çæç¤ºè®¸å¯æèä¸å¾å°±ä¸å©ä¾µææèµ·è¯è®¼çåè®®ï¼ãåä¸æ¹âæäºï¼grantï¼âæ­¤ç§ä¸å©è®¸å¯æ¯æä½åºä¸ä¼å¯¹è¯¥æ¹æ§è¡ä¸å©çåè®®ææ¿è¯ºã
+
+If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. âKnowingly relyingâ means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
+
+å¦æä½ æç¥å¶ä¾èµäºæä¸å©èè½¬ååä¿æ¤çä½åï¼ä¸æªæ ¹æ®æ¬åè®®éè¿å¬ä¼å¯è®¿é®çç½ç»æå¡å¨æèå¶ä»æäºè®¿é®çæ¹å¼åè´¹ä¸ºä»äººæä¾å¤å¶è¯¥ä½åç¸åºçæºç çéå¾ï¼åä½ å¿é¡»(1)ä½¿ç¸åºçæºç å¯ä»¥è¢«ä»äººè·åï¼æè(2) æ¾å¼è¯¥ä½åçä¸å©è®¸å¯æå¸¦æ¥çæçï¼æè(3)ä»¥ç¬¦åæ¬åè®®è¦æ±çæ¹å¼ï¼å°ä¸å©è®¸å¯æ©å±å°ä¸æ¸¸æ¥æ¶èãâæç¥å¶ä¾èµäºâæ¯æä½ å®éç¥æï¼è¥æ ä¸å©è®¸å¯ï¼ä½ å¨ä¸ä¸ªå½å®¶è½¬ååä¿æ¤çä½åæèä½ çæ¥æ¶èå¨è¿ä¸ªå½å®¶ä½¿ç¨åä¿æ¤çä½åï¼å°ä¼ä¾µç¯ä½ æçç±ç¸ä¿¡ææçä¸é¡¹æå¤é¡¹å¯è¯å«çè¯¥å½ä¸å©ã
+
+If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
+
+å¦ææ ¹æ®ä¸é¡¹äº¤ææå®æï¼æå¨ä¸ä¹ç¸å³çæåµä¸ï¼ä½ è½¬åæéè¿ä¿æè½¬åä¼ æ­åä¿æ¤çä½åï¼å¹¶åæ¶å°åä¿æ¤çä½åçæäºå½äºäººæäºä¸å©è®¸å¯ï¼ææä»ä»¬ä½¿ç¨ãä¼ æ­ãä¿®æ¹æè½¬ååä¿æ¤ä½åçç¹å®å¯æ¬ï¼åä½ æäºçä¸å©è®¸å¯ä¼èªå¨æå±è³åä¿æ¤ä½åä»¥ååºäºå®çä½åçæææ¥æ¶èã
+
+A patent license is âdiscriminatoryâ if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
+
+å¦æä¸å©è®¸å¯ ä¸åå«å¨ä¸é¡¹ä¸å©æ§è®¸å¯æè¦ççèå´åï¼ç¦æ­¢è¡ä½¿æ¬è®¸å¯æç¡®æäºçä¸é¡¹æå¤é¡¹æå©æä»¥ä¸è¡ä½¿è¿äºæå©ä¸ºæ¡ä»¶ï¼åå±äºâæ­§è§æ§ï¼discriminatoryï¼âä¸å©è®¸å¯ãå¦æä½ ä¸ä»äºè½¯ä»¶ååä¸å¡çç¬¬ä¸æ¹ç­¾çº¦å¹¶ä¾çº¦å®æ ¹æ®ä½åè½¬åæ´»å¨çèå´åç¬¬ä¸æ¹ä»è´¹ï¼å¨ä¸åæåµä¸ä½ ä¸å¾è½¬ååä¿æ¤çä½åï¼(a)è¯¥ç¬¬ä¸æ¹åä»»ä½ä»ä½ å¤æ¶å°å¯æ¬çä¸æ¹æäºä¸ä½ è½¬åçåä¿æ¤çä½åå¯æ¬ï¼æè¿äºå¯æ¬çå¤å¶ä»¶ï¼ç¸å³çæ­§è§æ§ä¸å©è®¸å¯ï¼æ(b)è¯¥ç¬¬ä¸æ¹åä»»ä½ä»ä½ å¤æ¶å°å¯æ¬çä¸æ¹æäºä¸»è¦ç¨äºåå«åä¿æ¤çä½åçç¹å®äº§åææ±ç¼æèä¸ä¹ç¸å³çæ­§è§æ§ä¸å©è®¸å¯ï¼é¤éä½ å å¥çº¦å®çæ¶é´æä¸å©è®¸å¯çæ¶é´å¨2007å¹´3æ28æ¥ä¹åã
+
+Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.
+
+æ¬åè®®ä¸­çä»»ä½åå®¹åä¸åºè¢«è§£éä¸ºæé¤æéå¶ä»»ä½é»ç¤ºè®¸å¯æå¶ä»å¨æéç¨çä¸å©æ³ä¸å¯è½ææçä¾µææè¾©ã
+
+12. No Surrender of Others' Freedom.
+12. ä¸å¾å¼ç½®ä»äººçèªç±
+If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.
+
+å¦æå¯¹ä½ æ½å çæ¡ä»¶ï¼æ è®ºæ¯éè¿æ³é¢å½ä»¤ãåè®®æå¶ä»æ¹å¼ï¼ä¸æ¬åè®®è§å®çæ¡ä»¶ç¸çç¾ï¼å¶å¹¶ä¸ä¼åé¤ä½ éµå®æ¬åè®®æè®¾æ¡ä»¶çä¹å¡ãå¦æä½ å¨è½¬ååä¿æ¤çä½åæ¶æ æ³åæ¶æ»¡è¶³æ¬åè®®æè®¾ä¹å¡åå¶ä»ç¸å³ä¹å¡ï¼ä½ åä¸å¾è¿è¡è½¬åãä¾å¦ï¼å¦æä½ åæäºä½ æä¹å¡å°±åç¨åºçè½¬åå¯¹è±¡å°±è½¬åæ¶åçç¨çæ¡æ¬¾ï¼å¯ä¸è½åæ¶æ»¡è¶³è¯¥ä¹å¡åæ¬åè®®è§å®çåæ³å³ä¸ºå®å¨é¿åå¯¹æ¬ç¨åºçè½¬åã
+
+13. Use with the GNU Affero General Public License.
+13. ä¸GNU Afferoéç¨å¬å±è®¸å¯åè®®çå¼å®¹
+Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such.
+
+ä¸è®ºæ¬åè®®å¶ä»æ¡æ¬¾å¦ä½è§å®ï¼ä½ å¯ä»¥å°åä¿æ¤çä½åä¸ä»»ä½æ ¹æ®GNU Afferoéç¨å¬å±è®¸å¯åè®®è¿è¡ææçä½åè¿è¡è¿æ¥æç»åï¼å½¢æç»åä½åï¼combined workï¼ï¼å¹¶è½¬åäº§ççä½åãæ¬åè®®æ¡æ¬¾å°ä¼ç»§ç»­éç¨äºç»åä½åä¸­å±äºåä¿æ¤çä½åçé¨åï¼ä½æ¯GNU Afferoéç¨å¬å±è®¸å¯åè®®ç¬¬13æ¡æåºçå³äºéè¿ç½ç»äº¤äºçç¹æ®è¦æ±å°ä¼éç¨äºç»åä½åæ¬èº«ã
+
+14. Revised Versions of this License.
+14. æ¬è®¸å¯åè®®çä¿®è®¢ç
+The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+èªç±è½¯ä»¶åºéä¼å¯ä»¥ä¸æ¶å°åå¸ä¿®æ¹çææ°ççGNUéç¨å¬å±è®¸å¯åè®®ãæ°çæ¬å°ç§æä¸æ©åçæ¬åæ ·çç²¾ç¥ï¼ä½å¯è½ä¼ä¸ºè§£å³æ°çé®é¢ææå¿§èå¨ç»èä¸ææä¸åã
+
+Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU General Public License âor any later versionâ applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU General Public License, you may choose any version ever published by the Free Software Foundation.
+
+æ¯ä¸ªçæ¬é½å·ä¼æä¸åççæ¬å·ãå¦æç¨åºæç¡®æåºéç¨ç¹å®çæ¬çGNUéç¨å¬å±è®¸å¯åè®®âæä»»ä½åç»­çæ¬âï¼ä½ å¯ä»¥éæ©éç¨èªç±è½¯ä»¶åºéä¼åå¸çè¯¥ç¹å®çæ¬æèä»»ä½åç»­ççæ¬çæ¡æ¬¾ä¸æ¡ä»¶ãå¦ææ¬ç¨åºå¹¶æªæç¡®æåºå¶éç¨çGNUéç¨å¬å±è®¸å¯åè®®ççæ¬å·ï¼ä½ åå¯ä»¥éæ©èªç±è½¯ä»¶åºéä¼åå¸çä»»æä¸çã
+
+If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+å¦ææ¬ç¨åºæå®æä¸ä»£çå³å®éç¨æä¸å°æ¥çæ¬çGNUéç¨å¬å±è®¸å¯åè®®ï¼åè¯¥ä»£çæ¥åæä¸çæ¬çå¬å±éè¿°å°ä¼æ°¸ä¹ææä½ ä¸ºç¨åºéæ©è¯¥çæ¬ççGNUéç¨å¬å±è®¸å¯åè®®åè®®ã
+
+Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+æ°çæ¬çè®¸å¯åè®®å¯è½ä¼ç»äºä½ é¢å¤çæä¸åçè®¸å¯ãä½æ¯ï¼éæ©éç¨æ°çæ¬çè®¸å¯åè®®å°ä¸ä¼åä»»ä½ä½èæèèä½æäººæ½å ä»»ä½é¢å¤ä¹å¡ã
+
+15. Disclaimer of Warranty.
+15. åè´£å£°æ
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM âAS ISâ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+å¨æéç¨çæ³å¾åè®¸çèå´åï¼æ¬ç¨åºä¸å­å¨ä»»ä½çä¿è¯ãé¤éå¦æä¹¦é¢å£°æï¼èä½æäººå/æå¶ä»å½äºäººâç°ä»¥âä¸ååºä»»ä½ç§ç±»çãæç¤ºæé»ç¤ºçä¿è¯çæ¹å¼æä¾æ¬ç¨åºï¼åæ¬ä½ä¸éäºå¯¹å¯éå®æ§åéç¨äºç¹å®ç®ççé»ç¤ºä¿è¯ãæ¬ç¨åºè´¨éä¸æ§è½çä¸åé£é©ååºç±ä½ èªè¡æ¿æãå¦æç¨åºè¢«è¯ææç¼ºé·ï¼æ¨åºæ¿æææå¿è¦çç»´æ¤ãä¿®çæä¿®æ­£è´¹ç¨ã
+
+16. Limitation of Liability.
+16. è´£ä»»éå¶
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+å¨ä»»ä½æåµä¸ï¼é¤éæéç¨çæ³å¾è¦æ±æç»ä¹¦é¢åæï¼å¦åä»»ä½èä½æäººæä»»ä½æ ¹æ®ä¸è¿°æ¡æ¬¾ä¿®æ¹å/æè½¬åç¨åºçå¶ä»å½äºäººåä¸å¯¹ä½ æ¿ææå®³èµå¿è´£ä»»ï¼åæ¬ä»»ä½å ä½¿ç¨ææ æ³ä½¿ç¨æ¬ç¨åºèäº§ççä¸è¬çãç¹æ®çãéå¸¦æé´æ¥æå®³èµå¿ï¼åæ¬ä½ä¸éäºæ°æ®ä¸¢å¤±ãæ°æ®ç¯¡æ¹ãä½ æç¬¬ä¸æ¹é­åçæå¤±æèç¨åºæ æ³ä¸å¶ä»ä»»ä½ç¨åºå±åè¿è¡ï¼ï¼å³ä½¿è¯¥èä½æäººæå¶ä»å½äºäººå·²è¢«åç¥æ­¤ç±»æå®³çå¯è½æ§ã
+
+17. Interpretation of Sections 15 and 16.
+17. ç¬¬15ã16æ¡çè§£é
+If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
+
+å¦æåè¿°åè´£å£°æåè´£ä»»éå¶çæ¡æ¬¾æ æ³è·å¾å½å°æ³å¾æåï¼å®¡æ¥çæ³é¢åºå½éç¨ææ¥è¿äºæ¾å¼æå³æ¬ç¨åºçæ°äºè´£ä»»çæ¬å°æ³å¾è§å®ï¼é¤éç¨åºå¯æ¬ä¸ºå¶éå¸¦çä¿è¯æèè´£ä»»æ¿è¯ºæ¶è´¹ã
+
+How to Apply These Terms to Your New Programs
+å¦ä½å°ä¸è¿°æ¡æ¬¾éç¨äºä½ çæ°ç¨åºä¸­
+If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.
+
+å¦æä½ å¼åäºä¸ä¸ªæ°ç¨åºï¼å¹¶å¸æå®å°½æå¤§éåº¦ä¸ºå¬ä¼æä½¿ç¨ï¼æå¥½çåæ³å°±æ¯ä½¿ä½ çç¨åºæä¸ºä»»ä½äººå¯ä»¥æ ¹æ®æ¬åè®®ååååä¿®æ¹çèªç±è½¯ä»¶ã
+
+To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively state the exclusion of warranty; and each file should have at least the âcopyrightâ line and a pointer to where the full notice is found.
+
+ä¸ºæ­¤ï¼å¯ä»¥å¨ç¨åºä¸­éä¸ä»¥ä¸å£°æãå°å£°æéå¨æ¯ä¸ªæºæä»¶çå¼å¤´ä»¥ææååºåè´£è¯´ææ¯æä¿é©çåæ³ï¼å¹¶ä¸æ¯ä¸ªæä»¶åºè¯¥æä¸è¡çæå£°æè¡ï¼å¹¶æåå¯ä»¥æ¾å°å®æ´å£°æçé¡µé¢ã
+
+``` Copyright (C)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+<å¨æ¬è¡åæç¨åºåç§°åç¨åºåè½ç®ä»>
+Copyright (C) <å¹´ä»½>  <ä½èåç§°>
+
+æ¬ç¨åºä¸ºèªç±è½¯ä»¶ï¼ä½ å¯ä»¥æ ¹æ®èªç±è½¯ä»¶åºéä¼åå¸ç
+GNUéç¨å¬å±è®¸å¯åè®®ç¬¬ä¸çæèæ´æ°ççæ¬ï¼ä»»éï¼
+çè§å®å¯¹æ¬ç¨åºè¿è¡åååå/æä¿®æ¹ã
+
+æä»¬å¸æååçè¿æ¬¾ç¨åºå¯¹ä½ æ¯æç¨çï¼ä½æ¯æä»¬ä¸æ
+ä¾ä»»ä½ä¿è¯ï¼ä¹ä¸æä¾ä»»ä½å¯¹å¯éå®æ§åéç¨äºç¹å®ç® ççé»ç¤ºä¿è¯ãè¯¦æè¯·æ¥éGNUéç¨å¬å±è®¸å¯åè®®ã
+
+ä½ åºå·²éåæ¬ç¨åºæ¶å°ä¸ä»½GNUéç¨å¬å±è®¸å¯åè®®çå¯æ¬ï¼
+å¦æªæ¶å°ï¼è¯·æ¥éhttp://www.gnu.org/licenses/
+
+Also add information on how to contact you by electronic and paper mail.
+
+ä½ ä¹å¯ä»¥å°ä½ çèç³»ä¿¡æ¯æ¾å¨çµå­æçº¸è´¨çé®ä»¶ä¸­ã
+
+If the program does terminal interaction, make it output a short notice like this when it starts in an interactive mode:
+
+å¦æç¨åºä¼è¿è¡ç»ç«¯äº¤äºï¼å½ç¨åºå¨äº¤äºæ¨¡å¼ä¸å¯å¨æ¶ï¼è®©ç¨åºè¾åºå¦ä¸ç®ç­å£°æï¼
+Copyright (C)
+
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.
+
+<ç¨åºåç§°>  Copyright (C) <å¹´ä»½>  <ä½èåç§° >
+
+æ¬ç¨åºç»ä¸æä¾ä¿è¯ï¼æ´å¤è¯¦æè¯·è¾å¥âshow wâæ¥çã
+è¿æ¯ä¸æ¬¾èªç±è½¯ä»¶ï¼æ¬¢è¿ä½ å¨ç¬¦åç¹å®æ¡ä»¶çæåµä¸å¯¹
+æ¬ç¨åºè¿è¡åååï¼æ´å¤è¯¦æè¯·è¾å¥âshow câæ¥ç.
+
+```
+
+The hypothetical commands show w' andshow c' should show the appropriate parts of the General Public License. Of course, your program's commands might be different; for a GUI interface, you would use an âabout boxâ.
+
+ä¸é¢çå£°æåå® â show wâåâ show câ å½ä»¤ä¼æ¾GPLåè®®çç¸åºé¨åã å½ç¶ï¼ä½ çç¨åºä¸­çå½ä»¤å¯ä»¥æ¯ä¸åçï¼å¨GUIçé¢ä¸­ï¼ä½ å¯ä»¥ä½¿ç¨âå³äºâéé¡¹ã
+
+You should also get your employer (if you work as a programmer) or school, if any, to sign a âcopyright disclaimerâ for the program, if necessary. For more information on this, and how to apply and follow the GNU GPL, see http://www.gnu.org/licenses/.
+
+å¦æå¿è¦ï¼ä½ è¿åºå½è®©ä½ çéä¸»ï¼å¦æä½ æ¯åéçç¨åºåï¼æå­¦æ ¡ï¼å¦æï¼ç­¾ç½²ä¸ä»½âæ¾å¼çæå£°æâãå³äºè¿ä¸ç¹çæ´å¤è¯¦æï¼ä»¥åå¦ä½ä½¿ç¨åéµå®GNU GPLåè®®ï¼è¯·åèhttp://www.gnu.org/licenses/ã
+
+The GNU General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. But first, please read http://www.gnu.org/philosophy/why-not-lgpl.html.
+
+æ¬GNUéç¨å¬å±è®¸å¯åè®®ä¸åè®¸å°ä½ çç¨åºå¹¶å¥ä¸æç¨åºçè¡ä¸ºã å¦æä½ çç¨åºæ¯ä¸ä¸ªå­ç¨åºåºï¼æ´å¥½çèèæ¯åè®¸ä¸æåºç¨ç¨åºä¸è¯¥åºè¿è¡é¾æ¥ï¼å¦æä½ ç¡®å®å¸æåè®¸æ­¤ç§æåµï¼å¯ä»¥ä½¿ç¨GNU Lesser General Public Licenseï¼GNUè¾å®½æ¾éç¨å¬å±è®¸å¯åè®®ï¼LGPLï¼èéæ¬åè®®ãä½è¿è¯·äºåæ¥éhttp://www.gnu.org/philosophy/why-not-lgpl.htmlã
+

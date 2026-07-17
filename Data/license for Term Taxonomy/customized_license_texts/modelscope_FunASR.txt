@@ -1,0 +1,74 @@
+FunASR Model Open Source License
+Version 1.0
+
+Copyright (C) [2023-2028] Alibaba Group. All rights reserved.
+
+Thank you for choosing the FunASR open source models. The FunASR open source models contain a series of open-source models that allow everyone to use, modify, share, and learn from it.
+
+To ensure better community collaboration, we have developed the following agreement and hope that you carefully read and abide by it.
+
+1 Definitions
+In this agreement, [FunASR software] refers to the FunASR open source model, and its derivatives, including fine-tuned models. [You] refer to individuals or organizations who use, modify, share, and learn from [FunASR software].
+
+2 License and Restrictions
+
+2.1 License
+You are free to use, copy, modify, and share [FunASR software] under the conditions of this agreement.
+
+2.2 Restrictions
+You should indicate the code and model source and author information when using, copying, modifying and sharing [FunASR software]. You should keep the relevant names of models in [FunASR software].
+
+3 Responsibility and Risk
+[FunASR software] is for reference and learning purposes only and is not responsible for any direct or indirect losses caused by your use or modification of [FunASR software]. You should take responsibility and risks for your use and modification of [FunASR software].
+
+4 Termination
+If you violate any terms of this agreement, your license will be automatically terminated, and you must stop using, copying, modifying, and sharing [FunASR software].
+
+5 Revision
+This agreement may be updated and revised from time to time. The revised agreement will be published in the FunASR official repository and automatically take effect. If you continue to use, copy, modify, and share [FunASR software], it means you agree to the revised agreement.
+
+6 Other Provisions
+This agreement is subject to the laws of [Country/Region]. If any provisions are found to be illegal, invalid, or unenforceable, they shall be deemed deleted from this agreement, and the remaining provisions shall remain valid and binding.
+
+If you have any questions or comments about this agreement, please contact us.
+
+Copyright (c) [2023-2028] Alibaba Group. All rights reserved.
+
+FunASR æ¨¡åå¼æºåè®®
+
+çæ¬å·ï¼1.0
+
+çæææ (C) [2023-2028] [é¿éå·´å·´éå¢]ãä¿çæææå©ã
+
+æè°¢æ¨éæ© FunASR å¼æºæ¨¡åãFunASR å¼æºæ¨¡ååå«ä¸ç³»ååè´¹ä¸å¼æºçå·¥ä¸æ¨¡åï¼è®©å¤§å®¶å¯ä»¥ä½¿ç¨ãä¿®æ¹ãåäº«åå­¦ä¹ è¯¥æ¨¡åã
+
+ä¸ºäºä¿è¯æ´å¥½çç¤¾åºåä½ï¼æä»¬å¶å®äºä»¥ä¸åè®®ï¼å¸ææ¨ä»ç»éè¯»å¹¶éµå®æ¬åè®®ã
+
+1 å®ä¹
+æ¬åè®®ä¸­ï¼[FunASR è½¯ä»¶]æ FunASR å¼æºæ¨¡åæéåå¶è¡çåï¼åæ¬ Finetune åçæ¨¡åï¼[æ¨]æä½¿ç¨ãä¿®æ¹ãåäº«åå­¦ä¹ [FunASR è½¯ä»¶]çä¸ªäººæç»ç»ã
+
+2 è®¸å¯åéå¶
+2.1 è®¸å¯
+
+æ¨å¯ä»¥å¨éµå®æ¬åè®®çåæä¸ï¼èªç±å°ä½¿ç¨ãå¤å¶ãä¿®æ¹ååäº«[FunASR è½¯ä»¶]ã
+
+2.2 éå¶
+
+æ¨å¨ä½¿ç¨ãå¤å¶ãä¿®æ¹ååäº«[FunASR è½¯ä»¶]æ¶ï¼å¿é¡»æ³¨æåºå¤ä»¥åä½èä¿¡æ¯ï¼å¹¶ä¿ç[FunASR è½¯ä»¶]ä¸­ç¸å³æ¨¡ååç§°ã
+
+3 è´£ä»»åé£é©æ¿æ
+[FunASR è½¯ä»¶]ä»ä½ä¸ºåèåå­¦ä¹ ä½¿ç¨ï¼ä¸å¯¹æ¨ä½¿ç¨æä¿®æ¹[FunASR è½¯ä»¶]é æçä»»ä½ç´æ¥æé´æ¥æå¤±æ¿æä»»ä½è´£ä»»ãæ¨å¯¹[FunASR è½¯ä»¶]çä½¿ç¨åä¿®æ¹åºè¯¥èªè¡æ¿æé£é©ã
+
+4 ç»æ­¢
+å¦ææ¨è¿åæ¬åè®®çä»»ä½æ¡æ¬¾ï¼æ¨çè®¸å¯å°èªå¨ç»æ­¢ï¼æ¨å¿é¡»åæ­¢ä½¿ç¨ãå¤å¶ãä¿®æ¹ååäº«[FunASR è½¯ä»¶]ã
+
+5 ä¿®è®¢
+æ¬åè®®å¯è½ä¼ä¸æ¶æ´æ°åä¿®è®¢ãä¿®è®¢åçåè®®å°å¨[FunASR è½¯ä»¶]å®æ¹ä»åºåå¸ï¼å¹¶èªå¨çæãå¦ææ¨ç»§ç»­ä½¿ç¨ãå¤å¶ãä¿®æ¹ååäº«[FunASR è½¯ä»¶]ï¼å³è¡¨ç¤ºæ¨åæä¿®è®¢åçåè®®ã
+
+6 å¶ä»è§å®
+æ¬åè®®åå°[å½å®¶/å°åº] çæ³å¾ç®¡è¾ãå¦æä»»ä½æ¡æ¬¾è¢«è£å®ä¸ºä¸åæ³ãæ æææ æ³æ§è¡ï¼åè¯¥æ¡æ¬¾åºè¢«è§ä¸ºä»æ¬åè®®ä¸­å é¤ï¼èå¶ä½æ¡æ¬¾åºç»§ç»­ææå¹¶å·æçº¦æåã
+
+å¦ææ¨å¯¹æ¬åè®®æä»»ä½é®é¢ææè§ï¼è¯·èç³»æä»¬ã
+
+çæææÂ© [2023-2028] [é¿éå·´å·´éå¢]ãä¿çæææå©ã
+

@@ -1,0 +1,65 @@
+The ChatGLM2-6B License
+
+1. å®ä¹
+
+âè®¸å¯æ¹âæ¯æååå¶è½¯ä»¶ç ChatGLM2-6B æ¨¡åå¢éã
+
+âè½¯ä»¶âæ¯ææ ¹æ®æ¬è®¸å¯æä¾ç ChatGLM2-6B æ¨¡ååæ°ã
+
+2. è®¸å¯æäº
+
+æ ¹æ®æ¬è®¸å¯çæ¡æ¬¾åæ¡ä»¶ï¼è®¸å¯æ¹ç¹æ­¤æäºæ¨éæä»æ§ãå¨çæ§ãä¸å¯è½¬è®©ãä¸å¯åè®¸å¯ãå¯æ¤éãåçç¨ççæè®¸å¯ã
+
+ä¸è¿°çæå£°æåæ¬è®¸å¯å£°æåºåå«å¨æ¬è½¯ä»¶çææå¯æ¬æéè¦é¨åä¸­ã
+
+3.éå¶
+
+æ¨ä¸å¾åºäºä»»ä½åäºæéæ³ç®çä½¿ç¨ãå¤å¶ãä¿®æ¹ãåå¹¶ãåå¸ãååãå¤å¶æåå»ºæ¬è½¯ä»¶çå¨é¨æé¨åè¡çä½åã
+
+æ¨ä¸å¾å©ç¨æ¬è½¯ä»¶ä»äºä»»ä½å±å®³å½å®¶å®å¨åå½å®¶ç»ä¸ãå±å®³ç¤¾ä¼å¬å±å©çãä¾µç¯äººèº«æççè¡ä¸ºã
+
+4.åè´£å£°æ
+
+æ¬è½¯ä»¶âæåæ ·âæä¾ï¼ä¸æä¾ä»»ä½æç¤ºææç¤ºçä¿è¯ï¼åæ¬ä½ä¸éäºå¯¹ééæ§ãç¹å®ç¨éçéç¨æ§åéä¾µææ§çä¿è¯ã å¨ä»»ä½æåµä¸ï¼ä½èæçæææäººåä¸å¯¹ä»»ä½ç´¢èµãæå®³æå¶ä»è´£ä»»è´è´£ï¼æ è®ºæ¯å¨ååè¯è®¼ãä¾µæè¡ä¸ºè¿æ¯å¶ä»æ¹é¢ï¼ç±è½¯ä»¶æè½¯ä»¶çä½¿ç¨æå¶ä»äº¤æå¼èµ·ãç±è½¯ä»¶å¼èµ·æä¸ä¹ç¸å³ è½¯ä»¶ã
+
+5. è´£ä»»éå¶
+
+é¤éç¨æ³å¾ç¦æ­¢çèå´å¤ï¼å¨ä»»ä½æåµä¸ä¸æ ¹æ®ä»»ä½æ³å¾çè®ºï¼æ è®ºæ¯åºäºä¾µæè¡ä¸ºãçå¿½ãååãè´£ä»»æå¶ä»åå ï¼ä»»ä½è®¸å¯æ¹åä¸å¯¹æ¨æ¿æä»»ä½ç´æ¥ãé´æ¥ãç¹æ®ãå¶ç¶ãç¤ºèæ§ã æé´æ¥æå®³ï¼æä»»ä½å¶ä»åä¸æå¤±ï¼å³ä½¿è®¸å¯äººå·²è¢«åç¥æ­¤ç±»æå®³çå¯è½æ§ã
+
+6.äºè®®è§£å³
+
+æ¬è®¸å¯åä¸­åäººæ°å±åå½æ³å¾ç®¡è¾å¹¶æå¶è§£éã å æ¬è®¸å¯å¼èµ·çæä¸æ¬è®¸å¯æå³çä»»ä½äºè®®åºæäº¤åäº¬å¸æµ·æ·åºäººæ°æ³é¢ã
+
+è¯·æ³¨æï¼è®¸å¯è¯å¯è½ä¼æ´æ°å°æ´å¨é¢ççæ¬ã æå³è®¸å¯åçæçä»»ä½é®é¢ï¼è¯·éè¿ license@zhipuai.cn ä¸æä»¬èç³»ã
+
+1. Definitions
+
+âLicensorâ means the ChatGLM2-6B Model Team that distributes its Software.
+
+âSoftwareâ means the ChatGLM2-6B model parameters made available under this license.
+
+2. License Grant
+
+Subject to the terms and conditions of this License, the Licensor hereby grants to you a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable, royalty-free copyright license to use the Software.
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+3. Restriction
+
+You will not use, copy, modify, merge, publish, distribute, reproduce, or create derivative works of the Software, in whole or in part, for any military, or illegal purposes.
+
+You will not use the Software for any act that may undermine China's national security and national unity, harm the public interest of society, or infringe upon the rights and interests of human beings.
+
+4. Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+5. Limitation of Liability
+
+EXCEPT TO THE EXTENT PROHIBITED BY APPLICABLE LAW, IN NO EVENT AND UNDER NO LEGAL THEORY, WHETHER BASED IN TORT, NEGLIGENCE, CONTRACT, LIABILITY, OR OTHERWISE WILL ANY LICENSOR BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, OR ANY OTHER COMMERCIAL LOSSES, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+6. Dispute Resolution
+
+This license shall be governed and construed in accordance with the laws of Peopleâs Republic of China. Any dispute arising from or in connection with this License shall be submitted to Haidian District People's Court in Beijing.
+
+Note that the license is subject to update to a more comprehensive version.  For any questions related to the license and copyright, please contact us at license@zhipuai.cn.

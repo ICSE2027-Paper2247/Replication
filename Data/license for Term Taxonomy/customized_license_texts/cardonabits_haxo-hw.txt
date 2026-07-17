@@ -1,0 +1,15 @@
+Copyright (c) 2021-2023 Javier Cardona Unipessoal Lda DBA Cardona Bits
+
+This hardware is licensed under Creative Commons License Attribution-ShareAlike
+4.0 International available here:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+This is a human-readable summary of (and not a substitute for) the license.
+You are free to:
+
+    Share â copy and redistribute the material in any medium or format
+    Adapt â remix, transform, and build upon the material
+    for any purpose, even commercially.
+
+This license is acceptable for Free Cultural Works.
+The licensor cannot revoke these freedoms as long as you follow the license terms.

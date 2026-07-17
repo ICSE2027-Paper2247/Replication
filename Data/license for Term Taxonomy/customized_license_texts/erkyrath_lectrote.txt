@@ -1,0 +1,159 @@
+Lectrote is copyright (c) 2016-2023, Andrew Plotkin [MIT license]
+Electron is copyright (c) 2013-2023 GitHub Inc. [MIT license]
+Quixe is copyright (c) 2010-2023, Andrew Plotkin [MIT license]
+inkjs is copyright (c) 2017 Yannick Lohse [MIT license]
+ifvms.js is copyright (c) 2011-2023 Dannii Willis and other contributors [MIT license]
+emglken is copyright (c) 2012-2023, Andrew Plotkin, Dannii Willis [MIT license]
+Git (in emglken) is copyright (c) 2003 Iain Merrick [MIT license]
+Glulxe (in emglken) is copyright (c) 1999-2023, Andrew Plotkin [MIT license]
+Hugo (in emglken)  is copyright (c) 2011 by Kent Tessman [BSD license]
+TADS (in emglken)  is copyright (c) 1991-2012 by Michael J. Roberts [dual-licensed GPL/TADS license]
+RemGlk (in emglken) is copyright (c) 2012-2023, Andrew Plotkin [MIT license]
+Scare (in emglken) is copyright (c) 2003-2008, Simon Baldwin and Mark J. Tilford [GPL]
+
+-------------------
+
+The MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+-------------------
+
+BSD 2-clause "Simplified" License (for Hugo component of emglken)
+
+Hugo is copyright (c) 2011 by Kent Tessman
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+- Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-------------------
+
+TADS 2 FREEWARE SOURCE CODE LICENSE
+
+The TADS 2 source code is Copyright 1991, 2003 by Michael J. Roberts.
+
+The author hereby grants you permission to use, copy, and
+distribute this software, if you agree to the following conditions:
+
+    1. You must include this license and the copyright notice with
+       all copies.
+    2. You may not require or collect a fee for copies of this
+       software, or any part of this software, that you give to
+       other people.
+    3. You may not include this software with any other software
+       for which a fee is collected.
+    4. You may not modify this software except as permitted below
+       (see "derivative works"), and each copy you make and
+       distribute must be a full and complete copy of the software
+       you originally received.
+    5. Anyone to whom you give a copy of this software receives
+       all of the same permissions that you did under this license
+       and is subject to all of the same restrictions.
+    6. You are not allowed to create derivative works, which are
+       works that contain or are based on all or part of this work,
+       except under the conditions described below.
+    7. Any derivative works are subject to this same license.
+
+
+Derivative Works
+----------------
+
+This source code is distributed for the specific purpose of
+facilitating the creation of versions of TADS on various computers and
+operating systems.  All other derivative works are prohibited without
+the written permission of the author.  Please contact the author if
+you have any questions about this or if you'd like permission to
+create a derived work.
+
+If you port TADS to a new platform, the author does grant permission
+for you to distribute your ported version - I encourage it, in fact.
+We ask that you provide your contact information in any distribution
+package you create, so that users of your version will know how to
+contact you if they have any questions relating specifically to your
+version.
+
+-------------------
+
+TADS 3 FREEWARE SOURCE CODE LICENSE
+
+The TADS 3 source code is Copyright 1998, 2012 by Michael J. Roberts.
+
+The author hereby grants you permission to use, copy, and distribute
+this software, if you agree to the following conditions:
+
+    1. You must include this license and the copyright notice with
+       all copies.
+    2. You may not require or collect a fee for copies of this
+       software, or any part of this software, that you give to
+       other people.
+    3. You may not include this software with any other software
+       for which a fee is collected.
+    4. You may not modify this software except as permitted below
+       (see "derivative works"), and each copy you make and
+       distribute must be a full and complete copy of the software
+       you originally received.
+    5. Anyone to whom you give a copy of this software receives
+       all of the same permissions that you did under this license
+       and is subject to all of the same restrictions.
+    6. You are not allowed to create derivative works, which are
+       works that contain or are based on all or part of this work,
+       except under the conditions described below.
+    7. Any derivative works are subject to this same license.
+
+
+Derivative Works
+----------------
+
+This source code is distributed for the specific purpose of porting
+TADS, so that you can run the software on any system of your choosing.
+All other derivative works are prohibited without the written
+permission of the author.  I want to avoid the creation of variations
+on the system, because it leads to confusion on the part of users if
+there are multiple incompatible flavors floating around.  However, if
+you have a specific idea in mind, I'd be happy to at least consider
+it.  Please contact the author if you have any questions about this or
+if you would like permission to create a derived work.  
+
+If you port TADS to a new platform, the author does grant permission
+for you to distribute your ported version - I encourage it, in fact.
+I ask that you include your contact information in any distribution
+package you create, so that users of your version will know how to
+contact you if they have any questions relating specifically to your
+version.

@@ -1,0 +1,38 @@
+LICENSE
+=======
+
+The MIT License (MIT)
+
+Copyright (c) [2023]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+ä¸­æçï¼
+
+LICENSE
+ä½¿ç¨æ¡æ¬¾åæ¡ä»¶
+æ¬è½¯ä»¶ï¼âSoftwareâï¼æ¯ç±ï¼âDeveloperâï¼å¼åçï¼å¹¶åå°çææ³ä¿æ¤ãæªç»ææï¼ç¦æ­¢å¤å¶ãä¿®æ¹ãç¿»è¯ãæ±ç¼ãåºå®ãåºç§ãè®¸å¯æååæ¬è½¯ä»¶çä»»ä½é¨åæå¨é¨ã
+
+Developeræäºæ¨éç¬å ãéæä»æ§ãä¸å¯æ¤éä¸ä¸å¯è½¬è®©çæå©ï¼ä»¥å¨æ¨çè®¾å¤ä¸ä½¿ç¨æ¬è½¯ä»¶ãæ¨å¯ä»¥å¨æ¨çè®¾å¤ä¸å¤å¶ãå®è£åæ§è¡æ¬è½¯ä»¶ï¼ä½ä»éäºä¸ªäººä½¿ç¨ç®çï¼ä¸å¾ç¨äºåä¸ç¨éã
+
+æ¨å¿é¡»éµå®éç¨çæ³å¾åæ³è§ï¼åæ¬ä½ä¸éäºéç§æ³ãæ°æ®ä¿æ¤æ³ååçæ¯æ³ãæªç»Developeræç¡®ææï¼æ¨ä¸å¾å¯¹æ¬è½¯ä»¶è¿è¡ä»»ä½ä¿®æ¹ææ·»å ä»»ä½ä»£ç ã
+
+æ¬è½¯ä»¶å¯è½åå«å¼æºè½¯ä»¶ï¼å¼æºè½¯ä»¶çä½¿ç¨å¯è½åå°éå¶ãå¦ææ¨ä½¿ç¨æ¬è½¯ä»¶ï¼åè¡¨ç¤ºæ¨å·²éè¯»å¹¶åæè¿äºæ¡æ¬¾åæ¡ä»¶ãå¦ææ¨ä¸åæè¿äºæ¡æ¬¾åæ¡ä»¶ï¼è¯·ä¸è¦ä½¿ç¨æ¬è½¯ä»¶ã
+

@@ -1,0 +1,3 @@
+Copyright Â© 2021â HTTPie, Inc. <legal@httpie.io>
+
+See https://httpie.io/terms

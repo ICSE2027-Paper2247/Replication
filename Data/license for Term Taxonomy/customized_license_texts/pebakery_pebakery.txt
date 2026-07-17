@@ -1,0 +1,286 @@
+Unless specified, PEBakery is licensed under GPLv3 or any
+later version with additional permission.
+
+Some parts of PEBakery are licensed under various licenses,
+which are compatible with GPLv3. It is specified on a
+per-file basis or LICENSE file placed in a subdirectory.
+-----------------------------------------------------------
+Copyright (C) 2016-2024 Hajin Jang
+
+PEBakery is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+PURPOSE. See the  GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public
+License along with this program. If not, see 
+<http://www.gnu.org/licenses/>.
+
+Additional permission under GNU GPL version 3 section 7
+
+If you modify this program, or any covered work, by linking
+or combining it with external libraries, containing parts
+covered by the terms of the various license, the licensors of
+this program grants you additional permission to convey the
+resulting work. An external library is a library that is
+not derived from or based on this program. 
+-----------------------------------------------------------
+These parts of PEBakery is licensed under the various license.
+
+PEBakery.Ini
+PEBakery.Tree
+PEBakery.Helper
+    MIT License
+    https://opensource.org/licenses/MIT
+
+Ookii.Dialogs.Wpf
+    The BSD 3-Clause License
+    https://opensource.org/licenses/BSD-3-Clause
+
+    Copyright (c) Sven Groot (Ookii.org) 2009
+    http://www.ookii.org/Software/Dialogs/
+    Updated by Vladimir Svyatski (@vsvyatski)
+    https://github.com/vsvyatski/ookii.dialogs
+
+Launcher
+NetDetectorCli
+NetLauncherLib
+    MIT License
+    https://opensource.org/licenses/MIT
+
+PEBakery.Helper/ThirdParty/TextEncodingDetect.cs
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Copyright (c) Jonathan Bennett
+    https://github.com/AutoItConsulting/text-encoding-detect
+
+PEBakery/WPF/Controls/NumberBox.xaml
+PEBakery/WPF/Controls/NumberBox.xaml.cs
+PEBakery/WPF/Controls/DragCanvas.cs
+PEBakery/WPF/Controls/EditCanvas.cs
+    MIT License
+    https://opensource.org/licenses/MIT
+
+PEBakery/WPF/Controls/AutoSizedGridView.cs
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Derived from http://stackoverflow.com/a/15745082
+
+PEBakery.Core/WpfControls/CustomMessageBox.cs
+PEBakery.Core/WpfControls/CustomMessageBoxWindow.xaml
+PEBakery.Core/WpfControls/CustomMessageBoxWindow.xaml.cs
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) 2013 Evan Wondrasek / Apricity Software LLC
+    Derived from https://github.com/evanwon/WPFCustomMessageBox
+
+PEBakery/WPF/Controls/ProgressRing.cs
+PEBakery/WPF/Controls/ProgressRing.xaml
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) 2016 MahApps
+    Derived from https://github.com/MahApps/MahApps.Metro
+
+PEBakery/WPF/Controls/Donut.xaml
+PEBakery/Resources/Donut.ico
+LauncherNative/Donut.ico
+LauncherSharp/Donut.ico
+    CC BY 3.0 US
+    https://creativecommons.org/licenses/by/3.0/us/
+
+    Copyright (c) Numero Uno
+    https://thenounproject.com/numerouno/
+
+-----------------------------------------------------------
+PEBakery uses Open Source Software (OSS).
+This is the list of open-source projects and licenses.
+
+CommandLineParser
+    MIT License
+    https://opensource.org/licenses/MIT
+    
+    Copyright (c) Giacomo Stelluti Scala & Contributors
+    https://github.com/commandlineparser/commandline
+
+Joveler.Compression.XZ
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (C) Hajin Jang
+    https://github.com/ied206/Joveler.Compression
+
+Joveler.Compression.ZLib
+    zlib license
+    https://opensource.org/licenses/Zlib
+
+    Copyright (C) Jean-loup Gailly and Mark Adler
+    Copyright (C) Hajin Jang
+    https://github.com/ied206/Joveler.Compression
+
+Joveler.FileMagician
+    The 2-Clause BSD License
+    https://opensource.org/licenses/BSD-2-Clause
+
+    Copyright (C) Ian F. Darwin and Christos Zoulas
+    Copyright (C) Hajin Jang
+    https://github.com/ied206/Joveler.FileMagician
+
+MahApps.Metro.IconPacks.Core
+MahApps.Metro.IconPacks.Material
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) MahApps, Jan Karger
+    https://github.com/MahApps/MahApps.Metro.IconPacks
+
+ManagedWimgApi
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) jeffkl
+    https://github.com/jeffkl/ManagedWimgApi
+
+ManagedWimLib
+    LGPLv3 License
+    https://www.gnu.org/licenses/lgpl-3.0.en.html
+
+    Copyright (C) Eric Biggers
+    Copyright (C) Hajin Jang
+    https://github.com/ied206/ManagedWimLib
+
+MessagePack-CSharp
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) Yoshifumi Kawai and contributors
+    https://github.com/neuecc/MessagePack-CSharp
+
+Material Icons
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    https://material.io/tools/icons/
+    https://github.com/google/material-design-icons
+
+Microsoft.IO.RecyclableMemoryStream
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) Microsoft
+    https://github.com/Microsoft/Microsoft.IO.RecyclableMemoryStream
+
+NaturalSort.Extension
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) TomÃ¡Å¡ PaÅ¾ourek
+    https://github.com/tompazourek/NaturalSort.Extension
+
+Newtonsoft.Json
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) James Newton-King
+    https://github.com/JamesNK/Newtonsoft.Json
+
+NUglify
+    The 2-Clause BSD License
+    https://opensource.org/licenses/BSD-2-Clause
+    Copyright (c) Alexandre Mutel
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+    Copyright (c) Microsoft Corporation
+
+    https://github.com/xoofx/NUglify
+
+Scriban
+    The 2-Clause BSD License
+    https://opensource.org/licenses/BSD-2-Clause
+    
+    Copyright (c) Alexandre Mutel
+    https://github.com/scriban/scriban
+
+SevenZipSharp
+    LGPLv3 License
+    https://www.gnu.org/licenses/lgpl-3.0.en.html
+
+    https://github.com/squid-box/SevenZipSharp
+
+SharpVectors.Reloaded
+    The BSD 3-Clause License
+    https://opensource.org/licenses/BSD-3-Clause
+
+    Copyright (c) Elinam LLC
+    https://github.com/ElinamLLC/SharpVectors
+
+sqlite-net-pcl
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) Krueger Systems, Inc.
+    https://github.com/praeclarum/sqlite-net
+
+System.Text.Encoding.CodePages 
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) .NET Foundation and Contributors
+    https://github.com/dotnet/runtime
+
+Timestamp
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) NServiceBus Ltd
+    https://github.com/SimonCropp/Timestamp
+
+UACHelper
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (c) Soroush
+    https://github.com/falahati/UACHelper
+
+-----------------------------------------------------------
+PEBakery's log HTML templates use Open Source Software (OSS).
+This is the list of open-source projects and their licenses.
+
+Bootstrap
+    MIT License
+    https://opensource.org/licenses/MIT
+    
+    Copyright (c) Twitter, Inc.
+    Copyright (c) The Bootstrap Authors
+    https://getbootstrap.com/
+    
+Font Awesome
+    Icons - CC BY 4.0 License
+    Fonts - SIL OFL 1.1 License
+    Code - MIT License
+    https://fontawesome.com/license/free
+    
+jQuery
+    MIT License
+    https://opensource.org/licenses/MIT
+
+    Copyright (C) JS Foundation and other contributors
+    https://jquery.org/
+
+Popper.js
+    MIT License
+    https://opensource.org/licenses/MIT
+    
+    Copyright Â© Federico Zivolo and contributors
+    https://popper.js.org/

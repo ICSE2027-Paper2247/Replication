@@ -1,0 +1,18 @@
+RFIDler is (C) 2013-2014 Aperture Labs Ltd.
+
+The different contributions to RFIDler are collected here but licensed differently.
+
+Rfidler firmware is licensed under a similar license to NMAP, as described here:
+https://github.com/ApertureLabsLtd/RFIDler/RFIDler/firmware/COPYING
+
+Rfidler hardware design is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as described here:
+https://github.com/ApertureLabsLtd/RFIDler/RFIDler/hardware/Pic32/COPYING.txt
+
+Windows tools for RFIDler are licensed under the 'BSD 2-Clause License', as described here:
+https://github.com/ApertureLabsLtd/RFIDler/RFIDler/windows-src/COPYING.txt
+
+
+If you are interested in commercial licencing of this work please contact sales at aperturelabs.com.
+
+

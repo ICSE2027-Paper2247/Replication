@@ -1,0 +1,60 @@
+The following portions of the livox_camera_lidar_calibration (âSoftwareâ referred to in the terms below) are made available to you under the terms of the MIT License provided below.  
+
+calibration
+âââ LICENSE.txt
+âââ CMakeLists.txt
+âââ package.xml
+â
+âââ doc_resources
+â   âââ README_cn.md
+â
+âââ launch
+â   âââ cameraCalib.launch
+â   âââ cornerPhoto.launch
+â   âââ pcdTransfer.launch
+â   âââ getExt1.launch
+â   âââ getExt2.launch
+â   âââ projectCloud.launch
+â   âââ colorLidar.launch
+â   âââ config.rviz
+â
+âââ src
+â   âââ cameraCalib.cpp
+â   âââ corner_photo.cpp
+â   âââ pcdTransfer.cpp
+â   âââ cam_lid_external1.cpp
+â   âââ cam_lid_external2.cpp
+â   âââ projectCloud.cpp
+â   âââ color_lidar_display.cpp
+â   âââ CustomMsg.h
+â   âââ CustomPoint.h
+â   âââ common.h
+â   âââ result_verify.h
+â    
+âââ README.md
+
+
+
+-------------------------------------------------------------
+The MIT License (MIT)
+
+Copyright (c) 2020 Livox. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+===============================================================

@@ -1,0 +1,13 @@
+/*
+ * -----------------------------------------------------------------
+ * "THE BEERWARE LICENSE" (Revision 42):
+ * As long as you retain this notice, 
+ * you can do whatever you want with this stuff. 
+ * If we meet someday, and you think this stuff is worth it, 
+ * you can buy me a beer in return.
+ *
+ * ì´ ë¦¬í¬ì§í ë¦¬ë Beerware ë¼ì´ì¼ì¤ë¥¼ ê°ì§ëë¤.
+ * í¹ë³íê±´ ìê³  í¹ìë ì´ ë¦¬í¬ì§í ë¦¬ì ë´ì©ì´ ë§ìì ë¤ìê³  ì ì©íë¤ë©´
+ * ë¤ìì ë§ë ë ë§¥ì£¼ íì ì¬ì£¼ì¸ì.
+ * -----------------------------------------------------------------
+ */

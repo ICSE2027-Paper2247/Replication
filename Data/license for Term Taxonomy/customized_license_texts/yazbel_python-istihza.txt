@@ -1,0 +1,30 @@
+Creative Commons AtÄ±f-GayriTicari-AynÄ±LisanslaPaylaÅ 3.0 YerelleÅtirilmemiÅ (CC BY-NC-SA 3.0)
+
+Lisans ile ilgili bilgi iÃ§in Åu adrese bakabilirsiniz: https://creativecommons.org/licenses/by-nc-sa/3.0/deed.tr
+
+LisansÄ±n aslÄ±nÄ± Åu adreste okuyabilirsiniz: https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
+
+Bu belgeler https://yazbel.com/ adresindeki "Python Programlama Dili (Python 3 iÃ§in TÃ¼rkÃ§e KÄ±lavuz)" baÅlÄ±klÄ±
+belgelerden(https://python-istihza.yazbel.com/) oluÅturulmuÅtur. Belgelerin yazarÄ±
+FÄ±rat ÃzgÃ¼l(https://www.kodlab.com/141__firat-ozgul)'dÃ¼r.
+
+Bu lisans size ÅunlarÄ± yapma Ã¶zgÃ¼rlÃ¼ÄÃ¼nÃ¼ verir:
+
+- Belgeleri her boyut ve formatta PAYLAÅABÄ°LÄ°R, kopyalayabilir ve Ã§oÄaltabilirsiniz.
+- Belgeleri baÅka kaynaklara UYARLAYABÄ°LÄ°R, baÅka kaynaklarla karÄ±ÅtÄ±rabilir, baÅka kaynaklara aktarabilir ve bu
+belgelerin Ã¼zerine inÅa edebilirsiniz.
+
+Lisans sahibi, lisans ÅartlarÄ±nÄ± takip ettiÄiniz sÃ¼rece bu Ã¶zgÃ¼rlÃ¼kleri iptal edemez.
+
+Ancak bu Ã¶zgÃ¼rlÃ¼klerin aÅaÄÄ±daki Åartlar dahilinde geÃ§erli olduÄunu unutmamalÄ±sÄ±nÄ±z:
+
+- Bu belgeleri kullandÄ±ÄÄ±nÄ±z herhangi bir yerde bu belgelere(https://python-istihza.yazbel.com/) atÄ±fta
+bulunmalÄ± ve deÄiÅiklik yaptÄ±ysanÄ±z bundan bahsetmelisiniz. Ancak bunu yaparken lisans sahibinin sizi veya kullanÄ±mÄ±nÄ±zÄ±
+onayladÄ±ÄÄ±na dair bir bilgi paylaÅmamalÄ±sÄ±nÄ±z.
+
+- Bu belgeleri ticari amaÃ§larla kullanamazsÄ±nÄ±z.
+
+- EÄer belgeleri karÄ±ÅtÄ±rdÄ±nÄ±z, aktardÄ±nÄ±z veya belgeler Ã¼zerinde deÄiÅiklik yaptÄ±ysanÄ±z, ortaya Ã§Ä±kan yeni eseri bu
+belgelerin lisansÄ± ya da bu lisansa uyumlu olan bir lisans ile lisanslayabilirsiniz.
+
+- BaÅkalarÄ± Ã¼zerinde bu belirtilenler dÄ±ÅÄ±nda ek bir kÄ±sÄ±tlama uygulayamazsÄ±nÄ±z.

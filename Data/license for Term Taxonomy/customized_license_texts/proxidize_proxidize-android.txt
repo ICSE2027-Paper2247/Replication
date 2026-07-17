@@ -1,0 +1,10 @@
+Copyright 2022 Proxidize
+
+Non-commercial use only for Proxidize components. Proxidize does not permit any commercial 
+use or redistribution of Proxidize Android Legacy. Enthusiast, non-profit, research & academic use only.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

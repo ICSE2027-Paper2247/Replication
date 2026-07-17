@@ -1,0 +1,11 @@
+"THE Cola-WARE LICENSE" (Revision 42):
+<github@bitdust.me> wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a Cola in return. bitdust
+fork from:https://en.wikipedia.org/wiki/Beerware
+
+âå¯ä¹è½¯ä»¶åè®®âï¼ç¬¬ååäºçï¼ï¼
+<github@bitdust.me>ç¼åäºæ­¤æä»¶ãåªè¦ä½ è¿ä¿çæ¬åè®®ææ¬ï¼ä½ å¯ä»¥
+ä»¥ä½¿ç¨æ­¤è½¯ä»¶åä»»ä½äºãå¦ææä»¬å¨æä¸å¤©ç¸éäºï¼èä¸ä½ è®¤ä¸ºæ­¤è½¯ä»¶
+å¾æä»·å¼ï¼ä½ å¯ä»¥ä¸ºæä¹°ä¸ç¶å¯ä¹æ¥ç­è°¢bitdustã
+æ­¤åè®®æè¢­èª:https://en.wikipedia.org/wiki/Beerware

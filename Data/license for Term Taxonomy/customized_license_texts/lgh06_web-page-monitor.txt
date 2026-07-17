@@ -1,0 +1,21 @@
+## License / è®¸å¯åè®®  
+Individuals can download this software and modify this software for **non-commercial** use / purpose, without payment.  
+ä¸ªäººç¨æ·å¯ä»¥ä¸è½½åä¿®æ¹æ­¤è½¯ä»¶ï¼ç¨äº**éåä¸**ç¨é/ç®çï¼æ éä»è´¹ã  
+
+Individuals who **prepare** to use (or modify) this project directly, or create another software (or project) by using this project's any codes,  or create another software (or project) by using this project's any binaries, with **commercial or make money or get any profits 's purpose**, you should contact the creator of this project to see a solution, **before** you really do that.  
+ä¸ªäººç¨æ·**åå¤**ç´æ¥ä½¿ç¨ï¼æä¿®æ¹ï¼æ¬é¡¹ç®ï¼æåºäºæ¬é¡¹ç®çä»£ç ï¼æäºè¿å¶æä»¶ï¼åå»ºäºå¶ä»çè½¯ä»¶ï¼æé¡¹ç®ï¼ï¼ç¨äº**åä¸æèµé±æå¾å°ä»»ä½å©ççç®ç**ï¼é½åº**äºå**èç³»æ¬é¡¹ç®çåå»ºèæ¥å¯»æ±è§£å³æ¹æ¡ã  
+
+Companies or non-profit groups or any other groups with more than 2 person (3,4,5, ... persons), use this projects for any purpose (even not for commercial use, like just use this project as a tool to enhance work efficiency), should contact the creator of this project to see a solution, **before** you really do that.  
+å¬å¸æéçå©ç»ç»æå¶ä»ä»»ä½äººæ°å¤§äº2ï¼å³ 3,4,5,...ï¼çå¢ä½ï¼å©ç¨æ¬é¡¹ç®ç¨äºä»»ä½ç®çï¼å³ä½¿æ²¡æç¨äºåä¸ç®çï¼æ¯å¦ä½¿ç¨æ¬é¡¹ç®ç¨äºæåå·¥ä½æçï¼ï¼é½åº**äºå**èç³»æ¬é¡¹ç®çåå»ºèæ¥å¯»æ±è§£å³æ¹æ¡ã  
+
+Individuals **prepare** to use, and **use** this project for any group (more than 2 persons)/ non-profit group / company 's projects, are **prohibited**, that means individuals cannot use this project to do( or help) a group's or a non-profit group's or a company's tasks in a personal / individual's behalf.  
+ä¸ªäººç¨æ·**åå¤**ä½¿ç¨æ**ä½¿ç¨**æ¬é¡¹ç®ç¨äºä»»ä½å¢ä½(äººæ°å¤§äº2)/éçå©ç»ç»/å¬å¸çé¡¹ç®ï¼æ¯**ç¦æ­¢**çï¼ä¹å°±æ¯è¯´ï¼ä¸ªäººç¨æ·ä¸è½ä»¥ä¸ªäººçåä¹ä½¿ç¨æ¬é¡¹ç®äºå¬å¸æå¢ä½æéçå©ç»ç»çé¡¹ç®/ä»»å¡ä¸­ã
+
+Individuals can provide helps to one friend, to help her / him for non-commercial purposes / uses.  
+However, if you help two or more friends with using / modifying this project, for one same task/goal,for any purpose, all of you will be treated as a **group**. For group use, see above.  
+ä¸ªäººç¨æ·å¯ä»¥åä¸ä¸ªæåæä¾å¸®å©ï¼ä¸ºäºéåä¸æ§çç®çã
+ç¶èï¼å¦ææ¨ä¸ºäºåä¸ä¸ªä»»å¡/ç®æ èåä¸¤ä¸ªæä¸¤ä¸ªä»¥ä¸çæåæä¾ä½¿ç¨æä¿®æ¹æ¬é¡¹ç®çå¸®å©ï¼æ è®ºä»»ä½ç®çï¼æ¨ä»¬é½è¢«è§ä¸ºæ¯ä¸ä¸ª**å¢ä½**. å¢ä½çä½¿ç¨ï¼åè§ä¸æã
+
+The `esm-loader` sub-package have its own license, it is created by github user direktspeed, see https://github.com/direktspeed/esm-loader 's license.  
+`esm-loader`æèªå·±çLicenseï¼åè§ https://github.com/direktspeed/esm-loader .
+

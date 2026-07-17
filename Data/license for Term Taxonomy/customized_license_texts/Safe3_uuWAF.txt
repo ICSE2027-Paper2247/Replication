@@ -1,0 +1,59 @@
+## è½¯ä»¶è®¸å¯è¯
+
+æ¬è®¸å¯è¯ï¼ä»¥ä¸ç®ç§°âè®¸å¯è¯âï¼éç¨äºæ¨æè·åçè½¯ä»¶ï¼ä»¥ä¸ç®ç§°âè½¯ä»¶âï¼ï¼è¯·æ¨å¨ä½¿ç¨æ¬è½¯ä»¶åä»ç»éè¯»ä»¥ä¸æ¡æ¬¾ãä½¿ç¨æ¬è½¯ä»¶è¡¨ç¤ºæ¨åæå¹¶æ¥åæ¬è®¸å¯è¯çæ¡æ¬¾ã
+
+1. **çæå£°æ**  
+æ¬äº§åçææä»£ç ãéåãæä»¶å¶çæåå±äºæ­¦æ±å¸æå®ç§ææéå¬å¸ã
+
+2. **ä½¿ç¨è®¸å¯**  
+å¨éµå®æ¬è®¸å¯è¯æ¡æ¬¾çåæä¸ï¼æ¨ææå¨åä¸è®¾å¤ä¸å®è£ãè¿è¡æ¬è½¯ä»¶ï¼ä»ç¨äºä¸ªäººéåä¸ç®çã
+
+3. **ç¦æ­¢äºé¡¹**  
+æ¨ä¸å¾å¯¹æ¬è½¯ä»¶è¿è¡ä»¥ä¸è¡ä¸ºï¼
+    a) ç ´è§£ãéåå·¥ç¨ãåç¼è¯ãåæ±ç¼ç­è¡ä¸ºï¼
+    b) äºæ¬¡åè£ãä¿®æ¹ãæ¹ç¼ãå¤å¶ãç¿»è¯ãåè®¸å¯æå¶ä½è¡çä½åï¼
+    c) ç¨äºåä¸ç¨éæä»»ä½çå©æ´»å¨ï¼
+    d) æªç»ææçä¼ æ­ãååãåºå®ãåºç§æ¬è½¯ä»¶ï¼
+    e) å°æ¬è½¯ä»¶ä¸ä¾µç¯ä»äººç¥è¯äº§ææè¿åæ³å¾æ³è§çåå®¹ãè¡ä¸ºç»åã
+
+4. **ä¿çæå©**  
+æ¬è½¯ä»¶ççæå½åä½èææï¼é¤æ¬è®¸å¯è¯æç¡®ææå¤ï¼ææå¶ä»æå©åç±åä½èä¿çãæªç»åä½èæç¡®ææï¼æ¨ä¸å¾è¡ä½¿æ¬è®¸å¯è¯æªæç¡®ææçå¶ä»æå©ãå¦è¶åºææä½¿ç¨ï¼åä½èä¿çè¿½ç©¶æ³å¾è´£ä»»çæå©ã
+
+5. **åè´£å£°æ**  
+æ¬è½¯ä»¶æâç°ç¶âæä¾ï¼ä¸æä¾ä»»ä½å½¢å¼çä¿è¯ï¼åæ¬ä½ä¸éäºå¯¹ééæ§ãéç¨äºç¹å®ç¨éãæ ä¾µæç­æ¹é¢çä¿è¯ãåä½èå¯¹äºå ä½¿ç¨æ¬è½¯ä»¶èé æçä»»ä½æå¤±ãæå®³ãè¯è®¼ç­ä¸æ¿æè´£ä»»ã
+
+6. **ç»æ­¢æ¡æ¬¾**
+æ¬è®¸å¯è¯èªæ¨æ¥åä¹æ¥èµ·çæï¼ç´è³ç»æ­¢ãå¦æ¨æªéµå®æ¬è®¸å¯è¯çä»»ä½æ¡æ¬¾ï¼åä½èææéæ¶ç»æ­¢æ¬è®¸å¯è¯ãä¸æ¦è®¸å¯è¯ç»æ­¢ï¼æ¨å¿é¡»åæ­¢ä½¿ç¨æ¬è½¯ä»¶ï¼å¹¶éæ¯æ¨æ¥æææ§å¶çææå¯æ¬ã
+
+7. **éç¨æ³å¾ä¸äºè®®è§£å³**
+æ¬è®¸å¯è¯ååä½èæå¨å½å®¶æå¸æ³ç®¡è¾åºæ³å¾ççº¦æå¹¶ä¾æ®å¶è§£éãä»»ä½å æ¬è®¸å¯è¯å¼èµ·çæä¸å¶ç¸å³çäºè®®åºéè¿ååè§£å³ãå¦ååæ æï¼ä»»ä½ä¸æ¹åå¯å°äºè®®æäº¤åä½èæå¨å½å®¶æå¸æ³ç®¡è¾åºçæç®¡è¾æçæ³é¢è§£å³ã
+
+## License
+
+This License (hereinafter referred to as "License") applies to the software you have obtained (hereinafter referred to as "Software"). Please read the following terms carefully before using the Software. Using the Software indicates your agreement and acceptance of the terms of this License.
+
+1. **Copyright Notice**  
+All codes, images, and files of this product are copyrighted by Wuhan UUSEC Technology Co.,Ltd
+
+2. **Usage Permission**  
+Subject to compliance with the terms of this License, you are granted the right to install and run the Software on a single device for personal non-commercial purposes only.
+
+3. **Prohibitions**  
+You shall not engage in the following activities in relation to the Software:
+    a) Cracking, reverse engineering, decompiling, disassembling, or other similar actions;
+    b) Repackaging, modifying, adapting, copying, translating, sublicensing, or creating derivative works;
+    c) Using for commercial purposes or any profit-making activities;
+    d) Unauthorized dissemination, distribution, sale, or rental of the Software;
+    e) Combining the Software with content or actions that infringe upon the intellectual property rights of others or violate laws and regulations.
+
+4. **Reservation of Rights**  
+The copyright of the Software belongs to the original author. All other rights not expressly granted in this License are reserved by the original author. You may not exercise any other rights not expressly granted in this License without the explicit authorization of the original author.If used beyond the scope of the authorization, the original author reserves the right to pursue legal liability.
+
+5. **Disclaimers**  
+The Software is provided "as is" without any warranties of any kind, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. The original author shall not be liable for any loss, damage, litigation, or any other consequences resulting from the use of the Software.
+
+6. **Termination**  
+This License shall be effective upon your acceptance and shall continue in effect until terminated. The original author reserves the right to terminate this License at any time if you fail to comply with any of the terms and conditions of this License. Upon termination, you must cease all use of the Software and destroy all copies in your possession or control.
+
+7. **Applicable Law and Dispute Resolution**  
+This License shall be governed by and construed in accordance with the laws of the country or jurisdiction where the original author is located. Any disputes arising from or in connection with this License shall be resolved through negotiation. In case no settlement can be reached through negotiation, either party may submit the dispute to the competent court of the country or jurisdiction where the original author is located.

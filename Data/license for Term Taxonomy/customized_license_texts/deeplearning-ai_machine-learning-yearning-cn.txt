@@ -1,0 +1,64 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+================================================================
+
+## Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+This is a human-readable summary of (and not a substitute for) the [license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode). [Disclaimer](https://creativecommons.org/licenses/by-nc-sa/4.0/#).
+
+### You are free to:
+
+- **Share** â copy and redistribute the material in any medium or format
+
+- **Adapt** â remix, transform, and build upon the material
+
+  The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+------
+
+### Under the following terms:
+
+- **Attribution** â You must give [appropriate credit](https://creativecommons.org/licenses/by-nc-sa/4.0/#), provide a link to the license, and [indicate if changes were made](https://creativecommons.org/licenses/by-nc-sa/4.0/#). You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- **NonCommercial** â You may not use the material for [commercial purposes](https://creativecommons.org/licenses/by-nc-sa/4.0/#).
+- **ShareAlike** â If you remix, transform, or build upon the material, you must distribute your contributions under the [same license](https://creativecommons.org/licenses/by-nc-sa/4.0/#) as the original.
+
+- **No additional restrictions** â You may not apply legal terms or [technological measures](https://creativecommons.org/licenses/by-nc-sa/4.0/#) that legally restrict others from doing anything the license permits.
+
+------
+
+### Notices:
+
+- You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable [exception or limitation](https://creativecommons.org/licenses/by-nc-sa/4.0/#).
+- No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as [publicity, privacy, or moral rights](https://creativecommons.org/licenses/by-nc-sa/4.0/#) may limit how you use the material.
+
+================================================================
+
+## ç½²å-éåä¸æ§ä½¿ç¨-ç¸åæ¹å¼å±äº« 4.0 å½é (CC BY-NC-SA 4.0)
+
+è¿æ¯ä¸ä»½æ®éäººå¯ä»¥çè§£ç[è®¸å¯åè®®](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans)æ¦è¦ (ä½ä¸æ¯æ¿ä»£) ã [åè´£å£°æ](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#).
+
+### æ¨å¯ä»¥èªç±å°ï¼
+
+- **å±äº«** â å¨ä»»ä½åªä»ä»¥ä»»ä½å½¢å¼å¤å¶ãåè¡æ¬ä½å
+
+- **æ¼ç»** â ä¿®æ¹ãè½¬æ¢æä»¥æ¬ä½åä¸ºåºç¡è¿è¡åä½
+
+  åªè¦ä½ éµå®è®¸å¯åè®®æ¡æ¬¾ï¼è®¸å¯äººå°±æ æ³æ¶åä½ çè¿äºæå©ã
+
+------
+
+### æé¡»éµå®ä¸åæ¡ä»¶ï¼
+
+- **ç½²å** â æ¨å¿é¡»ç»åº[éå½çç½²å](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#)ï¼æä¾æåæ¬è®¸å¯åè®®çé¾æ¥ï¼åæ¶[æ ææ¯å¦ï¼å¯¹åå§ä½åï¼ä½äºä¿®æ¹](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#)ãæ¨å¯ä»¥ç¨ä»»ä½åççæ¹å¼æ¥ç½²åï¼ä½æ¯ä¸å¾ä»¥ä»»ä½æ¹å¼æç¤ºè®¸å¯äººä¸ºæ¨ææ¨çä½¿ç¨èä¹¦ã
+- **éåä¸æ§ä½¿ç¨** â æ¨ä¸å¾å°æ¬ä½åç¨äº[åä¸ç®ç](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#)ã
+- **ç¸åæ¹å¼å±äº«** â å¦ææ¨åæ··åãè½¬æ¢æèåºäºæ¬ä½åè¿è¡åä½ï¼æ¨å¿é¡»åºäº[ä¸ååè®¸å¯åè®®ç¸åçè®¸å¯åè®®](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#) ååæ¨è´¡ç®çä½åã
+
+- **æ²¡æéå éå¶** â æ¨ä¸å¾éç¨æ³å¾æ¯è¯­æè [ææ¯æªæ½](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#) ä»èéå¶å¶ä»äººåè®¸å¯åè®®åè®¸çäºæã
+
+------
+
+### å£°æï¼
+
+- æ¨ä¸å¿å ä¸ºå¬å±é¢åçä½åè¦ç´ èéµå®è®¸å¯åè®®ï¼æèæ¨çä½¿ç¨è¢«å¯éç¨ç [ä¾å¤æéå¶](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#)æåè®¸ã
+- ä¸æä¾æä¿ãè®¸å¯åè®®å¯è½ä¸ä¼ç»ä¸æ¨æå¾ä½¿ç¨çæå¿é¡»çææè®¸å¯ãä¾å¦ï¼å¶ä»æå©æ¯å¦[å½¢è±¡æãéç§ææäººæ ¼æ](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#)å¯è½éå¶æ¨å¦ä½ä½¿ç¨ä½åã

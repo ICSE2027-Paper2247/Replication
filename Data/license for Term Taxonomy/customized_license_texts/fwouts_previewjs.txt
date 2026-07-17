@@ -1,0 +1,3 @@
+Preview.js is divided into multiple packages, each licensed under either AGPL-3.0 or MIT.
+
+Please refer to LICENSE under each directory to find out which license applies.

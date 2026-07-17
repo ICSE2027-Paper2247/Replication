@@ -1,0 +1,205 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv=Content-Type  content="text/html; charset=utf-8" ><title>è´´å§äºç­¾å°ãæç»ç¨æ·ä½¿ç¨è®¸å¯åè®®ä¹¦ã V2.0</title><style>
+@font-face{
+font-family:"Times New Roman";
+}
+
+@font-face{
+font-family:"å®ä½";
+}
+
+@font-face{
+font-family:"Wingdings";
+}
+
+@font-face{
+font-family:"Calibri";
+}
+
+@font-face{
+font-family:"å¾®è½¯éé»";
+}
+
+@list l0:level1{
+mso-level-start-at:4;
+mso-level-number-format:chinese-counting;
+mso-level-suffix:none;
+mso-level-text:"%1ã";
+mso-level-tab-stop:0.0000pt;
+mso-level-number-position:left;
+margin-bottom:0pt; margin-top:0pt; margin-left:0.0000pt;
+text-indent:0.0000pt;
+font-family:'Times New Roman'; }
+
+@list l0:level2{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%2.";
+mso-level-tab-stop:72.0000pt;
+mso-level-number-position:left;
+margin-left:72.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level3{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%3.";
+mso-level-tab-stop:108.0000pt;
+mso-level-number-position:left;
+margin-left:108.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level4{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%4.";
+mso-level-tab-stop:144.0000pt;
+mso-level-number-position:left;
+margin-left:144.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level5{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%5.";
+mso-level-tab-stop:180.0000pt;
+mso-level-number-position:left;
+margin-left:180.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level6{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%6.";
+mso-level-tab-stop:216.0000pt;
+mso-level-number-position:left;
+margin-left:216.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level7{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%7.";
+mso-level-tab-stop:252.0000pt;
+mso-level-number-position:left;
+margin-left:252.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level8{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%8.";
+mso-level-tab-stop:288.0000pt;
+mso-level-number-position:left;
+margin-left:288.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l0:level9{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%9.";
+mso-level-tab-stop:324.0000pt;
+mso-level-number-position:left;
+margin-left:324.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l1:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:39.0000pt;
+mso-level-number-position:left;
+margin-left:39.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l2:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:\F06C;
+mso-level-tab-stop:81.0000pt;
+mso-level-number-position:left;
+margin-left:81.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Wingdings'; }
+
+@list l3:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:18.0000pt;
+mso-level-number-position:left;
+margin-left:18.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l4:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:\F06C;
+mso-level-tab-stop:18.0000pt;
+mso-level-number-position:left;
+margin-left:18.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Wingdings'; }
+
+@list l5:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:\F06C;
+mso-level-tab-stop:60.0000pt;
+mso-level-number-position:left;
+margin-left:60.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Wingdings'; }
+
+@list l6:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:60.0000pt;
+mso-level-number-position:left;
+margin-left:60.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l7:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:\F06C;
+mso-level-tab-stop:39.0000pt;
+mso-level-number-position:left;
+margin-left:39.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Wingdings'; }
+
+@list l8:level1{
+mso-level-number-format:bullet;
+mso-level-suffix:tab;
+mso-level-text:\F06C;
+mso-level-tab-stop:102.0000pt;
+mso-level-number-position:left;
+margin-left:102.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Wingdings'; }
+
+@list l9:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:81.0000pt;
+mso-level-number-position:left;
+margin-left:81.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+@list l10:level1{
+mso-level-number-format:decimal;
+mso-level-suffix:tab;
+mso-level-text:"%1.";
+mso-level-tab-stop:102.0000pt;
+mso-level-number-position:left;
+margin-left:102.0000pt; text-indent:-18.0000pt; margin-bottom:0pt; margin-top:0pt; font-family:'Times New Roman'; }
+
+p.p0{
+margin:0pt;
+margin-bottom:0.0001pt;
+margin-bottom:0pt;
+margin-top:0pt;
+text-align:justify;
+font-size:10.5000pt; font-family:'Times New Roman'; }
+
+span.10{
+font-family:'Times New Roman'; }
+
+span.15{
+color:rgb(0,0,255); text-decoration:underline ;font-family:'Times New Roman'; }
+
+p.p16{
+margin-bottom:0pt;
+margin-top:0pt;
+text-align:justify;
+font-weight:normal; font-style:normal; font-size:10.5000pt; font-family:'Calibri'; }
+@page{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}@page Section0{
+margin-top:72.0000pt;
+margin-bottom:72.0000pt;
+margin-left:90.0000pt;
+margin-right:90.0000pt;
+size:595.3000pt 841.9000pt;
+layout-grid:15.6000pt;
+}
+div.Section0{page:Section0;}</style></head><body style="tab-interval:21pt; text-justify-trim:punctuation; " ><!--StartFragment--><div class="Section0"  style="layout-grid:15.6000pt; " ><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:center; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:14.0000pt; font-family:'å¾®è½¯éé»'; " >è´´å§äºç­¾å°ãæç»ç¨æ·ä½¿ç¨è®¸å¯åè®®ä¹¦ã&nbsp;V2.0</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:14.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:bold; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ãé¦é¨åå¯¼è¨ã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:bold; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ¶è®¾æ</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ä½¿ç¨</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >è´´å§äºç­¾å°é¡¹ç®ï¼åæ¬æ­¤ç¨åºæ¬èº«åç¸å³ææææ¡£ï¼ä»¥ä¸ç®ç§°&#8220;äºç­¾&#8221;ï¼åå¶è¡çåï¼åæ¬å¨äºç­¾åºç¡ä¸äºæ¬¡åä½çé¡¹ç®åä¾èµäºç­¾ç¨åºè¿è¡çæä»¶ç­ï¼</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ï¼æ¨åºå½éè¯»å¹¶éµå®</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >è´´å§äºç­¾å°</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >æç»ç¨æ·ä½¿ç¨è®¸å¯åè®®ä¹¦</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ãï¼ä»¥ä¸ç®ç§°&#8220;åè®®&#8221;ï¼</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;ã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >è¯·æ¨å¡å¿å®¡æéè¯»ãååçè§£åæ¡æ¬¾åå®¹ï¼</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >åè®®ä¸­çéç¹åå®¹å¯è½ä»¥å ç²æå ä¸åçº¿çå½¢å¼æç¤ºæ¨éç¹æ³¨æã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >é¤éæ¨å·²éè¯»å¹¶æ¥åæ¬åè®®æææ¡æ¬¾ï¼å¦åæ¨æ æ</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >æ¶è®¾æä½¿ç¨äºç­¾</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >æ¨æ¶è®¾æä½¿ç¨äºç­¾</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >å³è§ä¸ºæ¨å·²éè¯»å¹¶åææ¬åè®®ççº¦æã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:bold; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ä¸ããåè®®çèå´ã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:bold; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >æ¬åè®®æ¯äºç­¾ç¨æ·ä¸</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >StusGame&nbsp;GROUP</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ä¹é´å³äºç¨æ·</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >æ¶è®¾æ</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ä½¿ç¨äºç­¾</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >åå¶è¡çå</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >æè®¢ç«çåè®®ã&#8220;</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >StusGame&nbsp;GROUP</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >&#8221;ï¼äº¦ä½&#8220;SGP&#8221;ï¼ä¸»è¦æ</span><span><a href="https://github.com/MoeNetwork/Tieba-Cloud-Sign" ><span class="15"  style="mso-spacerun:'yes'; color:rgb(0,0,255); letter-spacing:0.0000pt; font-weight:normal; text-transform:none; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >https://github.com/MoeNetwork/Tieba-Cloud-Sign</span></a></span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ç½ç«åå¶è¿è¥åç®¡çäººåã&#8220;ç¨æ·&#8221;æ¯ææ¶è®¾æä½¿ç¨äºç­¾</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >åå¶è¡çå</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >çæ¶è®¾èãä½¿ç¨äººï¼ä»¥ä¸ä¹æä¸º&#8220;æ¨&#8221;ã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >äºããè®¸å¯ä½¿ç¨ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1&nbsp;éè¿ä»»ä½éå¾ä¸è½½çäºç­¾ç¨åºï¼å¨ä¸è¿åæ¬åè®®çåæä¸å¯èªè¡æ¶è®¾ãä½¿ç¨ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2&nbsp;å¶å®åèäºç­¾åå¶è¡çåçæºä»£ç çç¨åºï¼</span><span style="mso-spacerun:'yes'; font-weight:normal; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >é¡»å¾å¾è³å°ä¸¤ä½äºç­¾å¼åèåæå</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ï¼å¨æ ç¤ºåæçæä¿¡æ¯çæåµä¸åè¡ãæ¶è®¾ãä½¿ç¨ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ä¸ããç¦æ­¢ä½¿ç¨ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1&nbsp;</span><span style="mso-spacerun:'yes'; font-weight:bold; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ä¸å¾ä»¥ä»»ä½çç±ãä»»ä½ææ®µï¼åæ¬ä½ä¸éäºå åãé®æ¡ãä¿®æ¹å­å·ãæ·»å nofollowå±æ§ç­ï¼ä¿®æ¹</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:bold; text-transform:none; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >äºç­¾</span><span style="mso-spacerun:'yes'; font-weight:bold; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >åå¶è¡çååæççæä¿¡æ¯ãçæé¾æ¥çæåååæé¾æ¥ï¼å¹¶ä¿è¯åæçæè½å¤å¨æ¾ç¼å¤å±ç¤ºã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2&nbsp;ç¦æ­¢ä»¥ä»»ä½å½¢å¼åä»äººåå®äºç­¾çå¤å¶åæå»¶ä¼¸äº§åã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.3&nbsp;ç¦æ­¢ä½¿ç¨äºç­¾ä»¥ä»»ä½å¼ºå¶æ¶è´¹å½¢å¼çå©ï¼æèµ ãæå¹¿åç­éå¼ºå¶æ¶è´¹å½¢å¼é¤å¤ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; mso-list:l0 level1 lfo1; " ><![if !supportLists]><span style="font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'Times New Roman'; " ><span style='mso-list:Ignore; ' >åã</span></span><![endif]><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ãè®¸å¯ç»æ­¢ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1&nbsp;æ è®ºä½æ¶ï¼å¦ææ¨ä¸»å¨æ¾å¼æè¢«æ¶åäºè®¸å¯ï¼æ¨å¿é¡»ç«å³éæ¯äºç­¾çææå¤å¶åãè¡çåï¼å¹¶å³é­ä»»ä½ç±äºç­¾æ­å»ºçæå¡ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2&nbsp;å¦æ¨è¿åäºæ¬åè®®çä»»ä½ä¸é¡¹æ¡æ¬¾åæ¡ä»¶ï¼åè§ä¸ºä¸åè®¸å¯è¢«æ¶åã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3&nbsp;</span><span style="mso-spacerun:'yes'; font-weight:bold; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ç±ç¨ä¸ç¨ï¼ä¸ç¨å°±æ»</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ï¼ä¸æ¦æ¨æ»èï¼åè§ä¸ºä¸åè®¸å¯è¢«æ¶åã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >äºããæå©ä¿çã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:'yes'; font-weight:normal; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >æªæç¡®å£°æçä¸åå¶å®æå©åä¸ºSGPæä¿çï¼å¯¹æ¬åè®®çä¸åè§£éæå½SGPææã</span><span style="mso-spacerun:'yes'; font-weight:normal; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >å­ããè´£ä»»éåº¦ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;å¨éç¨æ³å¾æåè®¸çæå¤§èå´åï¼SGPå¨ä»»ä½æåµä¸ç»ä¸å°±å ä½¿ç¨æä¸è½ä½¿ç¨äºç­¾æå°±æªæä¾æ¯ææå¡æåççä»»ä½ç¹æ®ãæå¤ãéç´æ¥æé´æ¥çæå®³è´èµå¿è´£ä»»ï¼å³ä½¿äºåè¢«åç¥è¯¥æå®³åççå¯è½æ§ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ä¸ããåè®®ççæä¸åæ´ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1&nbsp;</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >SGPææå¨å¿è¦æ¶ä¿®æ¹æ¬åè®®æ¡æ¬¾ãæ¨å¯ä»¥å¨ç¸å³é¡µé¢æ¥éææ°çæ¬çåè®®æ¡æ¬¾ã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " ><br></span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2&nbsp;</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >æ¬åè®®æ¡æ¬¾åæ´åï¼å¦ææ¨ç»§ç»­</span><span style="mso-spacerun:'yes'; font-weight:normal; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >æ¶è®¾æ</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ä½¿ç¨äºç­¾</span><span style="mso-spacerun:'yes'; font-weight:normal; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >åå¶è¡çå</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; text-decoration:underline ;font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >ï¼å³è§ä¸ºæ¨å·²æ¥åä¿®æ¹åçåè®®ã</span><span style="mso-spacerun:'yes'; letter-spacing:0.0000pt; font-weight:normal; text-transform:none; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»';  mso-shading:rgb(255,255,255); " >å¦ææ¨ä¸æ¥åä¿®æ¹åçåè®®ï¼é£ä¹è§ä¸ºæ¨æ¾å¼ä¸åè®¸å¯ï¼åè§4.1ï¼</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >å«ããéç¨åç®¡è¾æ³å¾ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ãä¸­åäººæ°å±åå½èä½ææ³ãããä¸­åäººæ°å±åå½è®¡ç®æºè½¯ä»¶ä¿æ¤æ¡ä¾ãããä¸­åäººæ°å±åå½åæ æ³ãããä¸­åäººæ°å±åå½ä¸å©æ³ãç­ä¸­åäººæ°å±åå½æ³å¾ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ãç»è¯­ã</span><span style="mso-spacerun:'yes'; font-weight:bold; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ¬åè®®åä¸è¿°æéä¿è¯åè´£ä»»éå¶åä¸­åäººæ°å±åå½æ³å¾ç®¡è¾ã</span><br/><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;æ­¤å¤ï¼å¨å®è£è¿ç¨ä¸­ï¼æä»¬å°ä¼æ¶éä¸äºä¿¡æ¯ä»¥ä¾¿äºç»è®¡å®è£éåæ¹è¿ä½éªãæä»¬ç»ä¸ä¼æ¶éæ¨çéç§ä¿¡æ¯ï¼ä¹ä¸ä¼åä»»ä½äººæ³é²è¿äºä¿¡æ¯ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;è³æ­¤ï¼æ¨è¯å®å·²ç»è¯¦ç»éè¯»å¹¶å·²çè§£æ¬åè®®ï¼å¹¶åæä¸¥æ ¼éµå®å¨é¨æ¡æ¬¾åæ¡ä»¶ã</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:right; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >StusGame&nbsp;GROUP</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p16  style="margin-bottom:0pt; margin-top:0pt; text-align:left; " ><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " >&nbsp;</span><span style="mso-spacerun:'yes'; font-weight:normal; font-style:normal; font-size:9.0000pt; font-family:'å¾®è½¯éé»'; " ><o:p></o:p></span></p><p class=p0  style="margin-bottom:0pt; margin-top:0pt; " ><span style="mso-spacerun:'yes'; font-size:10.5000pt; font-family:'Times New Roman'; " ><o:p>&nbsp;</o:p></span></p></div><!--EndFragment--></body></html>

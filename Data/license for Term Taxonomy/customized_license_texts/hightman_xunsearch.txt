@@ -1,0 +1,24 @@
+Xunsearch çæå£°æ
+=================
+$Id$
+
+Xunsearch æ¯ä¸ä¸ªåè´¹å¼æºçå¨ææç´¢è½¯ä»¶ï¼å¨ä»¥ä¸æè¿°ç GPL éç¨è®¸å¯è¯çæ¡æ¬¾ä¸åå¸ã
+
+Copyright (C) 2011, èä½æç±æ­å·äºå£ç½ç»ç§ææéå¬å¸ææã
+èä½æäººä¿çä¸åç¸å³æå©ã
+
+Copyright (C) 2010-2011 by Hangzhou YunSheng Network Technology Co., Ltd.
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+long with this program.  If not, see <http://www.gnu.org/licenses/>.

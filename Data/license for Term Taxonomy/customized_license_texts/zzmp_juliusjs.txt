@@ -1,0 +1,212 @@
+## License
+
+This is a modification of the Large Vocabulary Continuous Speech Recognition Engine Julius
+to work in modern browser environments with JavaScript.
+
+The modifications are licensed under The MIT License (MIT)
+
+Copyright (c) 2014 Zachary Pomerantz, @zzmp
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Original licensing still applies.
+
+## Original licenses
+
+### XAudioJS
+
+Resampler.js is taken from https://github.com/grantgalitz/XAudioJS, and is in the Public Domain.
+
+### Large Vocabulary Continuous Speech Recognition Engine Julius:
+
+*** English translation is available in the latter of this file ***
+
+	ãå¤§èªå½é£ç¶é³å£°èªè­ã¨ã³ã¸ã³ Juliusã
+			å©ç¨è¨±è«¾æ¸
+
+  Copyright (c)   1991-2013 äº¬é½å¤§å­¦ æ²³åç ç©¶å®¤
+  Copyright (c)   1997-2000 æå ±å¦çæ¯èäºæ¥­åä¼(IPA)
+  Copyright (c)   2000-2005 å¥è¯åç«¯ç§å­¦æè¡å¤§å­¦é¢å¤§å­¦ é¹¿éç ç©¶å®¤
+  Copyright (c)   2005-2013 åå¤å±å·¥æ¥­å¤§å­¦ Juliuséçºãã¼ã 
+
+----------------------------------------------------------------------------
+
+ãå¤§èªå½é£ç¶é³å£°èªè­ã¨ã³ã¸ã³ Juliusãï¼Julianãå«ãï¼ã¯ãäº¬é½å¤§å­¦ æ²³å
+ç ç©¶å®¤ãå¥è¯åç«¯ç§å­¦æè¡å¤§å­¦é¢å¤§å­¦ é¹¿éç ç©¶å®¤ãåã³åå¤å±å·¥æ¥­å¤§å­¦ 
+Juliuséçºãã¼ã ã§éçºããã¦ãã¾ãã1997å¹´åº¦ãã3å¹´éãæå ±å¦çæ¯èäº
+æ¥­åä¼(IPA)ãå®æ½ãããç¬åµçæå ±æè¡è²æäºæ¥­ãã®æ´å©ãåãã¾ããã
+
+äº¬é½å¤§å­¦ æ²³åç ç©¶å®¤ãIPAãå¥è¯åç«¯ç§å­¦æè¡å¤§å­¦é¢å¤§å­¦ é¹¿éç ç©¶å®¤ãåã³
+åå¤å±å·¥æ¥­å¤§å­¦ Juliuséçºãã¼ã ï¼ä»¥ä¸ãããã¦ãèä½æ¨©èãã¨è¨ãï¼ã¯ã
+èä½èã§ããèä½æ¨©ãçä¿ãã¦ãã¾ãããæ¬å©ç¨æ¡ä»¶ã®å¨ã¦ãåè«¾ãéµå®ãã
+éããã½ã¼ã¹ã³ã¼ããå«ãæ¬ãã­ã°ã©ã åã³ãã­ã¥ã¡ã³ãã¼ã·ã§ã³ï¼ä»¥ä¸ãã
+ãã¦ãæ¬ã½ããã¦ã§ã¢ãã¨è¨ãï¼ãç¡åã§ããªãã«æä¾ãã¾ããããªããæ¬ã½
+ããã¦ã§ã¢ãå©ç¨ããã¨ãã¯ãæ¬å©ç¨æ¡ä»¶ã®å¨ã¦ãåè«¾ãããã®ã¨çåããã¾
+ãã
+
+			ãå©ç¨æ¡ä»¶ã
+
+1. ããªãã¯ãæ¬å©ç¨æ¡ä»¶ã®å¨ã¦ãåè«¾ãéµå®ããéããæ¬ã½ããã¦ã§ã¢ã®å¨
+é¨åã¯ä¸é¨ã«ã¤ãã¦ä½¿ç¨ãè¤è£½ãç¿»æ¡ãå¤æ´ãçµè¾¼ã¿ãçµåãããã¨ããã³ã
+ããã®è¤è£½ç©ãç¿»æ¡ç©ãå¤æ´ç©ç­ãéå¸ãéä¿¡ãããã¨ãã§ãã¾ãããã ãã
+ããªããå«ãæ¬ã½ããã¦ã§ã¢ã®å©ç¨èã¯ãæ¬ã½ããã¦ã§ã¢ã®å¨é¨åã¯ãã®ä¸é¨
+ãå¤æ´ãã¦ãã®è¤è£½ç©ãéå¸ãéä¿¡ãªã©ãã¦ç¬¬ä¸èã«æä¾ããã¨ãã¯ç¬¬2é ã®
+è¡¨ç¤ºè¨è¼ã«å ãæ¬ã½ããã¦ã§ã¢ãå¤æ´ããæ¨ãå¤æ´èåã³ãã®å¤æ´æ¥ãæç¢ºã«
+è¡¨ç¤ºãããã®ã¨ãã¾ãã
+
+2. ããªãã¯ãä½¿ç¨ãè¤è£½ãç¿»æ¡ãå¤æ´ãçµè¾¼ã¿ãçµåãã®ä»æ¬ã½ããã¦ã§ã¢
+ã®å©ç¨ææ§ã®å¦ä½ã«ãããããããã®è¤è£½ç©ãç¿»æ¡ç©ãå¤æ´ç©ç­ã®å¨é¨åã¯ä¸
+é¨ãç¬¬ä¸èã«æä¾ããã¨ãã¯ãæ¬ã½ããã¦ã§ã¢ã«ä¸è¨ã®èä½æ¨©è¡¨ç¤ºåã³å¬éã®
+è¶£æ¨ãå«ãæ¬å©ç¨æ¡ä»¶ã®å¨ã¦ï¼ãã®ææ¸ãã¡ã¤ã«ï¼ããããããå¤æ´ãããã¨
+ãªããã®ã¾ã¾è¡¨ç¤ºãæ·»ä»ããªããã°ãªãã¾ããã
+
+			è¨
+  Copyright (c) 1991-2013 äº¬é½å¤§å­¦ æ²³åç ç©¶å®¤
+  Copyright (c) 1997-2000 æå ±å¦çæ¯èäºæ¥­åä¼(IPA)
+  Copyright (c) 2000-2005 å¥è¯åç«¯ç§å­¦æè¡å¤§å­¦é¢å¤§å­¦ é¹¿éç ç©¶å®¤
+  Copyright (c) 2005-2013 åå¤å±å·¥æ¥­å¤§å­¦ Juliuséçºãã¼ã 
+
+3. æ¬ã½ããã¦ã§ã¢ãå©ç¨ãã¦å¾ãããç¥è¦ã«é¢ãã¦çºè¡¨ãè¡ãªãéã«ã¯ã
+ãå¤§èªå½é£ç¶é³å£°èªè­ã¨ã³ã¸ã³ Juliusããå©ç¨ãããã¨ãæè¨ãã¦ä¸ããã
+
+4. æ¬ã½ããã¦ã§ã¢ã¯ãç ç©¶éçºã®è©¦ä½ç©ã¨ãã¦ãããã¾ã¾ã®ç¶æã§ç¡åå¬é
+æä¾ãããã®ã§ãããæ¬ã½ããã¦ã§ã¢ã«é¢ããæç¤ºãé»ç¤ºãåããããããªã
+å½ã«ãããå©ç¨ã§ããããåãããã¾ãæ³ä»¤ã«ããçãããã®ã§ãããå¦ãã
+åãããä¸åã®ä¿è¨¼ãè¡ãã¾ãããããã§è¨ãä¿è¨¼ã«ã¯ãæ¬ã½ããã¦ã§ã¢ã®å
+è³ªãæ§è½ãååæ§ãç¹å®ç®çé©åæ§ãæ¬ é¥ã®ãªããã¨ããã³ä»ã®ç¬¬ä¸èã®æã
+ãèä½æ¨©ãç¹è¨±æ¨©ãåæ¨æ¨©ç­ã®ç¡ä½è²¡ç£æ¨©ãå¶æ¥­ç§å¯ãã®ä»ã®æ¨©å©å©çãä¾µå®³
+ããªããã¨ã®ä¿è¨¼ãå«ã¿ã¾ãããããã«éå®ããããã®ã§ã¯ããã¾ãããããª
+ããå«ãæ¬ã½ããã¦ã§ã¢ã®å©ç¨èã¯ãæ¬ã½ããã¦ã§ã¢ãç¡ä¿è¨¼ã§ãããã¨ãæ¿
+è«¾ããæ¬ã½ããã¦ã§ã¢ãç¡ä¿è¨¼ã§ãããã¨ã®ãªã¹ã¯ãå©ç¨èèªèº«ã§è² ããã®ã¨
+ãã¾ããè£å¤æã®å¤æ±ºã«ããããªãã«èª²ããããç¾©åã«ãã£ã¦ããªããæ¬å©ç¨
+æ¡ä»¶ã«å¾ããã¨ãä¸å¯è½ã«ãªã£ãã¨ãã¯ãæ¬ã½ããã¦ã§ã¢ãå©ç¨ãã¦ã¯ãªãã¾
+ãããæ¬ã½ããã¦ã§ã¢ã®å©ç¨åã¯å©ç¨ã§ããªããã¨ã«é¢ãã¦ããªãåã³ç¬¬ä¸è
+ã«çããéå¸¸æå®³ãç¹å¥æå®³ãç´æ¥çãéæ¥çãä»éçãæ´¾ççãªæå®³ï¼é¸å¤±
+å©çãå«ãï¼ä¸åã«ã¤ãããããå¥ç´ãä¸æ³è¡çºè²¬ä»»ãççµæä¿è²¬ä»»ãè£½é ç©
+è²¬ä»»ç­ãããªãå½ã®ãããªãæ³å¾åå ã«ããããåãããè³ åãã¾ããã
+
+5. æ¬ã½ããã¦ã§ã¢ã®å©ç¨ã«é¢ãã¦ã¯ãæ¥æ¬å½ã®æ³å¾ãæºæ æ³ã¨ããäº¬é½å°æ¹
+è£å¤æãç¬¬ä¸å¯©ã®å°å±ç®¡è½è£å¤æã¨ãã¾ãã
+
+6. æ¬ã½ããã¦ã§ã¢ã®ã¡ã³ããã³ã¹ããµãã¼ããä¸è¨æ¡ä»¶ä»¥å¤ã®å©ç¨ç­ã«é¢ã
+ã¦ã¯ãåå¤å±å·¥æ¥­å¤§å­¦ Juliuséçºãã¼ã ãã¾ãã¯äº¬é½å¤§å­¦ æ²³åç ç©¶å®¤ã«ç§ä¼
+ä¸ããã
+
+
+
+*** This is English translation of the Japanese original for reference ***
+
+
+     Large Vocabulary Continuous Speech Recognition Engine Julius
+
+
+ Copyright (c) 1991-2013 Kawahara Lab., Kyoto University
+ Copyright (c) 1997-2000 Information-technology Promotion Agency, Japan
+ Copyright (c) 2000-2005 Shikano Lab., Nara Institute of Science and Technology
+ Copyright (c) 2005-2013 Julius project team, Nagoya Institute of Technology
+
+"Large Vocabulary Continuous Speech Recognition Engine Julius",
+including Julian, is being developed at Kawahara Lab., Kyoto
+University, Shikano Lab., Nara Institute of Science and Technology,
+and Julius project team, Nagoya Institute of Technology (collectively
+referred to herein as the "Licensers").  Julius was funded by the
+Advanced Information Technology Program Project of
+Information-technology Promotion Agency (IPA), Japan for three years
+since 1997.
+
+The Licensers reserve the copyright thereto.  However, as long as you
+accept and remain in strict compliance with the terms and conditions
+of the license set forth herein, you are hereby granted a royalty-free
+license to use "Large Vocabulary Continuous Speech Recognition Engine
+Julius" including the source code thereof and the documentation
+thereto (collectively referred to herein as the "Software").  Use by
+you of the Software shall constitute acceptance by you of all terms
+and conditions of the license set forth herein.
+
+	      TERMS AND CONDITIONS OF LICENSE
+
+1. So long as you accept and strictly comply with the terms and
+conditions of the license set forth herein, the Licensers will not
+enforce the copyright or moral rights in respect of the Software, in
+connection with the use, copying, duplication, adaptation,
+modification, preparation of a derivative work, aggregation with
+another program, or insertion into another program of the Software or
+the distribution or transmission of the Software.  However, in the
+event you or any other user of the Software revises all or any portion
+of the Software, and such revision is distributed, then, in addition
+to the notice required to be affixed pursuant to paragraph 2 below, a
+notice shall be affixed indicating that the Software has been revised,
+and indicating the date of such revision and the name of the person or
+entity that made the revision.
+
+2. In the event you provide to any third party all or any portion of
+the Software, whether for copying, duplication, adaptation,
+modification, preparation of a derivative work, aggregation with
+another program, insertion into another program, or other use, you
+shall affix the following copyright notice and all terms and
+conditions of this license (both the Japanese original and English
+translation) as set forth herein, without any revision or change
+whatsoever.
+
+                      Form of copyright notice:
+
+ Copyright (c) 1991-2013 Kawahara Lab., Kyoto University
+ Copyright (c) 1997-2000 Information-technology Promotion Agency, Japan
+ Copyright (c) 2000-2005 Shikano Lab., Nara Institute of Science and Technology
+ Copyright (c) 2005-2013 Julius project team, Nagoya Institute of Technology
+
+3. When you publish or present any results by using the Software, you
+must explicitly mention your use of "Large Vocabulary Continuous
+Speech Recognition Engine Julius".
+
+4. The Licensers are licensing the Software, which is the trial
+product of research and project, on an "as is" and royalty-free basis,
+and makes no warranty or guaranty whatsoever with respect to the
+Software, whether express or implied, irrespective of the nation where
+used, and whether or not arising out of statute or otherwise,
+including but not limited to any warranty or guaranty with respect to
+quality, performance, merchantability, fitness for a particular
+purpose, absence of defects, or absence of infringement of copyright,
+patent rights, trademark rights or other intellectual property rights,
+trade secrets or proprietary rights of any third party.  You and every
+other user of the Software hereby acknowledge that the Software is
+licensed without any warranty or guaranty, and assume all risks
+arising out of the absence of any warranty or guaranty.  In the event
+that obligations imposed upon you by judgment of a court would make it
+impossible for you to comply with the conditions of this license, you
+may not use the Software.
+
+The Licensers shall not have any liability to you or to any third
+party for damages or liabilities of any nature whatsoever arising out
+of your use of or inability to use the Software, whether of an
+ordinary, special, direct, indirect, consequential or incidental
+nature (including without limitation lost profits) or otherwise, and
+whether arising out of contract, negligence, tortuous conduct, product
+liability or any other legal theory or reason whatsoever of any nation
+or jurisdiction.
+
+5. This license of use of the Software shall be governed by the laws
+of Japan, and the Kyoto District Court shall have exclusive primary
+jurisdiction with respect to all disputes arising with respect
+thereto.
+
+6. Inquiries for support or maintenance of the Software, or inquiries
+concerning this license of use besides the conditions above, may be
+sent to Julius project team, Nagoya Institute of Technology, or
+Kawahara Lab., Kyoto University.

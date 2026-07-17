@@ -1,0 +1,17 @@
+éåº¸ç¾¤ä¾ ä¼ 3Déå¶ç License
+
+Copyright (c) 2021 éåº¸ç¾¤ä¾ ä¼ 3Déå¶ç
+
+éæ¬é¡¹ç®å¬å¼å£°æææï¼ä¸åè®¸ä½¿ç¨æ¬å·¥ç¨ä»»ä½èµæºåä»£ç ã
+ä¸¥ç¦ä½¿ç¨æ¬é¡¹ç®ä»£ç æèµæºè¿è¡ä»»ä½æªææåä¸è¡ä¸ºï¼å¦åå°ä¸æ¬é¡¹ç®è»è¾±æ¦ã
+
+The use of any resources or code of this project is not permitted unless authorized by the public statement of this project.
+Any unauthorized commercial use of the code or resources of this project is strictly prohibited, otherwise you will be on the list of shame of this project.
+
+
+
+å¦å¤ï¼æ¬é¡¹ç®ä¸­é¨åç®å½åç´ æå·æè¡¥åçéç¾¤ç¤¾åºåè®®ï¼
+In addition, some of the catalogs and materials in this project have supplementary community agreements:.
+
+
+https://github.com/jynew/jynew/blob/main/COMMUNITY_LICENSE_FOR_JYX2/README.md

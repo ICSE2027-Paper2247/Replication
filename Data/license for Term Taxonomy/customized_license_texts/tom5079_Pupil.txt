@@ -1,0 +1,4 @@
+License is specified in following module separately
+
+app/
+libpupil/

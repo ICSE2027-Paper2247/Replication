@@ -1,0 +1,70 @@
+Copyright (c) 2019 - 2022, Bellaris, Some rights reserved.
+
+å¯¹äºæ¬ä»åºæä¾çéç½®æä»¶çä¿®æ¹ãä½¿ç¨åéæ°ååï¼å¨æ»¡è¶³ä»¥ä¸æ¡ä»¶çæ¶åå°è¢«åè®¸ï¼
+
+** æ¨å¯ä»¥èªç±å°ä½¿ç¨ãä¿®æ¹æ­¤éç½®æä»¶ï¼æéèªè¡æ¿æä½¿ç¨ãä¿®æ¹è¯¥éç½®æä»¶é æçä¸ååæã
+
+** ä»¥äºè¿å¶å½¢å¼ææºä»£ç å½¢å¼çä¿®æ¹åéæ°ååï¼å¿é¡»ä¿çä¸è¿°çæå£°æãä¾èµé¡¹ç®ççæå£°æ(1)ã
+   æ­¤è®¸å¯è¯åä»¥ä¸åè´£å£°æã
+
+** å¨æ²¡æä¹¦é¢åè®¸çæå½¢ä¸ï¼ä¸åè®¸ç¨æ·å¨éæ°ååæ¶ï¼ä½¿ç¨çæææèï¼æå¶å®è´¡ç®èï¼çå§å
+   ç¨äºå®£ä¼ ã
+
+** ä¸åè®¸ç¨äºæ éå æå¡çåä¸ç¨éçéæ°ååã(2)
+
+æ³¨ï¼ 
+  ï¼1ï¼âä¾èµé¡¹ç®âæ¯æï¼è¯¥ä»åºéç½®æä»¶ä¸­ï¼å¼ç¨äºå¶å®é¡¹ç®ï¼å¦ Lilu ç­ï¼çäºè¿å¶æä»¶ææºä»£ç ã
+       ä¿®æ¹åéæ°ååè¯¥ä»åºçåå®¹æ¶ï¼éè¦ä¿çè¿äºé¡¹ç®åæççæå£°æã
+  ï¼2ï¼ä»»ä½äººä¸åè®¸å¨æªæä¾éå æå¡çæåµä¸ï¼å°è¯¥ä»åºä¸çä»»ä½åå®¹ç¨äºåä¸ç¨éï¼ç¤ºä¾ï¼ç¨æ·ä¸å¾
+      ä»¥ä»»ä½ä»·æ ¼åºå®è¯¥éç½®æä»¶ææ­¤ä»åºä¸çä»»ä½åå®¹ï¼ä½ç¨æ·å¯ä»¥å¼ç¨æ­¤éç½®æä»¶ä¸ºä»äººæä¾æå¿è£
+      æºæå¡ï¼ã
+
+
+åè´£å£°æï¼
+è¯¥ä»åºä¸éç½®æä»¶ç±çæææèåè´¡ç®èï¼æªä¸ä¸åä¸¾ï¼âæåæ ·âæä¾ï¼ä¸åå«ä»»ä½ç±»åçä¿è¯
+(æ è®ºæ¯ææçè¿æ¯æå»ç)ï¼åæ¬ä½ä¸éäºä¸ºä¸ä¾µæçééæ§åç¹å®ç®ççéç¨æ§çä¿è¯æä¿ã
+å¨ä»»ä½æåµä¸ï¼æ è®ºæ¯å¦ç­¾è®¢äºåçº¦ãå­å¨ä¾µæè¡ä¸ºè¿æ¯å¨å¶ä»æåµä¸ï¼çæææäººæè´¡ç®èä¸
+å¯¹ç±æ¬éç½®æä»¶ç´æ¥æé´æ¥äº§ççï¼æç±ä½¿ç¨æ¬éç½®æä»¶æå¤ç½®æ¬éç½®æäº§ççä»»ä½ç´¢èµãæå
+æèå¶ä»è´£ä»»è´è´£ãçæææèåè´¡ç®èäº¦ä¸å¯¹ä½¿ç¨èçä¸ªäººè¡ä¸ºå¯¼è´çç´æ¥ãé´æ¥ãå¶ç¶ãç¹æ®ã
+æ©ææ§çåæï¼åæ¬ä½ä¸éäºï¼è½¯ä»¶æåãæ°æ®ä¸¢å¤±ãç¡¬ä»¶æåç­ï¼æ¿æä»»ä½å½¢å¼çè´£ä»»ã
+
+============================================================================
+
+Redistribution and use of this product in source and binary forms, with or
+without modification, are permitted provided that the following conditions
+are met:
+
+** You may freely use and modify this product in case that you take the 
+   consequences cased by your use and modification.
+
+** Redistribution and modification in source and binary forms must retain
+   the above copyright notice, the copyright notice of dependencies (1),
+   this license and the following disclaimer.
+
+** Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+** Commercial use without accessorial service of the product is forbidden. (2)
+
+Notes: 
+    (1) "dependencies" indicates that this product has used the binary file
+       and source from other project. You should retain the original copyright
+       notice of those project when you modify and redistribute the product.
+    (2) No one is allowed to use any of the contents of this product for 
+        commercial purposes without providing additional services (example: you
+        may not sell any content under this repository at any price, but you may
+        use this product in a paid installation services for others).
+
+Disclaimer:
+
+THIS PRODUCT IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

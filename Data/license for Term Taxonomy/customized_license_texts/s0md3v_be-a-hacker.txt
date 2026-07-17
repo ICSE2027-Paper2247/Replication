@@ -1,0 +1,3 @@
+Copyright (C) Somdev Sangwan (s0md3v@gmail.com)
+
+Reproducing this work regardless of modifciation, in any form without prior written permission of the author is prohibited.

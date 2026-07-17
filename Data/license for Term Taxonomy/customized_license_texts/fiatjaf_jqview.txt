@@ -1,0 +1,1 @@
+Whatever Qt requires, LGPL or something like that.

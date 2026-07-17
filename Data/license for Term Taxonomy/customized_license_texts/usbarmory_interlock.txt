@@ -1,0 +1,22 @@
+INTERLOCK | https://github.com/usbarmory/interlock
+Copyright (c) WithSecure Corporation
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation under version 3 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Additional copyright notices:
+
+  TextSecure library and command line test client for Go
+  https://github.com/aebruno/textsecure/cmd/textsecure
+
+The license does not apply to the following 3rd party bundled code (see
+individual file headers for their copyright and license notices):
+
+  static/js/jquery-1.11.2.min.js
+  static/js/jquery-ui-1.11.3.min.js
+  static/styles/jquery-ui.css

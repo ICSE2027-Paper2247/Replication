@@ -1,0 +1,86 @@
+**GIáº¤Y PHÃP Sá»¬ Dá»¤NG PHáº¦N Má»M VNSTOCK3**
+-----------------------------------
+
+> _(*) GÃ³i thÆ° viá»n Python Vnstock tháº¿ há» thá»© 3 ÄÆ°á»£c phÃ¡t hÃ nh vÃ o thÃ¡ng 5 nÄm 2024, ÄÆ°á»£c Äá» cáº­p Äáº¿n trong giáº¥y phÃ©p nÃ y vá»i tÃªn gá»i táº¯t lÃ  Vnstock3._
+
+Khi báº¡n truy cáº­p, sá»­ dá»¥ng ná»i dung mÃ£ nguá»n Vnstock3, hoáº·c cÃ i Äáº·t Vnstock3 trÃªn thiáº¿t bá» cá»§a mÃ¬nh, báº¡n xÃ¡c nháº­n ráº±ng mÃ¬nh ÄÃ£ Äá»c, hiá»u rÃµ, vÃ  cháº¥p nháº­n Äiá»u khoáº£n sá»­ dá»¥ng pháº§n má»m nhÆ° mÃ´ táº£ dÆ°á»i ÄÃ¢y. Báº¡n cáº§n xÃ¡c nháº­n Äiá»u khoáº£n & Äiá»u kiá»n trong láº§n Äáº§u tiÃªn cháº¡y thÆ° viá»n Vnstock Äá» cÃ³ thá» sá»­ dá»¥ng.
+
+
+
+**I. ÄIá»U KHOáº¢N CHUNG**
+
+- **Cáº¥p PhÃ©p**: ThÆ° viá»n nÃ y chá» dÃ nh cho má»¥c ÄÃ­ch cÃ¡ nhÃ¢n vÃ  khÃ´ng ÄÆ°á»£c phÃ¢n phá»i láº¡i hoáº·c sá»­ dá»¥ng cho má»¥c ÄÃ­ch thÆ°Æ¡ng máº¡i mÃ  khÃ´ng cÃ³ sá»± Äá»ng Ã½ báº±ng vÄn báº£n chÃ­nh thá»©c tá»« tÃ¡c giáº£. Táº¥t cáº£ báº£n quyá»n vÃ  sá» há»¯u trÃ­ tuá» thuá»c vá» tÃ¡c giáº£. Báº¥t ká»³ hÃ nh vi vi pháº¡m báº£n quyá»n hoáº·c sá» há»¯u trÃ­ tuá» sáº½ chá»u trÃ¡ch nhiá»m trÆ°á»c phÃ¡p luáº­t.
+
+- **Háº¡n Cháº¿ Sá»­ Dá»¥ng ThÆ°Æ¡ng Máº¡i**: Sá»­ dá»¥ng Vnstock3 cho má»¥c ÄÃ­ch thÆ°Æ¡ng máº¡i bá»i báº¥t ká»³ tá» chá»©c nÃ o lÃ  nghiÃªm cáº¥m. Äiá»u nÃ y bao gá»m, nhÆ°ng khÃ´ng giá»i háº¡n, cÃ¡c hoáº¡t Äá»ng mÃ  Vnstock3 trá»±c tiáº¿p hoáº·c giÃ¡n tiáº¿p gÃ³p pháº§n táº¡o ra doanh thu hoáº·c dÃ²ng tiá»n cho má»t tá» chá»©c mÃ  khÃ´ng cÃ³ sá»± cháº¥p thuáº­n báº±ng vÄn báº£n tá»« tÃ¡c giáº£. Tuy nhiÃªn, viá»c sá»­ dá»¥ng Vnstock3 cho má»¥c ÄÃ­ch cÃ¡ nhÃ¢n, bao gá»m nghiÃªn cá»©u vÃ  chá»nh sá»­a, váº«n ÄÆ°á»£c phÃ©p miá»n phÃ­.
+
+- **CÃ¡c Má»¥c ÄÃ­ch Sá»­ Dá»¥ng Bá» Cáº¥m**: Báº¡n khÃ´ng ÄÆ°á»£c sá»­ dá»¥ng Vnstock cho cÃ¡c má»¥c ÄÃ­ch báº¥t há»£p phÃ¡p, phi Äáº¡o Äá»©c, hoáº·c trÃ¡i vá»i quy Äá»nh phÃ¡p luáº­t hiá»n hÃ nh.
+
+- **Tá»« Chá»i TrÃ¡ch Nhiá»m**: TÃ¡c giáº£ khÃ´ng chá»u trÃ¡ch nhiá»m cho báº¥t ká»³ thiá»t háº¡i, máº¥t mÃ¡t, hoáº·c háº­u quáº£ nÃ o phÃ¡t sinh tá»« viá»c sá»­ dá»¥ng thÆ° viá»n nÃ y, Äáº·c biá»t trong hoáº¡t Äá»ng Äáº§u tÆ° hoáº·c báº¥t ká»³ hoáº¡t Äá»ng nÃ o cÃ³ rá»§i ro. Báº¡n tá»± chá»u trÃ¡ch nhiá»m cho cÃ¡c quyáº¿t Äá»nh Äáº§u tÆ° cá»§a mÃ¬nh.
+
+- **TuÃ¢n Thá»§ Luáº­t PhÃ¡p**: Báº¡n Äá»ng Ã½ tuÃ¢n thá»§ má»i luáº­t phÃ¡p, quy Äá»nh, vÃ  hÆ°á»ng dáº«n liÃªn quan khi sá»­ dá»¥ng thÆ° viá»n nÃ y.
+
+- **Báº£o Máº­t Dá»¯ Liá»u**: Vnstock cÃ³ thá» lÆ°u trá»¯ dá»¯ liá»u áº©n danh cá»§a thiáº¿t bá» Äá» tá»i Æ°u tÃ­nh nÄng vÃ  cáº£i thiá»n hiá»u nÄng pháº§n má»m. ThÃ´ng tin nÃ y sáº½ ÄÆ°á»£c báº£o máº­t vÃ  khÃ´ng ÄÆ°á»£c chia sáº» vá»i bÃªn thá»© ba mÃ  khÃ´ng cÃ³ sá»± Äá»ng Ã½ cá»§a báº¡n.
+
+
+
+**II. Báº¢N QUYá»N VÃ Sá» Há»®U**
+
+Báº£n quyá»n (c) 2024 Thinh Vu @ Vnstock. Táº¥t cáº£ cÃ¡c quyá»n ÄÆ°á»£c báº£o lÆ°u.
+
+**Sá»­ Dá»¥ng vÃ  PhÃ¢n Phá»i KhÃ´ng ÄÆ°á»£c PhÃ©p**: Viá»c sao chÃ©p, phÃ¢n phá»i, hoáº·c khai thÃ¡c thÆ°Æ¡ng máº¡i Vnstock3, hoáº·c báº¥t ká»³ pháº§n nÃ o cá»§a nÃ³ lÃ  khÃ´ng ÄÆ°á»£c phÃ©p. Giá»i háº¡n nÃ y bao gá»m báº¥t ká»³ hÃ¬nh thá»©c táº¡o ra doanh thu hoáº·c sá»­ dá»¥ng cho tá» chá»©c mÃ  khÃ´ng ÄÆ°á»£c sá»± cho phÃ©p rÃµ rÃ ng cá»§a tÃ¡c giáº£. Tuy nhiÃªn, viá»c sá»­ dá»¥ng cÃ¡ nhÃ¢n, chá»nh sá»­a, vÃ  nghiÃªn cá»©u há»c thuáº­t khÃ´ng liÃªn quan Äáº¿n lá»£i Ã­ch thÆ°Æ¡ng máº¡i váº«n ÄÆ°á»£c duy trÃ¬. NgÆ°á»i dÃ¹ng tham gia vÃ o cÃ¡c hoáº¡t Äá»ng ÄÆ°á»£c cho phÃ©p nÃªn tÃ´n trá»ng má»¥c ÄÃ­ch cá»§a pháº§n má»m nÃ y nhÆ° má»t cÃ´ng cá»¥ cho viá»c thÃºc Äáº©y phÃ¡t triá»n cÃ¡ nhÃ¢n vÃ  má»¥c ÄÃ­ch giÃ¡o dá»¥c, chá»© khÃ´ng pháº£i Äá» lá»£i dá»¥ng tÃ­nh cháº¥t má» cá»§a pháº§n má»m cho má»¥c ÄÃ­ch sinh lá»£i trong khi tá» chá»©c vá»n cÃ³ nguá»n tiá»m lá»±c vá» tÃ i chÃ­nh vÃ  con ngÆ°á»i nhÆ°ng khÃ´ng chia sáº» vá»i tÃ¡c giáº£ vÃ  Äá»i ngÅ© phÃ¡t triá»n. Vi pháº¡m cÃ¡c Äiá»u khoáº£n nÃ y tÆ°Æ¡ng ÄÆ°Æ¡ng vá»i viá»c ÄÃ¡nh cáº¯p quyá»n sá» há»¯u trÃ­ tuá» vÃ  phi Äáº¡o Äá»©c, cÃ³ thá» dáº«n Äáº¿n cÃ¡c ráº¯c rá»i phÃ¡p lÃ½ kÃ¨m theo.
+
+
+
+**III. CHáº¤M Dá»¨T**
+
+Thá»a thuáº­n nÃ y cÃ³ hiá»u lá»±c cho Äáº¿n khi ÄÆ°á»£c cháº¥m dá»©t. NÃ³ sáº½ tá»± Äá»ng cháº¥m dá»©t ngay láº­p tá»©c mÃ  khÃ´ng cáº§n thÃ´ng bÃ¡o tá»« tÃ¡c giáº£ náº¿u báº¡n khÃ´ng tuÃ¢n thá»§ báº¥t ká»³ Äiá»u khoáº£n nÃ o cá»§a thá»a thuáº­n nÃ y. Sau khi cháº¥m dá»©t, báº¡n pháº£i há»§y bá» táº¥t cáº£ cÃ¡c báº£n sao cá»§a Vnstock3 vÃ  táº¥t cáº£ cÃ¡c bá» pháº­n thÃ nh pháº§n cá»§a nÃ³.
+
+
+
+**IV. ÄIá»U KHOáº¢N THI HÃNH**
+
+Thá»a thuáº­n nÃ y sáº½ ÄÆ°á»£c Äiá»u chá»nh vÃ  giáº£i thÃ­ch theo luáº­t phÃ¡p cá»§a quá»c gia mÃ  tÃ¡c giáº£ cÆ° trÃº, khÃ´ng ká» Äáº¿n cÃ¡c quy Äá»nh xung Äá»t cá»§a phÃ¡p luáº­t.
+
+Báº±ng cÃ¡ch sá»­ dá»¥ng Vnstock3, báº¡n Äá»ng Ã½ ráº±ng mÃ¬nh sáº½ bá» rÃ ng buá»c bá»i cÃ¡c Äiá»u khoáº£n cá»§a Thá»a thuáº­n nÃ y. Náº¿u báº¡n khÃ´ng Äá»ng Ã½ vá»i cÃ¡c Äiá»u khoáº£n cá»§a Thá»a thuáº­n nÃ y, vui lÃ²ng khÃ´ng cÃ i Äáº·t hoáº·c sá»­ dá»¥ng Vnstock3.
+
+
+
+---
+
+**SOFTWARE LICENSE AGREEMENT FOR VNSTOCK3**
+
+> *This License Agreement ("Agreement") is made for the Python library package known as "Vnstock3," released in May 2024.*
+
+
+
+**I. GENERAL TERMS**
+
+**1. Grant of License:** This library is intended for personal use only and may not be redistributed or used for commercial purposes without the express written consent of the author. All copyrights and intellectual property rights belong to the author. Any infringement of copyright or intellectual property will be prosecuted according to the law.
+
+**2. Restriction on Commercial Use:** The use of Vnstock3 for commercial purposes by any organization is prohibited. This includes, but is not limited to, activities where Vnstock3 directly or indirectly contributes to generating revenue or cash flow for an organization without written approval from the author. However, the use of Vnstock3 for personal purposes, including research and editing, is still permitted free of charge.
+
+**3. Prohibited Uses:** You may not use Vnstock for any illegal, unethical, or unlawful purposes.
+
+**4. Disclaimer of Liability:** The author is not responsible for any damage, loss, or consequences arising from the use of this library, especially in investment activities or any risky activities. You are responsible for your own investment decisions.
+
+**5. Compliance with Laws:** You agree to comply with all applicable laws, regulations, and guidelines when using this library.
+
+**6. Data Privacy:** Vnstock may store anonymous device data to optimize features and improve software performance. This information will be kept confidential and will not be shared with third parties without your consent.
+
+**II. COPYRIGHT AND OWNERSHIP**
+
+Copyright (c) 2024 Thinh Vu @ Vnstock. All rights reserved.
+
+**Unauthorized Use and Distribution:** Copying, distributing, or commercially exploiting Vnstock3, or any part thereof, is not permitted. This limitation includes any form of generating revenue or using for an organization without the express permission of the author. However, personal use, editing, and academic research not related to commercial gain is still maintained. Users involved in permitted activities should respect the purpose of this software as a tool for promoting personal development and educational purposes, and not to exploit the open nature of the software for profit while the organization has the potential for financial and human resources but does not share with the author and the development team. Violating these terms is equivalent to intellectual property theft and is unethical, which can lead to legal trouble.
+
+**III. TERMINATION**
+
+This agreement is effective until terminated. It will automatically terminate immediately without notice from the author if you fail to comply with any of the terms of this agreement. Upon termination, you must destroy all copies of Vnstock3 and all of its components.
+
+**IV. ENFORCEMENT**
+
+This agreement shall be governed by and construed in accordance with the laws of the country in which the author resides, without regard to its conflict of laws provisions.
+
+
+
+> **By using Vnstock3, you agree that you will be bound by the terms of this Agreement. If you do not agree to the terms of this Agreement, please do not install or use Vnstock3.**

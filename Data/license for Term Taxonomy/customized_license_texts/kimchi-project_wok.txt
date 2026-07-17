@@ -1,0 +1,23 @@
+Wok are distributed pursuant to the terms of two different licenses.
+The user interface (located in ui/ in this distribution) is governed by the
+Apache License version 2.0.
+
+Wok makes use of different projects and they are placed as below:
+
+Files: ui/css/src/bootstrap.custom.scss
+       ui/css/src/vendor/bootstrap-sass/bootstrap/*
+Source: https://github.com/twbs/bootstrap
+License: MIT
+
+Files: ui/css/src/vendor/compass-mixins/*
+Source: https://github.com/Igosuki/compass-mixins
+License: MIT-with-addition
+
+Files: ui/libs/jquery-containsNC/*
+Source: https://github.com/friedolinfoerder/jquery.containsNC
+License: MIT
+
+The rest of this distribution is governed by the GNU Lesser General Public
+License version 2.1.
+
+See COPYING.LGPL and COPYING.ASL2.

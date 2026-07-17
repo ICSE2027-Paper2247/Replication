@@ -1,0 +1,3 @@
+Anyone is free to use the code in this project for commercial purposes, non-commercial purposes, and for any purpose. However, you need to pay attention to the open source agreement of the library.
+
+ä»»ä½äººé½å¯ä»¥åºäºåä¸ç®çï¼éåä¸ç®çä»¥åä»»ä½ç®çèªç±å°ä½¿ç¨è¯¥é¡¹ç®ä¸­çä»£ç ãä¸è¿ï¼ä½ éè¦æ³¨æä¸äºä¾èµåºçå¼æºåè®®ã

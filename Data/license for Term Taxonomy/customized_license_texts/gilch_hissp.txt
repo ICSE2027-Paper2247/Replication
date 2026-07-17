@@ -1,0 +1,7 @@
+This repository is licensed Apache-2.0 except for
+the docs/ directory which is mostly licensed CC-BY-SA-4.0 instead.
+Which license applies is noted inside each file near the top.
+
+See the setup/LICENSE.txt and docs/CC-BY-SA-4.0.txt files for the full text of each license.
+
+The docs/hissp.svg and docs/H.svg logos are trademarks.

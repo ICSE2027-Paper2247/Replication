@@ -1,0 +1,33 @@
+DEVGPT.COM Software Distribution License
+
+Copyright Â© 2023, DEVGPT.COM
+
+Note: The open-source version of this technology is intended exclusively for personal projects. Commercial use or distribution is not permitted under this open-source license.
+
+This license ("License") grants rights in specified software code (the "Code") under the following terms and conditions:
+
+Distribution Prohibition: You are expressly prohibited from distributing the Code under the DEVGPT.COM Business Source License (BSL) or any modified versions of the BSL for commercial use. The BSL includes terms and conditions that apply to the Code and all modified Code before a specified date (16 September 2023).
+
+Limited Rights: You have non-exclusive, worldwide rights under this License to copy, modify, display, use, and redistribute the Code solely for your internal purposes or personal use, subject to the following conditions listed 2.1 to 2.5:
+
+2.1. Non-Commercial Use: This technology is intended exclusively for non-commercial use. Users are prohibited from using it to generate revenue directly or indirectly.
+
+2.2. Internal Use Only: Users may employ the technology solely for internal development, testing, or educational purposes. It cannot be used to develop commercial products or services.
+
+2.3. No Hosting as a Service: Users cannot offer the technology as a cloud-based service or host it for others. It should only be used locally.
+
+2.4. Data Privacy Compliance: Users are responsible for ensuring that any data or content processed through the technology complies with applicable privacy laws and regulations. Data privacy violations are strictly prohibited.
+
+2.5. No Competitive Use: Users may not employ the technology in a manner that competes with the products or services offered by DEVGPT.COM.
+
+2.6. No Warranty: This technology is provided "as is" without any warranty, and DEVGPT.COM is not liable for any damages or issues arising from its use.
+
+Copyright Notice: When copying or distributing the Code, you must conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License applies to the Code; retain all notices of the absence of any warranty, and provide all recipients with a copy of this License along with the Code.
+
+Termination: Any attempt to distribute the Code under the BSL or any similar license will automatically terminate your rights under this License.
+
+No Warranties: To the extent permitted by applicable law, the code or any services or work product provided under or in connection with this license are provided on an "as is" basis. You expressly waive all warranties, whether express or implied, including (without limitation) warranties of merchantability, fitness for a particular purpose, non-infringement, system integration, and accuracy of informational content.
+
+This License is effective as of 16 September 2023 and supersedes any previous licenses or agreements relating to the Code. DEVGPT.COM reserves all rights not expressly granted herein.
+
+For any questions or inquiries regarding licensing or distribution, please contact DEVGPT.COM.

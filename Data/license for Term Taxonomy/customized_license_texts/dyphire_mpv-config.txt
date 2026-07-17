@@ -1,0 +1,26 @@
+
+##  .../mpv-config/scripts
+
+*éå¸¸åè®®å·²éæå¨æä»¶åé¨*
+
+*Usually the LICENSE is integrated inside the file*
+
+
+##  .../mpv-config/shaders
+
+*éå¸¸åè®®å·²éæå¨æä»¶åé¨*
+
+*Usually the LICENSE is integrated inside the file*
+
+##  .../mpv-config/osc-style
+
+*éå¸¸åè®®å·²éæå¨æä»¶åé¨*
+
+*Usually the LICENSE is integrated inside the file*
+
+##  .../mpv-config/script-modules
+
+*éå¸¸åè®®å·²éæå¨æä»¶åé¨*
+
+*Usually the LICENSE is integrated inside the file*
+

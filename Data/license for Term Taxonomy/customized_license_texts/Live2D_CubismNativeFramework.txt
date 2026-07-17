@@ -1,0 +1,46 @@
+## Definitions
+
+### Live2D Cubism Components
+
+Cubism Native Framework is included in Live2D Cubism Components.
+
+Cubism Native Framework ã¯ Live2D Cubism Components ã«å«ã¾ãã¾ãã
+
+Cubism Native Framework åæ¬å¨ Live2D Cubism Components ä¸­ã
+
+## Cubism SDK Release License
+
+*All business* users must obtain a Cubism SDK Release License. "Business" means an entity with the annual gross revenue more than ten million (10,000,000) JPY for the most recent fiscal year.
+
+* [Cubism SDK Release License](https://www.live2d.com/en/download/cubism-sdk/release-license/)
+
+ç´è¿ä¼è¨å¹´åº¦ã®å£²ä¸é«ã 1000 ä¸åä»¥ä¸ã®äºæ¥­èæ§ããå©ç¨ã«ãªãå ´åã¯ãCubism SDK ãªãªã¼ã¹ã©ã¤ã»ã³ã¹ï¼åºçè¨±è«¾å¥ç´ï¼ã«åæãã¦ããã ãå¿è¦ããããã¾ãã
+
+* [Cubism SDK ãªãªã¼ã¹ã©ã¤ã»ã³ã¹](https://www.live2d.com/ja/download/cubism-sdk/release-license/)
+
+å¦ææ¨çä¼ä¸å¨æè¿ä¸ä¸ªä¼è®¡å¹´åº¦çéå®é¢è¾¾å°æè¶è¿1000ä¸æ¥åï¼æ¨å¿é¡»å¾å°Cubism SDKçåºçææè®¸å¯ï¼åºçè®¸å¯åè®®ï¼ã
+
+* [Cubism SDKåè¡è®¸å¯è¯](https://www.live2d.com/zh-CHS/download/cubism-sdk/release-license/)
+
+
+## Live2D Open Software License
+
+Live2D Cubism Components is available under Live2D Open Software License.
+
+* [Live2D Open Software License Agreement](https://www.live2d.com/eula/live2d-open-software-license-agreement_en.html)
+* [Live2D Open Software ä½¿ç¨è¨±è«¾å¥ç´æ¸](https://www.live2d.com/eula/live2d-open-software-license-agreement_jp.html)
+* [Live2D Open Software ä½¿ç¨ææåè®®](https://www.live2d.com/eula/live2d-open-software-license-agreement_cn.html)
+
+
+## Live2D Proprietary Software License
+
+Live2D Cubism Core is available under Live2D Proprietary Software License.
+
+* [Live2D Proprietary Software License Agreement](https://www.live2d.com/eula/live2d-proprietary-software-license-agreement_en.html)
+* [Live2D Proprietary Software ä½¿ç¨è¨±è«¾å¥ç´æ¸](https://www.live2d.com/eula/live2d-proprietary-software-license-agreement_jp.html)
+* [Live2D Proprietary Software ä½¿ç¨ææåè®®](https://www.live2d.com/eula/live2d-proprietary-software-license-agreement_cn.html)
+
+
+---
+
+Please contact us from [here](https://www.live2d.jp/contact/) for more license information.

@@ -1,0 +1,69 @@
+[ç®ä½ä¸­æ](#çæè®¸å¯) / [English(Machine Translation)](#LICENSE)
+
+# çæè®¸å¯
+
+æ¬æç¼è¾äº 2023 å¹´ 12 æ 18 æ¥ã
+
+## åå®¹é¨å
+
+KnowSexï¼KnowSex.netï¼ç½ç«çæç« æå­é¨ååè®¸æ¨å¨
+
+1. éä¸åæé¾æ¥ï¼
+2. ä¸ç¨äºåä¸ç¨éï¼
+3. æ ææ¥æºäº KnowSexï¼KnowSex.netï¼ï¼
+4. ä¸è¿åä¸­åäººæ°å±åå½æ³å¾åæ¨ä½¿ç¨æ¶æ¶åçå½å®¶æå°åºçæ³å¾
+
+ä¹æåµä¸ä½¿ç¨ã
+
+è¥æå¯è½è¿èä¸è¿°æ¡æ¬¾çè¡ä¸ºï¼è¯·ä¸ KnowSex [éè¿é®ä»¶èç³»](mailto:knowsex@outlook.com)ï¼knowsex@outlook.comï¼ã
+
+å¯¹äºå¾çé¨åï¼çæè¯·åèéäºææ«çâå¾çæ¥æºâçâæ¥æºâåï¼æç§åä½èççæè¦æ±è¿è¡ä½¿ç¨ã
+
+æ¨ä¸å¾å©ç¨æ¬ç«æ°åä¹åå®¹åå»ºå ä¹å®å¨ä¸è´çãç¸ä¼¼åè½çä¼ æ­èµæï¼ä½éµå®[ãKnowSex éåé¨ç½²åè®®ã](https://github.com/knowsex/knowsex.github.io/blob/main/mirror-license.md)çåæä¸æå»ºç«çéåç«ç¹é¤å¤ã
+
+KnowSexï¼KnowSex.netï¼ä¸ä¸ºæ¨çè¡ä¸ºä¹åæèä¹¦ã
+
+## å¤è§è®¾è®¡
+
+å³äºç½ç«çå¤è§è®¾è®¡ï¼åæ¬ä½ä¸éäºç½ç«ç HTMLãCSS å JavaScript ä»£ç ï¼æ¨å¯ä»¥å¨
+
+1. ä¸ç¨äºåä¸ç¨éï¼
+2. ä¸è¿åä¸­åäººæ°å±åå½æ³å¾åæ¨ä½¿ç¨æ¶æ¶åçå½å®¶æå°åºçæ³å¾
+
+ä¹æåµä¸ä½¿ç¨ã
+
+KnowSex ä¸å¯¹æ¨ä½¿ç¨è¿äºä»£ç çä¸ååæè´è´£ã
+
+
+
+# LICENSE
+
+**NOTICE: Translated with www.DeepL.com/Translator , translation is machine translation, for reference only, the original Simplified Chinese text shall prevail.**
+
+This article was edited on December 18, 2023.
+
+## Content
+
+The text part of the article on KnowSex.net allows you to use it under the following conditions: 
+
+1. attach a link to the original article.
+2. not be used for commercial purposes.
+3. identify the source as KnowSex.net.
+4. do not violate the laws of the People's Republic of China or the laws of the country or region in which you are using it.
+
+If there is any possible violation of the above terms, please contact KnowSex [by email](mailto:knowsex@outlook.com) (knowsex@outlook.com).
+
+For images, please refer to the "Source" column in the "Image Sources" section at the end of the article, and use them in accordance with the copyright requirements of the original author. 
+
+You may not use the content written on this Site to create virtually identical, functionally similar communications, except for mirror sites created in compliance with the [*KnowSex Mirror Deployment License*](https://github.com/knowsex/knowsex.github.io/blob/main/mirror-license.md).
+
+KnowSex.net does not endorse the consequences of your actions.
+
+## Design
+
+With respect to the design of the Site, including but not limited to the HTML, CSS and JavaScript code of the Site, you may use them under the following conditions: 
+
+1. not be used for commercial purposes,
+2. not violate the laws of the People's Republic of China and the laws of the country or region in which you are using it.
+
+KnowSex.net is not responsible for any consequences of your use of such code.

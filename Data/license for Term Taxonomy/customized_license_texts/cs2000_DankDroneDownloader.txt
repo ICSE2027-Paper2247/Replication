@@ -1,0 +1,37 @@
+END-USER LICENSE AGREEMENT (EULA)
+
+PLEASE READ THIS SOFTWARE LICENSE AGREEMENT CAREFULLY. BY CONTINUING TO USE THE SOFTWARE, YOU ARE AGREEING TO BE BOUND BY THE FOLLOWING TERMS AND CONDITIONS:
+
+1. License
+Dank Drone Downloader (DDD) is licensed under the "Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)" license. The full license terms can be found online at CC BY-NC-ND 4.0 Legal Code.
+Attribution: You must provide appropriate credit, include a link to the license, and specify if any changes were made to the software. This credit should be given in a reasonable manner, avoiding any implication of endorsement by the licensor mentioned below.
+NonCommercial: You are prohibited from using the software for commercial purposes. It's important to note that accepting donations for projects that use DDD as a component constitutes commercial use.
+NoDerivatives: You may not distribute modified versions of the core DDD application or any of its indexed files or assets.
+
+2. Exceptions
+The licensor may grant exceptions to the above licensing terms. You must obtain explicit permission from the developer via email at contact@dankdronedownloader.com for any exceptions.
+
+3. Disclaimer
+You acknowledge and agree that your use of this software is at your sole risk, and all associated risks are your responsibility.
+The application is provided "as is," with all faults, and without any warranty of any kind.
+
+4. License Terms
+The license terms may be modified at any time without prior notice. It is your responsibility to ensure compliance with both current and future license terms.
+
+5. Limitation of Liability
+In no event shall the developer or anyone associated with DDD be liable for personal injury or any incidental, special, indirect, or consequential damages, including, but not limited to, damages for loss of profits, loss of data, damages or losses, arising from or related to your use or inability to use the software.
+
+6. Legal Proceedings
+You agree not to initiate any legal proceedings against the developer or anyone associated with DDD.
+
+7. Data Collection
+While using DDD, the software may request personally identifiable information that could be used to identify you.
+Usage Data, including your device's Internet Protocol address, visit timestamp, unique device identifiers, and other diagnostic data, may be collected automatically. This data is solely for the purpose of providing and maintaining our services, monitoring usage, and may be used for data analysis, identifying usage trends, and improving our Service and user experience.
+We will never share your personal information with any third party unless required by law enforcement agencies with jurisdiction in your country.
+
+8. Liability Disclaimer
+If this software inadvertently causes damage to your computer, harm to you, or any unintended consequences, including but not limited to damage or inoperability of your drone or associated hardware, it is your sole responsibility. By using this program and any content downloaded through it, you assume all associated risks.
+
+Enjoy using DDD responsibly.
+
+Cs2000

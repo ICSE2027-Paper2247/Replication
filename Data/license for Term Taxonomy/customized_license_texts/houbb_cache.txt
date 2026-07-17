@@ -1,0 +1,334 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright 2016 ShenHuaJie iBase4J@163.com
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+======================================================================
+   
+                                        Apacheè®¸å¯è¯ 
+                                    çæ¬ 2.0ï¼2004å¹´1æ
+                                http://www.apache.org/licenses/
+									
+   ä½¿ç¨ãéçæåååçæ¯è¯­åæ¡ä»¶ï¼
+ 
+   1.å®ä¹
+ 
+     "è®¸å¯è¯"æ¯ææ ¹æ®æ¬ææ¡£ç¬¬1å°ç¬¬9é¨åå³äºä½¿ç¨ãéçæåååçæ¯è¯­åæ¡ä»¶ã
+ 
+     "è®¸å¯è¯é¢åè"æ¯æçæææèæèç±çæææèæ¹åçææè®¸å¯è¯çå®ä½ã
+ 
+     "æ³å¾å®ä½"æ¯æå®æ½å®ä½åè¿è¡æ§å¶çææå¶å®å®ä½åè¯¥å®ä½æ§å¶ï¼æèåè¯¥å®ä½éä¸­æ§å¶ã
+     æ ¹æ®æ­¤å®ä¹ï¼"æ§å¶"æ¯æ(i)è®©æ è®ºæ¯å¦ç­¾è®¢åè®®çä¸è¿°å®ä½ï¼è¿è¡æå¯¼æç®¡ççç´æ¥æå©æé´æ¥æå©ï¼
+     æè(ii)æ¥æç¾åä¹äºå(50%)æä»¥ä¸å·²åè¡è¡ç¥¨çææèï¼æè(iii)ä¸è¿°å®ä½çå®æææèã
+ 
+     "ç¨æ·"(æ"ç¨æ·ç")æ¯æè¡ä½¿æ¬è®¸å¯è¯ææäºæéçä¸ªäººææ³å¾å®ä½ã
+ 
+     "æºç¨åº"å½¢å¼æ¯æå¯¹åå«ä½ä¸éå¶è½¯ä»¶æºä»£ç ãææ¡£æºç¨åºåéç½®æä»¶è¿è¡ä¿®æ¹çé¦éå½¢å¼ã
+ 
+     "ç®æ "å½¢å¼æ¯æå¯¹æºç¨åºå½¢å¼è¿è¡æºæ¢°è½¬æ¢æç¿»è¯çä»»ä½å½¢å¼ï¼åæ¬ä½ä¸éäºå¯¹ç¼è¯çç®æ ä»£ç ï¼
+     çæçæä»¶ä»¥åè½¬æ¢ä¸ºå¶å®åªä½ç±»åã
+ 
+     "ä½å"æ¯ææ ¹æ®æ¬è®¸å¯è¯æå¶ä½çæºç¨åºå½¢å¼æç®æ å½¢å¼çèä½ï¼å¨èä½ä¸­åå«çæéå ççæéç¥
+     (å¨ä¸é¢éå½ä¸­æä¾äºä¸ä¸ªç¤ºä¾)ã
+ 
+     "è¡çä½å"æ¯æåºäºä½å(æä»ä½åè¡çèæ¥)çæºç¨åºå½¢å¼æç®æ å½¢å¼çä»»ä½ä½åï¼ä»¥åç¼è¾ä¿®è®¢ã
+     æ³¨éãè¯¦ç»æè¿°æå¶å®ä¿®è®¢ç­ææååèä½ä½åçæ´ä½ãæ ¹æ®æ¬è®¸å¯è¯ï¼è¡çä½åä¸å¾åæ¬ä¸ä½ååå¶
+     è¡çä½ååç¦»ä¹ä½åï¼æä»ä¸ä½ååå¶è¡çä½åçæ¥å£ç¸é¾æ¥(ææåç§°ç»å)ä¹ä½åã
+ 
+     "è´¡ç®"æ¯æä»»ä½èä½ä½åï¼åæ¬ä½åçåå§çæ¬åå¯¹è¯¥ä½åæè¡çä½åæåçä»»ä½ä¿®è®¢æè¡¥åï¼
+     æå¨æäº¤ç»è®¸å¯è¯é¢åèä»¥è®©çæææèæä»£è¡¨çæææèçææä¸ªäººææ³å¾å®ä½åå«å¨å¶ä½åä¸­ã
+     æ ¹æ®æ­¤å®ä¹ï¼"æäº¤"ä¸è¯è¡¨ç¤ºåéç»è®¸å¯è¯é¢åèæå¶ä»£è¡¨äººï¼ä»»ä½çµå­çãå£å¤´çæä¹¦é¢çäº¤æµä¿¡æ¯å½¢å¼ï¼
+     åæ¬ä½ä¸éäºå¨ç±è®¸å¯è¯é¢åèæèä»£è¡¨å¶ç®¡çççµå­é®ä»¶æ¸åãæºä»£ç æ§å¶ç³»ç»ãä»¥ååå¸è·è¸ªç³»ç»ä¸ä¸º
+     è®¨è®ºåæé«ä½åçäº¤æµï¼ä½ä¸åæ¬ç±çæææèä»¥ä¹¦é¢å½¢å¼ææ¾æ æ³¨ææå®ä¸º"éè´¡ç®"çäº¤æµæ´»å¨ã
+ 
+     "è´¡ç®è"æ¯æè®¸å¯è¯é¢åèåä»£è¡¨ä»è®¸å¯è¯é¢åèæ¥åä¹è´¡ç®çå¹¶éååå«å¨ä½åä¹è´¡ç®ä¸­çä»»ä½ä¸ªäººææ³å¾å®ä½ã
+ 
+   2.çæè®¸å¯è¯çæäº
+ 
+     æ ¹æ®æ¬è®¸å¯è¯çæ¡æ¬¾ï¼æ¯ä¸ªè´¡ç®èæäºç¨æ·æ°¸ä¹æ§çãå¨çæ§çãéä¸ææ§çãåè´¹çãæ çæè´¹çã
+     ä¸å¯æ¤éççæè®¸å¯è¯ä»¥æºç¨åºå½¢å¼æç®æ å½¢å¼å¤å¶ãåå¤è¡çä½åãå¬å¼æ¾ç¤ºãå¬å¼æ§è¡ã
+     æäºåè®¸å¯è¯ãä»¥åååä½ååè¿æ ·çè¡çä½åã
+ 
+   3.ä¸å©è®¸å¯è¯çæäº
+ 
+     æ ¹æ®æ¬è®¸å¯è¯çæ¡æ¬¾ï¼æ¯ä¸ªè´¡ç®èæäºç¨æ·æ°¸ä¹æ§çãå¨çæ§çãéä¸ææ§çãåè´¹çãæ çæè´¹çã
+     ä¸å¯æ¤éç(é¤å¨æ¬é¨åè¿è¡è¯´æ)ä¸å©è®¸å¯è¯å¯¹ä½åè¿è¡å¶ä½ãè®©äººå¶ä½ãä½¿ç¨ãæä¾éå®ãéå®ã
+     è¿å£åå¶å®è½¬è®©ï¼ä¸è¿æ ·çè®¸å¯è¯ä»éç¨äºå¨æéäº¤ä½åçè´¡ç®ä¸­å å¯ç±åä¸çæå¤ä¸ªè¿æ ·çè´¡ç®è
+     æäºèå¿é¡»ä¾µç¯çç³è¯·ä¸å©ãå¦æç¨æ·å¯¹ä»»ä½å®ä½éå¯¹ä½åæä½åä¸­ææ¶åè´¡ç®æåºå ç´æ¥æ§æè´¡ç®æ§
+     ä¸å©ä¾µæèæèµ·ä¸å©æ³å¾è¯è®¼(åæ¬äº¤äºè¯è®¼è¯·æ±æåç´¢èµ)ï¼é£ä¹æ ¹æ®æ¬è®¸å¯è¯ï¼æäºç¨æ·éå¯¹ä½å
+     çä»»ä½ä¸å©è®¸å¯è¯å°å¨æèµ·ä¸è¿°è¯è®¼ä¹æ¥èµ·ç»æ­¢ã
+ 
+   4.éæ°åå
+ 
+     ç¨æ·å¯å¨ä»»ä½åªä»ä¸­å¤å¶åååä½åæè¡çä½åä¹å¯æ¬ï¼æ è®ºæ¯å¦ä¿®è®¢ï¼è¿æ¯ä»¥æºç¨åºå½¢å¼æç®æ å½¢å¼ï¼
+     æ¡ä»¶æ¯ç¨æ·éæ»¡è¶³ä¸åæ¡æ¬¾ï¼
+ 
+     a) ç¨æ·å¿é¡»ä¸ºä½åæè¡çä½åçä»»ä½å¶ä»æ¥æ¶èæä¾æ¬è®¸å¯è¯çå¯æ¬ï¼å¹¶ä¸
+   
+     b) ç¨æ·å¿é¡»è®©ä»»ä½ä¿®æ¹è¿çæä»¶éå¸¦ææ¾çéç¥ï¼å£°æç¨æ·å·²æ´æ¹æä»¶ï¼å¹¶ä¸
+   
+     c) ç¨æ·å¿é¡»ä»ä½åçæºç¨åºå½¢å¼ä¸­ä¿çè¡çä½åæºç¨åºå½¢å¼çç¨æ·æååçææçæãä¸å©ã
+        åæ åå±æ§éç¥ï¼ä½ä¸åæ¬ä¸å±äºè¡çä½åä»»ä½é¨åçç±»ä¼¼éç¥ï¼å¹¶ä¸
+   
+     d) å¦æä½åå°"éç¥"ææ¬æä»¶åæ¬ä¸ºå¶ååä½åçä¸é¨åï¼é£ä¹ç¨æ·ååçä»»ä½è¡çä½åä¸­é¡»è³å°
+        å¨ä¸åå°æ¹ä¹ä¸åæ¬ï¼å¨è¿æ ·çéç¥æä»¶ä¸­æåå«çå±æ§éç¥çå¯è¯»å¯æ¬ï¼ä½ä¸åæ¬é£äºä¸å±äºè¡ç
+	    ä½åä»»ä½é¨åçéç¥ï¼å¨ä½ä¸ºè¡çä½åä¸é¨åèååçéç¥ææ¬æä»¶ä¸­ï¼å¦æä¸è¡çä½åä¸èµ·æä¾å
+	    å¨æºç¨åºå½¢å¼ææä»¶ä¸­ï¼æèéå¸¸ä½ä¸ºç¬¬ä¸æ¹éç¥åºç°çæ¶ååå°æ¹ï¼å¨è¡çä½åä¸­äº§ççç»é¢ä¸­ã
+	    éç¥æä»¶çåå®¹ä»ä¾ä¿¡æ¯æä¾ï¼å¹¶æªå¯¹è®¸å¯è¯è¿è¡ä¿®æ¹ãç¨æ·å¯å¨å¶ååçè¡çä½åä¸­å¨ä½åçéç¥
+	    ææ¬åæä½ä¸ºéå½æ·»å èªå·±çå±æ§éç¥ï¼æ¡ä»¶æ¯éå çå±æ§éç¥ä¸å¾ææä¿®æ¹æ¬è®¸å¯è¯ã
+   
+     ç¨æ·å¯ä»¥ä¸ºèªèº«æååºçä¿®è®¢æ·»å èªå·±ççæå£°æå¹¶å¯å¯¹èªèº«æååºä¿®è®¢åå®¹æä¸ºè¿æ ·çè¡çä½åä½ä¸º
+     æ´ä½çä½¿ç¨ãå¤å¶æååæä¾éå æä¸åçæ¡æ¬¾ï¼æ¡ä»¶æ¯ç¨æ·å¯¹ä½åçä½¿ç¨ãå¤å¶åååå¿é¡»ç¬¦åæ¬è®¸
+     å¯è¯ä¸­å£°æçæ¡æ¬¾ã
+ 
+   5.è´¡ç®çæäº¤ã
+ 
+     é¤éç¨æ·æç¡®å£°æï¼å¨ä½åä¸­ç±ç¨æ·åè®¸å¯è¯é¢åèçæäº¤è¥è¦åå«å¨è´¡ç®ä¸­ï¼å¿é¡»å¨æ ä»»ä½éå æ¡æ¬¾ä¸
+     ç¬¦åæ¬è®¸å¯è¯çæ¡æ¬¾ãå°½ç®¡ä¸é¢å¦æ­¤è§å®ï¼æ§è¡è®¸å¯è¯é¢åèæå³è´¡ç®çæ¡æ¬¾æ¶ï¼ä»»ä½æåµä¸åä¸å¾æ¿ä»£
+     æä¿®æ¹ä»»ä½åç¬è®¸å¯è¯åè®®çæ¡æ¬¾ã
+ 
+   6.åæ ãæ¬è®¸å¯è¯å¹¶æªæäºç¨æ·ä½¿ç¨è®¸å¯è¯é¢åèçåå·ãåæ ãæå¡æ è®°æäº§ååç§°ï¼é¤éå°è¿äºåç§°
+     ç¨äºåçæ§åæ¯ä¾æ§æè¿°ä½åèµ·æºåå¤å¶éç¥æä»¶çåå®¹æ¶ã
+	 
+   7.ä¿è¯å¦è®¤æ¡æ¬¾ãé¤éå éç¨æ³å¾éè¦æä¹¦é¢åæï¼è®¸å¯è¯é¢åèä»¥"æåæ ·"åºç¡æä¾ä½å(å¹¶ä¸æ¯ä¸ª
+     è´¡ç®èæä¾å¶è´¡ç®)ï¼æ ä»»ä½æç¤ºçææç¤ºçä¿è¯ææ¡ä»¶ï¼åæ¬ä½ä¸éäºå³äºæææãä¸ä¾µæã
+	 ååééæ§ãæéç¨æ§çä¿è¯ææ¡ä»¶ãç¨æ·ä»å¯¹ä½¿ç¨æéæ°ååä½åçæ­£ç¡®æ§è´è´£ï¼å¹¶éæ¿ææ ¹æ®æ¬
+	 è®¸å¯è¯è¡ä½¿æéæ¶çä»»ä½é£é©ã
+	 
+   8.è´£ä»»éå¶æ¡æ¬¾ãå¨ä»»ä½æåµä¸å¹¶æ ¹æ®ä»»ä½æ³å¾ï¼æ è®ºæ¯å ä¾µæ(åæ¬è¿å¤±)ææ ¹æ®ååï¼è¿æ¯å¶å®åå ï¼
+     é¤éæ ¹æ®éç¨æ³å¾éè¦(ä¾å¦ææè¡ä¸ºåéå¤§è¿å¤±è¡ä¸º)æç»ä¹¦é¢åæï¼å³ä½¿è´¡ç®èäºåå·²è¢«åç¥åç
+     æå®³çå¯è½æ§ï¼ä»»ä½è´¡ç®èä¸å°±ç¨æ·å ä½¿ç¨æ¬è®¸å¯è¯æä¸è½ä½¿ç¨ææ æ³ä½¿ç¨ä½å(åæ¬ä½ä¸éäºåèªæå¤±ã
+     åå·¥ãè®¡ç®æºå¤±æææéï¼æä»»ä½åä¸æåææå¤±)èé æçæå¤±ï¼åæ¬ç´æ¥çãéç´æ¥çãç¹æ®çãæå¤
+     çæé´æ¥çå­ç¬¦æåèè´è´£ã
+   
+   9.æ¥åä¿è¯æéå è´£ä»»ãéæ°ååä½åæåå¶è¡çä½åæ¶ï¼ç¨æ·å¯éæ©æä¾æä¸ºç¬¦åæ¬è®¸å¯è¯æ¿æä¹æ¯æã
+     æä¿ãèµå¿æå¶å®èè´£ä¹å¡å/ææå©èæ¶åè´¹ç¨ãä½æ¯ï¼å¨æ¿æä¸è¿°ä¹å¡æ¶ï¼ç¨æ·åªå¯ä»£è¡¨ç¨æ·æ¬èº«å
+     ç¨æ·æ¬èº«è´£ä»»æ¥æ§è¡ï¼æ éä»£è¡¨ä»»ä½å¶å®è´¡ç®èï¼å¹¶ä¸ç¨æ·ä»å¯ä¿è¯ãé²æ¤å¹¶ä¿ææ¯ä¸ªè´¡ç®èä¸åä»»ä½
+     å æ­¤èäº§ççè´£ä»»æå¯¹å ç¨æ·èªèº«æ¿æè¿æ ·çä¿è¯æéå è´£ä»»èå¯¹è¿æ ·çè´¡ç®èææåºçç´¢èµã
+   
+   æ¡æ¬¾ç»æ
+ 
+   éå½ï¼å¦ä½åç¨æ·ä½åä¸­åºç¨Apacheè®¸å¯è¯ã
+ 
+   è¥è¦åç¨æ·ä½ååºç¨Apacheè®¸å¯è¯ï¼è¯·éå ä¸åæ ·æ¬éç¥ï¼å°æ¬å·"[]"ä¸­çå­æ®µä»¥ç¨æ·èªèº«ç
+   åºåä¿¡æ¯æ¥æ¿æ¢(ä½ä¸åæ¬æ¬å·)ãææ¬å¿é¡»ä»¥æä»¶æ ¼å¼éå½çæ³¨éå¥æ³åå«å¨å¶ä¸­ã
+   å¦å¤å»ºè®®å°æä»¶åæç±»å«åä»¥åç®çè¯´æåå«å¨ç¸åç"æå°é¡µ"ä¸ä½ä¸ºçæéç¥ï¼ä»¥æ´å å®¹æçåºååºç¬¬ä¸æ¹æ¡£æ¡ã
+ 
+   çæææ 2016 ShenHuaJie iBase4J@163.com æ ¹æ®2.0çæ¬Apacheè®¸å¯è¯("è®¸å¯è¯")ææï¼
+   æ ¹æ®æ¬è®¸å¯è¯ï¼ç¨æ·å¯ä»¥ä¸ä½¿ç¨æ­¤æä»¶ã
+   
+   ç¨æ·å¯ä»ä¸åç½åè·å¾è®¸å¯è¯å¯æ¬ï¼http://www.apache.org/licenses/LICENSE-2.0
+   é¤éå éç¨æ³å¾éè¦æä¹¦é¢åæï¼æ ¹æ®è®¸å¯è¯ååçè½¯ä»¶æ¯åºäº"æåæ ·"åºç¡æä¾ï¼
+   æ ä»»ä½æç¤ºçææç¤ºçä¿è¯ææ¡ä»¶ãè¯¦è§æ ¹æ®è®¸å¯è¯è®¸å¯ä¸ï¼ç¹å®è¯­è¨çç®¡è¾æéåéå¶ã
+
+   =======================================================
+
+   ç®è¦è§£éï¼
+   
+   1.éè¦ç»ä»£ç çç¨æ·ä¸ä»½Apache Licence
+   2.å¦æä½ ä¿®æ¹äºä»£ç ï¼éè¦å¨è¢«ä¿®æ¹çæä»¶ä¸­è¯´æã
+   3.å¨å»¶ä¼¸çä»£ç ä¸­ï¼ä¿®æ¹åææºä»£ç è¡ççä»£ç ä¸­ï¼éè¦å¸¦æåæ¥ä»£ç ä¸­çåè®®ï¼åæ ï¼
+     ä¸å©å£°æåå¶ä»åæ¥ä½èè§å®éè¦åå«çè¯´æã
+   4.å¦æååå¸çäº§åä¸­åå«ä¸ä¸ªNoticeæä»¶ï¼åå¨Noticeæä»¶ä¸­éè¦å¸¦æ Apache Licenceã
+     ä½ å¯ä»¥å¨Noticeä¸­å¢å èªå·±çè®¸å¯ï¼ä½ä¸å¯ä»¥è¡¨ç°ä¸ºå¯¹Apache Licenceæææ´æ¹ã

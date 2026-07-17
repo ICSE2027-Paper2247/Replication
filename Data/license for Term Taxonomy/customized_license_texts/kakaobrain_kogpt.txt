@@ -1,0 +1,7 @@
+The `source code` of KakaoBrain `KoGPT` are licensed under [Apache 2.0](LICENSE.apache-2.0) License.
+The `pretrained wieghts` of KakaoBrain `KoGPT` are licensed under [CC-BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/) License.
+
+=======================================================================
+
+ì¹´ì¹´ì¤ë¸ë ì¸ `KoGPT`ì `ìì¤ì½ë(source code)`ë [Apache 2.0](LICENSE.apache-2.0) ë¼ì´ì ì¤ íì ê³µê°ëì´ ììµëë¤.
+ì¹´ì¹´ì¤ë¸ë ì¸ `KoGPT`ì `ì¬ì íìµë ê°ì¤ì¹(pretrained weights)`ë [CC-BY-NC-ND 4.0 ë¼ì´ì ì¤](https://creativecommons.org/licenses/by-nc-nd/4.0/) ë¼ì´ì ì¤ íì ê³µê°ëì´ ììµëë¤.

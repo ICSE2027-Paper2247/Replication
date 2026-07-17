@@ -1,0 +1,69 @@
+NEONIOUS PUBLIC LICENSE FOR LOW.JS
+
+Copyright (C) 2018, 2019 neonious GmbH
+
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software, both in source code and compiled form, and associated documentation files (the
+"Software") to
+
+(1) use the Software, including modifying and merging the Software and using the Software
+    in running applications, including networked ones, also to
+
+(2) publish, distribute, sublicense or sell copies of the Software, derived work of the
+    Software or combined work with the Software, both in source code and compiled form, if
+
+    - this happens under the term of this license (The above copyright notice and this
+      permission notice, both together: this LICENSE file, must be part of the
+      distribution and be available to the user in a prominent place, such as the LICENSE
+      file in the root directory of the software), and
+
+    - the origin of the software is clearly stated as being the Software by neonious, with
+      a link to https://www.neonious.com/ , and
+
+    - changes in the source code or the behaviour of the compiled programs are clearly
+      documented (for example via GIT commits or a change log), and
+
+    - the software only has code generic to any architecture and code for the following
+      architectures:
+
+        ESP32 (any OS)
+        Linux
+        Windows
+        macOS
+
+      For any other architectures, please contact neonious.
+
+    Combining and/or running low.js with a user program consisting of JavaScript files and
+    native modules based on the low native API never make this a derived or combined work.
+
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for
+inclusion in the Software by You shall be under the terms and conditions of this license,
+without any additional terms or conditions.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Contact us
+
+    neonious GmbH
+    MÃ¼nsterstr. 246
+    40470 DÃ¼sseldorf
+    Germany
+    
+    Managing Director / CEO
+    Thomas Rogg
+    
+    TEL +49 211 9241 8187
+    FAX +49 211 9241 8172
+    
+    info@neonious.com
+    District Court DÃ¼sseldorf
+    HRB 83086

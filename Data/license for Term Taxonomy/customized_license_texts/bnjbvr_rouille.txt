@@ -1,0 +1,14 @@
+                LICENCE PUBLIQUE RIEN Ã BRANLER
+                      Version 1, Mars 2009
+
+ Copyright (C) 2009 Sam Hocevar
+  14 rue de Plaisance, 75014 Paris, France
+ 
+ La copie et la distribution de copies exactes de cette licence sont
+ autorisÃ©es, et toute modification est permise Ã  condition de changer
+ le nom de la licence. 
+
+         CONDITIONS DE COPIE, DISTRIBUTON ET MODIFICATION
+               DE LA LICENCE PUBLIQUE RIEN Ã BRANLER
+
+  0. Faites ce que vous voulez, jâen ai RIEN Ã BRANLER.

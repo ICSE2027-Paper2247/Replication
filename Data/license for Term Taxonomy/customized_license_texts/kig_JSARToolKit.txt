@@ -1,0 +1,36 @@
+ï»¿======================================================================
+JSARToolKit License
+======================================================================
+JSARToolKit
+Copyright (C)2010-2011  Ilmari Heikkinen
+
+Based on FLARToolKit (C)2008-2010  Saqoosha, Ryo Iizuka
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+FLARToolKit
+Copyright (C)2008-2010  Saqoosha, Ryo Iizuka
+
+ãã®ãã­ã°ã©ã ã¯ããªã¼ã½ããã¦ã§ã¢ã§ããããªãã¯ããããããªã¼ã½ããã¦ã§ã¢
+è²¡å£ã«ãã£ã¦çºè¡ãããGNU ä¸è¬å¬è¡å©ç¨è¨±è«¾æ¸(ãã¼ã¸ã§ã³3ããããä»¥éã®ãã¼
+ã¸ã§ã³ã®ãã¡ã©ãã)ãå®ããæ¡ä»¶ã®ä¸ã§åé å¸ã¾ãã¯æ¹å¤ ãããã¨ãã§ãã¾ãã
+
+ãã®ãã­ã°ã©ã ã¯æç¨ã§ãããã¨ãé¡ã£ã¦é å¸ããã¾ããã*å¨ãã®ç¡ä¿è¨¼ *ã§ãã
+åæ¥­å¯è½æ§ã®ä¿è¨¼ãç¹å®ç®çã¸ã®é©åæ§ã¯ãè¨å¤ã«ç¤ºããããã®ã å«ããå¨ãå­
+å¨ãã¾ãããè©³ããã¯GNU ä¸è¬å¬è¡å©ç¨è¨±è«¾æ¸ããè¦§ãã ããã
+
+ããªãã¯ãã®ãã­ã°ã©ã ã¨å±ã«ãGNU ä¸è¬å¬è¡å©ç¨è¨±è«¾æ¸ã®ã³ãã¼ãä¸é¨åãåã£ã¦
+ããã¯ãã§ããããåãåã£ã¦ããªããã°ã<http://www.gnu.org/licenses/> ã
+ãè¦§ãã ããã

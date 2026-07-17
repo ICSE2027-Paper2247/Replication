@@ -1,0 +1,9 @@
+å¨ç¬¦åä»¥ä¸æ¡ä»¶çæåµä¸ï¼æä»¬æ¬¢è¿ä»»ä½äººä»¥ä»»ä½å½¢å¼ä½¿ç¨æ¬é¡¹ç®ï¼åæ¬åç¨ï¼ã
+
+- æ³¨æéæäºæ¬é¡¹ç®ï¼æ³¨ææ¹å¼ï¼ å¨é¡¹ç®ä»ç»é¡µéä¸æ¬é¡¹ç® repo å°åï¼
+- åæ https://github.com/Fly-Playgroud/Boom/blob/master/Disclaimer.md åè´£å£°æ
+
+Anyone is welcome to use this program in any form provided the following conditions are met (Including commercial).
+
+- Indicate the integration of the project (indicate: attach the repo address of the project on the project introduction page)
+- Agree to https://github.com/Fly-Playgroud/Boom/blob/master/Disclaimer.md disclaimer

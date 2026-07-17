@@ -1,0 +1,54 @@
+==========================================================================================
+
+*** SmartIMU v2.0 Hardware License ***
+
+CC BY-SA 4.0
+(http://creativecommons.org/licenses/by-sa/4.0/deed.zh_TW)
+
+
+ä½ å¯èªç±ï¼
+
+åäº« â ä»¥ä»»ä½åªä»ææ ¼å¼éè£½åæ£å¸æ¬ç´ æã
+ä¿®æ¹ â éæ··ãè½ææ¬ç´ æãåä¾æ¬ç´ æå»ºç«æ°ç´ æã
+ä¸çºä»»ä½ç®çï¼åå«åæ¥­æ§è³ªä¹ä½¿ç¨ã
+åªè¦ä½ éµå®ææ¬æ¢æ¬¾è¦å®ï¼ææ¬äººä¸è½æ¤åä½ ä½¿ç¨æ¬ç´ æçèªç±ã
+
+æééµç§ä¸åæ¢ä»¶ï¼
+
+å§åæ¨ç¤º â
+ä½ å¿é çµ¦äºé©ç¶è¡¨å½°ãæä¾æåæ¬ææ¬æ¢æ¬¾çé£çµï¼ä»¥åæåºæ¬ç´ ææ¯å¦å·²è¢«è®æ´ãä½ å¯ä»¥ä»»ä½åçæ¹å¼çºåè¿°è¡¨å½°ï¼ä½ä¸å¾ä»¥ä»»ä½æ¹å¼æç¤ºææ¬äººçºä½ æä½ çä½¿ç¨æ¹å¼èæ¸ã
+
+ç¸åæ¹å¼åäº« â
+è¥ä½ éæ··ãè½ææ¬ç´ æï¼æä¾æ¬ç´ æå»ºç«æ°ç´ æï¼ä½ å¿é ä¾æ¬ç´ æçææ¬æ¢æ¬¾ä¾æ£å¸ä½ çè²¢ç»ç©ã
+
+ä¸å¾å¢å é¡å¤éå¶ â
+ä½ ä¸è½å¢è¨­æ³å¾æ¢æ¬¾æç§ææªæ½ï¼ä¾éå¶å¥äººä¾ææ¬æ¢æ¬¾æ¬å·²è¨±å¯çä½çºã
+
+
+------------------------------------------------------------------------------------------
+
+*** SmartIMU Software License ***
+
+The MIT License (MIT)
+(http://opensource.org/licenses/MIT)
+
+Copyright (c) 2018 Hom
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+  
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+  
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+==========================================================================================

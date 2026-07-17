@@ -1,0 +1,112 @@
+ï»¿English Version of EULA, for non-Chinese-Speaking Users Only
+
+END USER LICENSE AGREEMENT
+Please read this agreement carefully before installing and using our software.
+
+Copyright Â© 2015-2020, WM Jonssen.
+All Rights Reserved.
+
+This software license agreement (hereinafter the âAgreementâ) is a legal agreement between the user (hereinafter âYouâ or the âUserâ) and Author/Owner of Centcount Analytics (hereinafter âAuthorâ) for the software products (hereinafter the âSoftwareâ) and related services (hereinafter the âServiceâ) that accompanies this Agreement, as may be updated or replaced by feature enhancements, software updates or maintenance releases and any services that may be provided by Author under this Agreement. You are not allowed to download, install or use the Software or to use Services unless you accept all the terms and conditions of this Agreement. Your download, installation and use of the Software shall be regarded as your acceptance of the Agreement and your agreement to be bound by all the terms and conditions of this Agreement.
+
+This Agreement, between the User and Author, is an agreement regarding the User's downloading, installation, use and copying of the Software, and the use of Services provided by Author. This Agreement stipulates the rights and duties of You and Author regarding the licensed use and related services. "The User" or "You" refers to a person (who is 18 years of age or older, any parent or guardian of a person under the age of 18 may accept this Agreement on behalf of a user) or entity who obtains the Software authorization license and/or the Software products by means of the Software license and the account registration as provided by Author.
+
+This Agreement may be updated by Author at any time and without prior notice to the User. After the updated Agreement is issued, it shall replace the original Agreement effectively. Users can read the updated Agreement by logging in the Software or checking on the Website at any time. After Author has updated the clauses of Agreement, the User should stop using software and services provided by Author if he/she does not agree with the clauses amended, otherwise it will be deemed that the user has accepted the Agreement as amended.
+
+Except those explicitly stated in the Agreement, the Agreement does not stipulate the terms of service for other services offered by Author which the User visits when using the âSoftwareâ. Those services are usually regulated by other separate terms of service and the User should be familiar with and confirm his/her acceptance of those terms of service when using the relevant services. If there are conflicts between separate terms of service and this Agreement, the separate terms of service will govern. By using those services, the User shall be regarded as having accepted the relevant terms of service.
+
+1. Grant of License
+Subject to the terms and conditions of this Agreement, Author grants to you a limited, non-exclusive, worldwide license to install, download and use a single instance of the Software on a single website server through a single installation for non-commercial purposes for free.
+
+You can modify the source code (if being provided) or interface of the Software if your modification is strictly under the Agreement and to beautify your website.
+
+When using the Software, the User shall comply with the relevant national laws and policies, protect the national interests, safeguard the national security and comply with this Agreement. The User, but not Author, shall be fully responsible for all liabilities resulting from the illegal use of the Software or breach of the Agreement. If the User's misbehavior causes loss to Author, Author is entitled to demand the User to provide compensation, cease provision of the service immediately and keep relevant records. Moreover, if the User violates laws or the Agreement and correlative clauses of services stipulated in other services of Author by using the Software, Author has the right to take these measures including, but not limited to, interruption of use license, stopping of services, restriction of use, legal investigation, etc. considering the nature of the Userâs behaviors and without a prior notice to the User.
+
+You have the entire property of all the membersâ data, information and articles in your website which is powered by the Software; that is to say, you must assume solely all the relevant liabilities concerns to the contents in your website.
+
+You may use the Software for commercial means after purchase of the commercial license. Moreover, according to the license you purchase you will get technical support from Author in specified term and manner. Commercial users are prior to submitting ideas and opinions to Author, but without any guarantee of acceptance.
+
+You can download application(s) for your website from Centcount Analytics official website after you have paid appropriate fee to the author/owner of the application(s).
+
+2. License Restrictions
+You cannot use the Software for commercial or profit purposes (include but are not limited to company websites, operating websites or other for-profit websites) unless you have been licensed to. To purchase the license, please visit https://www.centcount.com/license_price.php or email to wm.jonssen@gmail.com for more information.
+
+You may not rent, sublicense, assign, lease, loan, resell, distribute, publish or network the Software or related materials or create derivative works based upon the Software or any part thereof.
+
+You may not use the Software to engage in or allow others to engage in any illegal activity. You may not use the Software to engage in any activity that will violate the rights of third parties, including, without limitation, copyrights, trademarks, publicity rights, privacy rights, other proprietary rights, or rights against defamation of third parties.
+
+You cannot remove or modify the copyright information and relevant links under any circumstances, such as https://www.centcount.com, in the foot of web pages without the prior written consent of Author.
+
+You cannot reverse engineer, decompile or disassemble, copy, modify, link, reproduce, publish or develop derivative products of the applications that you download from Centcount Analytics official website without the prior written permission from the application author/owner.
+
+3. Disclaimer of Warranties and Limitations of Liabilities
+The software and the accompanying files are provided âas-isâ, and to the maximum extent permitted by applicable law, Author disclaims all other warranties, express or implied, by statute or otherwise, regarding the software and any related materials, including their fitness for a particular purpose, their quality, their merchantability, or any related services or content is secure, or is free from bugs, viruses, errors, or other program limitations nor does it warrant access to the internet or to any other services through the software.
+
+To the maximum extent permitted by applicable law, Author will not be liable for any indirect, special, incidental, or consequential damages(including damages for loss of business, loss of profits, or the like), whatever based on breach of contract, tort(including negligence), product liability or otherwise, even Author has been advised of the possibility of such damages. Authorâ total liability to you for actual damages for any cause whatsoever will be limited to the purchase price amount paid by you for the software.
+
+Author is not liable for the content of any message in the websites powered by the Software.
+
+Author does not guarantee the legality, safety, integrity, authenticity and quality of the applications which uploaded into Centcount Analytics official website by any third party. You agree to judge on yourself and take fully responsibilities to the action of download from Centcount Analytics official website. But in any case, Author may stop the Storeâs service and take appropriate actions, including but not limited to uninstall the associated applications, suspend the Storeâs service in whole or in part, keep the relevant records to the relevant authorities, and Author will not undertake any direct, indirect or consequential liability to the actions thereof.
+
+4. Termination
+The License is effective until terminated. You may terminate the License at any time by uninstalling the Software and destroying all copies of the Software in any media. This Agreement may be terminated by Author immediately and without notice if you fail to comply with any term or condition of the License or this Agreement. Upon such termination, you must immediately cease using the Software, and assume relevant liabilities.
+
+Author reserves the right to change or add to the terms of this Agreement at any time (including but are not limited to Internet-based Solutions, pricing, technical support options, and other product-related policies), and to change, discontinue or impose conditions on any feature or aspect of the Software, or any Internet-based Solutions provided to you or made available to you in the official websites. Such changes will be effective upon notification by any means reasonable to give you actual or constructive notice including by posting such terms on the discuz.net website, or another website designated by Author. Your continued use of the Software will indicate your agreement to any such change.
+
+5. Controlling Law
+The Agreement is governed by and construed in accordance with the laws of P.R China. You hereby consent to the exclusive jurisdiction and venue in the HuiShan District court of the City of Wuxi.
+
+
+Author/Owner: WM Jonssen
+07-31-2020
+
+-----------------------------------------------------------------------------
+
+ä¸­æçææåè®® éç¨äºä¸­æç¨æ·
+
+çæææ (c) 2015-2020ï¼WM Jonssen
+ä¿çæææå©ã
+
+æè°¢æ¨éæ©ç¾å¤«é¿ç»è®¡ãå¸ææä»¬çåªåè½ä¸ºæ¨æä¾ä¸ä¸ªç¨³å®ãå¿«éãå¼ºå¤§çç½ç«ç»è®¡åæè§£å³æ¹æ¡ãç¾å¤«é¿ç»è®¡ç½åä¸º https://www.centcount.com
+
+ç¨æ·é¡»ç¥ï¼æ¬åè®®æ¯æ¨ä¸è½¯ä»¶ä½èä¹é´å³äºæ¨ä½¿ç¨è½¯ä»¶ä½èæä¾çåç§è½¯ä»¶äº§ååæå¡çæ³å¾åè®®ãæ è®ºæ¨æ¯ä¸ªäººæç»ç»ãçå©ä¸å¦ãç¨éå¦ä½ï¼åæ¬ä»¥å­¦ä¹ åç ç©¶ä¸ºç®çï¼ï¼åéä»ç»éè¯»æ¬åè®®ï¼åæ¬åé¤æèéå¶è½¯ä»¶ä½èè´£ä»»çåè´£æ¡æ¬¾åå¯¹æ¨çæå©éå¶ãè¯·æ¨å®¡éå¹¶æ¥åæä¸æ¥åæ¬æå¡æ¡æ¬¾ãå¦æ¨ä¸åææ¬æå¡æ¡æ¬¾å/æè½¯ä»¶ä½èéæ¶å¯¹å¶çä¿®æ¹ï¼æ¨åºä¸ä½¿ç¨æä¸»å¨åæ¶è½¯ä»¶ä½èæä¾çç¾å¤«é¿ç»è®¡äº§åãå¦åï¼æ¨çä»»ä½å¯¹ç¾å¤«é¿ç»è®¡äº§åä¸­çç¸å³æå¡çæ³¨åãç»éãä¸è½½ãæ¥çç­ä½¿ç¨è¡ä¸ºå°è¢«è§ä¸ºæ¨å¯¹æ¬æå¡æ¡æ¬¾å¨é¨çå®å¨æ¥åï¼åæ¬æ¥åè½¯ä»¶ä½èå¯¹æå¡æ¡æ¬¾éæ¶æåçä»»ä½ä¿®æ¹ã
+æ¬æå¡æ¡æ¬¾ä¸æ¦åçåæ´, è½¯ä»¶ä½èå°å¨ç½é¡µä¸å¬å¸ä¿®æ¹åå®¹ãä¿®æ¹åçæå¡æ¡æ¬¾ä¸æ¦å¨ç½ç«ç®¡çåå°ä¸å¬å¸å³ææä»£æ¿åæ¥çæå¡æ¡æ¬¾ãæ¨å¯éæ¶ç»éç¾å¤«é¿ç»è®¡å®æ¹ç½ç«æ¥éææ°çæå¡æ¡æ¬¾ãå¦ææ¨éæ©æ¥åæ¬æ¡æ¬¾ï¼å³è¡¨ç¤ºæ¨åææ¥ååè®®åé¡¹æ¡ä»¶ççº¦æãå¦ææ¨ä¸åææ¬æå¡æ¡æ¬¾ï¼åä¸è½è·å¾ä½¿ç¨æ¬æå¡çæå©ãæ¨è¥æè¿åæ¬æ¡æ¬¾è§å®ï¼è½¯ä»¶ä½èææéæ¶ä¸­æ­¢æç»æ­¢æ¨å¯¹ç¾å¤«é¿ç»è®¡äº§åçä½¿ç¨èµæ ¼å¹¶ä¿çè¿½ç©¶ç¸å³æ³å¾è´£ä»»çæå©ã
+å¨çè§£ãåæãå¹¶éµå®æ¬åè®®çå¨é¨æ¡æ¬¾åï¼æ¹å¯å¼å§ä½¿ç¨ç¾å¤«é¿ç»è®¡äº§åãæ¨å¯è½ä¸è½¯ä»¶ä½èç´æ¥ç­¾è®¢å¦ä¸ä¹¦é¢åè®®ï¼ä»¥è¡¥åæèåä»£æ¬åè®®çå¨é¨æèä»»ä½é¨åã
+
+è½¯ä»¶ä½èæ¥ææ¬è½¯ä»¶çå¨é¨ç¥è¯äº§æãæ¬è½¯ä»¶åªä¾è®¸å¯åè®®ï¼å¹¶éåºå®ãè½¯ä»¶ä½èåªåè®¸æ¨å¨éµå®æ¬åè®®åé¡¹æ¡æ¬¾çæåµä¸å¤å¶ãä¸è½½ãå®è£ãä½¿ç¨æèä»¥å¶ä»æ¹å¼åçäºæ¬è½¯ä»¶çåè½æèç¥è¯äº§æã
+
+I. åè®®è®¸å¯çæå©
+
+   1. æ¨å¯ä»¥å¨å®å¨éµå®æ¬è®¸å¯åè®®çåºç¡ä¸ï¼å°æ¬è½¯ä»¶åºç¨äºéåä¸ç¨éï¼èä¸å¿æ¯ä»è½¯ä»¶çæè®¸å¯è´¹ç¨ã
+   2. æ¨å¯ä»¥å¨åè®®è§å®ççº¦æåéå¶èå´åä¿®æ¹ç¾å¤«é¿ç»è®¡äº§åæºä»£ç (å¦æè¢«æä¾çè¯)æçé¢é£æ ¼ä»¥éåºæ¨çç½ç«è¦æ±ã
+   3. æ¨æ¥æä½¿ç¨æ¬è½¯ä»¶æå»ºçç½ç«ä¸­å¨é¨ä¼åèµæãæç« åç¸å³ä¿¡æ¯çæææï¼å¹¶ç¬ç«æ¿æä¸ä½¿ç¨æ¬è½¯ä»¶æå»ºçç½ç«åå®¹çå®¡æ ¸ãæ³¨æä¹å¡ï¼ç¡®ä¿å¶ä¸ä¾µç¯ä»»ä½äººçåæ³æçï¼ç¬ç«æ¿æå ä½¿ç¨ç¾å¤«é¿ç»è®¡è½¯ä»¶åæå¡å¸¦æ¥çå¨é¨è´£ä»»ï¼è¥é æè½¯ä»¶ä½èæç¨æ·æå¤±çï¼æ¨åºäºä»¥å¨é¨èµå¿ã
+   4. è¥æ¨éå°ç¾å¤«é¿ç»è®¡è½¯ä»¶ææå¡ç¨æ·åä¸ç¨éï¼å¿é¡»å¦è¡è·å¾è½¯ä»¶ä½èçä¹¦é¢è®¸å¯ï¼æ¨å¨è·å¾åä¸ææä¹åï¼æ¨å¯ä»¥å°æ¬è½¯ä»¶åºç¨äºåä¸ç¨éï¼åæ¶ä¾æ®æè´­ä¹°çææç±»åä¸­ç¡®å®çææ¯æ¯ææéãææ¯æ¯ææ¹å¼åææ¯æ¯æåå®¹ï¼èªè´­ä¹°æ¶å»èµ·ï¼å¨ææ¯æ¯ææéåæ¥æéè¿æå®çæ¹å¼è·å¾æå®èå´åçææ¯æ¯ææå¡ãåä¸ææç¨æ·äº«æåæ åæåºæè§çæåï¼ç¸å³æè§å°è¢«ä½ä¸ºé¦è¦èèï¼ä½æ²¡æä¸å®è¢«éçº³çæ¿è¯ºæä¿è¯ã
+   5. æ¨å¯ä»¥ä»è½¯ä»¶ä½èæä¾çåºç¨ä¸­å¿æå¡ä¸­ä¸è½½éåæ¨ç½ç«çç¬¬ä¸æ¹æä»¶ææ©å±ç¨åºï¼ä½åºåç¬¬ä¸æ¹ç¨åºå¼åè/ææèæ¯ä»ç¸åºçè´¹ç¨ã
+
+II. åè®®è§å®ççº¦æåéå¶
+
+   1. æªè·è½¯ä»¶ä½èä¹¦é¢åä¸ææä¹åï¼ä¸å¾å°æ¬è½¯ä»¶ç¨äºåä¸ç¨éï¼åæ¬ä½ä¸éäºä¼ä¸ç½ç«ãç»è¥æ§ç½ç«ãä»¥è¥å©ä¸ºç®æå®ç°çå©çç½ç«ï¼ãè´­ä¹°åä¸ææè¯·ç»é https://www.centcount.com/license_price.php åèç¸å³è¯´æï¼äºè§£è¯¦æã
+   2. ä¸å¾å¯¹æ¬è½¯ä»¶æä¸ä¹å³èçåä¸ææè¿è¡åºç§ãåºå®ãæµæ¼æåæ¾å­è®¸å¯è¯ã
+   3. æ è®ºå¦ä½ï¼å³æ è®ºç¨éå¦ä½ãæ¯å¦ç»è¿ä¿®æ¹æç¾åãä¿®æ¹ç¨åº¦å¦ä½ï¼åªè¦ä½¿ç¨ç¾å¤«é¿ç»è®¡äº§åçæ´ä½æä»»ä½é¨åï¼æªç»ä¹¦é¢è®¸å¯ï¼é¡µé¢é¡µèå¤çç¾å¤«é¿ç»è®¡äº§ååç§°åè½¯ä»¶ä½èä¸å±ç½ç«ï¼https://www.centcount.comï¼ çé¾æ¥é½å¿é¡»ä¿çï¼èä¸è½æ¸é¤æä¿®æ¹ã
+   4. ç¦æ­¢å¨ç¾å¤«é¿ç»è®¡äº§åçæ´ä½æä»»ä½é¨ååºç¡ä¸ä»¥åå±ä»»ä½æ´¾ççæ¬ãä¿®æ¹çæ¬æç¬¬ä¸æ¹çæ¬ç¨äºéæ°ååã
+   5. æ¨ä»åºç¨ä¸­å¿ä¸è½½çåºç¨ç¨åºï¼æªç»åºç¨ç¨åºå¼åè/ææèçä¹¦é¢è®¸å¯ï¼ä¸å¾å¯¹å¶è¿è¡ååå·¥ç¨ãååæ±ç¼ãååç¼è¯ç­ï¼ä¸å¾æèªå¤å¶ãä¿®æ¹ãé¾æ¥ãè½¬è½½ãæ±ç¼ãåè¡¨ãåºçãåå±ä¸ä¹æå³çè¡çäº§åãä½åç­ã
+   6. å¦ææ¨æªè½éµå®æ¬åè®®çæ¡æ¬¾ï¼æ¨çææå°è¢«ç»æ­¢ï¼æè®¸å¯çæå©å°è¢«æ¶åï¼åæ¶æ¨åºæ¿æç¸åºæ³å¾è´£ä»»ã
+
+III. æéæä¿ååè´£å£°æ
+
+   1. æ¬è½¯ä»¶åæéå¸¦çæä»¶æ¯ä½ä¸ºä¸æä¾ä»»ä½æç¡®çæéå«çèµå¿ææä¿çå½¢å¼æä¾çã
+   2. ç¨æ·åºäºèªæ¿èä½¿ç¨æ¬è½¯ä»¶ï¼æ¨å¿é¡»äºè§£ä½¿ç¨æ¬è½¯ä»¶çé£é©ï¼å¨å°æªè´­ä¹°äº§åææ¯æå¡ä¹åï¼æä»¬ä¸æ¿è¯ºæä¾ä»»ä½å½¢å¼çææ¯æ¯æãä½¿ç¨æä¿ï¼ä¹ä¸æ¿æä»»ä½å ä½¿ç¨æ¬è½¯ä»¶èäº§çé®é¢çç¸å³è´£ä»»ã
+   3. è½¯ä»¶ä½èä¸å¯¹ä½¿ç¨æ¬è½¯ä»¶æå»ºçç½ç«ä¸­æèè®ºåä¸­çæç« æä¿¡æ¯æ¿æè´£ä»»ï¼å¨é¨è´£ä»»ç±æ¨èªè¡æ¿æã
+   4. è½¯ä»¶ä½èæ æ³å¨é¢çæ§ç±ç¬¬ä¸æ¹ä¸ä¼ è³åºç¨ä¸­å¿çåºç¨ç¨åºï¼å æ­¤ä¸ä¿è¯åºç¨ç¨åºçåæ³æ§ãå®å¨æ§ãå®æ´æ§ãçå®æ§æåè´¨ç­ï¼æ¨ä»åºç¨ä¸­å¿ä¸è½½åºç¨ç¨åºæ¶ï¼åæèªè¡å¤æ­å¹¶æ¿æææé£é©ï¼èä¸ä¾èµäºè½¯ä»¶ä½èãä½å¨ä»»ä½æåµä¸ï¼è½¯ä»¶ä½èææä¾æ³åæ­¢åºç¨ä¸­å¿æå¡å¹¶éåç¸åºè¡å¨ï¼åæ¬ä½ä¸éäºå¯¹äºç¸å³åºç¨ç¨åºè¿è¡å¸è½½ï¼æåæå¡çå¨é¨æé¨åï¼ä¿å­æå³è®°å½ï¼å¹¶åæå³æºå³æ¥åãç±æ­¤å¯¹æ¨åç¬¬ä¸äººå¯è½é æçæå¤±ï¼è½¯ä»¶ä½èä¸æ¿æä»»ä½ç´æ¥ãé´æ¥æèè¿å¸¦çè´£ä»»ã
+   5. è½¯ä»¶ä½èå¯¹æä¾çè½¯ä»¶åæå¡ä¹åæ¶æ§ãå®å¨æ§ãåç¡®æ§ä¸ä½æä¿ï¼ç±äºä¸å¯æåå ç´ ãè½¯ä»¶ä½èæ æ³æ§å¶çå ç´ ï¼åæ¬é»å®¢æ»å»ãåæ­çµç­ï¼ç­é æè½¯ä»¶ä½¿ç¨åæå¡ä¸­æ­¢æç»æ­¢ï¼èç»æ¨é ææå¤±çï¼æ¨åææ¾å¼è¿½ç©¶è½¯ä»¶ä½èè´£ä»»çå¨é¨æå©ã     
+   6.è½¯ä»¶ä½èç¹å«æè¯·æ¨æ³¨æï¼è½¯ä»¶ä½èä¸ºäºä¿éä¸å¡åå±åè°æ´çèªä¸»æï¼è½¯ä»¶ä½èæ¥æéæ¶ç»ææªç»äºåéç¥èä¿®æ¹æå¡åå®¹ãä¸­æ­¢æç»æ­¢é¨åæå¨é¨è½¯ä»¶ä½¿ç¨åæå¡çæå©ï¼ä¿®æ¹ä¼å¬å¸äºè½¯ä»¶ä½èç½ç«ç¸å³é¡µé¢ä¸ï¼ä¸ç»å¬å¸è§ä¸ºéç¥ã è½¯ä»¶ä½èè¡ä½¿ä¿®æ¹æä¸­æ­¢ãç»æ­¢é¨åæå¨é¨è½¯ä»¶ä½¿ç¨åæå¡çæå©èé ææå¤±çï¼è½¯ä»¶ä½èä¸éå¯¹æ¨æä»»ä½ç¬¬ä¸æ¹è´è´£ã
+
+æå³ç¾å¤«é¿ç»è®¡äº§åæç»ç¨æ·ææåè®®ãåä¸ææä¸ææ¯æå¡çè¯¦ç»åå®¹ï¼åç±è½¯ä»¶ä½èç¬å®¶æä¾ãè½¯ä»¶ä½èæ¥æå¨ä¸äºåéç¥çæåµä¸ï¼ä¿®æ¹ææåè®®åæå¡ä»·ç®è¡¨çæå©ï¼ä¿®æ¹åçåè®®æä»·ç®è¡¨å¯¹èªæ¹åä¹æ¥èµ·çæ°ææç¨æ·çæã
+
+ä¸æ¦æ¨å¼å§å®è£ç¾å¤«é¿ç»è®¡äº§åï¼å³è¢«è§ä¸ºå®å¨çè§£å¹¶æ¥åæ¬åè®®çåé¡¹æ¡æ¬¾ï¼å¨äº«æä¸è¿°æ¡æ¬¾æäºçæå©çåæ¶ï¼åå°ç¸å³ççº¦æåéå¶ãåè®®è®¸å¯èå´ä»¥å¤çè¡ä¸ºï¼å°ç´æ¥è¿åæ¬ææåè®®å¹¶ææä¾µæï¼æä»¬ææéæ¶ç»æ­¢ææï¼è´£ä»¤åæ­¢æå®³ï¼å¹¶ä¿çè¿½ç©¶ç¸å³è´£ä»»çæåã
+
+æ¬è®¸å¯åè®®æ¡æ¬¾çè§£éï¼æååçº çº·çè§£å³ï¼éç¨äºä¸­åäººæ°å±åå½å¤§éæ³å¾ã
+
+è¥æ¨åè½¯ä»¶ä½èä¹é´åçä»»ä½çº çº·æäºè®®ï¼é¦ååºåå¥½ååè§£å³ï¼ååä¸æçï¼æ¨å¨æ­¤å®å¨åæå°çº çº·æäºè®®æäº¤è½¯ä»¶ä½èæå¨å°æ é¡æ å±±åºäººæ°æ³é¢ç®¡è¾ãè½¯ä»¶ä½èæ¥æå¯¹ä»¥ä¸åé¡¹æ¡æ¬¾åå®¹çè§£éæåä¿®æ¹æãï¼æ­£æå®ï¼
+
+è½¯ä»¶ä½èï¼WM Jonssen
+2020-07-31

@@ -1,0 +1,42 @@
+Copyright (c) 2016-2020 googlehosts members
+
+åè¨
+1.æ¯ä¸ªäººé½å¯ä»¥éå­å¤å¶å¹¶ä¸ååæ­¤åè®®,ä½ä¸åè®¸æ´æ¹ä»»ä½åå®¹.
+2.è¯·ä½¿ç¨Hosts licenseçé¡¹ç®å¨hostsæä»¶æ¬å¤´æ³¨æçæ,ä»ä»¥ä¸æ ¼å¼ææ:
+Copyright (C) Time Author
+
+æ¬åè®®çèµ·èåèäºGPL v2.0å¼æºåè®®çæ ¼å¼,ä½æ¯æä»¬æ³¨éçæ¯å¯¹hostsæä»¶çä¿æ¤
+
+å¤å¶,ä¿®æ¹,ååçæ¡ä»¶åæ¡æ¬¾
+1.ç¦æ­¢ä¿®æ¹åä½èä¿¡æ¯ä»¥ååè®®å£°æ
+2.ç¦æ­¢ä¿®æ¹hostsæä»¶ä¸­çæ ¼å¼,ä¾å¦:
+â ä¸ä¸ªååå¯¹åºä¸ä¸ªIP(åååè§£æ)
+1.1.1.1 adc.com
+1.1.1.2 zzz.adc.com
+â¡ä¸ä¸ªIPå¯¹åºå¤ä¸ªåå(æ³è§£æ)
+1.1.1.1 abc.com
+1.1.1.1 zzz.abc.com
+åªè¦ç¬¦åä»¥ä¸ä¾å­ä¸­ä»»ä½ä¸ç§æèä½èèªè¡å£°æ,çä¸å¯ä¿®æ¹
+3.ç¦æ­¢å°hostsæä»¶ç¨äºä»»ä½åä¸è¡ä¸º,åæ¬ä½ä¸éäºæèµ ,å¹¿å,ç´æ¥æ¶è´¹
+4.æ¨å¿é¡»å¨ç¸åå¹³å°forkåé¡¹ç®åæè½è¿è¡ååè¡,å¹¶ä¸ä¸åè®¸è½¬ç§»è³å¶ä»å¹³å°
+
+åè´£å£°æ
+1.ç±äºæå¡å¨åæ¹é¢é®é¢é æçæå¤±,hostsä½èä¸è´æ³å¾è´£ä»»
+2.å¦æä½¿ç¨ååä»£çæå¡å¨ãç«¯å£è½¬åæå¡å¨æèä»»ä½éå®æ¹æå¡å¨,è¯·ä½èæåå£°æå¹¶ä¸ååè´£å£°æ1
+3.forkåé¡¹ç®åä¿®æ¹çåå®¹,åé¡¹ç®ä¸è´è´£ä»»
+
+æç»è§£éæç±Hosts licenseç¼åç»ææ
+
+And wait, the most important, you shall star/+1/like the project(s) in project url
+section above first, and then thank the author(s) in Copyright section.
+ 
+Here are some suggested ways:
+
+ - Email the authors a thank-you letter, and make friends with him/her/them.
+ - Report bugs or issues.
+ - Tell friends what a wonderful project this is.
+ - And, sure, you can just express thanks in your mind without telling the world.
+
+Contributors of this project by forking have the option to add his/her name and
+forked project url at copyright and project url sections, but shall not delete
+or modify anything else in these two sections.

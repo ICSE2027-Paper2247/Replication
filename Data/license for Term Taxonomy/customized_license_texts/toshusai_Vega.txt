@@ -1,0 +1,45 @@
+Vega Software License
+
+Copyright (c) 2023 toshusai
+
+Version 1.0, Effective Date: 2023/08/19
+
+Scope: This license governs the rights and obligations regarding the use, reproduction, modification, and distribution of the Software (hereinafter referred to as the "Software"). By using, copying, modifying, or distributing the Software, users agree to the terms of this license.
+
+Language Priority: In case of discrepancies between the Japanese and English versions of this license, the Japanese version shall prevail.
+
+Commercial Use Prohibition: Use of the Software or its derivatives for direct or indirect commercial purposes is strictly prohibited. However, this clause does not set any restrictions on the commercial use of content or creative works produced using the Software.
+
+Disclaimer: The copyright owner explicitly declares that they have no involvement, responsibility, or legal obligation concerning creative works produced using the Software.
+
+Source Code Public Obligation: If the Software is modified or if a derivative is created, the source code of the modifications or derivative must be made available to the public in an easily accessible manner.
+
+Copyright Notice: When distributing copies or significant parts of the Software, it is required to include both the original copyright notice and a notice or link to this license.
+
+Disclaimer: The Software is provided "AS IS", without any express or implied warranties. Users assume all risks associated with the use of the Software. The copyright owner and contributors are not liable for any consequences arising from the prohibition of commercial use.
+
+License Violation: If the terms of this license are violated, the user's rights under this license will automatically terminate. Use of the Software beyond the provisions of this license requires explicit written agreement with the copyright owner.
+
+----------------
+
+Vega ã½ããã¦ã§ã¢ ã©ã¤ã»ã³ã¹
+
+Copyright (c) 2023 toshusai
+
+ãã¼ã¸ã§ã³ 1.0ãå¹åçºçæ¥: 2023/08/19
+
+é©ç¨ç¯å²: æ¬ã©ã¤ã»ã³ã¹ã¯ãä»¥ä¸ã®æ¡ä»¶ã«å¾ãããã®ã½ããã¦ã§ã¢ï¼ä»¥ä¸ããã½ããã¦ã§ã¢ãã¨ãã¾ãï¼ã®å©ç¨ãè¤è£½ãå¤æ´ãåã³éå¸ã«é¢ããæ¨©å©ã¨ç¾©åãè¦å®ãã¾ããã½ããã¦ã§ã¢ãä½¿ç¨ãè¤è£½ãå¤æ´ãã¾ãã¯éå¸ãããã¨ã§ãã¦ã¼ã¶ã¼ã¯æ¬ã©ã¤ã»ã³ã¹ã®æ¡ä»¶ã«åæãããã®ã¨ã¿ãªããã¾ãã
+
+è¨èªã®åªåæ§: æ¬ã©ã¤ã»ã³ã¹ã®æ¥æ¬èªçã¨è±èªçã®éã«è§£éã®ç¸éãçããå ´åãæ¥æ¬èªçãåªåããã¾ãã
+
+åæ¥­å©ç¨ã®ç¦æ­¢: ã½ããã¦ã§ã¢ããã®æ´¾çç©ããç´æ¥çã¾ãã¯éæ¥çã«åçãç®çã¨ãã¦ä½¿ç¨ãããã¨ã¯ç¦æ­¢ããã¾ãããã ããã½ããã¦ã§ã¢ãå©ç¨ãã¦çæãããã³ã³ãã³ããåµä½ç©ã®åæ¥­å©ç¨ã«ã¤ãã¦ã®å¶éã¯æ¬é ã§ã¯è¨­ãã¾ããã
+
+åè²¬: èä½æ¨©ææèã¯ãã½ããã¦ã§ã¢ãä½¿ç¨ãã¦çããåµä½ç©ã«å¯¾ãã¦ãä¸åã®é¢ä¸ãè²¬ä»»ãã¾ãã¯æ³çç¾©åãè² ããªããã¨ãæç¤ºçã«è¡¨æãã¾ãã
+
+ã½ã¼ã¹ã³ã¼ãã®å¬éç¾©å: ã½ããã¦ã§ã¢ãå¤æ´ãã¾ãã¯æ´¾çç©ãä½æããå ´åããã®å¤æ´ã¾ãã¯æ´¾çç©ã®ã½ã¼ã¹ã³ã¼ãã¯å¬éãããã¹ãã§ãããåºãã¢ã¯ã»ã¹å¯è½ãªæ¹æ³ã§æä¾ãããå¿è¦ãããã¾ãã
+
+èä½æ¨©è¡¨ç¤º: ã½ããã¦ã§ã¢ã®ã³ãã¼ãã¾ãã¯ãã®ä¸é¨ãéå¸ããéã«ã¯ãåã®èä½æ¨©è¡¨ç¤ºåã³æ¬ã©ã¤ã»ã³ã¹ã¸ã®ãªã³ã¯ã¾ãã¯éç¥ãæç¤ºçã«å«ããå¿è¦ãããã¾ãã
+
+åè²¬äºé : ã½ããã¦ã§ã¢ã¯ãç¾ç¶æå§¿ãã§æä¾ãããæç¤ºçã¾ãã¯é»ç¤ºçãªä¿è¨¼ã¯ä¸åè¡ããã¾ãããã¦ã¼ã¶ã¼ã¯ãã½ããã¦ã§ã¢ã®ä½¿ç¨ã«ä¼´ããªã¹ã¯ãèªå·±è² æã¨ããèä½æ¨©ææèã¾ãã¯è²¢ç®èã¯ãåæ¥­å©ç¨ã®ç¦æ­¢ã«èµ·å ããä¸åã®çµæã«ã¤ãã¦ãè²¬ä»»ãè² ãã¾ããã
+
+ã©ã¤ã»ã³ã¹éå: æ¬ã©ã¤ã»ã³ã¹ã®æ¡ä»¶ã«éåããå ´åãã¦ã¼ã¶ã¼ã®ã©ã¤ã»ã³ã¹ã«åºã¥ãæ¨©å©ã¯èªåçã«çµäºãã¾ããæ¬ã©ã¤ã»ã³ã¹ã®è¦å®å¤ã§ã®å©ç¨ã¯ãèä½æ¨©ææèã¨ã®æç¤ºçãªæ¸é¢ã«ããåæãå¿è¦ã§ãã

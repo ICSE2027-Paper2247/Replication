@@ -1,0 +1,74 @@
+MIT License
+
+Copyright (c) 2016 Suehiro
+Copyright (c) 2018 K4thos
+Copyright (c) 2018 ShinLucho
+Copyright (c) 2018 NeatUnsou
+Copyright (c) 2019 Windblade
+Copyright (c) 2019 Dan
+Copyright (c) 2019 Kidcy
+Copyright (c) 2020 Wintermourn
+Copyright (c) 2020 Shiyo Kakuge
+Copyright (c) 2021 Kamekaze
+Copyright (c) 2021 two4teezee
+Copyright (c) 2021 Super
+Copyright (c) 2022 Eiton
+Copyright (c) 2022 Sam Hocevar
+Copyright (c) 2022 GaryCXJk
+Copyright (c) 2022 Lazin3ss
+Copyright (c) 2022 potsmugen
+Copyright (c) 2023 BwdYeti
+Copyright (c) 2023 fantasma
+Copyright (c) 2023 Wftk
+Copyright (c) 2024 wily-coyote
+Copyright (c) 2024 Jesuszilla
+Copyright (c) 2024 Kasasagi77
+Copyright (c) 2024 Jmorphman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The MIT License applies to the Ikemen GO engine and the scripts in this repo.
+
+----------------------------------------------------------------------------
+
+ä»¥ä¸ã«å®ããæ¡ä»¶ã«å¾ããæ¬ã½ããã¦ã§ã¢ããã³é¢é£ææ¸ã®ãã¡ã¤ã«ï¼ä»¥ä¸ãã½ããã¦ã§ã¢ãï¼
+ã®è¤è£½ãåå¾ãããã¹ã¦ã®äººã«å¯¾ããã½ããã¦ã§ã¢ãç¡å¶éã«æ±ããã¨ãç¡åã§è¨±å¯ãã¾ãã
+ããã«ã¯ãã½ããã¦ã§ã¢ã®è¤è£½ãä½¿ç¨ãè¤åãå¤æ´ãçµåãæ²è¼ãé å¸ããµãã©ã¤ã»ã³ã¹ãããã³
+ã¾ãã¯è²©å£²ããæ¨©å©ãããã³ã½ããã¦ã§ã¢ãæä¾ããç¸æã«åããã¨ãè¨±å¯ããæ¨©å©ãç¡å¶éã«å«ã¾ãã¾ãã
+
+ä¸è¨ã®èä½æ¨©è¡¨ç¤ºããã³æ¬è¨±è«¾è¡¨ç¤ºããã½ããã¦ã§ã¢ã®ãã¹ã¦ã®è¤è£½ã¾ãã¯éè¦ãªé¨åã«è¨è¼ãããã®ã¨ãã¾ãã
+
+ã½ããã¦ã§ã¢ã¯ãç¾ç¶ã®ã¾ã¾ãã§ãæç¤ºã§ãããæé»ã§ããããåãããä½ãã®ä¿è¨¼ããªãæä¾ããã¾ãã
+ããã§ããä¿è¨¼ã¨ã¯ãååæ§ãç¹å®ã®ç®çã¸ã®é©åæ§ãããã³æ¨©å©éä¾µå®³ã«ã¤ãã¦ã®ä¿è¨¼ãå«ã¿ã¾ããã
+ããã«éå®ããããã®ã§ã¯ããã¾ããã ä½èã¾ãã¯èä½æ¨©èã¯ãå¥ç´è¡çºãä¸æ³è¡çºãã¾ãã¯ããä»¥å¤ã§ãããã¨ã
+ã½ããã¦ã§ã¢ã«èµ·å ã¾ãã¯é¢é£ãããããã¯ã½ããã¦ã§ã¢ã®ä½¿ç¨ã¾ãã¯ãã®ä»ã®æ±ãã«ãã£ã¦çããä¸åã®è«æ±ãæå®³ã
+ãã®ä»ã®ç¾©åã«ã¤ãã¦ä½ãã®è²¬ä»»ãè² ããªããã®ã¨ãã¾ãã
+
+----------------------------------------------------------------------------
+
+Work contributed to Ikemen GO by various artists is licensed under a Creative Commons Attribution 3.0 Unported License.
+http://creativecommons.org/licenses/by/3.0/deed.en_US
+The license applies to following assets:
+- The "default-3x5" font by Gacel.
+- The icon/logo of the engine by Cylia Margatroid.
+
+----------------------------------------------------------------------------
+
+On release builds the engine is packed with more assets that could have different licences.
+If you are using a release build check the "ScreenpackLicence.txt" file for more info.

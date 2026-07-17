@@ -1,0 +1,9 @@
+STACK is released under the MIT license.
+
+http://opensource.org/licenses/MIT
+
+However, by default STACK links to the Boolector solver, which is
+released under GPLv3.  In that case, STACK is under GPL as well.
+
+If you want to keep the MIT license for STACK, use another solver.
+See the INSTALL file for details.

@@ -1,0 +1,29 @@
+MIT License
+
+Copyright (c) 2016-present The ZLMediaKit project authors. All Rights Reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+----------------------------------------------------------------------------------------
+
+è¡¥ååè®®:
+
+æ¬é¡¹ç®éç¨ç±»MITåè®®ï¼ç¨æ·å¨å±¥è¡MITåè®®ä¹å¡çåæ¶ï¼åºå½åæ¶éµå¾ªä¿çZLMediaKitè½¯ä»¶çæä¿¡æ¯çä¹å¡ã
+ç¨æ·ä¸å¾å»é¤ZLMediaKitæä¾çåç§æå¡ä¸­åæ¬ä½ä¸éäº "title"ã"Server"ã"User-Agent" ç­å­æ®µä¸­ "ZLMediaKit" çä¿¡æ¯ã
+å¦åæ¬é¡¹ç®ä¸»è¦æå©äºº(é¡¹ç®åèµ·äººãä¸»è¦ä½è)ä¿çå£°ç´¢èµ·è¯çæå©ã

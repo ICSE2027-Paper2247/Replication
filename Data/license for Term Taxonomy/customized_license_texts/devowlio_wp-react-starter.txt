@@ -1,0 +1,21 @@
+The software "WP React Starter" is comprised of multiple parts
+(files in these directories and subdirectories, if the subdirectory
+be under no other licence):
+
+/: ISC License (ISC)
+/.vscode: ISC License (ISC)
+/common: ISC License (ISC)
+/devops: ISC License (ISC)
+/docs: ISC License (ISC)
+/packages/utils: GNU General Public License v3.0 or later (GPL-3.0-or-later)
+/plugins/wp-reactjs-starter: GNU General Public License v3.0 or later (GPL-3.0-or-later)
+
+You can find a copy of both licenses at:
+
+ISC License: https://opensource.org/licenses/ISC
+GNU General Public License v3.0: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+In practice, this means that the build of the WordPress plugins 
+that you create with WP React Starter is only licensed under
+GNU General Public License v3.0 or later. Most or all devtools 
+are licensed under the ISC license.

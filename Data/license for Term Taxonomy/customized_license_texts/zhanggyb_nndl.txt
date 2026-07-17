@@ -1,0 +1,18 @@
+% file: copyright.tex
+
+\chapter{çæ}
+
+æ¬ä¹¦è±æåçå°å
+ä¸ºï¼
+\href{http://neuralnetworksanddeeplearning.com/}{http://neuralnetworksanddeeplearning.com/}
+ã
+
+å¨å­¦æ¯èä½ä¸­è¯·å¼ç¨è±æåæä¸ºï¼Michael A. Nielsen, ``Neural Networks and Deep
+Learning'', Determination Press, 2015ã
+
+è±æçåæ¬ä¹¦é
+ç¨ \href{http://creativecommons.org/licenses/by-nc/3.0/deed.en_GB}{Creative
+  Commons Attribution-NonCommercial 3.0 Unported License} è®¸å¯åè®®ãè¿æå³çä½ å¯
+ä»¥èªç±å°æ·è´ãååãæ©å±æ¬ä¹¦åå®¹ï¼ä½ä¸å¾åºå®ãå¦æä½ å¯¹åä¸ç¨éæå´è¶£ï¼è±æçè¯·è
+ç³»\href{mailto:mn@michaelnielsen.org}{ä½è}ï¼ä¸­æçè¯·è
+ç³»\hyperref[sec:TranslationTeam]{ç¿»è¯å¢é}ã

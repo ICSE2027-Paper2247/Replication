@@ -1,0 +1,39 @@
+MIT License
+
+Copyright (c) 2017-2018 Bjorn Stahl
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The included font, 'Hack' is licensed MIT and (C)2018 by the Source Foundry Authors,
+see https://github.com/source-foundry/Hack
+
+The included Skybox, 'Corona' is licensed as follows:
+(C) Ulukai (jonathan.denil@gmail.com), are
+licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+To view a copy of this license, see cc-by-sa.txt or visit
+http://creativecommons.org/licenses/by-sa/3.0/
+
+The corona and redeclipse skyboxes were made with Spacescape version 0.3,
+(Spacescape is copyright 2010 Alex Peterson, MIT (Expat) License).
+
+The image of the red eclipse in the redeclipse skybox is originally based on a
+photo by Luc Viatour <http://www.Lucnix.be> taken from
+<https://en.wikipedia.org/wiki/File:Solar_eclips_1999_4.jpg> which is
+licensed under CC-BY-SA-3.0.
+It has been modified by Dratz-C prior to inclusion in the skybox.

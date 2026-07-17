@@ -1,0 +1,7 @@
+------Java Lambda Expressions Internals------
+Author: CarpenterLee
+Name: æè±ª
+Mail: hooleeucas@163.com
+URL: https://github.com/CarpenterLee/JavaLambdaInternals
+
+æ¬¢è¿è½¬è½½ï¼è½¬è½½è¯·æ³¨æåºå¤ï¼è°¢è°¢ï½ï½

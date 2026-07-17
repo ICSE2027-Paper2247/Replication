@@ -1,0 +1,24 @@
+Copyright (c) 2014-2023, ZHANG ZHIGANG <hizzgdev@163.com>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+çæææ (c) 2014-2023, å¼ å¿å <hizzgdev@163.com>
+ä¿çä¸åæå©ã
+
+å¨æ»¡è¶³ä¸åæ¡ä»¶çåæä¸ï¼æäºä½¿ç¨èä½¿ç¨åååå¸æ¬è½¯ä»¶çæºä»£ç æäºè¿å¶å½¢å¼çæå©ï¼æ è®ºæ¯å¦ä¿®æ¹çç¶ï¼
+
+* å¯¹äºæ¬è½¯ä»¶æºä»£ç çååå¸ï¼å¿é¡»ä¿çä¸è¿°ççæå£°æãæ­¤ä¸æ¡è®¸å¯æ¡ä»¶ï¼ä»¥åä¸è¿°çåè´£å£°æã
+* å¯¹äºæ¬è½¯ä»¶äºè¿å¶å½¢å¼çååå¸ï¼å¿é¡»å¨éåæä¾çææ¡£å/æå¶å®åªä»ä¸­ï¼åå«ä¸è¿°ççæå£°æãæ­¤ä¸æ¡è®¸å¯æ¡ä»¶ï¼ä»¥åä¸è¿°çåè´£å£°æã
+* æªè·å¾äºåä¹¦é¢è®¸å¯ï¼ä¸å¾ä½¿ç¨çæææäººçåç§°åè´¡ç®èçåå­ï¼æ¥ä¸ºæ¬è½¯ä»¶çè¡çç©åä»»ä½æ¯æãè®¤å¯ææ¨å¹¿ãä¿éçè¡ä¸ºã
+
+æ­¤è½¯ä»¶ç±çæææèåè´¡ç®èä»¥ç°ç¶ï¼"as is"ï¼æ¹å¼æä¾ï¼æ¬è½¯ä»¶ä¸è´ä»»ä½æç¤ºææç¤ºçæä¿è´£ä»»ï¼åæ¬ä½ä¸éäºå°±ééæ§ä»¥åç¹å®ç®ççéç¨æ§çæç¤ºæ§æä¿ãä»»ä½å ä½¿ç¨æ¬è½¯ä»¶é æçï¼ç´æ¥ãé´æ¥ãè¿å¸¦ãç¹å«ãæ©ææä»»ä½ç»æçæå®³ï¼åæ¬ä½ä¸éäºæ¿ä»£åååæå¡çéè´­ï¼æ æ³ä½¿ç¨ï¼æ°æ®ä¸¢å¤±ï¼çå©æå¤±æä¸å¡ä¸­æ­ç­ï¼ï¼æ è®ºä»»ä½æ¡ä»¶ãæ è®ºä»»ä½åå æä»»ä½è´£ä»»æ¨æ­ãæ è®ºæ¯å¦å±äºååèç´ãæ è®ºæ¯å¦ä¸ºä¸¥æ ¼èµå¿è´£ä»»ææ°äºä¾µæè¡ä¸ºï¼åæ¬è¿å¤±æå¶ä»åå ï¼èèµ·ï¼å³ä½¿å¨ä½¿ç¨åå·²è·åç¥å¯è½ä¼é ææ­¤ç±»æå®³çæå½¢ä¸ï¼çæææèåè´¡ç®èåä¸è´ä»»ä½è´£ä»»ã
+

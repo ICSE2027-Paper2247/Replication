@@ -1,0 +1,18 @@
+# Licence CC-By-NC-ND
+
+Vous avez l'obligation de transmettre les titres et les rÃ¨gles de validation de toutes les bonnes pratiques de la version 4 en l'Ã©tat, sans modification, intÃ©gralement, en incluant les informations ci-dessous:
+
+	Le "RÃ©fÃ©rentiel d'Ã©coconception web (REW)" est publiÃ© par GreenIT.fr dans le cadre des travaux du Collectif conception numÃ©rique responsable selon les termes de la licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0 International.
+	FondÃ©(e) sur une Åuvre disponible Ã  https://collectif.greenit.fr/
+
+	Cette oeuvre, crÃ©ation, site ou texte est sous licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0 International. Pour accÃ©der Ã  une copie de cette licence, merci de vous rendre Ã  l'adresse suivante https://creativecommons.org/licenses/by-nc-nd/4.0/ ou envoyez un courrier Ã  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+## Utilisation
+
+Les titres et contenus des bonnes pratiques de la version 4 sont publiÃ©s sous licence Creative Commons BY-NC-ND. Cela signifie que vous pouvez l'utiliser librement pour des utilisations non commerciales, Ã  la condition de maintenir la paternitÃ© du contenu, via un lien vers https://collectif.greenit.fr et https://www.ecoconceptionweb.com.
+
+## Titre
+
+RÃ©fÃ©rentiel d'Ã©coconception web (REW)
+
+Auteur principal: GreenIT.fr

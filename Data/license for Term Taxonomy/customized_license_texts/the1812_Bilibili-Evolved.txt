@@ -1,0 +1,19 @@
+æºä»£ç åºäº [MIT è®¸å¯](https://mit-license.org/) å¬å¼.
+
+ä½å­å¨ä¸äºéå¶:
+- å¦æéè¦å¨å¶ä»å°æ¹åå¸æ­¤èæ¬<sup>1</sup>, åå¿é¡»æ»¡è¶³ä»¥ä¸æ¡ä»¶ä¹ä¸:
+  - ä¿ç README ææ¡£, ä¸å®è£å¥å£åªå­å¨äº README æä»¶ç ["å®è£"](./README.md#å®è£) ç« èä¸­, ä¸å¾é¢å¤æä¾è·³è¿ README ææ¡£éè¯»å³å¯å®è£çæ¹å¼.
+  - èªè¡å¤çç¸å³èçææ¯æ¯æ, ä¸å¾ç´æ¥å¯¼åæ¬ä»åº. ä¹å°±æ¯å¿é¡» Fork å¹¶ä¿®æ¹æææåæ¬ä»åºçåé¦æ¸ é, åæ¬ Issues å Discussions. æ¬ä»åºä¸å¯¹æ¥èªå¶ä»æ¥æºå®è£çèæ¬æä¾ææ¯æ¯æ.
+
+> <sup>1</sup> æåå¸èæ¬çå®æ´åå®¹, ä¾å¦ç´æ¥å°å®è£é¾æ¥ (ä»¥ `.user.js` ç»å°¾) åå¸, æèå¨ GreasyFork ç­èæ¬æç®¡ç«ç¹å¯¼å¥. å¦æåªæ¯æåæ¬ä»åºçé¡µé¢é¾æ¥ (ä¾å¦ `https://github.com/the1812/Bilibili-Evolved`) æ¯æ²¡å³ç³»ç.
+
+----
+
+Source codes are published under [The MIT License](https://mit-license.org/).
+
+With some restrictions:
+- Redistribute contents<sup>1</sup> from this repository must satisfy one of the following requirements:
+  - Preserve the README file as the only entry of installation. Users cannot install the software without visiting the README file.
+  - Provide user support (any issue or discussion) independently. All support links must be redirected to the redistribution site (by forking this repository). The original repository will not provide any support for the redistributed software.
+
+> <sup>1</sup> Redistribute repository files. Including publish the direct link for installation (ends with `.user.js`), or import into other UserScript host sites (like GreasyFork). Publish the repository link (like `https://github.com/the1812/Bilibili-Evolved`) is not treated as redistribution.

@@ -1,0 +1,251 @@
+Any file in this project that doesn't state otherwise, and isn't listed as an
+exception below, is Copyright 2013-2021 The openage authors, and licensed
+under the terms of the GNU General Public License Version 3, or
+(at your option) any later version ("GPL3+").
+A copy of the license can be found in [legal/GPLV3](/legal/GPLv3).
+
+_the openage authors_ are:
+
+| Full name                   | aliases                     | E-Mail                                            |
+|-----------------------------|-----------------------------|---------------------------------------------------|
+| Jonas Jelten                | TheJJ                       | jj Ã  sft dawt lol                                 |
+| Michael EnÃlin              | mic_e                       | michael Ã  ensslin dawt cc                         |
+| Andre Kupka                 | freakout                    | kupka Ã  in dawt tum dawt de                       |
+| Frank Schmidt               | gellardo                    | rubiccuber Ã  googlemail dawt com                  |
+| Markus Otto                 | zuntrax                     | otto Ã  fs dawt tum dawt de                        |
+| Sascha Vincent Kurowski     | svkurowski                  | svkurowski Ã  gmail dawt com                       |
+| James Mintram               | JimmyJazz                   | jamesmintram Ã  gmail dawt com                     |
+| Martin McGrath              | MartinMcGrath               | mcgrath dawt martin Ã  gmail dawt com              |
+| RenÃ©e Kooi                  | goto-bus-stop               | renee Ã  kooi dawt me                              |
+| Markus Elfring              | elfring                     | elfring Ã  users dawt sourceforge dawt net         |
+| Jimmy Berry                 | boombatower                 | jimmy Ã  boombatower dawt com                      |
+| JoÃ£o Roque                  | joaoroque                   | joaoroque Ã  gmail dawt com                        |
+| Julius Michaelis            | jcaesar                     | gitter Ã  liftm dawt de                            |
+| Katharina Bogad             | mistressofjellyfish         | delirium Ã  hacked dawt xyz                        |
+| Oliver Fawcett-Griffiths    | ollyfg                      | olly Ã  ollyfg dawt com                            |
+| Ross Murray                 | rossmurray                  | rm Ã  egoorb dawt com                              |
+| Alexandre Arpin             | AlexandreArpin              | arpin dawt alexandre Ã  gmail dawt com             |
+| Henry Snoek                 | snoek09                     | snoek09 Ã  gmail dawt com                          |
+| Gabriel Scherer             | gasche                      | gasche dawt dylc Ã  gmail dawt com                 |
+| Austin Eyler                | awestin1                    | awestin1 Ã  gmail dawt com                         |
+| Francisco Demartino         | franciscod                  | demartino dawt francisco Ã  gmail dawt com         |
+| Peter Piwowarski            | oldlaptop                   | oldlaptop654 Ã  aol dawt com                       |
+| Charles Pigott              | LordAro                     | charlespigott Ã  googlemail dawt com               |
+| Andrew Eikum                | ColdPie1                    | coldpies Ã  gmail dawt com                         |
+| Michael Sebastiyan          | BugExplorer                 | sebastiyan dawt michael Ã  outlook dawt com        |
+| Adam Miartus                | miartad                     | adam dawt miartus Ã  gmail dawt com                |
+| BenoÃ®t Legat                | blegat                      | benoit dawt legat Ã  gmail dawt com                |
+| James Hagborg               | blucoat                     | jameshagborg Ã  gmail dawt com                     |
+| Prashanth Jonnala           | jprashanth                  | prashanth dawt neo Ã  gmail dawt com               |
+| Jonathan Remnant            | Jon0                        | jono4728 Ã  gmail dawt com                         |
+| Sam Schetterer              | schets                      | samschet Ã  gmail dawt com                         |
+| Georg Kilzer                | leper                       | leper Ã  wildfiregames dawt com                    |
+| Florian Erler               | ethon                       | ethon Ã  ethon dawt cc                             |
+| MichaÅ Janiszewski          | janisozaur                  | janisozaur+openage Ã  gmail dawt com               |
+| Lautaro Nahuel De LeÃ³n      | lndl                        | laudleon Ã  gmail dawt com                         |
+| Robin Kreis                 | rkreis                      | r dawt kreis Ã  uni-bremen dawt de                 |
+| Shion Ryuu                  | shion                       | shionryuu Ã  outlook dawt com                      |
+| Jonas Borchelt              | riotjones                   | jonasbr-github Ã  bellatrix dawt uberspace dawt de |
+| Jon Gelderloos              | jgelderloos                 | jgelderloos Ã  gmail dawt com                      |
+| Emmanuel Gil Peyrot         | Link Mauve                  | linkmauve Ã  linkmauve dawt fr                     |
+| Danilo Bargen               | dbrgn                       | mail Ã  dbrgn dawt ch                              |
+| Niklas Fiekas               | niklasf                     | niklas dawt fiekas Ã  backscattering dawt de       |
+| Charles Gould               | charlesrgould               | charles dawt r dawt gould Ã  gmail dawt com        |
+| Wilco Kusee                 | detrumi                     | wilcokusee Ã  gmail dawt com                       |
+| Sreejith R                  | sreejithr                   | sreejith dawt r44 Ã  gmail dawt com                |
+| Jens Feodor Nielsen         | jfeo                        | xws747 Ã  alumni dawt ku dawt dk                   |
+| Franz-Niclas Muschter       | fm                          | fm Ã  stusta dawt net                              |
+| Valentin Gagarin            | frickler01                  | valentin Ã  fricklerhandwerk dawt de               |
+| Emmanouil Kampitakis        | madonius                    | emmanouil Ã  kampitakis dawt de                    |
+| Thomas Oltmann              | tomolt                      | thomas dawt oltmann dawt hhg Ã  gmail dawt com     |
+| Miguel Kasparick            | miguellissimo               | miguellissimo Ã  gmail dawt com                    |
+| Darren Strash               | darrenstrash                | darren dawt strash Ã  gmail dawt com               |
+| Kyle Robbertze              | paddatrapper                | paddatrapper Ã  gmail dawt com                     |
+| Jonathan Biegert            | azrdev                      | azrdev Ã  qrdn dawt de                             |
+| Hadrien Mary                | hadim                       | hadrien dawt mary Ã  gmail dawt com                |
+| Sachin Kelkar               | s4chin                      | sachinkel19 Ã  gmail dawt com                      |
+| Camillo Dell'mour           | spjoe                       | cdellmour Ã  gmail dawt com                        |
+| Timothee Behety             | tim2000                     | tim dawt behety Ã  gmail dawt com                  |
+| Vyacheslav Davydov          | tombouctou                  | vissi Ã  vissi dawt su                             |
+| Lyle Nel                    | lyle-nel                    | pt20100938 Ã  gmail dawt com                       |
+| Michael Kilby               | kilbyjmichael               | kilbyjmichael Ã  gmail dawt com                    |
+| Michal KovÃ¡Ä                | mirelon                     | miso Ã  github dawt ksp dawt sk                    |
+| Patrik Stutz                | VanCoding                   | patrik dawt stutz Ã  gmail dawt com                |
+| James McMurray              | jamesmcm                    | jamesmcm03 Ã  gmail dawt com                       |
+| Åukasz Raszka               | lukky513                    | lukky513 Ã  gmail dawt com                         |
+| Martin Castillo             | castilma                    | castilma Ã  uni-bremen dawt de                     |
+| Volodymyr Samokhatko        | ChipmunkV                   | velorums Ã  gmail dawt com                         |
+| Guillaume Desquesnes        | elnabo                      | g dawt desquesnes Ã  gmail dawt com                |
+| Johan Klokkhammer Helsing   | johanhelsing                | johanhelsing Ã  gmail dawt com                     |
+| Jasper v. Blanckenburg      | jazzpi                      | jasper Ã  mezzo dawt de                            |
+| Alexej Disterhoft           | nobbs                       | disterhoft Ã  uni-mainz dawt de                    |
+| Sebastian Brodehl           | sbrodehl                    | sbrodehl Ã  students dawt uni-mainz dawt de        |
+| Gaith Hallak                | ghallak                     | gaithhallak Ã  gmail dawt com                      |
+| Pierre Hallot               | Hallot                      | hallotpierre Ã  gmail dawt com                     |
+| Vicken Simonian             | vsimon                      | vsimon Ã  gmail dawt com                           |
+| Kevin Peters                | kev946                      | klee946 Ã  gmail dawt com                          |
+| Andreas Schulz              | Longhanks                   | andi dawt schulz Ã  me dawt com                    |
+| Shaleen Jain                | Shalzz                      | shaleen dawt jain95 Ã  gmail dawt com              |
+| Johannes Walcher            | tomatower                   | johannes dawt walcher Ã  stusta dawt de            |
+| Akritas Akritidis           | MaanooAk                    | akritasak Ã  gmail dawt com                        |
+| Edgard Mota                 | edgardmota                  | edgardmota Ã  gmail dawt com                       |
+| Boris DuÅ¡ek                 | dusek                       | me Ã  dusek dawt me                                |
+| Michael Droogleever         | droogmic                    | droogmic Ã  gmail dawt com                         |
+| Christoph Heine             | heinezen                    | heinezen Ã  hotmail dawt de                        |
+| Marco Savelli               | Piruzzolo                   | svlmrc Ã  gmail dawt com                           |
+| Yvan Burrie                 | yvan-burrie                 | yvan dawt burrie Ã  hotmail dawt com               |
+| Martin Bernardi             | martinber                   | martinbernardi Ã  openmailbox dawt org             |
+| Erik Griese                 | citron0xa9                  | erik dawt griese Ã  yahoo dawt de                  |
+| Alex Birch                  | Birch-san                   | vengeance dawt m dawt x+openage Ã  gmail dawt com  |
+| Michal Jarzabek             | stiopa                      | stiopa Ã  gmail dawt com                           |
+| Christopher Wilson          | cdw33                       | cdw33 Ã  zips dawt uakron dawt edu                 |
+| Wojciech Nawrocki           | Vtec234                     | wjnawrocki Ã  protonmail dawt com                  |
+| Folkert van Verseveld       | methos, medicijnman         | folkert dawt van dawt verseveld Ã  gmail dawt com  |
+| Neel Patel                  | ohn0                        | silverskinx Ã  gmail dawt com                      |
+| David Carlier               | devnexen                    | devnexen Ã  gmail dawt com                         |
+| Tushar Maheshwari           | tusharpm                    | tushar27192 Ã  gmail dawt com                      |
+| Piotr Szpetkowski           | piotr-szpetkowski           | piotr dawt szpetkowski Ã  pyquest dawt space       |
+| Julian Guillotel            | arialwhite                  | julian dawt gullotel Ã  gmail dawt com             |
+| Arne Sellmann               | PythonicChemist             | arne dawt sellmann Ã  gmx dawt de                  |
+| Rafael X. Morales Georgi    | chocoladisco                | chocoladisco Ã  gmail dawt com                     |
+| Marcel Schneider            | schnema123                  | marcelschneider5 Ã  outlook dawt de                |
+| Samuel Grigolato            | samuelgrigolato             | samuel dawt grigolato Ã  gmail dawt com            |
+| Andrew Thompson             | mrwerdo                     | mrwerdo331 Ã  me dawt com                          |
+| Benedikt Freisen            | roybaer                     | b dawt freisen Ã  gmx dawt net                     |
+| Finn GÃ¼nther                | Kawzeg                      | kawzeg Ã  gmail dawt com                           |
+| Akshit Sharma               | akshit-sharma               | akshit9sharma Ã  gmail dawt com                    |
+| Jacek Wielemborek           | d33tah                      | d33tah Ã  gmail dawt com                           |
+| Charles Offenbacher         | coffenbacher                | charles.offenbacher Ã  gmail dawt com              |
+| Ilia Vladimirskiy           | ivvory                      | ivv.evol Ã  gmail dawt com                         |
+| Nicholas Schmidt            | schmidtnicholas             | schmidtnicholas111 Ã  gmail dawt com               |
+| Antti Aalto                 | Anakonda                    | antti dawt aalto dawt 10 Ã  gmail dawt com         |
+| Simon San                   | simonsan                    | simon Ã  systemli dawt org                         |
+| Lorenzo Gaifas              | brisvag                     | brisvag Ã  gmail dawt com                          |
+| Shim Myeongseob             | violet716                   | zzangsim231 Ã  gmail dawt com                      |
+| Serhan Tutar                | randomnoise                 | serhantutar Ã  outlook dawt com                    |
+| Georgy Komarov              | jubnzv                      | jubnzv Ã  gmail dawt com                           |
+| Aristotelis Dossas          | teldosas                    | teldosas Ã  gmail dawt com                         |
+| Martin Sandsmark            | martin                      | martin dawt sandsmark Ã  kde dawt org              |
+| Merlin Stollenwerk          | Mese96                      | merlin-stollenwerk Ã  past-development dawt de     |
+| æ®µæ¸æ¥  Duan Qingnan          | duanqn                      | duanqn_own_1 Ã  yeah dawt net                      |
+| Sean Ramey                  | SeanRamey                   | sramey40 Ã  gmail dawt com                         |
+| D R Siddhartha              | drs-11                      | siddharthadr11 Ã  gmail dawt com                   |
+| Martin MatÄjek              | mmtj                        | martin dawt matejek Ã  gmx dawt com                |
+| Tobias Feldballe            | Namabilis                   | tobias Ã  osandweb dawt dk                         |
+| Ayxan Haqverdili            | Ayxan13                     | aykhanhagverdili Ã  gmail dawt com                 |
+| David Heidelberg            | okias                       | david Ã  ixit dawt cz                              |
+| Giacomo Frascarelli         | 0ro8lu                      | giacomo dawt frascarelli1 Ã  gmail dawt com        |
+| Antonio M. R. Cunha         | Grubben                     | antoniomsprc Ã  gmail dawt com                     |
+| Jens Nyman                  | nymanjens                   | nymanjens dawt nj Ã  gmail dawt com                |
+| Deepak Dinesh               | deepak                      | d.deepakdinesh13 Ã  gmail dawt com                 |
+| Damien Lejay                | dlejay                      | lejay Ã  paracompact dawt space                    |
+| Talha Aamir                 | sarcxd                      | sarcxd Ã  gmail dawt com                           |
+| Matthias Geiger             | CountOmega                  | matthias dawt geiger1024 Ã  outlook dawt com       |
+| Yuvraj Tetarwal             | YuviTz1                     | yuvi56789 Ã  gmail dawt com                        |
+| Tarun Samanta               | TS                          | tarunsamanta77 Ã  gmail dawt com                   |
+| Derek Frogget               | FoggyLight                  | fro22003 Ã  byui dawt edu                          |
+| Martin                      | Starman                     | mstarman Ã  seznam dawt cz                         |
+| ZoltÃ¡n Ãcs                  | zoli111                     | acszoltan111 Ã  gmail dawt com                     |
+| Trevor Slocum               | tslocum                     | trevor Ã  rocket9labs dawt com                     |
+| Munawar Hafiz               | munahaf                     | munawar dawt hafiz Ã  gmail dawt com               |
+| Md Ashhar                   | ashhar                      | mdashhar01 Ã  gmail dawt com                       |
+| FÃ¡bio Barkoski              | fabiobarkoski               | fabiobarkoskii Ã  gmail dawt com                   |
+| Astitva Kamble              | askastitva                  | astitvakamble5 Ã  gmail dawt com                   |
+| Haoyang Bi                  | AyiStar                     | ayistar Ã  outlook dawt com                        |
+| Michael Seibt               | RoboSchmied                 | github Ã  roboschmie dawt de                       |
+
+If you're a first-time committer, add yourself to the above list. This is not
+just for legal reasons, but also to keep an overview of all those nicknames.
+
+For some authors, the full names and/or e-mail addresses are unknown. They have
+been marked by "?". Luckily, those author's contributions are only small typo
+fixes, so no copyright concerns should arise from this.
+If your info is missing, wrong, or you want it to be removed for whatever
+reason, please contact us.
+
+A full list of all openage authors ("contributors") can also be determined
+from the VCS, e.g. via `git shortlog -sne`, or conveniently looked up on
+[the GitHub web interface](https://github.com/SFTtech/openage/graphs/contributors).
+
+Details on individual authorships of files can be obtained via the VCS,
+e.g. via `git blame`, or the GitHub web interface.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License Version 3 for more details.
+
+If you wish to include a file from openage in your project, make sure to
+include all required legal info. The easiest way to do this would probably
+be to include a copy of this file (`copying.md`), and to leave the file's
+copyright header untouched.
+
+Per-file license header guidelines:
+
+In addition to this file, to prevent legal caveats, every source file *must*
+include a header.
+
+**openage-native** source files, that is, files that were created by
+_the openage authors_, require the following one-line header, preferably in
+the first line, as a comment:
+
+    Copyright 20XX-20YY the openage authors. See copying.md for legal info.
+
+`20XX` is the year when the file was created, and `20YY` is the year when the
+file was last edited. When editing a file, make sure the last-modification year
+is still correct.
+
+**3rd-party** source files, that is, files that were taken from other open-
+source projects, require the following, longer header:
+
+    This file was ((taken|adapted)|contains (data|code)) from $PROJECT,
+    Copyright 1337-2013 Your Mom.
+    It's licensed under the terms of the 3-clause BSD license.
+    < any amount of lines of further legal information required by $PROJECT,
+      such as a reference to a copy of the $PROJECT's README or AUTHORS file >
+    < if third-party files from more than the one project were used in this
+      file, copy the above any number of times >
+    (Modifications|Other (data|code)|Everything else) Copyright 2014-2014 the openage authors.
+    See copying.md for further legal info.
+
+For even more details, see the [regular expressions](buildsystem/codecompliance/legal.py).
+
+In addition to the openage header, the file's original license header should
+be retained if in doubt.
+
+The "license" line is required only if the file is not licensed as
+"GPLv3 or higher".
+
+Authors of 3rd-party files should generally not be entered in the
+"openage authors" list.
+
+All 3rd-party files **must** be included in the following list:
+
+List of all 3rd-party files in openage:
+
+From [cabextract/libmspack](http://www.cabextract.org.uk/) ([LGPL 2.0](/legal/LGPLv2.0))
+
+ - `libopenage/util/compress/lzxd.cpp`
+ - `doc/code/lzx_compression_info`
+
+cmake modules ([3-clause BSD license](/legal/BSD-3-clause))
+
+ - `buildsystem/modules/FindGPerfTools.cmake` (taken from [VAST](https://github.com/mavam/vast))
+ - `buildsystem/modules/FindOpusfile.cmake` (taken from [Unvanquished](https://github.com/Unvanquished/Unvanquished))
+
+
+#### Disclaimer
+
+Notes about this file:
+
+I (`mic_e`) am not a lawyer. This is a free software project, we're doing this for
+fun. People convinced me that this legal shit must be done, so I did it, even
+though I'd rather have spent the time on useful parts of the project.
+If you see any legal issues, feel free to contact me.
+
+I, personally, despise in-sourcefile legal text blocks. They're a pest,
+and unlike many others, I don't simply accept them because
+"that is what everybody does". Thus, I worked out the minimal 1-line text above,
+which should be free of legal caveats, and a reasonable compromise.
+I'd be happy to see it used in other projects; you're free to use this file
+(`copying.md`) as a template for your project's legal documentation.

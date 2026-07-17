@@ -1,0 +1,85 @@
+The Star And Thank Author but No Politics License (SATA-BNP)
+
+Copyright Â© 2019-2020 Eltrac(hi@guhub.cn)
+
+Project Url: https://github.com/BigCoke233/miracles
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software. 
+
+And wait, the most important, you shall star/+1/like the project(s) in project url 
+section above first, and then thank the author(s) in Copyright section. 
+
+Here are some suggested ways:
+
+ - Email the authors a thank-you letter, and make friends with him/her/them.
+ - Report bugs or issues.
+ - Tell friends what a wonderful project this is.
+ - And, sure, you can just express thanks in your mind without telling the world.
+
+Contributors of this project by forking have the option to add his/her name and 
+forked project url at copyright and project url sections, but shall not delete 
+or modify anything else in these two sections.
+
+Besides, you are NOT allowed to publish anything about politics with this software
+or use the software for political advocacy.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+
+ä¸­æè¯æ¬ï¼
+
+The Star And Thank Author but No Politics License (SATA-BNP)
+
+Copyright Â© 2019-2020 Eltrac(hi@guhub.cn)
+
+é¡¹ç®ç½åï¼https://github.com/BigCoke233/miracles
+
+å¹åäºä»»ä½äººåè´¹è·å¾ä¸ä»½å¯æ¬ã
+æ¬è½¯ä»¶åç¸å³çææ¡£æä»¶ï¼ä»¥ä¸ç§°"è½¯ä»¶"ï¼ï¼ä»¥æäºä»»ä½ä½¿ç¨è½¯ä»¶çäºº
+ä¸åéå¶å°ä½¿ç¨æ¬è½¯ä»¶çæå©ï¼åæ¬ä½ä¸éäºä»¥ä¸æå©
+ä½¿ç¨ãå¤å¶ãä¿®æ¹ãåå¹¶ãåºçãååãåææå/æåºå®ã
+æ¬è½¯ä»¶çå¯æ¬ï¼å¹¶åè®¸æ¥åæ¬è½¯ä»¶çäººä½¿ç¨æ¬è½¯ä»¶ã
+å¨ç¬¦åä¸åæ¡ä»¶çæåµä¸ï¼å¯ä»¥è¿æ ·åã
+
+ä¸è¿°çæå£°æåæ¬è®¸å¯å£°æåºåæ¬å¨ä»¥ä¸åå®¹ä¸­ï¼
+è½¯ä»¶çææå¯æ¬æå®è´¨æ§çé¨åã
+
+æéè¦çæ¯ï¼ä½ åºå¨é¡¹ç®ç½åä¸­çé¡¹ç®ä¸­çæçº§/+1/åæ¬¢çé¡¹ç®ã
+ç¶åç¨ä¸å®çæ¹å¼æè°¢ä½èã
+
+ä»¥ä¸æ¯ä¸äºå»ºè®®çæ¹æ³ã
+
+ - ç»ä½èåä¸å°æè°¢ä¿¡ï¼åä½èäº¤æåã
+ - æ¥å bug æé®é¢ã
+ - åè¯æåä»¬è¿æ¯ä¸ä¸ªå¤ä¹æ£çé¡¹ç®ã
+ - å½ç¶ï¼ä½ ä¹å¯ä»¥åªå¨å¿ä¸­è¡¨ç¤ºæè°¢ï¼ä¸åè¯å¨ä¸çã
+
+æ¬é¡¹ç®çæç¨¿èå¯ä»¥éæ©æ·»å  TA çåå­ 
+å¨çæåé¡¹ç®ç½åé¨åçååé¡¹ç®ç½åï¼ä½ä¸å¾å é¤ 
+æä¿®æ¹è¿ä¸¤ä¸ªé¨åä¸­çä»»ä½å¶ä»åå®¹ã
+
+æ­¤å¤ï¼ä½ ä¸åè®¸ç¨è¿ä¸ªè½¯ä»¶åå¸ä»»ä½å³äºæ¿æ²»çä¸è¥¿ã
+æä½¿ç¨è¯¥è½¯ä»¶è¿è¡æ¿æ²»å®£ä¼ ã
+
+æ¬è½¯ä»¶æ¯ "æåæ · "æä¾çï¼ä¸ä½ä»»ä½å½¢å¼çä¿è¯ï¼æ è®ºæç¤ºææç¤ºã
+æç¤ºçï¼åæ¬ä½ä¸éäºééæ§ä¿è¯ã
+éå½äºæä¸ç¹å®ç®çåä¸ä¾µæãå¨ä»»ä½æåµä¸ï¼ä»»ä½æåµä¸é½ä¸å¾
+ä½èæçæææäººå¯¹ä»»ä½ç´¢èµãæå®³èµå¿æå¶ä»è´£ä»»ã
+èµå¿è´£ä»»ï¼æ è®ºæ¯å¨ååãä¾µæè¡ä¸ºè¿æ¯å¶ä»æ¹é¢çè¯è®¼ä¸­ï¼ç±äºä»¥ä¸åå èäº§ççè´£ä»»ï¼
+ç±äºæä¸è¯¥è½¯ä»¶çä½¿ç¨æå¶ä»äº¤ææå³çæä¸ä¹æå³ç
+è¯¥è½¯ä»¶ã

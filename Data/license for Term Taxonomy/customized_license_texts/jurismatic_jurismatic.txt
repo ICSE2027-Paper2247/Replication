@@ -1,0 +1,32 @@
+# LICENSE
+
+## by-nc-sa/3.0/fr
+
+Sauf mention contraire, l'ensemble de ces documents est partagÃ© sous une licence [Creative Commons "by-nc-sa/3.0"](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)(fr)
+
+### Vous Ãªtes autorisÃ© Ã  :
+
+- Partager â copier, distribuer et communiquer le matÃ©riel par tous moyens et sous tous formats
+- Adapter â remixer, transformer et crÃ©er Ã  partir du matÃ©riel
+
+L'Offrant ne peut retirer les autorisations concÃ©dÃ©es par la licence tant que vous appliquez les termes de cette licence.
+
+### Selon les conditions suivantes :
+
+- Attribution â You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- Pas dâUtilisation Commerciale â Vous n'Ãªtes pas autoriser Ã  faire un usage commercial de cette Oeuvre, tout ou partie du matÃ©riel la composant.
+- Partage dans les MÃªmes Conditions â Dans le cas oÃ¹ vous effectuez un remix, que vous transformez, ou crÃ©ez Ã  partir du matÃ©riel composant l'Oeuvre originale, vous devez diffuser l'Oeuvre modifiÃ©e dans les mÃªme conditions, c'est Ã  dire avec la mÃªme licence avec laquelle l'Oeuvre originale a Ã©tÃ© diffusÃ©e.
+
+No additional restrictions â Vous n'Ãªtes pas autorisÃ© Ã  appliquer des conditions lÃ©gales ou des mesures techniques qui restreindraient lÃ©galement autrui Ã  utiliser l'Oeuvre dans les conditions dÃ©crites par la licence.
+Notes:
+
+Vous n'Ãªtes pas dans l'obligation de respecter la licence pour les Ã©lÃ©ments ou matÃ©riel appartenant au domaine public ou dans le cas oÃ¹ l'utilisation que vous souhaitez faire est couverte par une exception.
+Aucune garantie n'est donnÃ©e. Il se peut que la licence ne vous donne pas toutes les permissions nÃ©cessaires pour votre utilisation. Par exemple, certains droits comme les droits moraux, le droit des donnÃ©es personnelles et le droit Ã  l'image sont susceptibles de limiter votre utilisation.
+
+
+### Liens 
+
+- [Jurismatic: Toute la doc lÃ©gale et open-source pour les start-ups](http://www.jurismatic.com)
+- Les sources de ces documents sont disponible en ligne Ã  cette adresse : https://github.com/jurismatic/jurismatic
+- [RÃ©sumÃ© explicatif de la licence](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)
+- [Texte complet de la licence](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/legalcode)

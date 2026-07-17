@@ -1,0 +1,3 @@
+//Rawdraw and CNPing may be licensed feely under the MIT-x11
+//or NewBSD Licenses.  You choose!
+

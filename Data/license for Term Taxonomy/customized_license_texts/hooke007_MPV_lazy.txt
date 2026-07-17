@@ -1,0 +1,37 @@
+å¤§éæä»¶åå§æ¥èªä¸æ¸¸ï¼åå«ä½¿ç¨ä¸ååè®®  
+_æªååºçæä»¶ï¼ä»¥ææ°æä»¶åå®¹ä¸ºåï¼å¦åé»è®¤è§ä½_ **UNLICENSED**
+
+
+
+## .../mpv-lazy/
+
+### mpv
+https://github.com/mpv-player/mpv/blob/master/Copyright
+
+### python
+https://docs.python.org/3/license.html
+
+### VapourSynth
+https://github.com/vapoursynth/vapoursynth/blob/master/COPYING.LESSER
+
+### yt-dlp
+https://github.com/yt-dlp/yt-dlp/blob/master/LICENSE
+
+
+## .../mpv-lazy/installer
+https://github.com/rossy/mpv-install/blob/master/COPYING
+
+
+## .../mpv-lazy/portable_config/scripts
+
+_éå¸¸åè®®å·²éæå¨æä»¶åé¨_
+
+
+## .../mpv-lazy/portable_config/shaders
+
+_éå¸¸åè®®å·²éæå¨æä»¶åé¨_
+
+
+## .../mpv-lazy/vapoursynth64/plugins
+
+åè§ [å¯¹åºç»´åºé¡µé¢](https://github.com/hooke007/MPV_lazy/wiki/2_portable_config#vs%E8%84%9A%E6%9C%AC%E8%B7%AF%E5%BE%84-)

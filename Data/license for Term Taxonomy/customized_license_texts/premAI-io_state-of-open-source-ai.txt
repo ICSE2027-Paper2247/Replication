@@ -1,0 +1,32 @@
+SPDX-License-Identifier: CC-BY-4.0 AND Apache-2.0
+
+This book is a product of collaborative work.
+Unless otherwise stated, all authors (see commit logs) retain copyright
+for their respective work, and release code under the Apache-2.0 licence,
+and everything else under the CC-BY-4.0 licence.
+
+Exceptions or notable authors are listed below
+in reverse chronological order:
+
+* files: *
+  CC-BY-4.0 AND Apache-2.0 (c) 2023 Prem https://github.com/PremAI-io.
+
+Creative Commons Attribution v. 4.0 Internation (CC-BY-4.0)
+-----------------------------------------------------------
+
+This work is licenced under http://creativecommons.org/licenses/by/4.0
+
+Apache Licence v. 2.0
+---------------------
+
+Licenced under the Apache Licence, Version 2.0 (the "Licence");
+you may not use this work except in compliance with the Licence.
+You may obtain a copy of the Licence at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the Licence is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the Licence for the specific language governing permissions and
+limitations under the Licence.

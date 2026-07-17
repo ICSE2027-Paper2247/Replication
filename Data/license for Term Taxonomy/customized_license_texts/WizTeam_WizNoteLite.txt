@@ -1,0 +1,45 @@
+
+WizNote Lite Open Source License 
+Updated July, 2020
+
+Beijing Wozhi Technology Ltd (the "Company") makes this license and provides the resource code of WizNote Lite (the "Software") with dual authorization.  
+
+For individual users
+This agreement entitles individual users to modify the Software or the source code under the MIT License.
+
+For commercial use
+Before any packaging, modification of the Software source code, and use of the Software for commercial activities, you must contact the company and sign a commercial license agreement. (For the details, please contact us)
+
+We reserve the right to pursue its legal responsibility for any commercial activity using the software source code before signing the License Agreement.
+
+
+
+//-------------------------------------
+WizNote Lite å¼æºè®¸å¯è¯´æ
+2020 å¹´ 7 æ æ´æ°
+
+
+æç¥ç§ææéå¬å¸éç¨åæææ¹å¼æä¾ WizNote Lite è½¯ä»¶çæºç ãæ¨å¨æ»¡è¶³ä¸ªäººç¨æ·çä¸ªæ§åæ©å±ä½¿ç¨ï¼ä»¥ååä¸å¬å¸çåè½æ©å±ã
+
+å¯¹äºä¸ªäººä½¿ç¨èï¼
+å¯æ ¹æ® MIT åè®®çè¯´æï¼å¯¹ WizNote Lite è½¯ä»¶çæºç è¿è¡ä¸ªæ§åå¼åä½¿ç¨ã
+
+å¯¹äºåä¸å¬å¸ï¼
+ææéå¯¹ WizNote Lite è½¯ä»¶æºç è¿è¡çå°è£ãæ¹é ï¼ä»¥åä½¿ç¨ WizNote Lite è½¯ä»¶å¼å±åä¸æ´»å¨æ¶ï¼å¿é¡»ä¸æç¥ç§ææéå¬å¸èç³»ï¼å¹¶ç­¾è®¢åä¸è®¸å¯åè®®ãï¼åä¸è®¸å¯åè®®è¯¦ç»åå®¹è¯·ä¸æå¸èç³»ï¼
+ä»»ä½åä¸å¬å¸å¨ä¸æå¸ç­¾è®¢åä¸è®¸å¯åè®®åï¼ä½¿ç¨ WizNote Lite è½¯ä»¶æºç å¼å±åä¸æ´»å¨çè¡ä¸ºï¼æå¸å°ä¿çè¿½ç©¶å¶æ³å¾è´£ä»»çæå©ã
+
+//-------------------------------------
+
+
+
+MIT License for Personal
+
+Copyright <2020> <Beijing Wozhi Technology Co. Ltd.>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+

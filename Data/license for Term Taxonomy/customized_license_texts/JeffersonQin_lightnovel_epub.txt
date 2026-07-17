@@ -1,0 +1,5 @@
+MIXED LICENSE
+
+lightnovel.py and cli.py are licensed under AGPL license.
+
+Other files in the repo are licensed under MIT license.

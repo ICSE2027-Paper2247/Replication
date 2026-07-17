@@ -1,0 +1,19 @@
+The following sites have purchased a non-distributable copy of the previous
+version of bustabit's source code, exempting them from the requirements of the
+AGPL:
+
+ä»¥ä¸ç«ç¹è´­ä¹°äºåä¸ä¸ªç«ç¹çä¸å¯ååå¯æ¬
+çæ¬bcgameçæºä»£ç ï¼åé¤ä»ä»¬çè¦æ±AGPL:
+
+ä»¥ä¸ã®ãµã¤ãã¯ãåãµã¤ãã®éä¿¡ä¸å¯ã³ãã¼ãè³¼å¥ãã
+bcgameã®ã½ã¼ã¹ã³ã¼ãã¯ãå½¼ãã®è¦æ±agpl:
+ * bc.game
+ 
+Fraudulent sites that are unauthorized to use the bcgame name and brand
+and/or are making false representations about their relationship to bcgame:
+æªç»ææä½¿ç¨åç§°ååççæ¬ºè¯ç½ç«å/æå°±å¶ä¸bcgameçå³ç³»ä½åºèåéè¿°:
+
+bcgameåããã©ã³ãåãä¸æ­£ã«ä½¿ç¨ããè©æ¬ºãµã¤ã bcgameã¨ã®é¢ä¿ã«ã¤ãã¦åã®é³è¿°ãããã
+
+* bcgame.co
+ 

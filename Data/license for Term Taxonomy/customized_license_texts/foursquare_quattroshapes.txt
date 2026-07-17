@@ -1,0 +1,84 @@
+# ATTRIBUTION
+
+The quattroshapes are released by foursquare under [CC-BY](http://creativecommons.org/licenses/by/2.0/) attribution license.
+
+Please include attribution in your app, site, or printed work. Sample wording: "Includes data from foursquare quattroshapes" with a link to this Github repo.
+
+# ADDITIONAL ATTRIBUTION
+
+This map database contains open data from government and other sources. Consider including the following copyright statements when using the data. 
+
+### Global gazetters and data
+
+* Geonames.org
+* Yahoo! GeoPlanet
+* Flickr geotagged photos
+
+### Europe
+
+EuroGeoGraphics data copyright is held by European National Mapping Agencies. 
+
+* Austria Â© Bundesamt fÃ¼r Eich- und Vermessungswesen
+* Belgium Â© Institut GÃ©ographique National â Belgique
+* Bulgaria Â© Cadastre Agency, MRDPW
+* Croatia Â© Drzavna Geodetska Uprava
+* Cyprus Â© Lands and Surveys, Survey and Cartogr. Br.
+* Czech Republic Â© CeskÃºrad zememerick a katastrÃ¡lnÃ­
+* Denmark Â© Kort og Matrikelstyrelsen
+* Estonia Â© Maaamet
+* Faroe Islands Â© Kort og Matrikelstyrelsen
+* Finland Â© Maanmittauslaitos
+* France Â© Institut National de lâInformation GÃ©ographique et ForestiÃ¨re â France
+* Georgia Â© National Agency of Public Registry
+* Germany Â© Bundesamt fÃ¼r Kartographie und GeodÃ¤sie
+* Great Britain Â© Ordnance Survey
+* Greece Â© Hellenic Military Geographical Service
+* Greenland Â© Kort og Matrikelstyrelsen
+* Hungary Â© FÃ¶ldmÃ©rÃ©si Ã©s TÃ¡vÃ©rzÃ©kelÃ©si IntÃ©zet
+* Iceland Â© LandmÃ¦lingar Ãslands
+* Ireland Â© Ordnance Survey Ireland
+* Italy Â© Istituto Geografico Militare Italiano
+* Latvia Â© Latvijas Republikas Valsts zemes dienests
+* Liechtenstein Â© Bundesamt fÃ¼r Landestopographie (Switzerland)
+* Lithuania Â© NacionalinÄ Å¾emÄs tarnyba
+* Luxembourg Â© Administration du Cadastre et de la Topographie
+* Malta Â© Malta Environment and Planning Authority (MEPA)
+* Moldova Â© State Agency for Land Relations and Cadastre
+* Netherlands Â© Topografische Dienst Nederland
+* Northern Ireland Â© Ordnance Survey of Northern Ireland
+* Norway Â© Statens Kartverk
+* Poland Â© GÅÃ³wny UrzÄd Geodezji i Kartografii
+* Portugal Â© Instituto GeogrÃ¡fico PortuguÃªs
+* Rep. of Slovakia Â© Geodetick a kartografick Ãºstav
+* Romania Â© CNGCFT (National Center of Geodesie, Cartography, Fotogrametry and Remote Sensing)
+* Serbia Â© RepubliÄki geodetski zavod
+* Slovenia Â© Geodetska Uprava Republike Slovenije
+* Spain Â© Centro Nacional de Informacion Geografica â Instituto GeogrÃ¡fico Nacional
+* Sweden Â© LantmÃ¤teriet
+* Switzerland Â© Bundesamt fÃ¼r Landestopographie
+* Ukraine Â© Research Institute of Geodesy and Cartography
+
+### Additional European data
+
+* United Kingdom: Contains Ordnance Survey data Â© Crown copyright and database right [2012]
+* Netherlands: Kadaster
+* Spain: Instituto GeogrÃ¡fico Nacional
+* France: Institut GÃ©ographique National
+* Switzerland: swisstopo
+* Europe-wide: European Environment Agency (EEA) [urban morphological zones 2006](http://www.eea.europa.eu/data-and-maps/data/urban-morphological-zones-2006-umz2006-f3v0)
+
+### Americas
+
+* United States: US Census Bureau (Census 2010 geography files). 
+* Canada: Â© Department of Natural Resources Canada. All rights reserved., Statistics Canada, and BC Stats
+* Brazil: IBGE
+* Mexico: INEGI
+* Chile: Global Map of Chile Â© International Steering Committee for Global Mapping / Instituto Geografico Militar de Chile
+
+### Asia
+
+* Indonesia: Global Map of Indonesia @ ISCGM/Indonesia
+* Australian: Geoscience Australia and Australian Bureau of Statistics
+* New Zealand: Land Information New Zealand
+* South Africa: Global Map of the Republic of South Africa Â© ISCGM/State Copyright, Department of Rural Development and Land Reform, Chief Directorate of National Geo-spatial Information, Website: http://www.ngi.gov.za/
+* Palestine: "Global Map of PALESTINE Â© ISCGM/Palestinian National Authority, Ministry of Planning. Geographic Center and Technical Support www.mop.gov.ps

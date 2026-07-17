@@ -1,0 +1,13 @@
+Please view the LICENSE or LICENSE.txt files in the individual project 
+directories for license details.
+
+Some of the directories sub-projects under this repository (e.g.
+the main ObjectLayout project with the org.ObjectLayout source)
+are both placed in the public domain and licensed under a BSD
+2-clause license. 
+
+However, since some of the examples in the ObjectLayout-examples
+project were ported from OpenJDK 8, those examples carry the
+related GPLv2+CPE OpenJDK license. See details in the LICENSE
+files in the specific subdirectories under the ObjectLayout-examples
+source tree.

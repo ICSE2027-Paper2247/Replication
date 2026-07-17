@@ -1,0 +1,7 @@
+------Java Collections Framework Internals------
+Author: CarpenterLee
+Name: æè±ª
+Mail: hooleeucas@163.com
+URL: https://github.com/CarpenterLee/JCFInternals
+
+æ¬¢è¿è½¬è½½ï¼æ³¨æåºå¤å°±è¡ï¼è°¢è°¢ï½ï½

@@ -1,0 +1,42 @@
+Copyright (c) 2022 PublicMS
+
+ä¸ãææè®¸å¯
+  1.1 æ¨å¯ä»¥åè´¹ä¿®æ¹ãå¤å¶ãååæ¬è½¯ä»¶åæ¬è½¯ä»¶çæºç 
+  1.2 æ¨å¯ä»¥åè´¹è·å¾çåºäºåè´¹åè®®çæææä»¶ï¼å¹¶è·å¾éåä¸ç¨éçä½¿ç¨æéï¼éåä¸ç¨ééä¸ªäººç¨æ·ä½¿ç¨
+  1.3 åä¸ç¨éç¨æ·åè®¸ä¸è¶è¿3ä¸ªæçè¯ç¨ï¼è¯ç¨æé´ï¼åºäºæ¬è½¯ä»¶å¼åçé¡µé¢å¿é¡»å¨æ¾èä½ç½®æ·»å Powered by PublicCMSæ è¯ï¼å¹¶ä¿çäº§åä¸­çææålogoç­æ è¯
+  1.4 å¨å°æ¬è½¯ä»¶ç¨ä½åä¸ç¨éæ¶ï¼éè¦åå¾è½¯ä»¶çææ¹åä¸ä½¿ç¨ææï¼ææåä½åºä¸ºæç»ä½¿ç¨äº§åçç¨æ·åä½
+  1.5 å·²è·å¾åä¸ææçç¨æ·å¯ä»¥ä½¿ç¨ãå¤å¶ãä¿®æ¹ãååæ¬è½¯ä»¶(å«æºç )ååå«æ¬è½¯ä»¶(å«æºç )çäº§å
+  1.6 è¯¥åè®®ä»å¯¹å½åçæ¬ææï¼åå²å·²åå¸çæ¬è¯·åç§è½¯ä»¶åå¸æ¶éå¸¦çææåè®®
+äºãçæ
+  2.1 è¯¥è½¯ä»¶çæå½PublicCMSå®æ¹ææ
+ä¸ãåè´£å£°æ
+  3.1 æ¬è½¯ä»¶åæéå¸¦çæä»¶æ¯ä½ä¸ºä¸æä¾ä»»ä½æç¡®çæéå«çèµå¿ææä¿çå½¢å¼æä¾ç
+  3.2 ç¨æ·åºäºèªæ¿èä½¿ç¨æ¬è½¯ä»¶ï¼æ¨å¿é¡»äºè§£ä½¿ç¨æ¬è½¯ä»¶çé£é©ï¼å¨å°æªè´­ä¹°äº§åææ¯æå¡ä¹åï¼æä»¬ä¸æ¿è¯ºæä¾ä»»ä½å½¢å¼çææ¯æ¯æãä½¿ç¨æä¿ï¼ä¹ä¸æ¿æä»»ä½å ä½¿ç¨æ¬è½¯ä»¶èäº§çé®é¢çç¸å³è´£ä»»
+
+# å¶ä»ææè®¸å¯ Other Licenses
+
+This software includes projects with the following licenses
+
+è¯¥è½¯ä»¶åæ¬å¶ä»å¼æºé¡¹ç®æ¶åçææåè®®
+
+### [Apache License](http://www.apache.org/licenses/LICENSE-2.0)
+This license is used by the following third-party libraries:
+
+  * jUI [DWZ] (http://j-ui.com/)
+  * Spring Framework (http://projects.spring.io/spring-framework/)
+  * FreeMarker (http://freemarker.org/)
+
+### [LGPL License](https://www.gnu.org/copyleft/lesser.html)
+This license is used by the following third-party libraries:
+
+  * hibernate (http://hibernate.org/orm/)
+  * mybatis (http://www.mybatis.org/mybatis-3/)
+
+### [MIT License](http://www.opensource.org/licenses/MIT)
+This license is used by the following third-party libraries:
+
+  * jquery (http://jquery.com/)
+
+### [License(BSD)](https://github.com/ecomfe/echarts/blob/master/LICENSE)
+
+  * Echarts (http://echarts.baidu.com/)

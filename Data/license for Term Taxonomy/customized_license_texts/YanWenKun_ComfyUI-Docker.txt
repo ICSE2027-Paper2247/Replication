@@ -1,0 +1,183 @@
+                    æ¨å°å¬å±è®¸å¯è¯, ç¬¬2ç
+
+æ¨å°å¬å±è®¸å¯è¯ï¼ ç¬¬2ç
+
+2021å¹´5æ http://license.coscl.org.cn/MulanPubL-2.0
+
+æ¨å¯¹âè´¡ç®âçå¤å¶ãä½¿ç¨ãä¿®æ¹ååååæ¨å°å¬å±è®¸å¯è¯,ç¬¬2çï¼ä»¥ä¸ç®ç§°âæ¬è®¸å¯è¯âï¼çå¦ä¸æ¡æ¬¾ççº¦æï¼
+
+0.   å®ä¹
+
+âè´¡ç®â æ¯æç±âè´¡ç®èâè®¸å¯å¨âæ¬è®¸å¯è¯âä¸çåçææ³ä¿æ¤çä½åï¼åæ¬æåâè´¡ç®èâè®¸å¯å¨âæ¬è®¸å¯è¯âä¸çä½åååç»­âè´¡ç®èâè®¸å¯å¨âæ¬è®¸å¯è¯âä¸çâè¡çä½åâã
+
+âè´¡ç®èâ æ¯æå°åçææ³ä¿æ¤çä½åè®¸å¯å¨âæ¬è®¸å¯è¯âä¸çèªç¶äººæâæ³äººå®ä½âã
+
+âæ³äººå®ä½â æ¯ææäº¤è´¡ç®çæºæåå¶âå³èå®ä½âã
+
+âå³èå®ä½â æ¯æï¼å¯¹âæ¬è®¸å¯è¯âä¸çè¡ä¸ºæ¹èè¨ï¼æ§å¶ãåæ§å¶æä¸å¶å±ååæ§å¶çæºæï¼æ­¤å¤çâæ§å¶âæ¯ææ¥æåæ§æ¹æå±ååæ§æ¹è³å°50%ç´æ¥æé´æ¥çæç¥¨æãèµéæå¶ä»æä»·è¯å¸ã
+
+âè¡çä½åâ æ¯æåºäºâè´¡ç®âåä½çä½åï¼å·ä½åæ¬å¯¹å¨é¨æé¨åâè´¡ç®âè¿è¡ä¿®æ¹ãéåãç¿»è¯ãæ³¨éãç»åæä¸ä¹é¾æ¥ï¼åæ¬å¨æé¾æ¥æéæé¾æ¥ï¼èå½¢æçä½åãä»ä¸âè´¡ç®âè¿è¡è¿ç¨é´éä¿¡æç³»ç»è°ç¨çä½åæ¯ç¬ç«ä½åï¼ä¸å±äºâè¡çä½åâã
+
+âå¯¹åºæºä»£ç â æ¯æçæãå®è£å(å¯¹äºå¯æ§è¡ä½å)è¿è¡ç®æ ä»£ç æéçæææºæä»¶åä¸ä¹å³èçæ¥å£å®ä¹æä»¶ï¼ä»¥åæ§å¶è¿äºæ´»å¨çèæ¬ï¼ä½ä¸åæ¬ç¼è¯ç¯å¢ãç¼è¯å·¥å·ãäºæå¡å¹³å°ï¼å¦ææï¼ã
+
+âååâ æ¯æéè¿ä»»ä½åªä»åä»äººæä¾âè´¡ç®âæâè¡çä½åâçè¡ä¸ºï¼ä»¥åå©ç¨âè´¡ç®âæâè¡çä½åâéè¿ç½ç»è¿ç¨ç»ç¨æ·æä¾æå¡çè¡ä¸ºï¼ä¾å¦ï¼éè¿å©ç¨âè´¡ç®âæâè¡çä½åâæ­å»ºçäºæå¡å¹³å°æä¾å¨çº¿æå¡çè¡ä¸ºã
+
+1.   æäºçæè®¸å¯
+
+æ¯ä¸ªâè´¡ç®èâæ ¹æ®âæ¬è®¸å¯è¯âæäºæ¨æ°¸ä¹æ§çãå¨çæ§çãåè´¹çãéç¬å çãä¸å¯æ¤éççæè®¸å¯ï¼æ¨å¯ä»¥å¤å¶ãä½¿ç¨ãä¿®æ¹ãâååâå¶âè´¡ç®âæâè¡çä½åâï¼ä¸è®ºä¿®æ¹ä¸å¦ã
+
+2.   æäºä¸å©è®¸å¯
+
+æ¯ä¸ªâè´¡ç®èâæ ¹æ®âæ¬è®¸å¯è¯âæäºæ¨æ°¸ä¹æ§çãå¨çæ§çãåè´¹çãéç¬å çãä¸å¯æ¤éçï¼æ ¹æ®æ¬æ¡è§å®æ¤éçæå½¢é¤å¤ï¼ä¸å©è®¸å¯ï¼ä¾æ¨ä½¿ç¨ãå¶é ãå§æå¶é ãéå®ãè®¸è¯ºéå®ãè¿å£å¶âè´¡ç®âæä»¥å¶ä»æ¹å¼è½¬ç§»å¶âè´¡ç®âãåè¿°ä¸å©è®¸å¯ä»éäºâè´¡ç®èâç°å¨æå°æ¥æ¥æææ§å¶çå¶âè´¡ç®âä¸­çä¸å©æå©è¦æ±ï¼èä¸åæ¬ä»å æ¨å¯¹âè´¡ç®âçä¿®æ¹èå°å¿ç¶ä¼ä¾µç¯å°çä¸å©æå©è¦æ±ãå¦ææ¨ææ¨çâå³èå®ä½âç´æ¥æé´æ¥å°ï¼å°±âè´¡ç®âå¯¹ä»»ä½äººåèµ·ä¸å©ä¾µæè¯è®¼ï¼åæ¬å¨è¯è®¼ä¸­æåºåè¯è¯·æ±æäº¤åè¯·æ±ï¼æåèµ·å¶ä»ä¸å©ç»´æè¡å¨ï¼åâè´¡ç®èâæ ¹æ®âæ¬è®¸å¯è¯âæäºæ¨çä¸å©è®¸å¯èªæ¨åèµ·ä¸å©è¯è®¼æä¸å©ç»´æè¡å¨ä¹æ¥ç»æ­¢ã
+
+3.   æ åæ è®¸å¯
+
+âè´¡ç®èâå¨âæ¬è®¸å¯è¯âä¸ä¸æä¾å¯¹å¶åååç§°ãåæ ãæå¡æ è¯æäº§ååç§°çåæ è®¸å¯ï¼ä½æ¨ä¸ºæ»¡è¶³ç¬¬4æ¡è§å®çå£°æä¹å¡èå¿é¡»ä½¿ç¨çæå½¢é¤å¤ã
+
+4.   ååéå¶
+
+æ¨å¯ä»¥å°æ¨æ¥æ¶å°çâè´¡ç®âææ¨çâè¡çä½åâä»¥æºç¨åºå½¢å¼æå¯æ§è¡å½¢å¼éæ°âååâï¼ä½å¿é¡»æ»¡è¶³ä¸åæ¡ä»¶ï¼
+
+ï¼1ï¼æ¨å¿é¡»åæ¥æ¶èæä¾âæ¬è®¸å¯è¯âçå¯æ¬ï¼å¹¶ä¿çâè´¡ç®âä¸­ççæãåæ ãä¸å©ååè´£å£°æï¼å¹¶ä¸ï¼
+
+ï¼2ï¼å¦ææ¨âååâæ¨æ¥æ¶å°çâè´¡ç®âï¼æ¨å¿é¡»ä½¿ç¨âæ¬è®¸å¯è¯âæä¾è¯¥âè´¡ç®âçæºä»£ç å¯æ¬ï¼å¦ææ¨ âååâæ¨çâè¡çä½åâï¼æ¨å¿é¡»ï¼
+
+ï¼iï¼éâè¡çä½åâæä¾ä½¿ç¨âæ¬è®¸å¯è¯ââååâçæ¨çâè¡çä½åâçâå¯¹åºæºä»£ç âãå¦ææ¨éè¿ä¸è½½é¾æ¥æä¾åè¿°âå¯¹åºæºä»£ç âï¼åæ¨åºå°ä¸è½½é¾æ¥å°åç½®äºâè¡çä½åâæå¶ééææ¡£ä¸­çææ¾ä½ç½®ï¼æææèªè¯¥âè¡çä½åââååâä¹æ¥èµ·ä¸å°äºä¸å¹´ï¼å¹¶ç¡®ä¿æ¥æ¶èå¯ä»¥è·å¾âå¯¹åºæºä»£ç âï¼æèï¼
+
+ï¼iiï¼éâè¡çä½åâåæ¥æ¶èæä¾ä¸ä¸ªä¹¦é¢è¦çº¦ï¼è¡¨ææ¨æ¿ææä¾æ ¹æ®âæ¬è®¸å¯è¯ââååâçæ¨âè¡çä½åâçâå¯¹åºæºä»£ç âãè¯¥ä¹¦é¢è¦çº¦åºç½®äºâè¡çä½åâä¸­çææ¾ä½ç½®ï¼å¹¶ç¡®ä¿æ¥æ¶èæ ¹æ®ä¹¦é¢è¦çº¦å¯è·åâå¯¹åºæºä»£ç âçæ¶é´ä»æ¨æ¥å°è¯¥è¯·æ±ä¹æ¥èµ·ä¸å¾è¶è¿ä¸ä¸ªæï¼ä¸æææèªè¯¥âè¡çä½åââååâä¹æ¥èµ·ä¸å°äºä¸å¹´ã
+
+5.   è¿çº¦ä¸ç»æ­¢
+
+å¦ææ¨è¿åâæ¬è®¸å¯è¯âï¼ä»»ä½âè´¡ç®èâææä¹¦é¢éç¥æ¨ç»æ­¢å¶æ ¹æ®âæ¬è®¸å¯è¯âæäºæ¨çè®¸å¯ãè¯¥âè´¡ç®èâæäºæ¨çè®¸å¯èªæ¨æ¥å°å¶ç»æ­¢éç¥ä¹æ¥èµ·ç»æ­¢ãä»å¨å¦ä¸ä¸¤ç§æå½¢ä¸ï¼å³ä½¿æ¨æ¶å°âè´¡ç®èâçéç¥ä¹å¹¶ä¸ç»æ­¢å¶æäºæ¨çè®¸å¯ï¼
+
+ï¼1ï¼æ¨å¨æ¥å°è¯¥ç»æ­¢éç¥ä¹åå·²åæ­¢ææè¿åè¡ä¸ºï¼
+
+ï¼2ï¼æ¨æ¯é¦æ¬¡æ¶å°è¯¥âè´¡ç®èâæ ¹æ®âæ¬è®¸å¯è¯âååºçä¹¦é¢ç»æ­¢éç¥ï¼å¹¶ä¸æ¨å¨æ¶å°è¯¥éç¥å30å¤©åå·²åæ­¢ææè¿åè¡ä¸ºã
+
+åªè¦æ¨ä¸æ¸¸çæ¥æ¶èéµå®âæ¬è®¸å¯è¯âçç¸å³è§å®ï¼å³ä½¿æ¨å¨âæ¬è®¸å¯è¯âä¸è¢«æäºçè®¸å¯ç»æ­¢ï¼ä¸å½±åä¸æ¸¸çæ¥æ¶èæ ¹æ®âæ¬è®¸å¯è¯âäº«æçæå©ã
+
+6.   ä¾å¤
+
+å¦ææ¨å°âè´¡ç®âä¸éç¨GNU AFFERO GENERAL PUBLIC LICENSE Version 3ï¼ä»¥ä¸ç®ç§°âAGPLv3âï¼æå¶åç»­çæ¬çä½åç»åå½¢ææ°çâè¡çä½åâï¼ä¸æ ¹æ®âAGPLv3âæå¶åç»­çæ¬çè¦æ±æ¨æä¹å¡å°æ°å½¢æçâè¡çä½åâä»¥âAGPLv3âæå¶åç»­çæ¬è¿è¡è®¸å¯çï¼æ¨å¯ä»¥æ ¹æ®âAGPLv3âæå¶åç»­çæ¬è¿è¡è®¸å¯ï¼åªè¦æ¨å¨âååâè¯¥âè¡çä½åâçåæ¶åæ¥æ¶èæä¾âæ¬è®¸å¯è¯âçå¯æ¬ï¼å¹¶ä¿çâè´¡ç®âä¸­ççæãåæ ãä¸å©ååè´£å£°æãä½ä»»ä½âè´¡ç®èâä¸ä¼å æ¨éæ©âAGPLv3âæå¶åç»­çæ¬èæäºè¯¥âè¡çä½åâçæ¥æ¶èæ´å¤æå©ã
+
+7.   åè´£å£°æä¸è´£ä»»éå¶
+
+âè´¡ç®âå¨æä¾æ¶ä¸å¸¦æä»»ä½æç¤ºæé»ç¤ºçæä¿ãå¨ä»»ä½æåµä¸ï¼âè´¡ç®èâæçæäººä¸å¯¹ä»»ä½äººå ä½¿ç¨âè´¡ç®âèå¼åçä»»ä½ç´æ¥æé´æ¥æå¤±æ¿æä»»ä½è´£ä»»ï¼ä¸è®ºè¯¥ç­æå¤±å ä½ç§åå å¯¼è´æèåºäºä½ç§æ³å¾çè®º,å³ä½¿å¶æ¾è¢«åç¥æè¯¥ç­æå¤±çå¯è½æ§ã
+
+8.   è¯­è¨
+
+âæ¬è®¸å¯è¯âä»¥ä¸­è±æåè¯­è¡¨è¿°ï¼ä¸­è±æçæ¬å·æåç­æ³å¾æåãå¦æä¸­è±æçæ¬å­å¨ä»»ä½ä¸ä¸è´ï¼ä»¥ä¸­æçä¸ºåã
+
+æ¡æ¬¾ç»æ
+
+å¦ä½å°æ¨å°å¬å±è®¸å¯è¯ï¼ç¬¬2çï¼åºç¨å°æ¨çè½¯ä»¶
+
+å¦ææ¨å¸æå°æ¨å°å¬å±è®¸å¯è¯ï¼ç¬¬2çï¼åºç¨å°æ¨çè½¯ä»¶ï¼ä¸ºäºæ¹ä¾¿æ¥æ¶èæ¥éï¼å»ºè®®æ¨å®æå¦ä¸ä¸æ­¥ï¼
+
+1ï¼ è¯·æ¨è¡¥åå¦ä¸å£°æä¸­çç©ºç½ï¼åæ¬è½¯ä»¶åãè½¯ä»¶çé¦æ¬¡åè¡¨å¹´ä»½ä»¥åæ¨ä½ä¸ºçæäººçåå­ï¼
+
+2ï¼ è¯·æ¨å¨è½¯ä»¶åçä¸çº§ç®å½ä¸åå»ºä»¥âLICENSEâä¸ºåçæä»¶ï¼å°æ´ä¸ªè®¸å¯è¯ææ¬æ¾å¥è¯¥æä»¶ä¸­ï¼
+
+3ï¼ è¯·å°å¦ä¸å£°æææ¬æ¾å¥æ¯ä¸ªæºæä»¶çå¤´é¨æ³¨éä¸­ã
+
+Copyright (c) [Year] [name of copyright holder]
+[Software Name] is licensed under Mulan PubL v2.
+You can use this software according to the terms and conditions of the Mulan PubL v2.
+You may obtain a copy of Mulan PubL v2 at:
+         http://license.coscl.org.cn/MulanPubL-2.0
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+See the Mulan PubL v2 for more details.
+
+
+                    Mulan Public Licenseï¼Version 2
+
+Mulan Public Licenseï¼Version 2 (Mulan PubL v2)
+
+May 2021 http://license.coscl.org.cn/MulanPubL-2.0
+
+Your reproduction, use, modification and Distribution of the Contribution shall be subject to Mulan Public License, Version 2 (this License) with following terms and conditions:
+
+0. Definition
+
+Contribution means the copyrightable work licensed by a particular Contributor under this License, including the work licensed by the initial Contributor under this License and its Derivative Work licensed by any subsequent Contributor under this License.
+
+Contributor means the Individual or Legal Entity who licenses its copyrightable work under this License.
+
+Legal Entity means the entity making a Contribution and all its Affiliates.
+
+Affiliates mmeans entities that control, are controlled by, or are under common control with the acting entity under this License, âcontrolâ means direct or indirect ownership of at least fifty percent (50%) of the voting power, capital or other securities of controlled or commonly controlled entity.
+
+Derivative Work means works created based on Contribution, specifically including works formed by modifying, rewriting, translating, annotating, combining or linking to all or part of Contribution (including dynamic linking or static linking). Works which only communicate with Contribution through inter-process communication or system call, are independent works, rather than Derivative Work.
+
+Corresponding Source Code means all the source code needed to generate, install, and (for an executable work) run the object code including the interface definition files associated with source files for the work, and scripts to control those activities, excluding of compilation environment and compilation tools, cloud services platform (if any).
+
+Distribute (or Distribution) means the act of making the Contribution or Derivative Work available to others through any medium, and using the Contribution or Derivative Work to provide online services to users, such as the act of providing online services through a cloud service platform built using Contributions or Derivative Works.
+
+1. Grant of Copyright License
+
+Subject to the terms and conditions of this License, each Contributor hereby grants to you a perpetual, worldwide, royalty-free, non-exclusive, irrevocable copyright license to reproduce, use, modify, or Distribute its Contribution or Derivative Work, with modification or not.
+
+2. Grant of Patent License
+
+Subject to the terms and conditions of this License, each Contributor hereby grants to you a perpetual, worldwide, royalty-free, non-exclusive, irrevocable (except for revocation under this Section) patent license to use, make, have made, sell, offer for sale, import or otherwise transfer its Contribution, where such patent license is only limited to the patent claims owned or controlled by such Contributor now or in future which will be necessarily infringed by its Contribution alone, excluding of any patent claims solely be infringed by your modification. If you or your Affiliates directly or indirectly institute patent litigation (including a cross claim or counterclaim in a litigation) or other patent enforcement activities against any individual or entity by alleging that any Contribution infringes patents, then any patent license granted to you under this License for the Contribution shall terminate as of the date such litigation or activity is filed or taken.
+
+3. No Trademark License
+
+No trademark license is granted to use the trade names, trademarks, service marks, or product names of Contributor, except as required to fulfill notice requirements in Section 4.
+
+4. Distribution Restriction
+
+You may Distribute the Contribution you received or your Derivative Work, whether in source or executable forms, provided that you meet the following conditions:
+
+1) You must provide recipients with a copy of this License and retain copyright, trademark, patent and disclaimer statements in the Contribution; and,
+
+2) If you Distribute the Contribution you received, you must provide copies of the Contributionâs source code under this License;
+
+If you Distribute your Derivative Work, you have to:
+
+(i) accompanying the Derivative work, provide recipients with Corresponding Source Code of your Derivative Work under this License. If you provide the Corresponding Source Code through a download link, you should place such link address prominently in the Derivative Work or its accompanying documents, and be valid no less than three years from your Distribution of the particular Derivative Work, and ensure that the recipients can acquire the Corresponding Source Code through the link; or,
+
+(ii) accompanying the Derivative Work, provide recipients with a written offer indicating your willingness to provide the Corresponding Source Code of the Derivative Work licensed under this License. Such written offer shall be placed prominently in the Derivative Work or its accompanying documents. Without reasonable excuse, the recipient shall be able to acquire the Corresponding Source code of the Derivative work for no more than three months from your receipt of a valid request, and be valid no less than three years from your Distribution of the particular Derivative Work.
+
+5. Breach and Termination
+
+If you breach this License, any Contributor has the right to notify you in writing to terminate its license granted to you under this License. The license granted to you by such Contributor terminates upon your receipt of such notice of termination. Notwithstanding the foregoing, your license will not be terminated even if you receive a notice of termination from Contributor, provided that:
+
+1) you have cured all the breaches prior to receiving such notice of termination; or,
+
+2) itâs your first time to receive a notice of termination from such Contributor pursuant to this License, and you have cured all the breaches within 30 days of receipt of such notice.
+
+Termination of your license under this License shall not affect the downstream recipient's rights under this License, provided that the downstream recipient complies with this License.
+
+6. Exceptions
+
+If you combine Contribution or your Derivative Work with a work licensed under the GNU AFFERO GENERAL PUBLIC LICENSE Version 3 (hereinafter referred to as âAGPLv3â) or its subsequent versions, and according to the AGPLv3 or its subsequent versions, you have an obligation to make the combined work to be licensed under the corresponding license, you can license such combined work under the license, provided that when you Distribute the combined work, you also provide a copy of this License to the recipients, and retain copyright, trademarks, patents, and disclaimer statements in the Contribution. No Contributor will grant additional rights to the recipients of the combined work for your license under AGPLv3 or its subsequent versions.
+
+7. Disclaimer of Warranty and Limitation of liability
+
+CONTRIBUTION ARE PROVIDED WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. IN NO EVENT SHALL ANY CONTRIBUTOR OR COPYRIGHT HOLDER BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING, BUT NOT LIMITED TO ANY DIRECT, OR INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING FROM YOUR USE OR INABILITY TO USE THE CONTRIBUTION, NO MATTER HOW ITâS CAUSED OR BASED ON WHICH LEGAL THEORY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+8. Language
+
+THIS LICENSE IS WRITTEN IN BOTH CHINESE AND ENGLISH, AND THE CHINESE VERSION AND ENGLISH VERSION SHALL HAVE THE SAME LEGAL EFFECT. IN THE CASE OF DIVERGENCE BETWEEN THE CHINESE AND ENGLISH VERSIONS, THE CHINESE VERSION SHALL PREVAIL.
+
+END OF THE TERMS AND CONDITIONS
+
+How to apply the Mulan Public Licenseï¼Version 2 (Mulan PubL v2), to your software
+
+To apply the Mulan Public Licenseï¼Version 2 to your work, for easy identification by recipients, you are suggested to complete following three steps:
+
+Fill in the blanks in following statement, including insert your software name, the year of the first publication of your software, and your name identified as the copyright owner;
+Create a file named âLICENSEâ which contains the whole context of this License in the first directory of your software package;
+Attach the statement to the appropriate annotated syntax at the beginning of each source file.
+Copyright (c) [Year] [name of copyright holder]
+[Software Name] is licensed under Mulan PubL v2.
+You can use this software according to the terms and conditions of the Mulan PubL v2.
+You may obtain a copy of Mulan PubL v2 at:
+         http://license.coscl.org.cn/MulanPubL-2.0
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+See the Mulan PubL v2 for more details.

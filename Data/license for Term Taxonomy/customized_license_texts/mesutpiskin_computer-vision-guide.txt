@@ -1,0 +1,22 @@
+MIT License
+
+Copyright (c) 2018 Mesut PiÅkin
+
+HiÃ§bir Ã¼cret talep edilmeden burada iÅbu yazÄ±lÄ±mÄ±n bir kopyasÄ±nÄ± ve belgelendirme dosyalarÄ±nÄ± (âYazÄ±lÄ±mâ) 
+elde eden herkese verilen izin; kullanma, kopyalama, deÄiÅtirme, 
+birleÅtirme, yayÄ±mlama, daÄÄ±tma, alt lisanslama, 
+ve/veya yazÄ±lÄ±mÄ±n kopyalarÄ±nÄ± satma eylemleri de dahil olmak Ã¼zere ve 
+bununla kÄ±sÄ±tlama olmaksÄ±zÄ±n, yazÄ±lÄ±mÄ±n sÄ±nÄ±rlama olmadan ticaretini yapmak iÃ§in 
+verilmiÅ olup, bunlarÄ± yapmalarÄ± iÃ§in yazÄ±lÄ±mÄ±n saÄlandÄ±ÄÄ± kiÅilere aÅaÄÄ±dakileri yapmak koÅuluyla sunulur:
+
+YukarÄ±daki telif hakkÄ± bildirimi ve iÅbu izin bildirimi yazÄ±lÄ±mÄ±n tÃ¼m kopyalarÄ±na veya Ã¶nemli parÃ§alarÄ±na eklenmelidir. 
+
+YAZILIM âHÄ°ÃBÄ°R DEÄÄ°ÅÄ°KLÄ°K YAPILMADANâ ESASINA BAÄLI OLARAK, 
+TÄ°CARETE ELVERÄ°ÅLÄ°LÄ°K, ÃZEL BÄ°R AMACA UYGUNLUK VE 
+Ä°HLAL OLMAMASI DA DAHÄ°L VE BUNUNLA KISITLI OLMAKSIZIN AÃIKÃA VEYA 
+ÃSTÃ KAPALI OLARAK HÄ°ÃBÄ°R TEMÄ°NAT OLMAKSIZIN SUNULMUÅTUR. 
+HÄ°ÃBÄ°R KOÅULDA YAZARLAR VEYA TELÄ°F HAKKI SAHÄ°PLERÄ° HERHANGÄ° BÄ°R Ä°DDÄ°AYA, 
+HASARA VEYA DÄ°ÄER YÃKÃMLÃLÃKLERE KARÅI, 
+YAZILIMLA VEYA KULLANIMLA VEYA YAZILIMIN BAÅKA BAÄLANTILARIYLA Ä°LGÄ°LÄ°, 
+BUNLARDAN KAYNAKLANAN VE BUNLARIN SONUCU BÄ°R SÃZLEÅME DAVASI, 
+HAKSIZ FÄ°Ä°L VEYA DÄ°ÄER EYLEMLERDEN SORUMLU DEÄÄ°LDÄ°R.

@@ -1,0 +1,37 @@
+This version of library is created by Alexey Volkov (http://unit6.ru/) on June 2013
+and based on Eric White sample http://msdn.microsoft.com/en-us/magazine/ee532473.aspx
+that is licensed under the terms of the Microsoft Limited Public License as mentioned in Terms of Use http://msdn.microsoft.com/en-us/cc300389.aspx#D
+
+MICROSOFT LIMITED PUBLIC LICENSE
+
+This license governs use of code marked as âsampleâ or âexampleâ available on this web site without a license agreement, as provided under the section above titled âNOTICE SPECIFIC TO SOFTWARE AVAILABLE ON THIS WEB SITE.â If you use such code (the âsoftwareâ), you accept this license. If you do not accept the license, do not use the software.
+
+1. Definitions
+
+The terms âreproduce,â âreproduction,â âderivative works,â and âdistributionâ have the same meaning here as under U.S. copyright law.
+
+A âcontributionâ is the original software, or any additions or changes to the software.
+
+A âcontributorâ is any person that distributes its contribution under this license.
+
+âLicensed patentsâ are a contributorâs patent claims that read directly on its contribution.
+
+2. Grant of Rights
+
+(A) Copyright Grant - Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.
+
+(B) Patent Grant - Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.
+
+3. Conditions and Limitations
+
+(A) No Trademark License- This license does not grant you rights to use any contributorsâ name, logo, or trademarks.
+
+(B) If you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.
+
+(C) If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.
+
+(D) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution.  If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.
+
+(E) The software is licensed âas-is.â You bear the risk of using it. The contributors give no express warranties, guarantees or conditions.  You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+
+(F) Platform Limitation - The licenses granted in sections 2(A) and 2(B) extend only to the software or derivative works that you create that run on a Microsoft Windows operating system product.

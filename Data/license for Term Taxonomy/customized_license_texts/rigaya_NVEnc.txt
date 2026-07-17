@@ -1,0 +1,137 @@
+-----------------------------------------------------------------------------------------
+    NVEncã®ä½¿ç¨ã«ããã£ã¦
+-----------------------------------------------------------------------------------------
+
+ç¡ä¿è¨¼ã§ããèªå·±è²¬ä»»ã§ä½¿ç¨ãã¦ãã ããã  
+NVEncãä½¿ç¨ãããã¨ã«ããããããªãæå®³ã»ãã©ãã«ã«ã¤ãã¦ãè²¬ä»»ãè² ãã¾ããã  
+
+-----------------------------------------------------------------------------------------
+    NVEncã®ã½ã¼ã¹ã³ã¼ãã«ã¤ãã¦
+-----------------------------------------------------------------------------------------
+
+The MIT License
+
+Copyright (c) 1999-2016 rigaya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+------------------------------------------------------------------------------------------
+AviUtlPluginSDK License
+------------------------------------------------------------------------------------------
+
+The MIT License
+
+Copyright (c) 1999-2011 Kenkun
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+------------------------------------------------------------------------------------------
+  NVIDIA CORPORATION CUDA SAMPLES EULA ã®ã©ã¤ã»ã³ã¹è¦å®ã®æºæ è¡¨è¨
+------------------------------------------------------------------------------------------
+
+æ¬ãã­ã°ã©ã ã¯ãNVIDA CUDA Samplesããã¼ã¹ã«ä½æããã¦ãã¾ãã
+ããªãã¡ãµã³ãã«ã³ã¼ãããã¼ã¹ã¨ããæ´¾çãã­ã°ã©ã ã§ããããµã³ãã«ã³ã¼ããå«ã¿ã¾ãã
+
+"This software contains source code provided by NVIDIA Corporation."
+
+------------------------------------------------------------------------------------------
+  Avisynth 2.5.8 "avisynth_c.h" ã©ã¤ã»ã³ã¹
+------------------------------------------------------------------------------------------
+
+QSVEncCã§ã¯ãAvisynth 2.5.8ã®"avisynth_c.h"ãã¤ã³ã¯ã«ã¼ããã
+Avisynthèª­ã¿è¾¼ã¿ãè¡ãªã£ã¦ãã¾ãã
+ä»¥ä¸ã«"avisynth_c.h"ã«æ¸ããã¦ããã©ã¤ã»ã³ã¹ãç¤ºãã¾ãã
+
+// Avisynth C Interface Version 0.20
+// Copyright 2003 Kevin Atkinson
+
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA, or visit
+// http://www.gnu.org/copyleft/gpl.html .
+//
+// As a special exception, I give you permission to link to the
+// Avisynth C interface with independent modules that communicate with
+// the Avisynth C interface solely through the interfaces defined in
+// avisynth_c.h, regardless of the license terms of these independent
+// modules, and to copy and distribute the resulting combined work
+// under terms of your choice, provided that every copy of the
+// combined work is accompanied by a complete copy of the source code
+// of the Avisynth C interface and Avisynth itself (with the version
+// used to produce the combined work), being distributed under the
+// terms of the GNU General Public License plus this exception.  An
+// independent module is a module which is not derived from or based
+// on Avisynth C Interface, such as 3rd-party filters, import and
+// export plugins, or graphical user interfaces.
+
+------------------------------------------------------------------------------------------
+  VapourSynth ã©ã¤ã»ã³ã¹
+------------------------------------------------------------------------------------------
+QSVEncCã§ã¯ã"vapoursynth.h""VSScript.h"ãã¤ã³ã¯ã«ã¼ããä½¿ç¨ãã¦ãã¾ãã
+ã¾ãã¤ã³ãã¼ãã©ã¤ãã©ãª"VSScript.lib"ãä½¿ç¨ãã¦ãã¾ãã
+ãããã¯VapourSynthèª­ã¿è¾¼ã¿ã®ãããã©ã¤ãã©ãªã®ã¢ã¯ã»ã¹å®ç¾©ã¨ãã¦ä½¿ç¨ãããã®ã§ãã
+ä»¥ä¸ã«"vapoursynth.h"ã®ã©ã¤ã»ã³ã¹ãç¤ºãã¾ãã
+
+/*
+* Copyright (c) 2012 Fredrik Mellbin
+*
+* This file is part of VapourSynth.
+*
+* VapourSynth is free software; you can redistribute it and/or
+* modify it under the terms of the GNU Lesser General Public
+* License as published by the Free Software Foundation; either
+* version 2.1 of the License, or (at your option) any later version.
+*
+* VapourSynth is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU Lesser General Public
+* License along with VapourSynth; if not, write to the Free Software
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+*/
+
+------------------------------------------------------------------------------------------

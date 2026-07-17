@@ -1,0 +1,33 @@
+# LicenÃ§a
+
+Copyright Â© 2015 Allen Downey.
+
+## CC BY-NC 3.0
+
+Este trabalho Ã© oferecido sob a licenÃ§a __Creative Commons AtribuiÃ§Ã£o-NÃ£oComercial 3.0 NÃ£o Adaptada__.
+
+O texto a seguir Ã© um resumo e nÃ£o substitui a licenÃ§a completa em [legalÃªs inglÃªs](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
+
+
+## VocÃª tem o direito de:
+
+__Compartilhar__ â copiar e redistribuir o material em qualquer suporte ou formato
+
+__Adaptar__ â remixar, transformar, e criar a partir do material
+
+O licenciante nÃ£o pode revogar estes direitos desde que vocÃª respeite os termos da licenÃ§a.
+
+
+## De acordo com os termos seguintes:
+
+__AtribuiÃ§Ã£o__ â VocÃª deve dar o __crÃ©dito apropriado__, prover um link para a licenÃ§a e __indicar se mudanÃ§as foram feitas__. VocÃª deve fazÃª-lo em qualquer circunstÃ¢ncia razoÃ¡vel, mas de maneira alguma que sugira ao licenciante a apoiar vocÃª ou o seu uso.
+
+__NÃ£oComercial__ â VocÃª nÃ£o pode usar o material para __fins comerciais__.
+
+__Sem restriÃ§Ãµes adicionais__ â VocÃª nÃ£o pode aplicar termos jurÃ­dicos ou __medidas de carÃ¡ter tecnolÃ³gico__ que restrinjam legalmente outros de fazerem algo que a licenÃ§a permita.
+
+## Avisos:
+
+VocÃª nÃ£o tem de cumprir com os termos da licenÃ§a relativamente a elementos do material que estejam no domÃ­nio pÃºblico ou cuja utilizaÃ§Ã£o seja permitida por uma __exceÃ§Ã£o ou limitaÃ§Ã£o__ que seja aplicÃ¡vel.
+
+NÃ£o sÃ£o dadas quaisquer garantias. A licenÃ§a pode nÃ£o lhe dar todas as autorizaÃ§Ãµes necessÃ¡rias para o uso pretendido. Por exemplo, outros direitos, tais como __direitos de imagem, de privacidade ou direitos morais__, podem limitar o uso do material.

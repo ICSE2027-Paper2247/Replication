@@ -1,0 +1,16 @@
+# Sample Appã®ã©ã¤ã»ã³ã¹
+
+Ruby on Rails Tutorial: Learn Web Development with Rails. Copyright Â© 2014 by Michael Hartl.
+
+All source code in the Ruby on Rails Tutorial is available jointly under the MIT License and the Beerware License.
+
+Copyright &copy; 2014-2017 [Michael Hartl](https://www.michaelhartl.com/)
+
+
+# æ¬ãªãã¸ããª (sample_apps) ã®ã©ã¤ã»ã³ã¹
+
+The [MIT License](https://ja.wikipedia.org/wiki/MIT_License)
+
+Copyright &copy; 2015-2021 [YassLab Inc.](https://yasslab.jp)
+
+[![YassLab Logo](https://yasslab.jp/img/logos/800x200.png)](https://yasslab.jp)

@@ -1,0 +1,29 @@
+# Restrictive License - No Sale and Modification Limitation
+
+Copyright Â© 2024 Oblivion Desktop
+
+This software is provided under a specific license.
+
+<b>by using this software or accessing its source code, you agree that:</b>
+
+-   No Sale: You are prohibited from selling or distributing the software or modified versions of it.
+-   Modification Limitation: You may not alter the name, about page, copyright notice, logo, or other fundamental details
+    of this software.
+
+Development of the software is only possible through project participation.
+
+---
+
+# ÙØ§ÛØ³ÙØ³ ÙØ­Ø¯ÙØ¯ - Ø¹Ø¯Ù Ø§ÙÚ©Ø§Ù ÙØ±ÙØ´ Ù ÙØ­Ø¯ÙØ¯ÛØª ØªØºÛÛØ±Ø§Øª
+
+Ú©Ù¾ÛâØ±Ø§ÛØª Â© Û±Û´Û°Û³ Oblivion Desktop
+
+Ø§ÛÙ ÙØ±ÙâØ§ÙØ²Ø§Ø± Ø·Ø¨Ù ÛÚ© ÙØ§ÛØ³ÙØ³ Ø®Ø§Øµ Ø§Ø±Ø§Ø¦Ù ÙÛâØ´ÙØ¯.
+
+<b>Ø¨Ø§ Ø§Ø³ØªÙØ§Ø¯Ù Ø§Ø² Ø§ÛÙ ÙØ±ÙâØ§ÙØ²Ø§Ø± ÛØ§ Ø¯Ø³ØªØ±Ø³Û Ø¨Ù ÙÙØ§Ø¨Ø¹ Ø¢ÙØ Ø´ÙØ§ ÙÙØ§ÙÙØª ÙÛâÚ©ÙÛØ¯ Ú©Ù:</b>
+
+-   Ø¹Ø¯Ù Ø§ÙÚ©Ø§Ù ÙØ±ÙØ´: Ø´ÙØ§ ÙØ¬Ø§Ø² Ø¨Ù ÙØ±ÙØ´ ÛØ§ ØªÙØ²ÛØ¹ ÙØ±ÙâØ§ÙØ²Ø§Ø± ÛØ§ ÙØ³Ø®ÙâÙØ§Û ØªØºÛÛØ± ÛØ§ÙØªÙ Ø¢Ù ÙÛØ³ØªÛØ¯.
+-   ÙØ­Ø¯ÙØ¯ÛØª ØªØºÛÛØ±Ø§Øª: Ø´ÙØ§ ÙÙÛâØªÙØ§ÙÛØ¯ ÙØ§ÙØ ØµÙØ­Ù Ø¯Ø±Ø¨Ø§Ø±ÙØ Ø§Ø·ÙØ§Ø¹Ø§Øª Ú©Ù¾ÛâØ±Ø§ÛØªØ ÙÙÚ¯Ù ÛØ§ Ø¬Ø²Ø¦ÛØ§Øª Ø¨ÙÛØ§Ø¯ÛÙ Ø¯ÛÚ¯Ø± Ø§ÛÙ ÙØ±ÙâØ§ÙØ²Ø§Ø± Ø±Ø§
+    ØªØºÛÛØ± Ø¯ÙÛØ¯.
+
+ØªÙØ³Ø¹Ù Ø§ÛÙ ÙØ±ÙâØ§ÙØ²Ø§Ø± ØªÙÙØ§ Ø§Ø² Ø·Ø±ÛÙ ÙØ´Ø§Ø±Ú©Øª Ø¯Ø± Ù¾Ø±ÙÚÙ Ø§ÙÚ©Ø§ÙâÙ¾Ø°ÛØ± Ø§Ø³Øª.

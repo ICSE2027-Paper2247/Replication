@@ -1,0 +1,325 @@
+ï»¿The following portions of the LIVOXâs Livox SDK (âSoftwareâ referred to in the terms below) are made available to you under the terms of the MIT License provided below.  
+
+Livox-SDK
+âââ CMakeLists.txt
+âââ sample
+â   âââ hub
+â   â   âââ CMakeLists.txt
+â   â   âââ main.c
+â   âââ hub_lvx_file
+â   â   âââ CMakeLists.txt
+â   â   âââ lvx_file.cpp
+â   â   âââ lvx_file.h
+â   â   âââ main.cpp
+â   âââ lidar
+â   â   âââ CMakeLists.txt
+â   â   âââ main.c
+â   âââ lidar_lvx_file
+â       âââ CMakeLists.txt
+â       âââ lvx_file.cpp
+â       âââ lvx_file.h
+â       âââ main.cpp
+âââ sample_cc
+â   âââ hub
+â   â   âââ CMakeLists.txt
+â   â   âââ lds_hub.cpp
+â   â   âââ lds_hub.h
+â   â   âââ main.cpp
+â   âââ lidar
+â   â   âââ CMakeLists.txt
+â   â   âââ lds_lidar.cpp
+â   â   âââ lds_lidar.h
+â   â   âââ main.cpp
+â   âââ lidar_utc_sync
+â   â   âââ CMakeLists.txt
+â   â   âââ lds_lidar.cpp
+â   â   âââ lds_lidar.h
+â   â   âââ main.cpp
+â   â   âââ synchro.cpp
+â   â   âââ synchro.h
+â   âââ trouble_shooting
+â       âââ CMakeLists.txt
+â       âââ main.cpp
+âââ sdk_core
+    âââ CMakeLists.txt
+    âââ include
+    â   âââ comm
+    â   â   âââ comm_port.h
+    â   â   âââ protocol.h
+    â   âââ config.h
+    â   âââ livox_def.h
+    â   ââ livox_sdk.h
+    âââ src
+        âââ base
+        â   âââ command_callback.h
+        â   âââ io_loop.cpp
+        â   âââ io_loop.h
+        â   âââ io_thread.cpp
+        â   âââ io_thread.h
+        â   âââ logging.cpp
+        â   âââ logging.h
+        â   âââ multiple_io
+        â   â   âââ multiple_io_base.cpp
+        â   â   âââ multiple_io_base.h
+        â   â   âââ multiple_io_epoll.cpp
+        â   â   âââ multiple_io_epoll.h
+        â   â   âââ multiple_io_factory.h
+        â   â   âââ multiple_io_kqueue.cpp
+        â   â   âââ multiple_io_kqueue.h
+        â   â   âââ multiple_io_poll.cpp
+        â   â   âââ multiple_io_poll.h
+        â   â   âââ multiple_io_select.cpp
+        â   â   âââ multiple_io_select.h
+        â   âââ network
+        â   â   âââ network_util.h
+        â   â   âââ unix
+        â   â   â   âââ network_util.cpp
+        â   â   âââ win
+        â   â       âââ network_util.cpp
+        â   âââ noncopyable.h
+        â   âââ thread_base.cpp
+        â   âââ thread_base.h
+        â   âââ wake_up
+        â       âââ unix
+        â       â   âââ wake_up_pipe.cpp
+        â       âââ wake_up_pipe.h
+        â       âââ win
+        â           âââ wake_up_pipe.cpp
+        âââ comm
+        â   âââ comm_port.cpp
+        â   âââ sdk_protocol.cpp
+        â   âââ sdk_protocol.h
+        âââ command_handler
+        â   âââ command_channel.cpp
+        â   âââ command_channel.h
+        â   âââ command_handler.cpp
+        â   âââ command_handler.h
+        â   âââ command_impl.cpp
+        â   âââ command_impl.h
+        â   âââ hub_command_handler.cpp
+        â   âââ hub_command_handler.h
+        â   âââ lidar_command_handler.cpp
+        â   âââ lidar_command_handler.h
+        âââ data_handler
+        â   âââ data_handler.cpp
+        â   âââ data_handler.h
+        â   âââ hub_data_handler.cpp
+        â   âââ hub_data_handler.h
+        â   âââ lidar_data_handler.cpp
+        â   âââ lidar_data_handler.h
+        âââ device_discovery.cpp
+        âââ device_discovery.h
+        âââ device_manager.cpp
+        âââ device_manager.h
+        âââ livox_sdk.cpp
+
+-------------------------------------------------------------
+The MIT License (MIT)
+
+Copyright (c) 2019 Livox. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+===============================================================
+FastCRC
+âââ sdk_core
+    âââ include
+    âÂ Â  âââ third_party
+    âÂ Â      âââ FastCRC
+    âÂ Â          âââ FastCRC.h
+    âââ src
+        âââ third_party
+            âââ FastCRC
+                âââ FastCRCsw.cpp
+                âââ FastCRC_tables.hpp
+                âââ LICENSE.md
+                âââ README.md
+
+LIVOXâs Livox SDK uses modified libraries of FastCRC (https://github.com/FrankBoesing/FastCRC), which is licensed under MIT license. A copy of the MIT license is provided below and is also available at https://raw.githubusercontent.com/FrankBoesing/FastCRC/master/LICENCE.md.
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Frank
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+===============================================================
+LIVOXâs Livox SDK uses unmodified libraries of Ros (https://github.com/ros/ros), which is licensed under BSD license. A copy of the BSD license is provided below and is also available at https://opensource.org/licenses/BSD-3-Clause.
+
+-------------------------------------------------------------
+Copyright (c) 2001 - 2009, The Board of Trustees of the University of Illinois.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above 
+  copyright notice, this list of conditions and the 
+  following disclaimer.
+
+* Redistributions in binary form must reproduce the
+  above copyright notice, this list of conditions
+  and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the University of Illinois
+  nor the names of its contributors may be used to
+  endorse or promote products derived from this
+  software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+===============================================================
+LIVOXâs Livox SDK uses unmodified libraries of spdlog(https://github.com/gabime/spdlog), which is licensed under MIT license. A copy of the MIT license is provided below and is also available at https://github.com/gabime/spdlog/blob/v1.x/LICENSE.
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Gabi Melman.                                       
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+===============================================================
+LIVOXâs Livox SDK uses unmodified libraries of rapidxml(http://rapidxml.sourceforge.net/), which is licensed under the Boost Software License and MIT license. A copy of the Boost Software License and MIT license is provided below and is also available at http://rapidxml.sourceforge.net/license.txt.
+
+Use of this software is granted under one of the following two licenses,
+to be chosen freely by the user.
+
+1. Boost Software License - Version 1.0 - August 17th, 2003
+===============================================================================
+
+Copyright (c) 2006, 2007 Marcin Kalicinski
+
+Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of the software and accompanying documentation covered by
+this license (the "Software") to use, reproduce, display, distribute,
+execute, and transmit the Software, and to prepare derivative works of the
+Software, and to permit third-parties to whom the Software is furnished to
+do so, all subject to the following:
+
+The copyright notices in the Software and this entire statement, including
+the above license grant, this restriction and the following disclaimer,
+must be included in all copies of the Software, in whole or in part, and
+all derivative works of the Software, unless such copies or derivative
+works are solely in the form of machine-executable object code generated by
+a source language processor.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+2. The MIT License
+===============================================================================
+
+Copyright (c) 2006, 2007 Marcin Kalicinski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to deal 
+in the Software without restriction, including without limitation the rights 
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
+of the Software, and to permit persons to whom the Software is furnished to do so, 
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+IN THE SOFTWARE.
+
+===============================================================
+LIVOXâs Livox SDK uses modified libraries of cmdline (https://github.com/tanakh/cmdline). A copy of license is provided below and is also available at https://github.com/tanakh/cmdline/blob/master/LICENSE.
+
+-------------------------------------------------------------
+Copyright (c) 2009, Hideyuki Tanaka
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+
+    * Neither the name of Hideyuki Tanaka nor the names of other
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

@@ -1,0 +1,34 @@
+
+Tplayéµå¾ªApache2å¼æºåè®®åå¸ï¼å¹¶æä¾åè´¹ä½¿ç¨ã
+
+ThinkPHPéµå¾ªApache2å¼æºåè®®åå¸ï¼å¹¶æä¾åè´¹ä½¿ç¨ã
+çæææCopyright Â© 2006-2016 by ThinkPHP (http://thinkphp.cn)
+All rights reservedã
+ThinkPHPÂ® åæ åèä½æææèä¸ºä¸æµ·é¡¶æ³ä¿¡æ¯ç§ææéå¬å¸ã
+
+Apache Licenceæ¯èåçéçå©å¼æºç»ç»Apacheéç¨çåè®®ã
+è¯¥åè®®åBSDç±»ä¼¼ï¼é¼å±ä»£ç å±äº«åå°éåä½èçèä½æï¼
+åè®¸ä»£ç ä¿®æ¹ï¼åä½ä¸ºå¼æºæåä¸è½¯ä»¶åå¸ãéè¦æ»¡è¶³
+çæ¡ä»¶ï¼ 
+1ï¼ éè¦ç»ä»£ç çç¨æ·ä¸ä»½Apache Licence ï¼
+2ï¼ å¦æä½ ä¿®æ¹äºä»£ç ï¼éè¦å¨è¢«ä¿®æ¹çæä»¶ä¸­è¯´æï¼
+3ï¼ å¨å»¶ä¼¸çä»£ç ä¸­ï¼ä¿®æ¹åææºä»£ç è¡ççä»£ç ä¸­ï¼éè¦
+å¸¦æåæ¥ä»£ç ä¸­çåè®®ï¼åæ ï¼ä¸å©å£°æåå¶ä»åæ¥ä½èè§
+å®éè¦åå«çè¯´æï¼
+4ï¼ å¦æååå¸çäº§åä¸­åå«ä¸ä¸ªNoticeæä»¶ï¼åå¨Noticeæ
+ä»¶ä¸­éè¦å¸¦ææ¬åè®®åå®¹ãä½ å¯ä»¥å¨Noticeä¸­å¢å èªå·±ç
+è®¸å¯ï¼ä½ä¸å¯ä»¥è¡¨ç°ä¸ºå¯¹Apache Licenceæææ´æ¹ã 
+å·ä½çåè®®åèï¼http://www.apache.org/licenses/LICENSE-2.0
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
